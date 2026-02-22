@@ -89,7 +89,7 @@
     {
       "name": "Large Final Construction Dial",
       "type": "Tile",
-      "description": "Placed in the centre of the calendar. Flipped when the last calendar dial is constructed, enabling a special 1 gold + 1 wood + 1 paint + 1 iron construction for 8 VP."
+      "description": "Placed in the center of the calendar. Flipped when the last calendar dial is constructed, enabling a special 1 gold + 1 wood + 1 paint + 1 iron construction for 8 VP."
     },
     {
       "name": "Calendar Sections",
@@ -139,13 +139,13 @@
       "name": "Common Stained-Glass-Window Objectives",
       "type": "Card",
       "count": 9,
-      "description": "Three per colour (3 colours). One of each colour used per game. Display conditions for players to claim with workers for 8/6/4 VP at end of game."
+      "description": "Three per color (3 colors). One of each color used per game. Display conditions for players to claim with workers for 8/6/4 VP at end of game."
     },
     {
       "name": "Common Objective Bonuses",
       "type": "Tile",
       "count": 9,
-      "description": "Three per colour. One of each placed below objectives. The first player to claim the objective receives this bonus, then it is flipped."
+      "description": "Three per color. One of each placed below objectives. The first player to claim the objective receives this bonus, then it is flipped."
     },
     {
       "name": "Mastery Stained-Glass Windows",
@@ -196,7 +196,7 @@
       "name": "Mastery Discs",
       "type": "Marker",
       "count": 3,
-      "description": "Per player (numbered 1-12 backs in player colour). One on each mastery track: Innovation (blue), Precision (pink), Observation (yellow)."
+      "description": "Per player (numbered 1-12 backs in player color). One on each mastery track: Innovation (blue), Precision (pink), Observation (yellow)."
     },
     {
       "name": "Scoring Marker",
@@ -227,7 +227,7 @@
       "name": "Apostle Tiles",
       "type": "Tile",
       "count": 12,
-      "description": "Per player (numbered 1-12, backs in player colour). Taken from the walk of the apostles gears and placed on the apostle panel or kept in the warehouse."
+      "description": "Per player (numbered 1-12, backs in player color). Taken from the walk of the apostles gears and placed on the apostle panel or kept in the warehouse."
     },
     {
       "name": "Gold",
@@ -262,7 +262,7 @@
   ],
   "setup": [
     {
-      "description": "Unfold the main board in the centre of the table. Place the Orloj clock face and the astronomical dial on the rotation axis to form the clock. The Orloj clock face should be placed in a random position. Set the astronomical dial with the hand pointing to a random starting hour.",
+      "description": "Unfold the main board in the center of the table. Place the Orloj clock face and the astronomical dial on the rotation axis to form the clock. The Orloj clock face should be placed in a random position. Set the astronomical dial with the hand pointing to a random starting hour.",
       "short_description": "Place Main Board and Clock"
     },
     {
@@ -280,24 +280,33 @@
     {
       "description": "Draw 6 month dials at random from the bag. Place a blocked month dial in each construction space indicated by the drawn dials. Draw 1 more dial from the bag and place all extracted dials in their corresponding calendar spaces with illustrated side up. Place all remaining dials in their construction area spaces with non-illustrated side up.",
       "short_description": "Set Up Month Dials",
-      "condition": {"min_count_variant": 2, "max_count_variant": 2}
+      "condition": {
+        "min_count_variant": 2,
+        "max_count_variant": 2
+      }
     },
     {
       "description": "Draw 5 month dials at random from the bag. Place a blocked month dial in each construction space indicated by the drawn dials. Draw 1 more dial from the bag and place all extracted dials in their corresponding calendar spaces with illustrated side up. Place all remaining dials in their construction area spaces with non-illustrated side up.",
       "short_description": "Set Up Month Dials",
-      "condition": {"min_count_variant": 3, "max_count_variant": 3}
+      "condition": {
+        "min_count_variant": 3,
+        "max_count_variant": 3
+      }
     },
     {
       "description": "Draw 4 month dials at random from the bag. Place a blocked month dial in each construction space indicated by the drawn dials. Draw 1 more dial from the bag and place all extracted dials in their corresponding calendar spaces with illustrated side up. Place all remaining dials in their construction area spaces with non-illustrated side up.",
       "short_description": "Set Up Month Dials",
-      "condition": {"min_count_variant": 4, "max_count_variant": 4}
+      "condition": {
+        "min_count_variant": 4,
+        "max_count_variant": 4
+      }
     },
     {
       "description": "Prepare the zodiac dials in the same way as the month dials, using the same number of draws based on player count.",
       "short_description": "Set Up Zodiac Dials"
     },
     {
-      "description": "Place the large final construction dial in the centre of the calendar with its initial side facing up.",
+      "description": "Place the large final construction dial in the center of the calendar with its initial side facing up.",
       "short_description": "Place Final Construction Dial"
     },
     {
@@ -319,19 +328,24 @@
     {
       "description": "Use all 24 scrolls (red seal). Shuffle to form a face-down reserve next to the main board, then reveal 4 scrolls.",
       "short_description": "Set Up Scrolls",
-      "condition": {"min_count_variant": 3}
+      "condition": {
+        "min_count_variant": 3
+      }
     },
     {
       "description": "Remove scrolls marked with the 3+ and 4-player symbols. Shuffle remaining scrolls to form a face-down reserve next to the main board, then reveal 3 scrolls.",
       "short_description": "Set Up Scrolls",
-      "condition": {"min_count_variant": 2, "max_count_variant": 2}
+      "condition": {
+        "min_count_variant": 2,
+        "max_count_variant": 2
+      }
     },
     {
-      "description": "Shuffle the common stained-glass-window objectives by back colour. Place one of each colour in the corresponding positions. Return the rest to the box.",
+      "description": "Shuffle the common stained-glass-window objectives by back color. Place one of each color in the corresponding positions. Return the rest to the box.",
       "short_description": "Place Common Objectives"
     },
     {
-      "description": "Shuffle the common objective bonuses by back colour. Place one of each colour below the corresponding objectives. Return the rest to the box.",
+      "description": "Shuffle the common objective bonuses by back color. Place one of each color below the corresponding objectives. Return the rest to the box.",
       "short_description": "Place Objective Bonuses"
     },
     {
@@ -369,7 +383,9 @@
     {
       "description": "Return 1 of your available workers to the box.",
       "short_description": "Remove 1 Worker",
-      "condition": {"min_count_variant": 3}
+      "condition": {
+        "min_count_variant": 3
+      }
     },
     {
       "description": "Place your sculptor next to your personal board.",
@@ -384,7 +400,7 @@
       "short_description": "Place Scoring Marker"
     },
     {
-      "description": "Take your personal set of 12 apostle tiles (backs in your colour) and place them next to your personal board.",
+      "description": "Take your personal set of 12 apostle tiles (backs in your color) and place them next to your personal board.",
       "short_description": "Take Apostle Tiles"
     },
     {
@@ -506,7 +522,7 @@
             "description": "Take one of the two visible apostles from your personal set and place it in your warehouse."
           },
           {
-            "description": "After taking, the gears automatically rotate one position (direction indicated at gear centre) to reveal a new apostle combination."
+            "description": "After taking, the gears automatically rotate one position (direction indicated at gear center) to reveal a new apostle combination."
           }
         ],
         "notes": [
@@ -583,7 +599,7 @@
             "description": "Choose a workshop card from the 3 displayed and pay its cost: one paint plus a number of resources based on card position and type."
           },
           {
-            "description": "If present, unlock the worker of your colour above the card and place it as a new available worker. If no worker is there, you have already purchased from that position and do not gain a worker."
+            "description": "If present, unlock the worker of your color above the card and place it as a new available worker. If no worker is there, you have already purchased from that position and do not gain a worker."
           },
           {
             "description": "Gain the reward shown at the top of the card."
@@ -621,7 +637,7 @@
             "description": "Place the constructed tile in its corresponding position on the calendar with the illustrated side up. Place an available worker on it."
           },
           {
-            "description": "Gain 2 VP per dial (including this one) that is part of an adjacent group of dials with workers of your colour."
+            "description": "Gain 2 VP per dial (including this one) that is part of an adjacent group of dials with workers of your color."
           },
           {
             "description": "Gain the bonus corresponding to the calendar section where the dial was built."
@@ -765,8 +781,7 @@
       },
       {
         "source": "Common Objectives (2-player)",
-        "description": "The second player to claim an objective places their worker in the third position (second position is not available).",
-        "condition": {"min_count_variant": 2, "max_count_variant": 2}
+        "description": "The second player to claim an objective places their worker in the third position (second position is not available)."
       }
     ]
   },
