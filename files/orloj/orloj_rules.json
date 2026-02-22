@@ -780,7 +780,7 @@
         "description": "Score based on worker position: 8 VP for first position, 6 VP for second, 4 VP for third."
       },
       {
-        "source": "Common Objectives (2-player)",
+        "source": "Common Stained-Glass-Window Objectives",
         "description": "The second player to claim an objective places their worker in the third position (second position is not available).",
         "condition": {
           "min_count_variant": 2,
