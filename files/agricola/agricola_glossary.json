@@ -141,7 +141,7 @@
   },
   "renovation": {
     "term": "Renovation",
-    "definition": "Upgrade all rooms at once: Wooden hut → Clay hut (1 Clay per room + 1 Reed) or Clay hut → Stone house (1 Stone per room + 1 Reed). Cannot skip levels. Clay rooms = 1 VP each, Stone = 2 VP each.",
+    "definition": "Upgrade all rooms at once: Wooden hut to Clay hut (1 Clay per room + 1 Reed) or Clay hut to Stone house (1 Stone per room + 1 Reed). Cannot skip levels. Clay rooms = 1 VP each, Stone = 2 VP each.",
     "context": "Actions",
     "icon": "StructureHouse",
     "tint": "#78909C"

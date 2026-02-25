@@ -245,7 +245,7 @@
       {
         "when": "During Play (Phases A–E)",
         "source": "Region Completion",
-        "description": "Fill all spaces of a connected same-color region → VP by size (1→1, 2→3, 3→6, 4→10, 5→15, 6→21, 7→28, 8→36) plus phase bonus (A=+10, B=+8, C=+6, D=+4, E=+2)."
+        "description": "Fill all spaces of a connected same-color region = VP by size (1: 1, 2: 3, 3: 6, 4: 10, 5: 15, 6: 21, 7: 28, 8: 36) plus phase bonus (A=+10, B=+8, C=+6, D=+4, E=+2)."
       },
       {
         "when": "During Play",
@@ -255,12 +255,12 @@
       {
         "when": "During Play",
         "source": "Goods Sales",
-        "description": "1 Silverling + VP per tile sold (2p→2VP, 3p→3VP, 4p→4VP)."
+        "description": "1 Silverling + VP per tile sold (2p: 2VP, 3p: 3VP, 4p: 4VP)."
       },
       {
         "when": "During Play",
         "source": "Color Completion",
-        "description": "First to fill all spaces of one color → large bonus tile. Second → small bonus tile."
+        "description": "First to fill all spaces of one color = large bonus tile. Second = small bonus tile."
       }
     ],
     "procedure": [

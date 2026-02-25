@@ -44,28 +44,28 @@
   "sculptor_action_1": {
     "id": "sculptor_action_1",
     "name": "Sculptor Action: Vanity (Gold & Coins)",
-    "body": "Level 1: Force deviation → take 1 gold + 1 coin. Level 2: Force deviation → take 1 gold + 2 coins. Level 3: Correct deviation → take 1 gold + 3 coins.",
+    "body": "Level 1: Force deviation: take 1 gold + 1 coin. Level 2: Force deviation: take 1 gold + 2 coins. Level 3: Correct deviation: take 1 gold + 3 coins.",
     "summary": "Gain gold and coins",
     "details": "The Vanity statue. Higher sculptor levels (determined by pink mastery track) grant more coins and switch from forcing to correcting deviation."
   },
   "sculptor_action_2": {
     "id": "sculptor_action_2",
     "name": "Sculptor Action: Greed (Workshop)",
-    "body": "Level 1: Force deviation → expand workshop. Level 2: Force deviation → take 1 resource of choice + expand workshop. Level 3: Correct deviation → take 1 gold + expand workshop.",
+    "body": "Level 1: Force deviation: expand workshop. Level 2: Force deviation: take 1 resource of choice + expand workshop. Level 3: Correct deviation: take 1 gold + expand workshop.",
     "summary": "Expand workshop (with resources at higher levels)",
     "details": "The Greed statue. At all levels, lets you expand your workshop. Higher levels add free resources."
   },
   "sculptor_action_3": {
     "id": "sculptor_action_3",
     "name": "Sculptor Action: Lust (Painter/Moon)",
-    "body": "Level 1: Force deviation → move painter; OR activate moon without forcing deviation. Level 2: Force deviation → take 1 coin + move painter; OR take 1 coin + activate moon with +1 modifier. Level 3: Correct deviation → take 1 coin + move painter; OR take 1 coin + activate moon with +2 modifier.",
+    "body": "Level 1: Force deviation: move painter; OR activate moon without forcing deviation. Level 2: Force deviation: take 1 coin + move painter; OR take 1 coin + activate moon with +1 modifier. Level 3: Correct deviation: take 1 coin + move painter; OR take 1 coin + activate moon with +2 modifier.",
     "summary": "Move painter or activate moon",
     "details": "The Lust statue. Choose between painter movement or moon activation. Higher levels add coins and moon modifiers."
   },
   "sculptor_action_4": {
     "id": "sculptor_action_4",
     "name": "Sculptor Action: Death (Construct)",
-    "body": "Level 1: Force 2 deviations → construct. Level 2: Force 1 deviation → take 1 resource of choice + construct. Level 3: Correct 1 deviation → take 1 gold + construct.",
+    "body": "Level 1: Force 2 deviations: construct. Level 2: Force 1 deviation: take 1 resource of choice + construct. Level 3: Correct 1 deviation: take 1 gold + construct.",
     "summary": "Perform a construction",
     "details": "The Death statue (rings the bell). Allows construction action. Level 1 is expensive (2 deviations), improving at higher levels."
   },

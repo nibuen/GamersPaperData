@@ -71,7 +71,7 @@
   },
   "workers": {
     "term": "Worker",
-    "definition": "Spent to adjust any die result by +1 or −1, wrapping around (1↔6). Multiple workers can be spent on the same die. Pairs of leftover workers are worth 1 VP at game end.",
+    "definition": "Spent to adjust any die result by +1 or -1, wrapping around (1-6). Multiple workers can be spent on the same die. Pairs of leftover workers are worth 1 VP at game end.",
     "context": "Resources",
     "icon": "Pawn",
     "tint": "#8D6E63"

@@ -2,7 +2,7 @@
   "00S": {
     "id": "00S",
     "name": "Farmer",
-    "body": "Place 1 worker on an undeveloped space adjacent to another worker → 1 matching resource (grape, stone, wheat)",
+    "body": "Place 1 worker on an undeveloped space adjacent to another worker = 1 matching resource (grape, stone, wheat)",
     "summary": "Place 1 worker",
     "details": "on an undeveloped space adjacent to another worker",
     "extra": "1 matching resource (grape, stone, wheat)"
@@ -10,7 +10,7 @@
   "00S-1": {
     "id": "00S-1",
     "name": "Two Roads",
-    "body": "Place 2 roads, on croc-free spaces, start from building site or settlement, or continue road ☑ 2 resources → 3 rep",
+    "body": "Place 2 roads, on croc-free spaces, start from building site or settlement, or continue road [Pay] 2 resources = 3 rep",
     "summary": "Place 2 roads",
     "details": "on croc-free spaces, start from building site or settlement, or continue road (Cost: 2 resources)",
     "extra": "3 rep"
@@ -18,7 +18,7 @@
   "00S-2": {
     "id": "00S-2",
     "name": "Settlement",
-    "body": "Place 1 settlement on a crocodile-free space, must be at least 1 space away from other settlements ☑ 1 grape, stone, & wheat → 3 rep & $3",
+    "body": "Place 1 settlement on a crocodile-free space, must be at least 1 space away from other settlements [Pay] 1 grape, stone, & wheat = 3 rep & $3",
     "summary": "Place 1 settlement",
     "details": "on a crocodile-free space, must be at least 1 space away from other settlements (Cost: 1 grape, stone, & wheat)",
     "extra": "3 rep & $3"
@@ -26,7 +26,7 @@
   "002": {
     "id": "002",
     "name": "Gardener",
-    "body": "Place 1 worker on an undeveloped space adjacent to the channel → 1 rose",
+    "body": "Place 1 worker on an undeveloped space adjacent to the channel = 1 rose",
     "summary": "Place 1 worker",
     "details": "on an undeveloped space adjacent to the channel",
     "extra": "1 rose"
@@ -34,7 +34,7 @@
   "004": {
     "id": "004",
     "name": "Revenue",
-    "body": "Play card → $5",
+    "body": "Play card = $5",
     "summary": "Play card",
     "details": null,
     "extra": "$5"
@@ -42,7 +42,7 @@
   "006": {
     "id": "006",
     "name": "Senior Farmer",
-    "body": "Place 1 worker on an undeveloped space adjacent to another worker → 2 matching resources (grape, stone, wheat)",
+    "body": "Place 1 worker on an undeveloped space adjacent to another worker = 2 matching resources (grape, stone, wheat)",
     "summary": "Place 1 worker",
     "details": "on an undeveloped space adjacent to another worker",
     "extra": "2 matching resources (grape, stone, wheat)"
@@ -50,7 +50,7 @@
   "008": {
     "id": "008",
     "name": "Hermit",
-    "body": "Place 1 worker on an undeveloped space, all adjacent spaces must be undeveloped and contain no other workers → 2 rep",
+    "body": "Place 1 worker on an undeveloped space, all adjacent spaces must be undeveloped and contain no other workers = 2 rep",
     "summary": "Place 1 worker",
     "details": "on an undeveloped space, all adjacent spaces must be undeveloped and contain no other workers",
     "extra": "2 rep"
@@ -58,7 +58,7 @@
   "010": {
     "id": "010",
     "name": "Senior Farmer",
-    "body": "Place 1 worker on an undeveloped space adjacent to another worker → 2 matching resources (grape, stone, wheat)",
+    "body": "Place 1 worker on an undeveloped space adjacent to another worker = 2 matching resources (grape, stone, wheat)",
     "summary": "Place 1 worker",
     "details": "on an undeveloped space adjacent to another worker",
     "extra": "2 matching resources (grape, stone, wheat)"
@@ -66,7 +66,7 @@
   "012": {
     "id": "012",
     "name": "Sacrifice",
-    "body": "Place 1 building block on any building site ☑ 1 card (any card from hand, discard stack, or itself) → 1 rep & $3",
+    "body": "Place 1 building block on any building site [Pay] 1 card (any card from hand, discard stack, or itself) = 1 rep & $3",
     "summary": "Place 1 building block",
     "details": "on any building site (Cost: 1 card from hand, discard stack, or itself)",
     "extra": "1 rep & $3"
@@ -74,7 +74,7 @@
   "014": {
     "id": "014",
     "name": "Wheat Supplier",
-    "body": "Place 1 worker on any settlement → 2 wheat",
+    "body": "Place 1 worker on any settlement = 2 wheat",
     "summary": "Place 1 worker",
     "details": "on any settlement",
     "extra": "2 wheat"
@@ -82,7 +82,7 @@
   "016": {
     "id": "016",
     "name": "Grape Supplier",
-    "body": "Place 1 worker on any settlement → 2 grape",
+    "body": "Place 1 worker on any settlement = 2 grape",
     "summary": "Place 1 worker",
     "details": "on any settlement",
     "extra": "2 grape"
@@ -90,7 +90,7 @@
   "018": {
     "id": "018",
     "name": "Stone Supplier",
-    "body": "Place 1 worker on any settlement → 2 stone",
+    "body": "Place 1 worker on any settlement = 2 stone",
     "summary": "Place 1 worker",
     "details": "on any settlement",
     "extra": "2 stone"
@@ -98,15 +98,15 @@
   "020": {
     "id": "020",
     "name": "New Settlement",
-    "body": "Place 1 settlement on a croc-free space, must be at least 1 space away from other settlements ☑ 2 ≠ resources → 3 rep & $3",
+    "body": "Place 1 settlement on a croc-free space, must be at least 1 space away from other settlements [Pay] 2 different resources = 3 rep & $3",
     "summary": "Place 1 settlement",
-    "details": "on a croc-free space, must be at least 1 space away from other settlements (Cost: 2 ≠ resources)",
+    "details": "on a croc-free space, must be at least 1 space away from other settlements (Cost: 2 different resources)",
     "extra": "3 rep & $3"
   },
   "022": {
     "id": "022",
     "name": "Refinement",
-    "body": "Choose up to 2 resources (grape, stone, wheat, fish) you own → 1 matching resource for each chosen resource",
+    "body": "Choose up to 2 resources (grape, stone, wheat, fish) you own = 1 matching resource for each chosen resource",
     "summary": "Choose up to 2 resources (grape, stone, wheat, fish) you own",
     "details": null,
     "extra": "1 matching resource for each chosen resource"
@@ -114,7 +114,7 @@
   "024": {
     "id": "024",
     "name": "Trader",
-    "body": "Place 1 worker on any settlement 1-3 × 1 resource → 1 rose",
+    "body": "Place 1 worker on any settlement 1-3 × 1 resource = 1 rose",
     "summary": "Place 1 worker",
     "details": "on any settlement (Cost: 1-3 × 1 resource)",
     "extra": "1 rose"
@@ -122,7 +122,7 @@
   "026": {
     "id": "026",
     "name": "Migrant Farmer",
-    "body": "Move 1 worker 2 undeveloped spaces, or 2 workers onto 1 undeveloped space each → 1 matching resource (grape, stone, wheat) for each space",
+    "body": "Move 1 worker 2 undeveloped spaces, or 2 workers onto 1 undeveloped space each = 1 matching resource (grape, stone, wheat) for each space",
     "summary": "Move 1 worker 2 undeveloped spaces, or 2 workers onto 1 undeveloped space each",
     "details": null,
     "extra": "1 matching resource (grape, stone, wheat) for each space"
@@ -130,7 +130,7 @@
   "028": {
     "id": "028",
     "name": "Supplier",
-    "body": "Place 1 worker on any settlement → 2 resources (grape, stone, wheat, fish)",
+    "body": "Place 1 worker on any settlement = 2 resources (grape, stone, wheat, fish)",
     "summary": "Place 1 worker",
     "details": "on any settlement",
     "extra": "2 resources (grape, stone, wheat, fish)"
@@ -138,7 +138,7 @@
   "030": {
     "id": "030",
     "name": "Marketer",
-    "body": "Place 1 worker on any settlement 1-3 × $1 → 1 resource (grape, stone, wheat, fish)",
+    "body": "Place 1 worker on any settlement 1-3 × $1 = 1 resource (grape, stone, wheat, fish)",
     "summary": "Place 1 worker",
     "details": "on any settlement (Cost: 1-3 × $1)",
     "extra": "1 resource (grape, stone, wheat, fish)"
@@ -146,7 +146,7 @@
   "032": {
     "id": "032",
     "name": "Perfumer",
-    "body": "Place 1 worker on any settlement 1-2 × 1 rose → 3 rep",
+    "body": "Place 1 worker on any settlement 1-2 × 1 rose = 3 rep",
     "summary": "Place 1 worker",
     "details": "on any settlement (Cost: 1-2 × 1 rose)",
     "extra": "3 rep"
@@ -154,7 +154,7 @@
   "034": {
     "id": "034",
     "name": "Crook",
-    "body": "Place 1 worker on any settlement 1-3 × 1 rep → $4",
+    "body": "Place 1 worker on any settlement 1-3 × 1 rep = $4",
     "summary": "Place 1 worker",
     "details": "on any settlement (Cost: 1-3 × 1 rep)",
     "extra": "$4"
@@ -170,7 +170,7 @@
   "038": {
     "id": "038",
     "name": "Bridge",
-    "body": "Place 1 bridge connecting 2 croc-free spaces on opposite sides of the channel (start from building site or settlement, or continue road) ☑ 2 resources (grape, stone, wheat) → 4 rep",
+    "body": "Place 1 bridge connecting 2 croc-free spaces on opposite sides of the channel (start from building site or settlement, or continue road) [Pay] 2 resources (grape, stone, wheat) = 4 rep",
     "summary": "Place 1 bridge",
     "details": "connecting 2 croc-free spaces on opposite sides of the channel (start from building site or settlement, or continue road) (Cost: 2 resources (grape, stone, wheat))",
     "extra": "4 rep"
@@ -178,7 +178,7 @@
   "040": {
     "id": "040",
     "name": "Small Town",
-    "body": "Place 1 town marker on any non-town settlement ☑ 1 grape, stone, & wheat → 5 rep & $2",
+    "body": "Place 1 town marker on any non-town settlement [Pay] 1 grape, stone, & wheat = 5 rep & $2",
     "summary": "Place 1 town marker",
     "details": "on any non-town settlement (Cost: 1 grape, stone, & wheat)",
     "extra": "5 rep & $2"
@@ -186,7 +186,7 @@
   "042": {
     "id": "042",
     "name": "Grower",
-    "body": "Place 1 worker on an undeveloped space adjacent to the channel → 2 rose",
+    "body": "Place 1 worker on an undeveloped space adjacent to the channel = 2 rose",
     "summary": "Place 1 worker",
     "details": "on an undeveloped space adjacent to the channel",
     "extra": "2 rose"
@@ -194,7 +194,7 @@
   "044": {
     "id": "044",
     "name": "Farm",
-    "body": "Place 1 workshop on any developed wheat space ☑ 1 grape & 1 stone → 3 rep & 3 wheat",
+    "body": "Place 1 workshop on any developed wheat space [Pay] 1 grape & 1 stone = 3 rep & 3 wheat",
     "summary": "Place 1 workshop",
     "details": "on any developed wheat space (Cost: 1 grape & 1 stone)",
     "extra": "3 rep & 3 wheat"
@@ -202,7 +202,7 @@
   "046": {
     "id": "046",
     "name": "Vineyard",
-    "body": "Place 1 workshop on any developed grape space ☑ 1 stone & 1 wheat → 3 rep & 4 grape",
+    "body": "Place 1 workshop on any developed grape space [Pay] 1 stone & 1 wheat = 3 rep & 4 grape",
     "summary": "Place 1 workshop",
     "details": "on any developed grape space (Cost: 1 stone & 1 wheat)",
     "extra": "3 rep & 4 grape"
@@ -210,7 +210,7 @@
   "048": {
     "id": "048",
     "name": "Pit",
-    "body": "Place 1 workshop on any developed stone space * 1 grape & 1 wheat → 3 rep & 3 stone",
+    "body": "Place 1 workshop on any developed stone space * 1 grape & 1 wheat = 3 rep & 3 stone",
     "summary": "Place 1 workshop",
     "details": "on any developed stone space (Cost: 1 grape & 1 wheat)",
     "extra": "3 rep & 3 stone"
@@ -218,7 +218,7 @@
   "050": {
     "id": "050",
     "name": "All-Rounder",
-    "body": "Choose one: → top card of your discard stack / 1 resource (grape, stone, wheat, fish) / 1 rep",
+    "body": "Choose one: = top card of your discard stack / 1 resource (grape, stone, wheat, fish) / 1 rep",
     "summary": "Choose one",
     "details": null,
     "extra": "top card of your discard stack / 1 resource (grape, stone, wheat, fish) / 1 rep"
@@ -226,7 +226,7 @@
   "052": {
     "id": "052",
     "name": "Order",
-    "body": "Place 1-3 cards from hand onto the bottom of your discard stack → $2 per card",
+    "body": "Place 1-3 cards from hand onto the bottom of your discard stack = $2 per card",
     "summary": "Place 1-3 cards from hand onto the bottom of your discard stack",
     "details": null,
     "extra": "$2 per card"
@@ -234,7 +234,7 @@
   "054": {
     "id": "054",
     "name": "Expansion",
-    "body": "Place 1 expansion on any non-expanded workshop ☑ 1 resource (grape, stone, wheat, fish) → 3 rep",
+    "body": "Place 1 expansion on any non-expanded workshop [Pay] 1 resource (grape, stone, wheat, fish) = 3 rep",
     "summary": "Place 1 expansion",
     "details": "on any non-expanded workshop (Cost: 1 resource (grape, stone, wheat, fish))",
     "extra": "3 rep"
@@ -242,7 +242,7 @@
   "056": {
     "id": "056",
     "name": "Assistant",
-    "body": "Place 1 worker on any workshop → 3 matching resources (grape, stone, wheat)",
+    "body": "Place 1 worker on any workshop = 3 matching resources (grape, stone, wheat)",
     "summary": "Place 1 worker",
     "details": "on any workshop",
     "extra": "3 matching resources (grape, stone, wheat)"
@@ -250,7 +250,7 @@
   "058": {
     "id": "058",
     "name": "Fisher",
-    "body": "Place 1 worker on an undeveloped space adjacent to another worker & the channel, or lake → 3 fish",
+    "body": "Place 1 worker on an undeveloped space adjacent to another worker & the channel, or lake = 3 fish",
     "summary": "Place 1 worker",
     "details": "on an undeveloped space adjacent to another worker & the channel, or lake",
     "extra": "3 fish"
@@ -258,7 +258,7 @@
   "060": {
     "id": "060",
     "name": "Gem Searchers",
-    "body": "Choose one: 1-5 × $1 → lay down 1 worker or ☑ all laid-down workers → $3 for each removed worker",
+    "body": "Choose one: 1-5 × $1 = lay down 1 worker or [Pay] all laid-down workers = $3 for each removed worker",
     "summary": "Choose one",
     "details": "Option 1: Pay $1 (1 to 5 times) to lay down 1 worker. Option 2: Remove all laid-down workers to gain $3 for each removed worker.",
     "extra": "Option 1: lay down 1 worker. Option 2: $3 for each removed worker."
@@ -266,7 +266,7 @@
   "062": {
     "id": "062",
     "name": "Novices",
-    "body": "1-3 × 1 worker → $2",
+    "body": "1-3 × 1 worker = $2",
     "summary": "(Cost: 1-3 × 1 worker)",
     "details": null,
     "extra": "$2"
@@ -274,7 +274,7 @@
   "064": {
     "id": "064",
     "name": "Bazaar",
-    "body": "☑ $2 → 1 card from the current market (pay only $1 if the card has a discount token)",
+    "body": "[Pay] $2 = 1 card from the current market (pay only $1 if the card has a discount token)",
     "summary": "(Cost: $2)",
     "details": "(pay only $1 if the card has a discount token)",
     "extra": "1 card from the current market"
@@ -282,7 +282,7 @@
   "066": {
     "id": "066",
     "name": "Wheat Trader",
-    "body": "Place 1 worker on any settlement → 3 wheat",
+    "body": "Place 1 worker on any settlement = 3 wheat",
     "summary": "Place 1 worker",
     "details": "on any settlement",
     "extra": "3 wheat"
@@ -290,7 +290,7 @@
   "068": {
     "id": "068",
     "name": "Grape Trader",
-    "body": "Place 1 worker on any settlement → 3 grape",
+    "body": "Place 1 worker on any settlement = 3 grape",
     "summary": "Place 1 worker",
     "details": "on any settlement",
     "extra": "3 grape"
@@ -298,7 +298,7 @@
   "070": {
     "id": "070",
     "name": "Stone Trader",
-    "body": "Place 1 worker on any settlement → 3 stone",
+    "body": "Place 1 worker on any settlement = 3 stone",
     "summary": "Place 1 worker",
     "details": "on any settlement",
     "extra": "3 stone"
@@ -306,7 +306,7 @@
   "072": {
     "id": "072",
     "name": "Monument",
-    "body": "Place 1-3 building blocks on any building sites 1-3 × 1 stone → 2 rep",
+    "body": "Place 1-3 building blocks on any building sites 1-3 × 1 stone = 2 rep",
     "summary": "Place 1-3 building blocks",
     "details": "on any building sites (Cost: 1-3 × 1 stone)",
     "extra": "2 rep"
@@ -314,7 +314,7 @@
   "074": {
     "id": "074",
     "name": "Homestead",
-    "body": "Place 1 workshop on any developed wheat space * 1 grape & 1 stone → 3 rep & 4 wheat",
+    "body": "Place 1 workshop on any developed wheat space * 1 grape & 1 stone = 3 rep & 4 wheat",
     "summary": "Place 1 workshop",
     "details": "on any developed wheat space (Cost: 1 grape & 1 stone)",
     "extra": "3 rep & 4 wheat"
@@ -322,7 +322,7 @@
   "076": {
     "id": "076",
     "name": "Plantation",
-    "body": "Place 1 workshop on any developed grape space * 1 stone & 1 wheat → 3 rep & 4 grape",
+    "body": "Place 1 workshop on any developed grape space * 1 stone & 1 wheat = 3 rep & 4 grape",
     "summary": "Place 1 workshop",
     "details": "on any developed grape space (Cost: 1 stone & 1 wheat)",
     "extra": "3 rep & 4 grape"
@@ -330,7 +330,7 @@
   "078": {
     "id": "078",
     "name": "Quarry",
-    "body": "Place 1 workshop on any developed stone space * 1 grape & 1 wheat → 3 rep & 4 stone",
+    "body": "Place 1 workshop on any developed stone space * 1 grape & 1 wheat = 3 rep & 4 stone",
     "summary": "Place 1 workshop",
     "details": "on any developed stone space (Cost: 1 grape & 1 wheat)",
     "extra": "3 rep & 4 stone"
@@ -338,7 +338,7 @@
   "080": {
     "id": "080",
     "name": "Harvest Hands",
-    "body": "Place 1-3 workers on an undeveloped space adjacent to another worker 1-3 × $1 → 1 matching resource (grape, stone, wheat)",
+    "body": "Place 1-3 workers on an undeveloped space adjacent to another worker 1-3 × $1 = 1 matching resource (grape, stone, wheat)",
     "summary": "Place 1-3 workers",
     "details": "on an undeveloped space adjacent to another worker (Cost: 1-3 × $1)",
     "extra": "1 matching resource (grape, stone, wheat)"
@@ -346,7 +346,7 @@
   "082": {
     "id": "082",
     "name": "Senior Supplier",
-    "body": "Place 1 worker on any settlement → 3 resources (grape, stone, wheat, fish)",
+    "body": "Place 1 worker on any settlement = 3 resources (grape, stone, wheat, fish)",
     "summary": "Place 1 worker",
     "details": "on any settlement",
     "extra": "3 resources (grape, stone, wheat, fish)"
@@ -354,7 +354,7 @@
   "084": {
     "id": "084",
     "name": "Town",
-    "body": "Place 1 town marker on any non-town settlement ☑ 1 grape, stone, & wheat → 6 rep & $2",
+    "body": "Place 1 town marker on any non-town settlement [Pay] 1 grape, stone, & wheat = 6 rep & $2",
     "summary": "Place 1 town marker",
     "details": "on any non-town settlement (Cost: 1 grape, stone, & wheat)",
     "extra": "6 rep & $2"
@@ -362,7 +362,7 @@
   "086": {
     "id": "086",
     "name": "Escort",
-    "body": "Move 1 worker 1-3 settlements (final destination must be empty) connected by roads, then remove that worker ☑ $2 / $4 / $6 → 4 / 5 / 6 rep",
+    "body": "Move 1 worker 1-3 settlements (final destination must be empty) connected by roads, then remove that worker [Pay] $2 / $4 / $6 = 4 / 5 / 6 rep",
     "summary": "Move 1 worker 1-3 settlements (final destination must be empty) connected by roads, then remove that worker",
     "details": "(Cost: $2 / $4 / $6 based on settlements moved)",
     "extra": "4 / 5 / 6 rep"
@@ -378,7 +378,7 @@
   "090": {
     "id": "090",
     "name": "Tax Collector",
-    "body": "Place 1 worker on any workshop → $1 for each workshop and town on the map",
+    "body": "Place 1 worker on any workshop = $1 for each workshop and town on the map",
     "summary": "Place 1 worker",
     "details": "on any workshop",
     "extra": "$1 for each workshop and town on the map"
@@ -386,7 +386,7 @@
   "092": {
     "id": "092",
     "name": "Five Roads",
-    "body": "Place up to 5 roads, on crocodile-free spaces, start from building site or settlement, or continue road 1-5 × 1 resource → 1 rep",
+    "body": "Place up to 5 roads, on crocodile-free spaces, start from building site or settlement, or continue road 1-5 × 1 resource = 1 rep",
     "summary": "Place up to 5 roads",
     "details": "on crocodile-free spaces, start from building site or settlement, or continue road (Cost: 1-5 × 1 resource)",
     "extra": "1 rep"
@@ -394,7 +394,7 @@
   "094": {
     "id": "094",
     "name": "Banquet",
-    "body": "Place 1 worker on any building site ☑ 1 grape, wheat, fish, & $6 → 8 rep",
+    "body": "Place 1 worker on any building site [Pay] 1 grape, wheat, fish, & $6 = 8 rep",
     "summary": "Place 1 worker",
     "details": "on any building site (Cost: 1 grape, wheat, fish, & $6)",
     "extra": "8 rep"
@@ -402,7 +402,7 @@
   "096": {
     "id": "096",
     "name": "Crocodile Sacrifice",
-    "body": "Place 1 worker on any building site ☑ 1 crocodile → 3 rep",
+    "body": "Place 1 worker on any building site [Pay] 1 crocodile = 3 rep",
     "summary": "Place 1 worker",
     "details": "on any building site (Cost: 1 crocodile)",
     "extra": "3 rep"
@@ -410,7 +410,7 @@
   "098": {
     "id": "098",
     "name": "Baker",
-    "body": "Place 1 worker on any wheat workshop ☑ 1 wheat → 2 rep & $5",
+    "body": "Place 1 worker on any wheat workshop [Pay] 1 wheat = 2 rep & $5",
     "summary": "Place 1 worker",
     "details": "on any wheat workshop (Cost: 1 wheat)",
     "extra": "2 rep & $5"
@@ -418,7 +418,7 @@
   "100": {
     "id": "100",
     "name": "Vintner",
-    "body": "Place 1 worker on any grape workshop ☑ 1 grape → 2 rep & $5",
+    "body": "Place 1 worker on any grape workshop [Pay] 1 grape = 2 rep & $5",
     "summary": "Place 1 worker",
     "details": "on any grape workshop (Cost: 1 grape)",
     "extra": "2 rep & $5"
@@ -426,7 +426,7 @@
   "102": {
     "id": "102",
     "name": "Stonemason",
-    "body": "Place 1 worker on any stone workshop ☑ 1 stone → 2 rep & $5",
+    "body": "Place 1 worker on any stone workshop [Pay] 1 stone = 2 rep & $5",
     "summary": "Place 1 worker",
     "details": "on any stone workshop (Cost: 1 stone)",
     "extra": "2 rep & $5"
@@ -434,7 +434,7 @@
   "104": {
     "id": "104",
     "name": "Channel Festival",
-    "body": "Supply 1-9 settlements adjacent to the channel 1-9 × 1 resource → 2 rep per town, 1 rep per settlement",
+    "body": "Supply 1-9 settlements adjacent to the channel 1-9 × 1 resource = 2 rep per town, 1 rep per settlement",
     "summary": "Supply 1-9 settlements",
     "details": "adjacent to the channel (Cost: 1-9 × 1 resource)",
     "extra": "2 rep per town, 1 rep per settlement"
@@ -442,7 +442,7 @@
   "106": {
     "id": "106",
     "name": "Juggler",
-    "body": "Place 1 worker on any town → $3 for each town on the map",
+    "body": "Place 1 worker on any town = $3 for each town on the map",
     "summary": "Place 1 worker",
     "details": "on any town",
     "extra": "$3 for each town on the map"
@@ -450,15 +450,15 @@
   "108": {
     "id": "108",
     "name": "Masons' Work",
-    "body": "Place 1 building block on any building site ☑ $3 & up to 5 ≠ resources → 1/3/5/10/15 rep",
+    "body": "Place 1 building block on any building site [Pay] $3 & up to 5 different resources = 1/3/5/10/15 rep",
     "summary": "Place 1 building block",
-    "details": "on any building site (Cost: $3 & up to 5 ≠ resources)",
+    "details": "on any building site (Cost: $3 & up to 5 different resources)",
     "extra": "1/3/5/10/15 rep"
   },
   "110": {
     "id": "110",
     "name": "Harvest Festival",
-    "body": "Supply 1-10 settlements connected by roads 1-10 × 1 resource → 2 rep per town, 1 rep per settlement",
+    "body": "Supply 1-10 settlements connected by roads 1-10 × 1 resource = 2 rep per town, 1 rep per settlement",
     "summary": "Supply 1-10 settlements",
     "details": "connected by roads (Cost: 1-10 × 1 resource)",
     "extra": "2 rep per town, 1 rep per settlement"
@@ -466,7 +466,7 @@
   "112": {
     "id": "112",
     "name": "Pharaoh",
-    "body": "Place 1 worker on any town → 2 rep per town, 1 rep per settlement & building block directly connected to the Pharaoh",
+    "body": "Place 1 worker on any town = 2 rep per town, 1 rep per settlement & building block directly connected to the Pharaoh",
     "summary": "Place 1 worker",
     "details": "on any town",
     "extra": "2 rep per town, 1 rep per settlement & building block directly connected to the Pharaoh"
@@ -474,7 +474,7 @@
   "114": {
     "id": "114",
     "name": "Mummy",
-    "body": "Place 1 worker on any building site 1-10 × 1 resource → 1 rep per resource & building block",
+    "body": "Place 1 worker on any building site 1-10 × 1 resource = 1 rep per resource & building block",
     "summary": "Place 1 worker",
     "details": "on any building site (Cost: 1-10 × 1 resource)",
     "extra": "1 rep per resource & building block"
@@ -482,7 +482,7 @@
   "116": {
     "id": "116",
     "name": "Treasurer",
-    "body": "Place 1 worker on any building site 1-12 × $2 → 1 rep",
+    "body": "Place 1 worker on any building site 1-12 × $2 = 1 rep",
     "summary": "Place 1 worker",
     "details": "on any building site (Cost: 1-12 × $2)",
     "extra": "1 rep"
@@ -490,7 +490,7 @@
   "118": {
     "id": "118",
     "name": "Grand Bridge",
-    "body": "Place 1 bridge connecting 2 croc-free spaces on opposite sides of the channel (start from building site or settlement, or continue road) ☑ 1 grape, stone, wheat & $5 → 12 rep",
+    "body": "Place 1 bridge connecting 2 croc-free spaces on opposite sides of the channel (start from building site or settlement, or continue road) [Pay] 1 grape, stone, wheat & $5 = 12 rep",
     "summary": "Place 1 bridge",
     "details": "connecting 2 croc-free spaces on opposite sides of the channel (start from building site or settlement, or continue road) (Cost: 1 grape, stone, wheat & $5)",
     "extra": "12 rep"
@@ -498,7 +498,7 @@
   "120": {
     "id": "120",
     "name": "Palace",
-    "body": "Place 1 palace on any town ☑ 2 grape, stone, & wheat → 15 rep",
+    "body": "Place 1 palace on any town [Pay] 2 grape, stone, & wheat = 15 rep",
     "summary": "Place 1 palace",
     "details": "on any town (Cost: 2 grape, stone, & wheat)",
     "extra": "15 rep"
@@ -506,7 +506,7 @@
   "122": {
     "id": "122",
     "name": "Wasteland x2",
-    "body": "Natural disaster, cannot be purchased → 1/0 rep",
+    "body": "Natural disaster, cannot be purchased = 1/0 rep",
     "summary": "Natural disaster, cannot be purchased",
     "details": null,
     "extra": "1/0 rep"
@@ -514,7 +514,7 @@
   "124": {
     "id": "124",
     "name": "Heat x2",
-    "body": "Natural disaster, cannot be purchased → 3/0 rep",
+    "body": "Natural disaster, cannot be purchased = 3/0 rep",
     "summary": "Natural disaster, cannot be purchased",
     "details": null,
     "extra": "3/0 rep"
@@ -522,7 +522,7 @@
   "126": {
     "id": "126",
     "name": "Drought x2",
-    "body": "Natural disaster, cannot be purchased → 6/0 rep",
+    "body": "Natural disaster, cannot be purchased = 6/0 rep",
     "summary": "Natural disaster, cannot be purchased",
     "details": null,
     "extra": "6/0 rep"
@@ -530,7 +530,7 @@
   "128": {
     "id": "128",
     "name": "Sandstorm x3",
-    "body": "Natural disaster, cannot be purchased → 10/6/0 rep",
+    "body": "Natural disaster, cannot be purchased = 10/6/0 rep",
     "summary": "Natural disaster, cannot be purchased",
     "details": null,
     "extra": "10/6/0 rep"

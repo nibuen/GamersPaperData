@@ -4,7 +4,7 @@
     "name": "Sow and/or Bake Bread",
     "summary": "Sow crops into empty fields; optionally bake Grain into Food",
     "body": "You may Sow one or more empty fields by taking 1 Grain or 1 Vegetable from your supply and placing it on a fallow field (then adding 2 Grain or 1 Vegetable from supply). You may also Bake bread: use a Baking Improvement to convert Grain from your supply into Food. You need not Sow all empty fields.",
-    "details": "Stage 1 (Rounds 1–4). Baking requires a Fireplace (1 Grain → 2 Food), Cooking Hearth (→ 3 Food), Clay Oven (up to 1 Grain → 5 Food), or Stone Oven (up to 2 Grain → 4 Food each). Grain on fields may not be used for Baking."
+    "details": "Stage 1 (Rounds 1–4). Baking requires a Fireplace (1 Grain = 2 Food), Cooking Hearth (= 3 Food), Clay Oven (up to 1 Grain = 5 Food), or Stone Oven (up to 2 Grain = 4 Food each). Grain on fields may not be used for Baking."
   },
   "major_minor_improvement_s1": {
     "id": "major_minor_improvement_s1",

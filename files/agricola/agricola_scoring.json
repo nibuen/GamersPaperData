@@ -3,7 +3,7 @@
     "id": "fields",
     "name": "Fields",
     "body": "Scored at END OF GAME. Points based on total number of plowed fields (empty or sown): 0-1 fields = -1 VP, 2 fields = 1 VP, 3 fields = 2 VP, 4 fields = 3 VP, 5+ fields = 4 VP.",
-    "summary": "0-1→-1 / 2→1 / 3→2 / 4→3 / 5+→4",
+    "summary": "0-1: -1 / 2: 1 / 3: 2 / 4: 3 / 5+: 4",
     "details": "Fields are created by the Plow action. Once plowed, a field remains even after harvesting. Fields can be sown with Grain or Vegetables.",
     "extra": "Scored: End of game | Max: 4 VP"
   },
@@ -11,7 +11,7 @@
     "id": "pastures",
     "name": "Pastures",
     "body": "Scored at END OF GAME. Points based on total number of fenced pastures (enclosed areas, not individual spaces): 0 pastures = -1 VP, 1 pasture = 1 VP, 2 pastures = 2 VP, 3 pastures = 3 VP, 4+ pastures = 4 VP.",
-    "summary": "0→-1 / 1→1 / 2→2 / 3→3 / 4+→4",
+    "summary": "0: -1 / 1: 1 / 2: 2 / 3: 3 / 4+: 4",
     "details": "A pasture is a fully fenced area that can span multiple farmyard spaces. Each pasture counts as one regardless of how many spaces it covers.",
     "extra": "Scored: End of game | Max: 4 VP"
   },
@@ -19,7 +19,7 @@
     "id": "grain",
     "name": "Grain",
     "body": "Scored at END OF GAME. Count all Grain in personal supply and on fields: 0 Grain = -1 VP, 1-3 Grain = 1 VP, 4-5 Grain = 2 VP, 6-7 Grain = 3 VP, 8+ Grain = 4 VP.",
-    "summary": "0→-1 / 1-3→1 / 4-5→2 / 6-7→3 / 8+→4",
+    "summary": "0: -1 / 1-3: 1 / 4-5: 2 / 6-7: 3 / 8+: 4",
     "details": "Grain in personal supply and Grain tokens on sown fields both count toward the total.",
     "extra": "Scored: End of game | Max: 4 VP"
   },
@@ -27,7 +27,7 @@
     "id": "vegetables",
     "name": "Vegetables",
     "body": "Scored at END OF GAME. Count all Vegetables in personal supply and on fields: 0 Vegetables = -1 VP, 1 Vegetable = 1 VP, 2 Vegetables = 2 VP, 3 Vegetables = 3 VP, 4+ Vegetables = 4 VP.",
-    "summary": "0→-1 / 1→1 / 2→2 / 3→3 / 4+→4",
+    "summary": "0: -1 / 1: 1 / 2: 2 / 3: 3 / 4+: 4",
     "details": "Vegetables in personal supply and Vegetable tokens on sown fields both count toward the total.",
     "extra": "Scored: End of game | Max: 4 VP"
   },
@@ -35,7 +35,7 @@
     "id": "sheep",
     "name": "Sheep",
     "body": "Scored at END OF GAME. Count all Sheep on your farmyard: 0 Sheep = -1 VP, 1-3 Sheep = 1 VP, 4-5 Sheep = 2 VP, 6-7 Sheep = 3 VP, 8+ Sheep = 4 VP.",
-    "summary": "0→-1 / 1-3→1 / 4-5→2 / 6-7→3 / 8+→4",
+    "summary": "0: -1 / 1-3: 1 / 4-5: 2 / 6-7: 3 / 8+: 4",
     "details": "Sheep are white cubes. They must be housed in fenced pastures, unfenced stables, or as a single pet in your home.",
     "extra": "Scored: End of game | Max: 4 VP"
   },
@@ -43,7 +43,7 @@
     "id": "wild_boar",
     "name": "Wild Boar",
     "body": "Scored at END OF GAME. Count all Wild boar on your farmyard: 0 Wild boar = -1 VP, 1-2 Wild boar = 1 VP, 3-4 Wild boar = 2 VP, 5-6 Wild boar = 3 VP, 7+ Wild boar = 4 VP.",
-    "summary": "0→-1 / 1-2→1 / 3-4→2 / 5-6→3 / 7+→4",
+    "summary": "0: -1 / 1-2: 1 / 3-4: 2 / 5-6: 3 / 7+: 4",
     "details": "Wild boar are black cubes. They must be housed in fenced pastures, unfenced stables, or as a single pet in your home.",
     "extra": "Scored: End of game | Max: 4 VP"
   },
@@ -51,7 +51,7 @@
     "id": "cattle",
     "name": "Cattle",
     "body": "Scored at END OF GAME. Count all Cattle on your farmyard: 0 Cattle = -1 VP, 1 Cattle = 1 VP, 2-3 Cattle = 2 VP, 4-5 Cattle = 3 VP, 6+ Cattle = 4 VP.",
-    "summary": "0→-1 / 1→1 / 2-3→2 / 4-5→3 / 6+→4",
+    "summary": "0: -1 / 1: 1 / 2-3: 2 / 4-5: 3 / 6+: 4",
     "details": "Cattle are brown cubes. They must be housed in fenced pastures, unfenced stables, or as a single pet in your home.",
     "extra": "Scored: End of game | Max: 4 VP"
   },
@@ -75,7 +75,7 @@
     "id": "rooms",
     "name": "Rooms",
     "body": "Scored at END OF GAME. Wooden hut rooms score 0 VP each. Clay hut rooms score 1 VP each. Stone house rooms score 2 VP each.",
-    "summary": "Wood→0 / Clay→1 / Stone→2 per room",
+    "summary": "Wood: 0 / Clay: 1 / Stone: 2 per room",
     "details": "Players start with 2 Wooden hut rooms. Rooms can be renovated from Wood to Clay to Stone. Additional rooms can be built before renovating.",
     "extra": "Scored: End of game"
   },

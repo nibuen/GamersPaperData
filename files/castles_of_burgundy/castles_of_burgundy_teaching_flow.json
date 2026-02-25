@@ -154,7 +154,7 @@
       "title": "How Regions Score",
       "content": [
         { "description": "The big points come from completing regions \u2014 filling every space in a connected group of the same color." },
-        { "description": "Region size \u2192 Victory Points:", "style": "header", "action": { "type": "value_grid", "columns": [["Tiles", "VP"], ["1", "1"], ["2", "3"], ["3", "6"], ["4", "10"], ["5", "15"], ["6", "21"], ["7", "28"], ["8", "36"]] } },
+        { "description": "Region size to Victory Points:", "style": "header", "action": { "type": "value_grid", "columns": [["Tiles", "VP"], ["1", "1"], ["2", "3"], ["3", "6"], ["4", "10"], ["5", "15"], ["6", "21"], ["7", "28"], ["8", "36"]] } },
         { "description": "Timing bonus \u2014 complete regions early!", "style": "section", "action": { "type": "value_grid", "columns": [["Phase", "VP"], ["A", "+10"], ["B", "+8"], ["C", "+6"], ["D", "+4"], ["E", "+2"]] } },
         { "description": "Finishing regions early is a big deal." }
       ],

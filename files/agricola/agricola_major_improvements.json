@@ -3,14 +3,14 @@
     "id": "fireplace_cheap",
     "name": "Fireplace (2 Clay)",
     "summary": "Cook animals and Vegetables; bake Grain into bread",
-    "body": "Cost: 2 Clay. At any time, cook animals into Food (Sheep → 2 Food, Wild Boar → 2 Food, Cattle → 3 Food) or cook Vegetables into 2 Food. When you take a Bake bread action, convert 1 Grain into 2 Food. Can be upgraded to a Cooking Hearth by taking a Cooking Hearth and returning this card to the board.",
+    "body": "Cost: 2 Clay. At any time, cook animals into Food (Sheep = 2 Food, Wild Boar = 2 Food, Cattle = 3 Food) or cook Vegetables into 2 Food. When you take a Bake bread action, convert 1 Grain into 2 Food. Can be upgraded to a Cooking Hearth by taking a Cooking Hearth and returning this card to the board.",
     "extra": "1 Victory Point. May be upgraded to a Cooking Hearth."
   },
   "fireplace_expensive": {
     "id": "fireplace_expensive",
     "name": "Fireplace (3 Clay)",
     "summary": "Cook animals and Vegetables; bake Grain into bread",
-    "body": "Cost: 3 Clay. At any time, cook animals into Food (Sheep → 2 Food, Wild Boar → 2 Food, Cattle → 3 Food) or cook Vegetables into 2 Food. When you take a Bake bread action, convert 1 Grain into 2 Food. Can be upgraded to a Cooking Hearth by taking a Cooking Hearth and returning this card to the board.",
+    "body": "Cost: 3 Clay. At any time, cook animals into Food (Sheep = 2 Food, Wild Boar = 2 Food, Cattle = 3 Food) or cook Vegetables into 2 Food. When you take a Bake bread action, convert 1 Grain into 2 Food. Can be upgraded to a Cooking Hearth by taking a Cooking Hearth and returning this card to the board.",
     "extra": "1 Victory Point. May be upgraded to a Cooking Hearth."
   },
   "cooking_hearth_cheap": {
