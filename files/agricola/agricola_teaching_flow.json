@@ -97,14 +97,14 @@
           "action": { "type": "icon_formula", "formula": "{Pawn} {ArrowRight} action space {ArrowRight} do it" }
         },
         {
-          "description": "The key rule: only one person per space per round. If someone takes the action you wanted, you'll have to do something else."
+          "description": "The key rule: only one person per space per round (this includes yourself). If someone takes the action you wanted, you'll have to do something else."
         },
         {
           "description": "You start with 2 family members, so you get 2 actions per round. Grow your family and you'll get more — up to 5 actions per round."
         }
       ],
       "options": [
-        { "label": "What can I do?", "next_node": "key_actions" }
+        { "label": "What other actions are there?", "next_node": "key_actions" }
       ]
     },
     {
@@ -238,7 +238,7 @@
           "description": "Cooking Improvements (Fireplace, Cooking Hearth) — cook animals or Vegetables into Food at any time. This is the most flexible option.",
           "style": "bullet",
           "icon": "Fire",
-          "action": { "type": "icon_formula", "formula": "{Fire} Sheep {ArrowRight} 2 Food" }
+          "action": { "type": "icon_formula", "formula": "{Fire} + Sheep {ArrowRight} 2 Food" }
         },
         {
           "description": "Baking — with an oven (Clay Oven, Stone Oven) or Fireplace, convert Grain into Food when you take a \"Bake Bread\" action.",
