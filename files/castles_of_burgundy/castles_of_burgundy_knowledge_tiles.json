@@ -1,0 +1,210 @@
+{
+  "knowledge_01": {
+    "id": "knowledge_01",
+    "name": "#1 - Building Flexibility",
+    "body": "Ignore the rule that only one building of each type is allowed in each city. You may now place duplicate building types in the same city.",
+    "summary": "Duplicate buildings allowed per city",
+    "details": "Triggered when placed on estate",
+    "extra": null
+  },
+  "knowledge_02": {
+    "id": "knowledge_02",
+    "name": "#2 - Mine Worker Bonus",
+    "body": "Receive 1 worker tile in addition to the usual Silverling for each mine at the end of each phase.",
+    "summary": "+1 worker per mine at phase end",
+    "details": "Stacks with the normal Silverling income from mines",
+    "extra": null
+  },
+  "knowledge_03": {
+    "id": "knowledge_03",
+    "name": "#3 - Goods Sale Silverling Bonus",
+    "body": "Receive 2 Silverlings instead of 1 when selling goods (either via the Sell Goods dice action or via the Warehouse building).",
+    "summary": "2 Silverlings per goods sale instead of 1",
+    "details": "Applies to both the dice action and the Warehouse building effect",
+    "extra": null
+  },
+  "knowledge_04": {
+    "id": "knowledge_04",
+    "name": "#4 - Goods Sale Worker Bonus",
+    "body": "Receive 1 worker tile in addition to the usual Silverling when selling goods (via the Sell Goods dice action or via the Warehouse building).",
+    "summary": "+1 worker when selling goods",
+    "details": "Applies to both the dice action and the Warehouse building effect",
+    "extra": null
+  },
+  "knowledge_05": {
+    "id": "knowledge_05",
+    "name": "#5 - Double Ship Goods",
+    "body": "When adding a ship tile to your estate, you may choose to take goods from two neighboring goods spaces (instead of one) and add them all to your goods storage.",
+    "summary": "Take goods from 2 depots when placing a ship",
+    "details": "The two depots must be neighboring spaces",
+    "extra": null
+  },
+  "knowledge_06": {
+    "id": "knowledge_06",
+    "name": "#6 - All Depots Access",
+    "body": "May buy tiles from all seven depots on the board (still only one purchase per turn, costing 2 Silverlings).",
+    "summary": "Buy from any of the 7 depots",
+    "details": "Normally you can only buy from the central black depot. Still limited to one purchase per turn.",
+    "extra": null
+  },
+  "knowledge_07": {
+    "id": "knowledge_07",
+    "name": "#7 - Animal Scoring Bonus",
+    "body": "Receive 1 VP more for each animal tile that scores points when a new animal tile is added to your estate.",
+    "summary": "+1 VP per scoring animal when placing animals",
+    "details": "This bonus applies to every animal that scores, including same-type animals already on the pasture",
+    "extra": null
+  },
+  "knowledge_08": {
+    "id": "knowledge_08",
+    "name": "#8 - Enhanced Worker Adjustment",
+    "body": "May adjust a die result by up to +/- 2 per worker tile spent (instead of the usual +/- 1).",
+    "summary": "Workers adjust dice by +/- 2 each",
+    "details": "Each worker tile spent gives +/- 2 instead of +/- 1. Wraps around (1 to 6 and vice versa).",
+    "extra": null
+  },
+  "knowledge_09": {
+    "id": "knowledge_09",
+    "name": "#9 - Building Placement Flexibility",
+    "body": "May adjust all die results used to place buildings (brown tiles) on your estate by +/- 1 for free (without spending workers).",
+    "summary": "Free +/- 1 for placing buildings",
+    "details": "Only applies when placing building tiles from storage to estate",
+    "extra": null
+  },
+  "knowledge_10": {
+    "id": "knowledge_10",
+    "name": "#10 - Ship & Animal Placement Flexibility",
+    "body": "May adjust all die results used to place ships (blue tiles) or animals (light green tiles) on your estate by +/- 1 for free (without spending workers).",
+    "summary": "Free +/- 1 for placing ships or animals",
+    "details": "Only applies when placing ship or animal tiles from storage to estate",
+    "extra": null
+  },
+  "knowledge_11": {
+    "id": "knowledge_11",
+    "name": "#11 - Castle/Mine/Knowledge Flexibility",
+    "body": "May adjust all die results used to place castles (dark green tiles), mines (grey tiles), or knowledge tiles (yellow tiles) on your estate by +/- 1 for free (without spending workers).",
+    "summary": "Free +/- 1 for placing castles, mines, or knowledge",
+    "details": "Only applies when placing these tile types from storage to estate",
+    "extra": null
+  },
+  "knowledge_12": {
+    "id": "knowledge_12",
+    "name": "#12 - Tile Taking Flexibility",
+    "body": "May adjust any die results used to take new 6-sided tiles from the game board (depots) by +/- 1 for free (without spending workers).",
+    "summary": "Free +/- 1 when taking tiles from depots",
+    "details": "Only applies to the Take Tile action, not placement",
+    "extra": null
+  },
+  "knowledge_13": {
+    "id": "knowledge_13",
+    "name": "#13 - Worker Action Silverling Bonus",
+    "body": "Receive 1 Silverling in addition to the 2 worker tiles when choosing the 'Take Worker Tiles' dice action.",
+    "summary": "+1 Silverling when taking workers",
+    "details": "Only applies to the dice action, not other worker-gaining effects",
+    "extra": null
+  },
+  "knowledge_14": {
+    "id": "knowledge_14",
+    "name": "#14 - Enhanced Worker Action",
+    "body": "Receive 4 worker tiles (instead of the usual 2) when choosing the 'Take Worker Tiles' dice action.",
+    "summary": "4 workers instead of 2 from dice action",
+    "details": "Only applies to the dice action, not other worker-gaining effects",
+    "extra": null
+  },
+  "knowledge_15": {
+    "id": "knowledge_15",
+    "name": "#15 - Goods Type Diversity Bonus",
+    "body": "Receive 3 VPs at the end of the game for each goods type that was sold during the game. Unsold goods are ignored.",
+    "summary": "3 VP per goods type sold at end",
+    "details": "End-game scoring. Only counts distinct types of goods that were sold, not individual tiles.",
+    "extra": "End-game scoring"
+  },
+  "knowledge_16": {
+    "id": "knowledge_16",
+    "name": "#16 - Warehouse Bonus",
+    "body": "Receive 4 VPs at the end of the game for each Warehouse (building) that has been added to your estate.",
+    "summary": "4 VP per Warehouse on estate",
+    "details": "End-game scoring",
+    "extra": "End-game scoring"
+  },
+  "knowledge_17": {
+    "id": "knowledge_17",
+    "name": "#17 - Carpenter's Workshop Bonus",
+    "body": "Receive 4 VPs at the end of the game for each Carpenter's Workshop (building) that has been added to your estate.",
+    "summary": "4 VP per Carpenter's Workshop on estate",
+    "details": "End-game scoring",
+    "extra": "End-game scoring"
+  },
+  "knowledge_18": {
+    "id": "knowledge_18",
+    "name": "#18 - Church Bonus",
+    "body": "Receive 4 VPs at the end of the game for each Church (building) that has been added to your estate.",
+    "summary": "4 VP per Church on estate",
+    "details": "End-game scoring",
+    "extra": "End-game scoring"
+  },
+  "knowledge_19": {
+    "id": "knowledge_19",
+    "name": "#19 - Market Bonus",
+    "body": "Receive 4 VPs at the end of the game for each Market (building) that has been added to your estate.",
+    "summary": "4 VP per Market on estate",
+    "details": "End-game scoring",
+    "extra": "End-game scoring"
+  },
+  "knowledge_20": {
+    "id": "knowledge_20",
+    "name": "#20 - Boarding House Bonus",
+    "body": "Receive 4 VPs at the end of the game for each Boarding House (building) that has been added to your estate.",
+    "summary": "4 VP per Boarding House on estate",
+    "details": "End-game scoring",
+    "extra": "End-game scoring"
+  },
+  "knowledge_21": {
+    "id": "knowledge_21",
+    "name": "#21 - Bank Bonus",
+    "body": "Receive 4 VPs at the end of the game for each Bank (building) that has been added to your estate.",
+    "summary": "4 VP per Bank on estate",
+    "details": "End-game scoring",
+    "extra": "End-game scoring"
+  },
+  "knowledge_22": {
+    "id": "knowledge_22",
+    "name": "#22 - City Hall Bonus",
+    "body": "Receive 4 VPs at the end of the game for each City Hall (building) that has been added to your estate.",
+    "summary": "4 VP per City Hall on estate",
+    "details": "End-game scoring",
+    "extra": "End-game scoring"
+  },
+  "knowledge_23": {
+    "id": "knowledge_23",
+    "name": "#23 - Watchtower Bonus",
+    "body": "Receive 4 VPs at the end of the game for each Watchtower (building) that has been added to your estate.",
+    "summary": "4 VP per Watchtower on estate",
+    "details": "End-game scoring",
+    "extra": "End-game scoring"
+  },
+  "knowledge_24": {
+    "id": "knowledge_24",
+    "name": "#24 - Animal Diversity Bonus",
+    "body": "Receive 4 VPs at the end of the game for each animal type that has been added to your estate.",
+    "summary": "4 VP per animal type on estate",
+    "details": "End-game scoring. Counts distinct animal types, not individual tiles.",
+    "extra": "End-game scoring"
+  },
+  "knowledge_25": {
+    "id": "knowledge_25",
+    "name": "#25 - Sold Goods Bonus",
+    "body": "Receive 1 VP at the end of the game for each sold goods tile. Unsold goods are ignored.",
+    "summary": "1 VP per goods tile sold at end",
+    "details": "End-game scoring. Counts individual tiles sold, not types.",
+    "extra": "End-game scoring"
+  },
+  "knowledge_26": {
+    "id": "knowledge_26",
+    "name": "#26 - Bonus Tile Collector",
+    "body": "Receive 2 VPs at the end of the game for each bonus tile claimed (large or small).",
+    "summary": "2 VP per bonus tile claimed",
+    "details": "End-game scoring. Includes both large and small color-completion bonus tiles.",
+    "extra": "End-game scoring"
+  }
+}
