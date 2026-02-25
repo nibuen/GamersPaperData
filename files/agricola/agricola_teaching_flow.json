@@ -141,7 +141,39 @@
       ],
       "options": [
         { "label": "Got it", "next_node": "the_harvest" },
-        { "label": "How do animals work?", "next_node": "animals_and_pastures" }
+        { "label": "How do animals work?", "next_node": "animals_and_pastures" },
+        { "label": "Tell me about the cards", "next_node": "cards_overview" }
+      ]
+    },
+    {
+      "id": "cards_overview",
+      "title": "Occupations & Improvements",
+      "content": [
+        {
+          "description": "If you're playing the full game (not the Family game), each player starts with a hand of 7 Occupation cards and 7 Minor Improvement cards. These are a big part of the strategy.",
+          "icon": "CardsFan"
+        },
+        {
+          "description": "Occupations (yellow) — special abilities you play by spending Food. They can bend the rules in powerful ways, like giving you extra resources or discounts.",
+          "style": "bullet",
+          "icon": "Card"
+        },
+        {
+          "description": "Minor Improvements (orange) — small upgrades you play by spending resources. Many provide ongoing benefits or end-game VP.",
+          "style": "bullet",
+          "icon": "Card"
+        },
+        {
+          "description": "Major Improvements (red) — 10 shared cards available to everyone. These include cooking upgrades (Fireplace, Ovens) and resource converters. First come, first served.",
+          "style": "bullet",
+          "icon": "Fire"
+        },
+        {
+          "description": "Tip: look at your hand early and build a strategy around your best cards. They can completely change how you approach the game."
+        }
+      ],
+      "options": [
+        { "label": "Got it", "next_node": "the_harvest" }
       ]
     },
     {
