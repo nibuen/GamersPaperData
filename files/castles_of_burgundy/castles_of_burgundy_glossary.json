@@ -1,0 +1,100 @@
+{
+  "castle_tile": {
+    "term": "Castle Tile",
+    "definition": "Dark green hex tile. When placed, immediately take one free action as if you had a third die of any value.",
+    "context": "Tile Types",
+    "icon": "Hexagon",
+    "tint": "#2D5A27"
+  },
+  "pasture_tile": {
+    "term": "Pasture Tile",
+    "definition": "Light green hex tile showing an animal (cow, pig, chicken, or sheep). Score VP for the animal; if the same type already exists in that pasture region, those score again too.",
+    "context": "Tile Types",
+    "icon": "Hexagon",
+    "tint": "#7CB342"
+  },
+  "ship_tile": {
+    "term": "Ship Tile",
+    "definition": "Blue hex tile. When placed, take all goods from any one depot and advance on the turn order track.",
+    "context": "Tile Types",
+    "icon": "Hexagon",
+    "tint": "#1565C0"
+  },
+  "building_tile": {
+    "term": "Building Tile",
+    "definition": "Brown hex tile. Eight types (Warehouse, Carpenter, Church, Market, Boarding House, Bank, City Hall, Watchtower), each with a unique effect when placed. No duplicate types in the same connected brown region.",
+    "context": "Tile Types",
+    "icon": "Hexagon",
+    "tint": "#C8A064"
+  },
+  "knowledge_tile": {
+    "term": "Knowledge Tile",
+    "definition": "Yellow hex tile granting an ongoing ability or end-game scoring bonus. 26 different types exist.",
+    "context": "Tile Types",
+    "icon": "Hexagon",
+    "tint": "#F9A825"
+  },
+  "mine_tile": {
+    "term": "Mine Tile",
+    "definition": "Grey hex tile. No immediate effect, but earns 1 Silverling at the end of every phase for the rest of the game.",
+    "context": "Tile Types",
+    "icon": "Hexagon",
+    "tint": "#78909C"
+  },
+  "black_depot": {
+    "term": "Black Depot",
+    "definition": "Central depot on the main board. Once per turn (in addition to 2 dice actions), spend 2 Silverlings to buy any one tile from it — no die needed.",
+    "context": "Main Board",
+    "icon": "Hexagon",
+    "tint": "#37474F"
+  },
+  "depot": {
+    "term": "Depot",
+    "definition": "One of the 6 numbered sections on the main board (numbered 1–6) that hold hex tiles available for drafting. A die matching the depot number is needed to take a tile from it.",
+    "context": "Main Board",
+    "icon": "HexagonOutline",
+    "tint": "#5C6BC0"
+  },
+  "estate": {
+    "term": "Estate",
+    "definition": "Your personal board with colored hex spaces. Tiles are placed here to score points by completing regions.",
+    "context": "Player Board",
+    "icon": "HexagonTile",
+    "tint": "#26A69A"
+  },
+  "silverling": {
+    "term": "Silverling",
+    "definition": "The game's currency. Used to buy tiles from the black depot (costs 2). Earned from selling goods and mine income. Worth 1 VP at game end.",
+    "context": "Resources",
+    "icon": "Dollar",
+    "tint": "#FFD54F"
+  },
+  "workers": {
+    "term": "Worker",
+    "definition": "Spent to adjust any die result by +1 or −1, wrapping around (1↔6). Multiple workers can be spent on the same die. Pairs of leftover workers are worth 1 VP at game end.",
+    "context": "Resources",
+    "icon": "Pawn",
+    "tint": "#8D6E63"
+  },
+  "region": {
+    "term": "Region",
+    "definition": "A connected group of same-colored spaces on the estate board. Completing a region (filling all spaces) scores VP based on size and the current phase.",
+    "context": "Scoring",
+    "icon": "Puzzle",
+    "tint": "#AB47BC"
+  },
+  "phase": {
+    "term": "Phase",
+    "definition": "The game has 5 phases (A–E), each consisting of 5 rounds. New tiles and goods are placed at the start of each phase. The phase bonus for completing regions decreases from 10 VP (A) to 2 VP (E).",
+    "context": "Game Structure",
+    "icon": "Hourglass",
+    "tint": "#5C6BC0"
+  },
+  "goods": {
+    "term": "Goods Tiles",
+    "definition": "Round tiles collected via ships. Sold using a die action matching the goods space number. Selling all goods of one type earns Silverlings and VP. Leftover goods are worth 1 VP each at game end.",
+    "context": "Resources",
+    "icon": "TokensStack",
+    "tint": "#EF6C00"
+  }
+}
