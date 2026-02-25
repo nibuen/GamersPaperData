@@ -1,0 +1,329 @@
+{
+  "game_name": "The Castles of Burgundy",
+  "designer": "Stefan Feld",
+  "publisher": "alea / Ravensburger",
+  "game_overview": "The Castles of Burgundy is a dice-driven strategy game set in the Loire Valley of medieval France. Players take on the role of aristocrats expanding their estates by acquiring and placing hex tiles representing settlements, knowledge, livestock, trade goods, and more. Each round, players roll two dice and use them to perform actions: taking tiles from the central board, adding tiles to their estate, selling goods, or gaining workers. Workers can adjust die results, giving players flexibility. Points are scored by completing colored regions on your estate, selling goods, and through various bonus effects. The game rewards efficient planning and tactical adaptation to dice rolls.",
+  "objective": "Score the most victory points over 5 phases by completing regions on your estate, selling goods, and leveraging tile abilities.",
+  "min_players": 2,
+  "max_players": 4,
+  "bgg_link": "https://boardgamegeek.com/boardgame/84876/the-castles-of-burgundy",
+  "play_time_minutes": 90,
+  "components_overview": [
+    {
+      "name": "Main Game Board",
+      "type": "Board",
+      "description": "Central board with 6 numbered depots for 6-sided tiles, a black central depot, 5 goods tile spaces per phase, a turn order track, and a VP track."
+    },
+    {
+      "name": "Player Boards",
+      "type": "Board",
+      "description": "Individual estate boards with colored hex regions. Each player board has a different layout. Spaces are numbered 1-6 corresponding to die values.",
+      "count": 4
+    },
+    {
+      "name": "6-Sided Tiles",
+      "type": "Tile",
+      "icon": "Hexagon",
+      "tint": "#26A69A",
+      "description": "Hex tiles in 6 colors: Dark Green (Castles), Light Green (Animals), Blue (Ships), Brown (Buildings), Yellow (Knowledge), Grey (Mines). Placed on matching-color spaces on player estates."
+    },
+    {
+      "name": "Knowledge Tiles",
+      "type": "Tile",
+      "icon": "Hexagon",
+      "tint": "#F9A825",
+      "description": "26 different yellow tiles providing ongoing abilities or end-game scoring bonuses.",
+      "action": {
+        "name": "CardList",
+        "value": "castles_of_burgundy_knowledge_tiles.json"
+      }
+    },
+    {
+      "name": "Goods Tiles",
+      "type": "Tile",
+      "icon": "TokensStack",
+      "tint": "#EF6C00",
+      "description": "Round tiles with phase letters (A-E) on the back. Placed on depots each round. When sold, provide Silverlings and VP."
+    },
+    {
+      "name": "Bonus Tiles",
+      "type": "Tile",
+      "description": "Large and small bonus tiles for each tile color. Awarded to the first and second players to fill all spaces of a color on their estate.",
+      "condition": {"min_count_variant": 2, "max_count_variant": 2}
+    },
+    {
+      "name": "Bonus Tiles",
+      "type": "Tile",
+      "description": "Large and small bonus tiles for each tile color. Awarded to the first and second players to fill all spaces of a color on their estate.",
+      "condition": {"min_count_variant": 3}
+    },
+    {
+      "name": "Silverlings",
+      "type": "Money",
+      "icon": "Dollar",
+      "tint": "#FFD54F",
+      "description": "Currency used to buy tiles from the black central depot (costs 2 Silverlings). Earned from selling goods and mine income."
+    },
+    {
+      "name": "Worker Tiles",
+      "type": "Token",
+      "icon": "Pawn",
+      "tint": "#8D6E63",
+      "description": "Spent to adjust any die result by +/- 1 (including wrapping from 1 to 6 and vice versa). Multiple workers can be spent on the same die."
+    },
+    {
+      "name": "Dice",
+      "type": "Dice",
+      "icon": "Dice6",
+      "description": "2 colored dice per player (one pair per player color) plus 1 white die for the start player to determine goods placement.",
+      "count": 9,
+      "condition": {"min_count_variant": 2, "max_count_variant": 2}
+    },
+    {
+      "name": "Dice",
+      "type": "Dice",
+      "icon": "Dice6",
+      "description": "2 colored dice per player (one pair per player color) plus 1 white die for the start player to determine goods placement.",
+      "count": 9,
+      "condition": {"min_count_variant": 3, "max_count_variant": 4}
+    }
+  ],
+  "setup": [
+    {
+      "description": "Place the main game board in the center of the table.",
+      "short_description": "Place board"
+    },
+    {
+      "description": "Sort all 6-sided tiles by color and place them face-down in supply piles. Randomly draw tiles and place them face-up on the matching-color numbered depot spaces on the board.",
+      "short_description": "Fill depots"
+    },
+    {
+      "description": "Sort goods tiles by phase letter (A-E) on the back. Place the 5 goods tiles for Phase A face-up on the 5 goods spaces on the board.",
+      "short_description": "Place goods"
+    },
+    {
+      "description": "Place bonus tiles (large and small) for each color near the board.",
+      "short_description": "Bonus tiles"
+    },
+    {
+      "description": "Each player takes a player board, a matching pair of colored dice, 1 starting castle tile (placed on the dark green space marked with a star), 1 Silverling, and 3 worker tiles.",
+      "short_description": "Player setup"
+    },
+    {
+      "description": "Place player markers on the turn order track. Determine a random start player.",
+      "short_description": "Turn order",
+      "action": {"type": "dice_roll", "use_player_count": true, "label": "Player"}
+    }
+  ],
+  "gameplay": {
+    "turn_structure": "The game lasts 5 phases (A through E). Each phase consists of 5 rounds. At the start of each phase, refill the depots with new tiles and place 5 new goods tiles. At the end of each phase, players with mines receive 1 Silverling per mine. Each round, the start player rolls the white die to place a goods tile on the matching depot, then all players roll their 2 dice simultaneously and take turns in turn order.",
+    "actions": [
+      {
+        "name": "Take a Tile from a Depot",
+        "description": "Use one die to take a 6-sided tile from the depot matching your die result. Place it on any empty storage space on your player board (3 storage spaces available).",
+        "steps": [
+          {"description": "Choose one of your dice."},
+          {"description": "Take one tile from the depot matching that die number."},
+          {"description": "Place the tile on an empty storage space on your player board."}
+        ],
+        "notes": [
+          {"description": "If the matching depot is empty, this action cannot be taken with that die."},
+          {"description": "You have 3 storage spaces. If all are full, you cannot take more tiles."}
+        ]
+      },
+      {
+        "name": "Place a Tile on Your Estate",
+        "description": "Use one die to take a tile from your storage and add it to your estate. The estate space must match the die number, be the correct color for the tile, and be adjacent to a previously placed tile.",
+        "steps": [
+          {"description": "Choose one of your dice."},
+          {"description": "Choose a tile from your storage area."},
+          {"description": "Place it on an empty estate space matching the die number."},
+          {"description": "The space must match the tile's color and be adjacent to at least one previously placed tile."},
+          {"description": "Resolve the tile's placement effect (if any)."}
+        ],
+        "notes": [
+          {"description": "Castle (dark green): Immediately take one additional action as if you had an extra die of any value."},
+          {"description": "Ship (blue): Take ALL goods tiles from any one depot and add them to your goods storage. Then advance one space on the turn order track."},
+          {"description": "Animal (light green): Score VP equal to the number shown on the tile. If the pasture already contains animals of the same type, those score again too."},
+          {"description": "Mine (grey): No immediate effect. At the end of each phase, receive 1 Silverling per mine on your estate."},
+          {"description": "Building (brown): Each building type has a unique immediate effect (see Buildings section)."},
+          {"description": "Knowledge (yellow): Gain an ongoing ability or end-game scoring bonus (see Knowledge Tiles reference).", "action": {"type": "card_list", "value": "castles_of_burgundy_knowledge_tiles.json", "label": "Knowledge"}},
+          {"description": "No identical buildings (brown tiles) may be placed in the same city (connected brown region)."}
+        ]
+      },
+      {
+        "name": "Sell Goods",
+        "description": "Use one die to sell all goods of one type. The goods type must match the die result.",
+        "steps": [
+          {"description": "Choose one of your dice."},
+          {"description": "Sell ALL goods tiles of the matching type from your goods storage."},
+          {"description": "Receive 1 Silverling per tile sold."},
+          {"description": "Receive VP per tile sold based on player count."}
+        ],
+        "notes": [
+          {
+            "description": "Receive 2 VP per goods tile sold.",
+            "condition": {"min_count_variant": 2, "max_count_variant": 2}
+          },
+          {
+            "description": "Receive 3 VP per goods tile sold.",
+            "condition": {"min_count_variant": 3, "max_count_variant": 3}
+          },
+          {
+            "description": "Receive 4 VP per goods tile sold.",
+            "condition": {"min_count_variant": 4, "max_count_variant": 4}
+          },
+          {"description": "You must sell ALL tiles of the chosen type, not just some."}
+        ]
+      },
+      {
+        "name": "Take Worker Tiles",
+        "description": "Use one die (regardless of the result) to take 2 worker tiles from the supply.",
+        "steps": [
+          {"description": "Choose one of your dice (the number does not matter)."},
+          {"description": "Take 2 worker tiles from the supply."}
+        ],
+        "notes": [
+          {"description": "Workers can be spent to adjust any die result by +/- 1 each (wraps around: 1 to 6 and 6 to 1). Multiple workers can modify the same die."}
+        ]
+      },
+      {
+        "name": "Buy from the Black Depot",
+        "description": "Once per turn (in addition to your two dice actions), you may spend 2 Silverlings to buy any one tile from the central black depot and place it in your storage.",
+        "steps": [
+          {"description": "Pay 2 Silverlings."},
+          {"description": "Take any one tile from the central black depot."},
+          {"description": "Place it on an empty storage space on your player board."}
+        ],
+        "notes": [
+          {"description": "This is optional and does not use a die."},
+          {"description": "Limited to one purchase per turn."},
+          {"description": "Requires an empty storage space."}
+        ]
+      }
+    ],
+    "key_concepts": [
+      {
+        "name": "Region Completion Scoring",
+        "description": "When all spaces of a connected colored region are filled, score VP based on region size plus a phase bonus.",
+        "action": {"type": "value_grid", "columns": [["Size", "1", "2", "3", "4", "5", "6", "7", "8"], ["VP", "1", "3", "6", "10", "15", "21", "28", "36"]]}
+      },
+      {
+        "name": "Color Completion Bonus",
+        "description": "The first player to fill ALL spaces of one color across their entire estate claims the large bonus tile for that color. The second player claims the small bonus tile."
+      },
+      {
+        "name": "Large Bonus Tile VP",
+        "description": "5 VP with 2 players, 6 VP with 3 players, 7 VP with 4 players."
+      },
+      {
+        "name": "Small Bonus Tile VP",
+        "description": "2 VP with 2 players, 3 VP with 3 players, 4 VP with 4 players."
+      },
+      {
+        "name": "Buildings (Brown Tiles)",
+        "description": "8 building types, each with an immediate effect when placed: Warehouse - sell any one goods type. Carpenter's Workshop - take any one building tile from the main board. Church - take any one mine, castle, or knowledge tile from the main board. Market - take any one animal or ship tile from the main board. Boarding House - take 4 worker tiles. Bank - take 2 Silverlings. City Hall - immediately add an additional 6-sided tile from your storage to your estate (as if you had an extra die of any result). Watchtower - immediately receive 4 VP."
+      },
+      {
+        "name": "Phase Bonus (Timing)",
+        "description": "Complete a region earlier for more bonus VP.",
+        "action": {"type": "value_grid", "columns": [["Phase", "A", "B", "C", "D", "E"], ["Bonus", "+10", "+8", "+6", "+4", "+2"]]}
+      },
+      {
+        "name": "Phase Structure",
+        "description": "Start of phase: Remove all remaining 6-sided tiles from depots and randomly draw new ones. Place 5 goods tiles for the current phase. End of phase: Players with mines receive 1 Silverling per mine."
+      },
+      {
+        "name": "Worker Tiles",
+        "description": "Each worker tile spent adjusts one die result by +/- 1, including wrapping from 1 to 6 and vice versa. Multiple workers can be spent on the same die. Workers are spent before choosing an action."
+      }
+    ]
+  },
+  "end_game": {
+    "trigger": "The game ends after the 5th round of Phase E (25 total rounds).",
+    "intermediate_scoring": [
+      {
+        "when": "During Play (Phases A–E)",
+        "source": "Region Completion",
+        "description": "Fill all spaces of a connected same-color region → VP by size (1→1, 2→3, 3→6, 4→10, 5→15, 6→21, 7→28, 8→36) plus phase bonus (A=+10, B=+8, C=+6, D=+4, E=+2)."
+      },
+      {
+        "when": "During Play",
+        "source": "Animal Placement",
+        "description": "Score VP shown on tile. Same-type animals already in that pasture score again."
+      },
+      {
+        "when": "During Play",
+        "source": "Goods Sales",
+        "description": "1 Silverling + VP per tile sold (2p→2VP, 3p→3VP, 4p→4VP)."
+      },
+      {
+        "when": "During Play",
+        "source": "Color Completion",
+        "description": "First to fill all spaces of one color → large bonus tile. Second → small bonus tile."
+      }
+    ],
+    "procedure": [
+      "Complete the final round of Phase E.",
+      "Resolve end-of-phase mine income for Phase E.",
+      "Proceed to final scoring."
+    ],
+    "final_scoring": [
+      {
+        "source": "VP Track",
+        "description": "Points scored during the game from region completion, goods sales, tile effects, and bonuses."
+      },
+      {
+        "source": "Unsold Goods",
+        "description": "1 VP for each unsold goods tile remaining in your goods storage."
+      },
+      {
+        "source": "Silverlings",
+        "description": "1 VP for each remaining Silverling."
+      },
+      {
+        "source": "Worker Tiles",
+        "description": "1 VP for every 2 remaining worker tiles (rounded down)."
+      },
+      {
+        "source": "Yellow Knowledge Tiles",
+        "description": "Score VP from any end-game-scoring knowledge tiles on your estate. Knowledge tiles still in storage do not score."
+      }
+    ]
+  },
+  "winning_condition": "The player with the most VP wins. In case of a tie, the tied player with fewer empty estate spaces wins.",
+  "tips_for_new_players": [
+    {
+      "tip": "Complete regions early",
+      "description": "Completing regions in Phase A or B gives 10 or 8 bonus VP respectively, compared to only 2 VP in Phase E. Prioritize finishing small regions early."
+    },
+    {
+      "tip": "Castles are powerful",
+      "description": "Placing a castle gives you a free extra action with any die value. This is one of the most powerful effects in the game."
+    },
+    {
+      "tip": "Don't hoard workers",
+      "description": "Workers only score 1 VP per 2 at end game. Use them to adjust dice for better placements rather than saving them."
+    },
+    {
+      "tip": "Ships first",
+      "description": "Placing ships early helps you collect goods and advance on the turn order track. Going first gives you the best tile selection."
+    },
+    {
+      "tip": "Tile advantages are immediate",
+      "description": "Additional advantages of tiles (except mines) are triggered when and only when the tile is placed on the estate, not later."
+    },
+    {
+      "tip": "Storage is limited",
+      "description": "You only have 3 storage spaces. Plan ahead so you don't fill up before you can place tiles."
+    },
+    {
+      "tip": "Sell goods in bulk",
+      "description": "You must sell ALL goods of a type at once. Accumulate goods of one type before selling for maximum VP."
+    },
+    {
+      "tip": "No duplicate buildings per city",
+      "description": "You cannot place two identical buildings in the same connected brown region (city), unless you have Knowledge tile #1."
+    }
+  ]
+}
