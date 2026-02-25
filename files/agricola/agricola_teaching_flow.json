@@ -1,0 +1,465 @@
+{
+  "game_id": "agricola",
+  "start_node": "theme_and_goal",
+  "nodes": [
+    {
+      "id": "theme_and_goal",
+      "title": "The Big Picture",
+      "content": [
+        {
+          "description": "You're a farmer in 17th-century Europe. You and your spouse live in a tiny two-room wooden hut with an empty plot of land. Over 14 rounds, you'll plow fields, raise animals, expand your home, and grow your family — all while making sure everyone gets fed."
+        },
+        {
+          "description": "At the end, the player with the most well-rounded farm wins. You're rewarded for having a bit of everything — and penalized for anything you neglect."
+        }
+      ],
+      "options": [
+        { "label": "Got it", "next_node": "your_farmyard" }
+      ]
+    },
+    {
+      "id": "your_farmyard",
+      "title": "Your Farmyard",
+      "content": [
+        {
+          "description": "Each player has a farmyard board with 15 spaces arranged in a 3×5 grid. Two of those spaces start with wooden hut rooms, and each room holds one family member."
+        },
+        {
+          "description": "Over the game, you'll fill those empty spaces with fields (for crops), pastures (fenced areas for animals), more rooms (for more family members), and stables."
+        },
+        {
+          "description": "Any space left empty at the end costs you 1 victory point — so fill up your farm!"
+        }
+      ],
+      "options": [
+        { "label": "Got it", "next_node": "how_a_round_works" }
+      ]
+    },
+    {
+      "id": "how_a_round_works",
+      "title": "How a Round Works",
+      "content": [
+        {
+          "description": "The game has 14 rounds split into 6 stages. Each round follows four quick phases:", "style": "header"
+        },
+        {
+          "description": "Reveal a new Round card — this adds a new action space to the board. The actions get better as the game goes on.",
+          "style": "numbered"
+        },
+        {
+          "description": "Replenish — resources pile up on accumulating spaces. The longer nobody takes them, the bigger the pile gets.",
+          "style": "numbered"
+        },
+        {
+          "description": "Work Phase — this is the main event. Take turns placing your family members on action spaces.",
+          "style": "numbered"
+        },
+        {
+          "description": "Return Home — everyone comes back to the farmyard, ready for next round.",
+          "style": "numbered"
+        }
+      ],
+      "options": [
+        { "label": "Tell me about the Work Phase", "next_node": "worker_placement" },
+        { "label": "What are the 6 stages?", "next_node": "what_are_stages" }
+      ]
+    },
+    {
+      "id": "what_are_stages",
+      "title": "The 6 Stages",
+      "content": [
+        {
+          "description": "The 14 rounds are divided into 6 stages. New action spaces are revealed from each stage's deck:", "style": "header"
+        },
+        {
+          "description": "Stages 1–3 (Rounds 1–9): Basics — Sow & Bake Bread, Fences, Sheep, first Family Growth, Vegetables, Wild Boar, Stone",
+          "style": "bullet"
+        },
+        {
+          "description": "Stages 4–6 (Rounds 10–14): Advanced — Cattle, more Stone, Plow & Sow, Family Growth without a Room, final Renovation",
+          "style": "bullet"
+        },
+        {
+          "description": "A Harvest happens at the end of rounds 4, 7, 9, 11, 13, and 14 — so they get more frequent as the game goes on. Plan ahead!"
+        }
+      ],
+      "options": [
+        { "label": "Got it", "next_node": "how_a_round_works" }
+      ]
+    },
+    {
+      "id": "worker_placement",
+      "title": "The Work Phase",
+      "content": [
+        {
+          "description": "This is the core of Agricola. In turn order, each player places one family member on an unoccupied action space and immediately takes that action.",
+          "action": { "type": "icon_formula", "formula": "{Pawn} {ArrowRight} action space {ArrowRight} do it" }
+        },
+        {
+          "description": "The key rule: only one person per space per round (this includes yourself). If someone takes the action you wanted, you'll have to do something else."
+        },
+        {
+          "description": "You start with 2 family members, so you get 2 actions per round. Grow your family and you'll get more — up to 5 actions per round."
+        }
+      ],
+      "options": [
+        { "label": "What other actions are there?", "next_node": "key_actions" }
+      ]
+    },
+    {
+      "id": "key_actions",
+      "title": "What You Can Do",
+      "content": [
+        {
+          "description": "There are many action spaces, but they boil down to a few categories:", "style": "header"
+        },
+        {
+          "description": "Gather resources — take Wood, Clay, Reed, Stone, or Food from accumulating spaces. The longer they sit, the more you get.",
+          "style": "bullet",
+          "icon": "TokensStack"
+        },
+        {
+          "description": "Build — spend resources to add rooms to your hut, build fences for pastures, or renovate your home from Wood to Clay to Stone.",
+          "style": "bullet",
+          "icon": "StructureHouse"
+        },
+        {
+          "description": "Farm — plow fields, sow Grain or Vegetables, and take animals (Sheep, Wild Boar, Cattle).",
+          "style": "bullet",
+          "icon": "ResourceWheat"
+        },
+        {
+          "description": "Play cards — Occupation and Improvement cards give you special abilities and alternate ways to score.",
+          "style": "bullet",
+          "icon": "Card"
+        },
+        {
+          "description": "Grow your family — add a new family member (needs a spare room). More family = more actions each round.",
+          "style": "bullet",
+          "icon": "Pawn"
+        }
+      ],
+      "options": [
+        { "label": "Got it", "next_node": "the_harvest" },
+        { "label": "How do animals work?", "next_node": "animals_and_pastures" },
+        { "label": "Tell me about the cards", "next_node": "cards_overview" }
+      ]
+    },
+    {
+      "id": "cards_overview",
+      "title": "Occupations & Improvements",
+      "content": [
+        {
+          "description": "If you're playing the full game (not the Family game), each player starts with a hand of 7 Occupation cards and 7 Minor Improvement cards. These are a big part of the strategy.",
+          "icon": "CardsFan"
+        },
+        {
+          "description": "Occupations (yellow) — special abilities you play by spending Food. They can bend the rules in powerful ways, like giving you extra resources or discounts.",
+          "style": "bullet",
+          "icon": "Card"
+        },
+        {
+          "description": "Minor Improvements (orange) — small upgrades you play by spending resources. Many provide ongoing benefits or end-game VP.",
+          "style": "bullet",
+          "icon": "Card"
+        },
+        {
+          "description": "Major Improvements (red) — 10 shared cards available to everyone. These include cooking upgrades (Fireplace, Ovens) and resource converters. First come, first served.",
+          "style": "bullet",
+          "icon": "Fire"
+        },
+        {
+          "description": "Tip: look at your hand early and build a strategy around your best cards. They can completely change how you approach the game."
+        }
+      ],
+      "options": [
+        { "label": "Got it", "next_node": "key_actions" }
+      ]
+    },
+    {
+      "id": "animals_and_pastures",
+      "title": "Animals & Pastures",
+      "content": [
+        {
+          "description": "Animals need a place to live on your farm. There are three ways to house them:", "style": "header"
+        },
+        {
+          "description": "Fenced pastures — spend Wood to build fences around farmyard spaces. Each enclosed space holds 2 animals.",
+          "style": "numbered"
+        },
+        {
+          "description": "Stables — build inside a pasture to double its capacity. A fenced stable also scores 1 VP at game end.",
+          "style": "numbered"
+        },
+        {
+          "description": "Pet rule — you can keep exactly 1 animal in your home (unfenced, no pasture needed). Great for your first Sheep!",
+          "style": "numbered"
+        },
+        {
+          "description": "Animals that can't be housed must be returned to supply or immediately cooked for Food (if you have a cooking Improvement)."
+        }
+      ],
+      "options": [
+        { "label": "Got it", "next_node": "key_actions" }
+      ]
+    },
+    {
+      "id": "the_harvest",
+      "title": "The Harvest",
+      "content": [
+        {
+          "description": "After certain rounds, a Harvest happens. This is the game's pressure valve — and the reason you can't ignore food production. Three things happen in order:", "style": "header"
+        },
+        {
+          "description": "Field phase — remove 1 crop token from each sown field and add it to your supply. This is your harvest coming in.",
+          "style": "numbered",
+          "icon": "ResourceWheat"
+        },
+        {
+          "description": "Feeding — each family member needs 2 Food. If you can't pay, you take Begging cards worth -3 VP each. Ouch.",
+          "style": "numbered",
+          "action": { "type": "icon_formula", "formula": "{Pawn} = 2 Food" }
+        },
+        {
+          "description": "Breeding — if you have 2+ of the same animal type, you get 1 baby animal (if you have space for it).",
+          "style": "numbered"
+        }
+      ],
+      "options": [
+        { "label": "How do I get Food?", "next_node": "food_engine" },
+        { "label": "Tell me about fields", "next_node": "fields_and_crops" }
+      ]
+    },
+    {
+      "id": "fields_and_crops",
+      "title": "Fields & Crops",
+      "content": [
+        {
+          "description": "Fields are your long-term food investment:", "style": "header"
+        },
+        {
+          "description": "Plow a field — place a field tile on an empty farmyard space.",
+          "style": "numbered"
+        },
+        {
+          "description": "Sow it — place 1 Grain (adds 2 more from supply = 3 total) or 1 Vegetable (adds 1 more = 2 total) on the field.",
+          "style": "numbered",
+          "action": { "type": "icon_formula", "formula": "1 {ResourceWheat} {ArrowRight} 3 on field" }
+        },
+        {
+          "description": "Harvest it — at each Harvest, remove 1 token from each field. A Grain field pays out for 3 harvests!",
+          "style": "numbered"
+        },
+        {
+          "description": "Fields stay plowed forever — once harvested, you can re-sow them without plowing again."
+        }
+      ],
+      "options": [
+        { "label": "Got it", "next_node": "the_harvest" }
+      ]
+    },
+    {
+      "id": "food_engine",
+      "title": "Feeding Your Family",
+      "content": [
+        {
+          "description": "Getting enough Food is the central challenge. Here's how to convert things into Food:", "style": "header"
+        },
+        {
+          "description": "Cooking Improvements (Fireplace, Cooking Hearth) — cook animals or Vegetables into Food at any time. This is the most flexible option.",
+          "style": "bullet",
+          "icon": "Fire",
+          "action": { "type": "icon_formula", "formula": "{Fire} + Sheep {ArrowRight} 2 Food" }
+        },
+        {
+          "description": "Baking — with an oven (Clay Oven, Stone Oven) or Fireplace, convert Grain into Food when you take a \"Bake Bread\" action.",
+          "style": "bullet",
+          "icon": "ResourceWheat"
+        },
+        {
+          "description": "Raw conversion — Grain and Vegetables can always be exchanged for 1 Food each, no Improvement needed. But that's a bad rate.",
+          "style": "bullet"
+        },
+        {
+          "description": "Priority #1 for new players: get a Fireplace or Cooking Hearth early. Without one, feeding your family is a constant struggle."
+        }
+      ],
+      "options": [
+        { "label": "Got it", "next_node": "growing_your_family" },
+        { "label": "What Improvements are there?", "next_node": "major_improvements_detail" }
+      ]
+    },
+    {
+      "id": "major_improvements_detail",
+      "title": "Major Improvements",
+      "content": [
+        {
+          "description": "10 Major Improvement cards are available to everyone (first come, first served):", "style": "header"
+        },
+        {
+          "description": "Fireplace (2 or 3 Clay) — cook animals/veggies into Food, bake Grain into 2 Food",
+          "style": "bullet",
+          "icon": "Fire"
+        },
+        {
+          "description": "Cooking Hearth (4 or 5 Clay) — upgraded Fireplace, better conversion rates",
+          "style": "bullet",
+          "icon": "Fire"
+        },
+        {
+          "description": "Clay Oven (3 Clay + 1 Stone) — bake 1 Grain into 5 Food. Great rate!",
+          "style": "bullet"
+        },
+        {
+          "description": "Stone Oven (1 Clay + 3 Stone) — bake up to 2 Grain into 4 Food each",
+          "style": "bullet"
+        },
+        {
+          "description": "Joinery / Pottery / Basketmaker's Workshop — convert Wood/Clay/Reed to Food at Harvest, plus end-game bonus points",
+          "style": "bullet"
+        },
+        {
+          "description": "Well (3 Stone + 1 Wood) — gives 1 Food per round for 5 rounds. Worth 4 VP.",
+          "style": "bullet"
+        }
+      ],
+      "options": [
+        { "label": "Got it", "next_node": "food_engine" }
+      ]
+    },
+    {
+      "id": "growing_your_family",
+      "title": "Growing Your Family",
+      "content": [
+        {
+          "description": "This is the most important decision in Agricola. More family members mean more actions each round — but also more mouths to feed.",
+          "action": { "type": "icon_formula", "formula": "more {Pawn} = more actions = more Food needed" }
+        },
+        {
+          "description": "To grow your family, you need:", "style": "header"
+        },
+        {
+          "description": "A spare room — build a new room first (costs 5 matching material + 2 Reed), then take the Family Growth action.",
+          "style": "numbered",
+          "icon": "StructureHouse"
+        },
+        {
+          "description": "A food plan — each new family member needs 2 Food per Harvest. Make sure your food engine can handle it before growing.",
+          "style": "numbered"
+        },
+        {
+          "description": "Timing matters: grow early and you get many more actions over the course of the game. Wait too long and you won't benefit enough."
+        }
+      ],
+      "options": [
+        { "label": "How does scoring work?", "next_node": "scoring" }
+      ]
+    },
+    {
+      "id": "scoring",
+      "title": "How Scoring Works",
+      "content": [
+        {
+          "description": "Agricola rewards well-rounded farms. Each category scores 0 to 4 points — but having zero in any category costs you -1 point.",
+          "icon": "Award"
+        },
+        {
+          "description": "You're scored on:", "style": "header"
+        },
+        {
+          "description": "Fields, Pastures, Grain, Vegetables — farming categories",
+          "style": "bullet"
+        },
+        {
+          "description": "Sheep, Wild Boar, Cattle — animal categories",
+          "style": "bullet"
+        },
+        {
+          "description": "Rooms (Clay = 1 VP, Stone = 2 VP each) and Family Members (3 VP each)",
+          "style": "bullet"
+        },
+        {
+          "description": "Fenced Stables (1 VP each), played cards (VP shown), and Begging cards (-3 VP each!)",
+          "style": "bullet"
+        },
+        {
+          "description": "The key insight: don't ignore any category. Even 1 Sheep avoids a -1 penalty and earns +1 instead — a 2-point swing."
+        }
+      ],
+      "options": [
+        { "label": "Got it", "next_node": "ready_to_play" },
+        { "label": "Show me the scoring table", "next_node": "scoring_table" }
+      ]
+    },
+    {
+      "id": "scoring_table",
+      "title": "Scoring Table",
+      "content": [
+        {
+          "description": "Each category uses a similar scale, but thresholds differ:",
+          "style": "header",
+          "action": {
+            "type": "value_grid",
+            "columns": [
+              ["", "-1", "1", "2", "3", "4"],
+              ["Fields", "0-1", "2", "3", "4", "5+"],
+              ["Pastures", "0", "1", "2", "3", "4+"],
+              ["Grain", "0", "1-3", "4-5", "6-7", "8+"],
+              ["Vegs", "0", "1", "2", "3", "4+"]
+            ]
+          }
+        },
+        {
+          "description": "Animals:",
+          "style": "section",
+          "action": {
+            "type": "value_grid",
+            "columns": [
+              ["", "-1", "1", "2", "3", "4"],
+              ["Sheep", "0", "1-3", "4-5", "6-7", "8+"],
+              ["Boar", "0", "1-2", "3-4", "5-6", "7+"],
+              ["Cattle", "0", "1", "2-3", "4-5", "6+"]
+            ]
+          }
+        },
+        {
+          "description": "Plus: 3 VP per Family Member, 1-2 VP per room (Clay/Stone), 1 VP per fenced stable, card bonuses, and -1 VP per unused farmyard space."
+        }
+      ],
+      "options": [
+        { "label": "Got it", "next_node": "scoring" }
+      ]
+    },
+    {
+      "id": "ready_to_play",
+      "title": "Ready to Play!",
+      "content": [
+        {
+          "description": "That covers the essentials. A few tips for your first game:", "style": "header"
+        },
+        {
+          "description": "Get a cooking Improvement early (Fireplace or Cooking Hearth). Without one, feeding is brutal.",
+          "style": "bullet",
+          "icon": "Fire"
+        },
+        {
+          "description": "Grow your family as soon as you can feed them. Going from 2 to 3 workers is a huge power spike.",
+          "style": "bullet",
+          "icon": "Pawn"
+        },
+        {
+          "description": "Don't neglect any scoring category. Even 1 of each animal avoids penalties and earns points.",
+          "style": "bullet",
+          "icon": "Award"
+        },
+        {
+          "description": "Watch the Harvest schedule — they come faster in the later stages. Plan your food supply ahead of time.",
+          "style": "bullet"
+        }
+      ],
+      "options": [
+        { "label": "Let's play!", "next_node": null }
+      ]
+    }
+  ]
+}

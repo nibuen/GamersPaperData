@@ -1,0 +1,163 @@
+{
+  "wood": {
+    "term": "Wood",
+    "definition": "Dark brown building resource. Used for fences (1 each), rooms (5 for Wooden hut), and various Improvements. Accumulates on action spaces each round.",
+    "context": "Resources",
+    "icon": "ResourceWood",
+    "tint": "#5D4037"
+  },
+  "clay": {
+    "term": "Clay",
+    "definition": "Red-brown building resource. Used for Clay hut rooms (1 per room + 1 Reed to renovate), Fireplaces, Cooking Hearths, and other Improvements.",
+    "context": "Resources",
+    "icon": "ResourceStone",
+    "tint": "#BF360C"
+  },
+  "reed": {
+    "term": "Reed",
+    "definition": "White resource required for all renovations and room building (2 Reed per build/renovate action). Scarcer than other resources — plan ahead.",
+    "context": "Resources",
+    "icon": "ResourceWheat",
+    "tint": "#D7CCC8"
+  },
+  "stone": {
+    "term": "Stone",
+    "definition": "Grey building resource. Used for Stone house rooms (1 per room + 1 Reed to renovate), Ovens, and late-game Improvements. Not available until Stage 2.",
+    "context": "Resources",
+    "icon": "ResourceStone",
+    "tint": "#78909C"
+  },
+  "grain": {
+    "term": "Grain",
+    "definition": "Yellow crop token. Can be sown on a field (place 1, add 2 more = 3 total). Harvested 1 per Harvest over 3 rounds. Converts to 1 Food raw, or 2-5 Food when baked with an Improvement.",
+    "context": "Resources",
+    "icon": "ResourceWheat",
+    "tint": "#FDD835"
+  },
+  "vegetables": {
+    "term": "Vegetables",
+    "definition": "Orange crop token. Can be sown on a field (place 1, add 1 more = 2 total). Not available until Stage 3. Converts to 1 Food raw, or 2-3 Food when cooked.",
+    "context": "Resources",
+    "icon": "ResourceApple",
+    "tint": "#FB8C00"
+  },
+  "food": {
+    "term": "Food",
+    "definition": "Yellow tokens used to feed your family during Harvest (2 per adult, 1 per newborn). Also spent to play Occupation cards. Can be obtained by cooking animals, baking Grain, or from certain action spaces.",
+    "context": "Resources",
+    "icon": "TokensStack",
+    "tint": "#FFD54F"
+  },
+  "sheep": {
+    "term": "Sheep",
+    "definition": "White animal cubes. First animal type available (Stage 1). Worth 2 Food when cooked with a Fireplace or Cooking Hearth. Breed during Harvest if you have 2+.",
+    "context": "Animals",
+    "icon": "Pawn",
+    "tint": "#EEEEEE"
+  },
+  "wild_boar": {
+    "term": "Wild Boar",
+    "definition": "Black animal cubes. Available from Stage 3. Worth 2 Food with a Fireplace (3 with Cooking Hearth). Breed during Harvest if you have 2+.",
+    "context": "Animals",
+    "icon": "Pawn",
+    "tint": "#37474F"
+  },
+  "cattle": {
+    "term": "Cattle",
+    "definition": "Brown animal cubes. The last animal type, available from Stage 4. Worth 3 Food when cooked. Breed during Harvest if you have 2+.",
+    "context": "Animals",
+    "icon": "Pawn",
+    "tint": "#6D4C41"
+  },
+  "family_member": {
+    "term": "Family Member",
+    "definition": "Your workers. Each Family member takes one action per round. Start with 2, can grow to 5 via Family Growth actions. Each scores 3 VP at game end. Must be fed 2 Food each Harvest.",
+    "context": "Player Pieces",
+    "icon": "Pawn",
+    "tint": "#1E88E5"
+  },
+  "harvest": {
+    "term": "Harvest",
+    "definition": "Occurs after rounds 4, 7, 9, 11, 13, and 14. Three phases: Field (collect 1 crop per sown field), Feeding (2 Food per adult, 1 per newborn), Breeding (gain 1 animal if you have 2+ of a type).",
+    "context": "Game Phase",
+    "icon": "ResourceWheat",
+    "tint": "#FDD835"
+  },
+  "begging_card": {
+    "term": "Begging Card",
+    "definition": "Taken when you can't feed a Family member during Harvest — 1 card per missing Food. Each costs -3 VP at game end. Cannot be removed once taken.",
+    "context": "Penalties",
+    "icon": "Card",
+    "tint": "#B71C1C"
+  },
+  "fireplace": {
+    "term": "Fireplace",
+    "definition": "Major Improvement (2 or 3 Clay). Lets you cook animals and Vegetables into Food at any time, and bake 1 Grain into 2 Food. Can be upgraded to a Cooking Hearth.",
+    "context": "Major Improvements",
+    "icon": "Fire",
+    "tint": "#E64A19"
+  },
+  "cooking_hearth": {
+    "term": "Cooking Hearth",
+    "definition": "Major Improvement (4 or 5 Clay, or upgrade from Fireplace). Better cooking rates than Fireplace — bakes 1 Grain into 3 Food, cooks Vegetables into 3 Food.",
+    "context": "Major Improvements",
+    "icon": "Fire",
+    "tint": "#D84315"
+  },
+  "occupation": {
+    "term": "Occupation",
+    "definition": "Yellow cards dealt at game start (7 per player). Played by spending Food on the Occupation action space. Provide special abilities, discounts, or bonus scoring. Not used in the Family game.",
+    "context": "Cards",
+    "icon": "Card",
+    "tint": "#FBC02D"
+  },
+  "minor_improvement": {
+    "term": "Minor Improvement",
+    "definition": "Orange cards dealt at game start (7 per player). Played by spending resources on an Improvement action space. Provide ongoing benefits or end-game VP. Not used in the Family game.",
+    "context": "Cards",
+    "icon": "Card",
+    "tint": "#FB8C00"
+  },
+  "major_improvement": {
+    "term": "Major Improvement",
+    "definition": "10 red shared cards available to all players (Fireplaces, Cooking Hearths, Ovens, Joinery, Pottery, Basketmaker's Workshop, Well). First come, first served.",
+    "context": "Cards",
+    "icon": "Card",
+    "tint": "#C62828"
+  },
+  "pasture": {
+    "term": "Pasture",
+    "definition": "A fully fenced area on your farmyard that holds animals. Each fenced space holds 2 animals. A stable inside doubles the whole pasture's capacity. Scores 1-4 VP at game end based on count.",
+    "context": "Farm",
+    "icon": "FlagTriangle",
+    "tint": "#43A047"
+  },
+  "field": {
+    "term": "Field",
+    "definition": "A plowed farmyard space that can be sown with Grain or Vegetables. Created by the Plow action. Stays plowed permanently — can be re-sown after harvesting. Scores 1-4 VP at game end.",
+    "context": "Farm",
+    "icon": "ResourceWheat",
+    "tint": "#8D6E63"
+  },
+  "renovation": {
+    "term": "Renovation",
+    "definition": "Upgrade all rooms at once: Wooden hut → Clay hut (1 Clay per room + 1 Reed) or Clay hut → Stone house (1 Stone per room + 1 Reed). Cannot skip levels. Clay rooms = 1 VP each, Stone = 2 VP each.",
+    "context": "Actions",
+    "icon": "StructureHouse",
+    "tint": "#78909C"
+  },
+  "stable": {
+    "term": "Stable",
+    "definition": "Built on a farmyard space (2 Wood each). Inside a pasture, doubles the entire pasture's animal capacity and scores 1 VP. Unfenced, holds exactly 1 animal but scores 0 VP.",
+    "context": "Farm",
+    "icon": "StructureHouse",
+    "tint": "#5D4037"
+  },
+  "round_card": {
+    "term": "Round Card",
+    "definition": "Blue cards revealed one per round, adding new action spaces to the board. Organized into 6 Stages — earlier stages provide basic actions, later stages unlock advanced options like Cattle and Family Growth without a Room.",
+    "context": "Game Structure",
+    "icon": "Card",
+    "tint": "#1565C0"
+  }
+}

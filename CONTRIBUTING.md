@@ -8,10 +8,10 @@ Thank you for helping build a community-maintained library of board game rules! 
 GamersPaperData/
 ├── files/                    # Game data (one folder per game)
 │   └── <game_id>/
-│       ├── <game_id>_rules.json             # Required: Main rules file
-│       ├── <game_id>_<cards>.json           # Optional: Card data files
-│       ├── <game_id>_glossary.json          # Optional: Glossary terms
-│       └── <game_id>_teaching_flow.json     # Optional: Interactive teaching walkthrough
+│       ├── <game_id>_rules.json              # Required: Main rules file
+│       ├── <game_id>_<cards>.json            # Optional: Card data files
+│       ├── <game_id>_glossary.json           # Optional: Glossary terms
+│       └── <game_id>_teaching_flow.json      # Optional: Interactive teaching walkthrough
 ├── icons/                    # SVG icons for game components
 │   ├── README.md             # Icon catalog and usage guide
 │   └── *.svg                 # Icon files
@@ -950,6 +950,109 @@ Let the app filter by player count — your descriptions should read naturally f
 
 ---
 
+## Teaching Flow File (`<game_id>_teaching_flow.json`)
+
+Optional interactive walkthrough that teaches new players how to play. Appears as a "Learn" button on the game landing page.
+
+**File structure:** A directed graph of nodes with a linear main path and optional side branches.
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `game_id` | string | **Yes** | Must match the game's folder identifier |
+| `start_node` | string | **Yes** | ID of the first node to display |
+| `nodes` | array of [TeachingNode](#teaching-node-object) | **Yes** | All nodes in the flow |
+
+### Teaching Node Object
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `id` | string | **Yes** | Unique node identifier (`snake_case`) |
+| `title` | string | **Yes** | Heading displayed above the content |
+| `content` | array of [TeachingContent](#teaching-content-object) | **Yes** | Text and visual content items |
+| `options` | array of [TeachingOption](#teaching-option-object) | **Yes** | Navigation buttons (at least one) |
+
+### Teaching Content Object
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `description` | string | **Yes** | The text to display |
+| `style` | string | No | `"header"`, `"section"`, `"numbered"`, `"bullet"`, or `"body"` (default) |
+| `glossary_ref` | string | No | Key into the game's glossary for icon/tint lookup |
+| `icon` | string | No | Icon name (overrides glossary) |
+| `tint` | string | No | Hex color (e.g. `"#2D5A27"`) or `"rainbow"` |
+| `action` | object | No | `icon_formula`, `value_grid`, `dice_roll`, or `card_list` |
+| `condition` | [Condition](#condition-object) | No | Player count / expansion filter |
+
+### Teaching Option Object
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `label` | string | **Yes** | Button text |
+| `next_node` | string | No | Target node ID. `null` = end of flow (navigates back to game overview) |
+| `condition` | [Condition](#condition-object) | No | Player count / expansion filter |
+
+### Main Path vs. Side Branches
+
+Teaching flows are **linear with optional detours**, not a maze.
+
+- The **first option** in each node is the **main path** (rendered as a filled button)
+- Subsequent options are **side branches** (rendered as outlined buttons with a help icon)
+- `next_node: null` ends the flow and returns to the game overview
+
+**Critical rule: side branches return to the parent node.** When a side branch node's "Got it" button navigates back, it must go to the **parent node** that offered the branch. This lets the learner explore other side branches or press the main-path button to continue forward.
+
+```
+Main path:  A ──→ B ──→ C ──→ D
+                   ↑ ↓
+Side branch: B offers "Details?" ──→ B2 ──→ B  (back to B, where "Got it" → C)
+```
+
+**Example:**
+```json
+// Parent node: key_actions
+"options": [
+  { "label": "Got it", "next_node": "the_harvest" },           // main path → C
+  { "label": "How do animals work?", "next_node": "animals" }  // side branch → B2
+]
+
+// Side branch node: animals
+"options": [
+  { "label": "Got it", "next_node": "key_actions" }  // back to parent (where user can continue or explore)
+]
+```
+
+### Design Guidelines
+
+- **7–12 main path nodes** (3–5 minutes to complete)
+- **2–4 content items per node** — more means the node teaches too much
+- **One concept per node** — split unrelated concepts into separate nodes
+- **Progressive disclosure** — start simple, add complexity through optional branches
+- Write conversationally, not like a rulebook
+
+### Action Types
+
+**Icon Formula** — visual "equation" using game icons:
+```json
+{ "action": { "type": "icon_formula", "formula": "{Fire} + Sheep {ArrowRight} 2 Food" } }
+```
+
+**Value Grid** — table of values (e.g., scoring):
+```json
+{ "action": { "type": "value_grid", "columns": [["Tiles", "VP"], ["1", "1"], ["2", "3"]] } }
+```
+
+**Dice Roll** — interactive die roller:
+```json
+{ "action": { "type": "dice_roll", "min_value": 1, "max_value": 6, "label": "Roll" } }
+```
+
+**Card List** — link to browse a card data file:
+```json
+{ "action": { "type": "card_list", "value": "game_cards.json", "label": "View Cards" } }
+```
+
+---
+
 ## Validation Checklist
 
 Before submitting a pull request:
@@ -962,6 +1065,8 @@ Before submitting a pull request:
 - [ ] All card files referenced by components actually exist in the game folder
 - [ ] Component `type` values are consistent
 - [ ] No placeholder or TODO text remains
+- [ ] Teaching flow side branches return to the parent node (not skip ahead to the next main-path node)
+- [ ] Teaching flow `start_node` exists in the nodes list and all `next_node` references resolve
 - [ ] Game is registered in `registry.json` with matching `id`
 - [ ] If adding translations, language subfolders use ISO 639-1 codes (`de/`, `fr/`, not `_de.json` suffixes)
 - [ ] Translated files use the same filenames as English originals (in language subfolders)

@@ -44,7 +44,7 @@
         { "description": "Tiles can only be placed on matching-color spaces on the estate board." }
       ],
       "options": [
-        { "label": "Got it", "next_node": "starting_stuff" }
+        { "label": "Got it", "next_node": "the_boards" }
       ]
     },
     {
@@ -73,7 +73,7 @@
         { "description": "Multiple workers can be spent on the same die. So if you really need a specific number, workers make it happen." }
       ],
       "options": [
-        { "label": "Got it", "next_node": "a_round" }
+        { "label": "Got it", "next_node": "starting_stuff" }
       ]
     },
     {
@@ -117,7 +117,7 @@
         { "description": "Not every turn is about tiles \u2014 selling goods and stocking up on workers are smart plays too." }
       ],
       "options": [
-        { "label": "Got it", "next_node": "placing_rules" }
+        { "label": "Got it", "next_node": "the_actions" }
       ]
     },
     {
@@ -146,7 +146,7 @@
         { "description": "There's always something to do with a die. Workers help a lot too \u2014 spending 1\u20132 workers to adjust a die and make a placement happen is almost always worth it." }
       ],
       "options": [
-        { "label": "Got it", "next_node": "scoring" }
+        { "label": "Got it", "next_node": "placing_rules" }
       ]
     },
     {
@@ -171,7 +171,7 @@
         { "description": "These are worth a handful of VP depending on player count \u2014 nice to grab but not worth chasing at the expense of region scoring." }
       ],
       "options": [
-        { "label": "Got it", "next_node": "tile_effects" }
+        { "label": "Got it", "next_node": "scoring" }
       ]
     },
     {
@@ -208,7 +208,7 @@
         { "description": "One important rule: no duplicate building types in the same connected brown region." }
       ],
       "options": [
-        { "label": "Got it", "next_node": "ready_to_play" }
+        { "label": "Got it", "next_node": "tile_effects" }
       ]
     },
     {
@@ -219,7 +219,7 @@
         { "description": "This is great for grabbing a specific tile you need without hoping for the right die roll." }
       ],
       "options": [
-        { "label": "Got it", "next_node": "ready_to_play" }
+        { "label": "Got it", "next_node": "tile_effects" }
       ]
     },
     {
@@ -237,3 +237,4 @@
     }
   ]
 }
+
