@@ -1,0 +1,239 @@
+{
+  "game_id": "castles_of_burgundy",
+  "start_node": "theme_and_goal",
+  "nodes": [
+    {
+      "id": "theme_and_goal",
+      "title": "The Big Picture",
+      "content": [
+        {
+          "description": "Castles of Burgundy is set in medieval France. Everyone is building an estate by collecting and placing hex tiles. The goal: score the most victory points over 5 phases by completing regions on your estate."
+        }
+      ],
+      "options": [
+        { "label": "Got it", "next_node": "the_boards" }
+      ]
+    },
+    {
+      "id": "the_boards",
+      "title": "The Boards",
+      "content": [
+        {
+          "description": "There's a main board in the center \u2014 this is where tiles get drafted from. It has 6 numbered sections called 'depots' (numbered 1\u20136), each holding several hex tiles."
+        },
+        {
+          "description": "Each player also has their own estate board with colored hex spaces. Notice the numbers 1\u20136 on the estate too \u2014 these correspond to dice rolls, which is how tiles get placed."
+        }
+      ],
+      "options": [
+        { "label": "Got it", "next_node": "starting_stuff" },
+        { "label": "What do the colors mean?", "next_node": "colors_explained" }
+      ]
+    },
+    {
+      "id": "colors_explained",
+      "title": "Tile Colors",
+      "content": [
+        { "description": "Each color represents a type of tile:", "style": "header" },
+        { "description": "Castles", "glossary_ref": "castle_tile", "style": "bullet" },
+        { "description": "Animals (pastures)", "glossary_ref": "pasture_tile", "style": "bullet" },
+        { "description": "Ships", "glossary_ref": "ship_tile", "style": "bullet" },
+        { "description": "Buildings (8 different types)", "glossary_ref": "building_tile", "style": "bullet" },
+        { "description": "Knowledge (special abilities)", "glossary_ref": "knowledge_tile", "style": "bullet" },
+        { "description": "Mines (income)", "glossary_ref": "mine_tile", "style": "bullet" },
+        { "description": "Tiles can only be placed on matching-color spaces on the estate board." }
+      ],
+      "options": [
+        { "label": "Got it", "next_node": "the_boards" }
+      ]
+    },
+    {
+      "id": "starting_stuff",
+      "title": "Starting Resources",
+      "content": [
+        { "description": "Each player starts with:", "style": "header" },
+        { "description": "A personal estate board", "glossary_ref": "estate", "style": "bullet" },
+        { "description": "2 colored dice", "style": "bullet", "icon": "Dice6", "tint": "rainbow" },
+        { "description": "1 castle tile (already placed on the starred space)", "glossary_ref": "castle_tile", "style": "bullet" },
+        { "description": "1 Silverling (the game's currency)", "glossary_ref": "silverling", "style": "bullet" },
+        { "description": "3 worker tiles", "glossary_ref": "workers", "style": "bullet" },
+        { "description": "The goods tiles for Phase A go face-up on the 5 goods spaces on the main board. Bonus tiles for each color go near the board." }
+      ],
+      "options": [
+        { "label": "Got it", "next_node": "a_round" },
+        { "label": "What do workers do?", "next_node": "workers_preview" }
+      ]
+    },
+    {
+      "id": "workers_preview",
+      "title": "Workers",
+      "content": [
+        { "description": "Worker tiles adjust dice results. Each worker spent changes a die by +1 or \u22121.", "action": { "type": "icon_formula", "formula": "{Pawn} {ArrowRight} {DiceQuestion} \u00b11" } },
+        { "description": "They even wrap around \u2014 a 1 can become a 6, and vice versa.", "action": { "type": "icon_formula", "formula": "{Dice1} \u2194 {Dice6}" } },
+        { "description": "Multiple workers can be spent on the same die. So if you really need a specific number, workers make it happen." }
+      ],
+      "options": [
+        { "label": "Got it", "next_node": "starting_stuff" }
+      ]
+    },
+    {
+      "id": "a_round",
+      "title": "A Round in 30 Seconds",
+      "content": [
+        { "description": "Each round is simple: everyone rolls their 2 dice at the same time. Then, in turn order, each player uses those 2 dice to take 2 actions.", "action": { "type": "icon_formula", "formula": "{DiceQuestion} {DiceQuestion} {ArrowRight} 2 actions" } },
+        { "description": "Roll, then 2 actions \u2014 that's a round." }
+      ],
+      "options": [
+        { "label": "What are the actions?", "next_node": "the_actions" }
+      ]
+    },
+    {
+      "id": "the_actions",
+      "title": "The 4 Actions",
+      "content": [
+        { "description": "Each die can do one of these four things:", "style": "header" },
+        { "description": "Take a tile \u2014 grab a tile from the depot matching your die number, put it in storage (you have 3 storage slots)", "style": "numbered", "action": { "type": "icon_formula", "formula": "{DiceQuestion} {ArrowRight} {HexagonOutline} {ArrowRight} storage" } },
+        { "description": "Place a tile \u2014 move a tile from storage onto your estate, on a space matching your die number", "style": "numbered", "action": { "type": "icon_formula", "formula": "storage {ArrowRight} {Hexagon} on estate" } },
+        { "description": "Sell goods \u2014 sell all goods of the type matching your die number for Silverlings and VP", "style": "numbered", "action": { "type": "icon_formula", "formula": "{DiceQuestion} {ArrowRight} {TokensStack} {ArrowRight} {Dollar}" } },
+        { "description": "Take 2 workers \u2014 use any die (number doesn't matter) to grab 2 workers", "style": "numbered", "action": { "type": "icon_formula", "formula": "{DiceQuestion} {ArrowRight} {Pawn} {Pawn}" } },
+        { "description": "The first two \u2014 taking and placing tiles \u2014 are the heart of the game." }
+      ],
+      "options": [
+        { "label": "Got it", "next_node": "placing_rules" },
+        { "label": "Show me an example turn", "next_node": "example_turn" }
+      ]
+    },
+    {
+      "id": "example_turn",
+      "title": "Example Turns",
+      "content": [
+        { "description": "Say you roll a 3 and a 5:", "style": "header", "action": { "type": "icon_formula", "formula": "{Dice3}  {Dice5}" } },
+        { "description": "Take a brown building tile from depot 3, put it in storage", "style": "numbered", "action": { "type": "icon_formula", "formula": "{Dice3} {ArrowRight} {HexagonOutline} {ArrowRight} storage" } },
+        { "description": "Place a tile from storage onto space 5 on your estate (color must match, must be adjacent)", "style": "numbered", "action": { "type": "icon_formula", "formula": "{Dice5} {ArrowRight} storage {ArrowRight} {Hexagon} on estate" } },
+        { "description": "Two actions, one per die \u2014 that's a whole turn." },
+        { "description": "Say you roll a 1 and a 4:", "style": "section", "action": { "type": "icon_formula", "formula": "{Dice1}  {Dice4}" } },
+        { "description": "Sell all goods matching depot 1 for Silverlings and VP", "style": "numbered", "action": { "type": "icon_formula", "formula": "{Dice1} {ArrowRight} {TokensStack} {ArrowRight} {Dollar}" } },
+        { "description": "Take 2 workers (any die works, number doesn't matter)", "style": "numbered", "action": { "type": "icon_formula", "formula": "{Dice4} {ArrowRight} {Pawn} {Pawn}" } },
+        { "description": "Not every turn is about tiles \u2014 selling goods and stocking up on workers are smart plays too." }
+      ],
+      "options": [
+        { "label": "Got it", "next_node": "the_actions" }
+      ]
+    },
+    {
+      "id": "placing_rules",
+      "title": "Placing Tiles \u2014 The Key Rules",
+      "content": [
+        { "description": "When a tile goes onto the estate, three things must be true:", "style": "header" },
+        { "description": "The space number matches the die used", "style": "numbered", "action": { "type": "icon_formula", "formula": "space # = {DiceQuestion}" } },
+        { "description": "The space color matches the tile color", "style": "numbered", "action": { "type": "icon_formula", "formula": "{Hexagon} color = {HexagonOutline} color" } },
+        { "description": "The space is next to a tile already on the estate (adjacency rule)", "style": "numbered" },
+        { "description": "Remember, workers can adjust dice by \u00b11 to reach the number you need." }
+      ],
+      "options": [
+        { "label": "Got it", "next_node": "scoring" },
+        { "label": "What if nothing fits?", "next_node": "nothing_fits" }
+      ]
+    },
+    {
+      "id": "nothing_fits",
+      "title": "When Nothing Matches",
+      "content": [
+        { "description": "If a die can't be used for placing \u2014 or nothing looks appealing \u2014 use it for something else:", "style": "header" },
+        { "description": "Take a new tile from a depot", "style": "bullet", "action": { "type": "icon_formula", "formula": "{DiceQuestion} {ArrowRight} {HexagonOutline}" } },
+        { "description": "Sell goods", "style": "bullet", "action": { "type": "icon_formula", "formula": "{DiceQuestion} {ArrowRight} {TokensStack} {ArrowRight} {Dollar}" } },
+        { "description": "Grab 2 workers", "style": "bullet", "action": { "type": "icon_formula", "formula": "{DiceQuestion} {ArrowRight} {Pawn} {Pawn}" } },
+        { "description": "There's always something to do with a die. Workers help a lot too \u2014 spending 1\u20132 workers to adjust a die and make a placement happen is almost always worth it." }
+      ],
+      "options": [
+        { "label": "Got it", "next_node": "placing_rules" }
+      ]
+    },
+    {
+      "id": "scoring",
+      "title": "How Regions Score",
+      "content": [
+        { "description": "The big points come from completing regions \u2014 filling every space in a connected group of the same color." },
+        { "description": "Region size \u2192 Victory Points:", "style": "header", "action": { "type": "value_grid", "columns": [["Tiles", "VP"], ["1", "1"], ["2", "3"], ["3", "6"], ["4", "10"], ["5", "15"], ["6", "21"], ["7", "28"], ["8", "36"]] } },
+        { "description": "Timing bonus \u2014 complete regions early!", "style": "section", "action": { "type": "value_grid", "columns": [["Phase", "VP"], ["A", "+10"], ["B", "+8"], ["C", "+6"], ["D", "+4"], ["E", "+2"]] } },
+        { "description": "Finishing regions early is a big deal." }
+      ],
+      "options": [
+        { "label": "Got it", "next_node": "tile_effects" },
+        { "label": "What about the color bonus tiles?", "next_node": "color_bonus" }
+      ]
+    },
+    {
+      "id": "color_bonus",
+      "title": "Color Completion Bonus",
+      "content": [
+        { "description": "There's also a race: the first player to fill ALL spaces of one color across their entire estate claims the large bonus tile for that color. The second player gets the small bonus tile." },
+        { "description": "These are worth a handful of VP depending on player count \u2014 nice to grab but not worth chasing at the expense of region scoring." }
+      ],
+      "options": [
+        { "label": "Got it", "next_node": "scoring" }
+      ]
+    },
+    {
+      "id": "tile_effects",
+      "title": "What Tiles Do When Placed",
+      "content": [
+        { "description": "Each tile color triggers a special effect when placed on the estate:", "style": "header" },
+        { "description": "Castle: Immediately take a free bonus action \u2014 like having a third die of any value. Very powerful.", "glossary_ref": "castle_tile", "style": "bullet" },
+        { "description": "Ship: Collect all goods from any one depot. Also move up on the turn order track.", "glossary_ref": "ship_tile", "style": "bullet" },
+        { "description": "Animal: Score VP based on the animal shown. If the same animal type is already in that pasture, those score again too.", "glossary_ref": "pasture_tile", "style": "bullet" },
+        { "description": "Mine: No immediate effect, but earns 1 Silverling at the end of every phase for the rest of the game.", "glossary_ref": "mine_tile", "style": "bullet" },
+        { "description": "Building: Each of the 8 building types has a unique effect.", "glossary_ref": "building_tile", "style": "bullet" },
+        { "description": "Knowledge: Grants an ongoing ability or end-game scoring bonus.", "glossary_ref": "knowledge_tile", "style": "bullet" }
+      ],
+      "options": [
+        { "label": "That's enough, let's play!", "next_node": "ready_to_play" },
+        { "label": "Tell me about the buildings", "next_node": "buildings_detail" },
+        { "label": "What about the black depot?", "next_node": "black_depot" }
+      ]
+    },
+    {
+      "id": "buildings_detail",
+      "title": "The 8 Building Types",
+      "content": [
+        { "description": "Each does something different when placed:", "glossary_ref": "building_tile", "style": "header" },
+        { "description": "Warehouse \u2014 immediately sell any one goods type", "style": "bullet" },
+        { "description": "Carpenter \u2014 take any building tile from the main board", "style": "bullet" },
+        { "description": "Church \u2014 take any mine, castle, or knowledge tile from the main board", "style": "bullet" },
+        { "description": "Market \u2014 take any animal or ship tile from the main board", "style": "bullet" },
+        { "description": "Boarding House \u2014 take 4 worker tiles", "style": "bullet" },
+        { "description": "Bank \u2014 take 2 Silverlings", "style": "bullet" },
+        { "description": "City Hall \u2014 immediately place another tile from storage (as if you had an extra die of any value)", "style": "bullet" },
+        { "description": "Watchtower \u2014 immediately score 4 VP", "style": "bullet" },
+        { "description": "One important rule: no duplicate building types in the same connected brown region." }
+      ],
+      "options": [
+        { "label": "Got it", "next_node": "tile_effects" }
+      ]
+    },
+    {
+      "id": "black_depot",
+      "title": "The Black Depot",
+      "content": [
+        { "description": "There's a central black depot on the main board. Once per turn \u2014 in addition to the 2 dice actions \u2014 anyone can spend 2 Silverlings to buy any one tile from it. No die needed.", "glossary_ref": "black_depot" },
+        { "description": "This is great for grabbing a specific tile you need without hoping for the right die roll." }
+      ],
+      "options": [
+        { "label": "Got it", "next_node": "tile_effects" }
+      ]
+    },
+    {
+      "id": "ready_to_play",
+      "title": "Ready to Play!",
+      "content": [
+        { "description": "That covers the essentials. A few things to keep in mind:", "style": "header" },
+        { "description": "The game is 5 phases of 5 rounds each (25 rounds total). Depots refill with new tiles at the start of each phase.", "style": "bullet" },
+        { "description": "At game end, leftover goods, Silverlings, and worker pairs are each worth 1 VP. Knowledge tiles may add end-game scoring.", "style": "bullet" },
+        { "description": "Tip: try to complete small regions early \u2014 the phase bonus drops from 10 VP in Phase A to just 2 in Phase E.", "style": "bullet" }
+      ],
+      "options": [
+        { "label": "Let's play!", "next_node": null }
+      ]
+    }
+  ]
+}
