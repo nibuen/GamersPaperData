@@ -106,7 +106,7 @@
       "short_description": "Bonus tiles"
     },
     {
-      "description": "Each player takes a player board, a matching pair of colored dice, 1 starting castle tile (placed on the center dark green castle space of the estate), 1 Silverling, and 3 worker tiles.",
+      "description": "Each player takes a player board, a matching pair of colored dice, 1 starting castle tile (placed on the dark green space marked with a star), 1 Silverling, and 3 worker tiles.",
       "short_description": "Player setup"
     },
     {
@@ -153,7 +153,7 @@
       },
       {
         "name": "Sell Goods",
-        "description": "Use one die to sell all goods of one type. The goods type must match the die result.",
+        "description": "Goods tiles accumulate in your storage when you place Ship tiles on your estate (each ship lets you take ALL goods from any one depot). Use one die to sell all goods of one type from your storage. The goods type must match the die result.",
         "steps": [
           {"description": "Choose one of your dice."},
           {"description": "Sell ALL goods tiles of the matching type from your goods storage."},
@@ -173,8 +173,7 @@
             "description": "Receive 4 VP per goods tile sold.",
             "condition": {"min_count_variant": 4, "max_count_variant": 4}
           },
-          {"description": "You must sell ALL tiles of the chosen type, not just some."},
-          {"description": "Goods tiles are acquired by placing Ship tiles on your estate -- each ship lets you take ALL goods from any one depot."}
+          {"description": "You must sell ALL tiles of the chosen type, not just some."}
         ]
       },
       {
