@@ -37,7 +37,7 @@
       "subTypes": ["Blue", "Red", "Green", "Yellow", "Black"],
       "description": "45 plastic train pieces per player in 5 colors. Placed on route spaces when claiming routes.",
       "icon": "Pawn",
-      "count": 240
+      "count": 225
     },
     {
       "name": "Scoring Markers",
@@ -171,8 +171,7 @@
             "description": "Route scoring: 1 space = 1 point, 2 spaces = 2 points, 3 spaces = 4 points, 4 spaces = 7 points, 5 spaces = 10 points, 6 spaces = 15 points."
           },
           {
-            "description": "A single player may never claim both routes of a Double Route (two parallel routes between the same cities).",
-            "condition": {"min_count_variant": 4}
+            "description": "A single player may never claim both routes of a Double Route (two parallel routes between the same cities)."
           },
           {
             "description": "Double Routes: only one of the two parallel routes connecting the same cities may be claimed. Once one is claimed, the other is closed to all players.",
@@ -227,9 +226,9 @@
     ]
   },
   "end_game": {
-    "trigger": "When any player's stock of Plastic Train Cars drops to 2 or fewer pieces at the end of their turn, each player (including that player) takes one final turn. Then the game ends and final scoring begins.",
+    "trigger": "When any player's stock of Plastic Train Cars drops to 2 or fewer pieces at the end of their turn, that turn triggers the final round: each other player then takes one final turn. Then the game ends and final scoring begins.",
     "procedure": [
-      "Each player gets exactly one more turn after the trigger (including the triggering player's turn which already happened).",
+      "Each other player gets exactly one more turn after the trigger; the triggering player's final turn has already occurred.",
       "Add points for completed Destination Tickets: if a continuous path of your routes connects both cities on a ticket, add the ticket's point value to your score.",
       "Subtract points for incomplete Destination Tickets: if you failed to connect both cities on a ticket, subtract the ticket's point value from your score.",
       "Award the Longest Path Bonus Card: the player with the longest continuous path of connected routes receives a 10-point bonus."
