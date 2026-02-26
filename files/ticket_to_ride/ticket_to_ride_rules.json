@@ -1,0 +1,297 @@
+{
+  "game_name": "Ticket to Ride",
+  "designer": "Alan R. Moon",
+  "publisher": "Days of Wonder",
+  "game_overview": "Ticket to Ride is a cross-country train adventure where players collect cards of various types of train cars and use them to claim railway routes connecting cities across North America. The longer the routes, the more points they earn. Players also earn points by fulfilling Destination Tickets -- goal cards that connect distant cities -- and by building the longest continuous route.",
+  "objective": "Score the most points by claiming routes between cities, completing Destination Tickets, and building the longest continuous path of routes.",
+  "min_players": 2,
+  "max_players": 5,
+  "bgg_link": "https://boardgamegeek.com/boardgame/9209/ticket-to-ride",
+  "play_time_minutes": 60,
+  "components_overview": [
+    {
+      "name": "Game Board",
+      "type": "Board",
+      "description": "Map of North America showing cities connected by colored and gray routes of varying lengths (1-6 spaces). A scoring track runs around the board edge.",
+      "icon": "Board",
+      "count": 1
+    },
+    {
+      "name": "Train Car Cards",
+      "type": "Card",
+      "subTypes": ["Purple", "Blue", "Orange", "White", "Green", "Yellow", "Black", "Red", "Locomotive"],
+      "description": "110 cards total: 12 each of 8 colors (Purple, Blue, Orange, White, Green, Yellow, Black, Red) plus 14 Locomotive wild cards.",
+      "icon": "Card",
+      "count": 110
+    },
+    {
+      "name": "Destination Tickets",
+      "type": "Card",
+      "description": "30 cards, each showing two cities and a point value (4-22 points). If you connect both cities with a continuous path of your claimed routes by game end, you score the points. If not, you lose that many points. Kept secret until final scoring.",
+      "icon": "CardsFan",
+      "count": 30
+    },
+    {
+      "name": "Plastic Train Cars",
+      "type": "Meeple",
+      "subTypes": ["Blue", "Red", "Green", "Yellow", "Black"],
+      "description": "45 plastic train pieces per player in 5 colors. Placed on route spaces when claiming routes.",
+      "icon": "Pawn",
+      "count": 240
+    },
+    {
+      "name": "Scoring Markers",
+      "type": "Marker",
+      "description": "5 colored wooden markers (one per player) for tracking scores on the board's scoring track.",
+      "icon": "Token",
+      "count": 5
+    },
+    {
+      "name": "Longest Path Bonus Card",
+      "type": "Card",
+      "description": "Awarded at game end to the player with the longest continuous path of routes. Worth 10 bonus points.",
+      "icon": "Award",
+      "count": 1
+    },
+    {
+      "name": "Summary Card",
+      "type": "Card",
+      "description": "Reference card showing the route scoring table and game actions.",
+      "icon": "BookOpen",
+      "count": 1
+    }
+  ],
+  "setup": [
+    {
+      "description": "Place the Game Board in the center of the table.",
+      "short_description": "Place Board"
+    },
+    {
+      "description": "Each player takes a set of 45 colored Plastic Train Cars and the matching Scoring Marker. Place the Scoring Marker on the Start space of the scoring track.",
+      "short_description": "Take Trains & Marker"
+    },
+    {
+      "description": "Shuffle the Train Car Cards and deal 4 cards face-down to each player.",
+      "short_description": "Deal Train Cards"
+    },
+    {
+      "description": "Place the remaining Train Car Cards face-down next to the board as the draw pile. Turn the top 5 cards face-up and place them in a row next to the draw pile.",
+      "short_description": "Create Draw Pile"
+    },
+    {
+      "description": "Shuffle the Destination Tickets and deal 3 cards face-down to each player. Each player looks at their Destination Tickets secretly and must keep at least 2 but may keep all 3. Return any unwanted tickets face-down to the bottom of the Destination Ticket deck.",
+      "short_description": "Deal Destination Tickets"
+    },
+    {
+      "description": "Place the Longest Path Bonus Card face-up next to the board.",
+      "short_description": "Longest Path Card"
+    },
+    {
+      "description": "Randomly determine the starting player.",
+      "short_description": "First Player",
+      "action": {
+        "type": "dice_roll",
+        "use_player_count": true,
+        "label": "Player"
+      }
+    }
+  ],
+  "gameplay": {
+    "turn_structure": "On your turn, you must perform exactly one of three actions: Draw Train Car Cards, Claim a Route, or Draw Destination Tickets. Play then passes clockwise to the next player.",
+    "actions": [
+      {
+        "name": "Draw Train Car Cards",
+        "description": "Draw 2 Train Car Cards to add to your hand. You may draw from the 5 face-up cards or from the top of the draw pile, in any combination.",
+        "steps": [
+          {
+            "description": "Draw your first card: either take one of the 5 face-up cards, or draw the top card from the draw pile."
+          },
+          {
+            "description": "If you took a face-up card, immediately replace it with a new card from the top of the draw pile."
+          },
+          {
+            "description": "Draw your second card: again, take a face-up card or draw from the draw pile."
+          },
+          {
+            "description": "If you took a face-up card, replace it from the draw pile."
+          }
+        ],
+        "notes": [
+          {
+            "description": "If you take a face-up Locomotive as your first draw, you may NOT draw a second card. The Locomotive counts as both draws."
+          },
+          {
+            "description": "You may draw a Locomotive from the top of the draw pile (blind draw) as either of your two draws without penalty."
+          },
+          {
+            "description": "If you draw a non-Locomotive face-up card first, you may NOT then take a face-up Locomotive as your second draw. You may still blind-draw from the deck."
+          },
+          {
+            "description": "If at any time 3 or more of the 5 face-up cards are Locomotives, discard all 5 face-up cards and deal 5 new face-up cards from the draw pile."
+          },
+          {
+            "description": "If the draw pile runs out, shuffle the discards to form a new draw pile. If there are no discards left either, you cannot draw cards (only face-up cards remain)."
+          },
+          {
+            "description": "There is no hand limit for Train Car Cards."
+          }
+        ]
+      },
+      {
+        "name": "Claim a Route",
+        "description": "Play a set of Train Car Cards from your hand to claim one open route on the board between two adjacent cities.",
+        "steps": [
+          {
+            "description": "Choose an unclaimed route on the board. You must have enough Train Car Cards matching the route's color and equal to its length."
+          },
+          {
+            "description": "For colored routes, play cards of the matching color. Locomotive cards are wild and may substitute for any color."
+          },
+          {
+            "description": "For gray routes, play cards of any single color (all the same). Locomotives may substitute for any of the chosen color."
+          },
+          {
+            "description": "Discard the played cards to the discard pile."
+          },
+          {
+            "description": "Place one of your Plastic Train Cars on each space of the claimed route."
+          },
+          {
+            "description": "Advance your Scoring Marker on the scoring track by the points earned for the route length."
+          }
+        ],
+        "notes": [
+          {
+            "description": "You may only claim one route per turn."
+          },
+          {
+            "description": "You may not claim a route that is already occupied by another player's trains."
+          },
+          {
+            "description": "Route scoring: 1 space = 1 point, 2 spaces = 2 points, 3 spaces = 4 points, 4 spaces = 7 points, 5 spaces = 10 points, 6 spaces = 15 points."
+          },
+          {
+            "description": "A single player may never claim both routes of a Double Route (two parallel routes between the same cities).",
+            "condition": {"min_count_variant": 4}
+          },
+          {
+            "description": "Double Routes: only one of the two parallel routes connecting the same cities may be claimed. Once one is claimed, the other is closed to all players.",
+            "condition": {"min_count_variant": 2, "max_count_variant": 3}
+          }
+        ]
+      },
+      {
+        "name": "Draw Destination Tickets",
+        "description": "Draw additional Destination Tickets to try to score more points by connecting distant cities.",
+        "steps": [
+          {
+            "description": "Draw 3 Destination Tickets from the top of the Destination Ticket deck."
+          },
+          {
+            "description": "You must keep at least 1 of the drawn tickets, but may keep 2 or all 3."
+          },
+          {
+            "description": "Return any unwanted tickets face-down to the bottom of the Destination Ticket deck."
+          }
+        ],
+        "notes": [
+          {
+            "description": "Destination Tickets are kept secret from other players until the end of the game."
+          },
+          {
+            "description": "Once you keep a Destination Ticket, you may not discard it later. You are committed to it for the rest of the game."
+          },
+          {
+            "description": "If fewer than 3 Destination Tickets remain in the deck, draw only what is available. You must still keep at least 1."
+          }
+        ]
+      }
+    ],
+    "key_concepts": [
+      {
+        "name": "Route Scoring Table",
+        "description": "Points scored immediately when claiming a route: 1 space = 1 point, 2 spaces = 2 points, 3 spaces = 4 points, 4 spaces = 7 points, 5 spaces = 10 points, 6 spaces = 15 points."
+      },
+      {
+        "name": "Locomotive Rules",
+        "description": "Locomotives are wild and may be used as any color when claiming routes. Taking a face-up Locomotive counts as both card draws for your turn. You may NOT take a face-up Locomotive as your second draw. Blind-drawing a Locomotive from the deck has no penalty."
+      },
+      {
+        "name": "Double Routes",
+        "description": "Some city pairs have two parallel routes. A single player cannot claim both routes of a double route. In games with 2 or 3 players, once one route is claimed, the parallel route is also blocked."
+      },
+      {
+        "name": "Face-Up Card Reset",
+        "description": "If 3 or more of the 5 face-up cards are Locomotives at any time, immediately discard all 5 face-up cards and draw 5 new ones. If the new set also has 3+ Locomotives, repeat the process."
+      }
+    ]
+  },
+  "end_game": {
+    "trigger": "When any player's stock of Plastic Train Cars drops to 2 or fewer pieces at the end of their turn, each player (including that player) takes one final turn. Then the game ends and final scoring begins.",
+    "procedure": [
+      "Each player gets exactly one more turn after the trigger (including the triggering player's turn which already happened).",
+      "Add points for completed Destination Tickets: if a continuous path of your routes connects both cities on a ticket, add the ticket's point value to your score.",
+      "Subtract points for incomplete Destination Tickets: if you failed to connect both cities on a ticket, subtract the ticket's point value from your score.",
+      "Award the Longest Path Bonus Card: the player with the longest continuous path of connected routes receives a 10-point bonus."
+    ],
+    "intermediate_scoring": [
+      {
+        "source": "Route Points",
+        "description": {
+          "description": "Score points immediately when claiming a route. Advance your Scoring Marker on the track.",
+          "action": { "type": "value_grid", "columns": [["Length", "1", "2", "3", "4", "5", "6"], ["Points", "1", "2", "4", "7", "10", "15"]] }
+        },
+        "when": "When Claiming a Route"
+      }
+    ],
+    "final_scoring": [
+      {
+        "source": "Completed Destination Tickets",
+        "description": "Add the point value printed on each Destination Ticket where you have successfully connected both cities with a continuous path of your routes."
+      },
+      {
+        "source": "Incomplete Destination Tickets",
+        "description": "Subtract the point value printed on each Destination Ticket where you failed to connect both cities with a continuous path of your routes."
+      },
+      {
+        "source": "Longest Continuous Path Bonus",
+        "description": "The player with the longest continuous path of routes scores a 10-point bonus. The path may loop and pass through the same city multiple times, but each Train Car piece may only be counted once. If tied, all tied players receive the 10-point bonus."
+      }
+    ]
+  },
+  "winning_condition": "The player with the highest total score wins. In case of a tie, the player who completed the most Destination Tickets wins. If still tied, the player with the Longest Continuous Path bonus wins.",
+  "tips_for_new_players": [
+    {
+      "tip": "Keep Your Tickets Secret",
+      "description": "Do not reveal which cities you are trying to connect. Other players may try to block your routes if they know your goals."
+    },
+    {
+      "tip": "Claim Long Routes Early",
+      "description": "Long routes (5-6 spaces) score the most points per card spent. Claim them before opponents block you, and while you have enough trains."
+    },
+    {
+      "tip": "Balance Route Claiming and Card Drawing",
+      "description": "Do not hoard cards for too long -- other players may claim the routes you need. But also do not claim routes without enough cards to finish your tickets."
+    },
+    {
+      "tip": "Watch Opponents' Train Supplies",
+      "description": "Keep track of how many trains each player has remaining. When someone gets low, the game is about to end. Make sure your Destination Tickets are completed before that happens."
+    },
+    {
+      "tip": "Gray Routes Are Flexible",
+      "description": "Gray routes can be claimed with any single color, making them easier to complete. Use them strategically when you have a surplus of one color."
+    },
+    {
+      "tip": "Locomotives Are Powerful but Costly",
+      "description": "Taking a face-up Locomotive costs your entire draw action (both draws). Drawing blindly from the deck might yield a Locomotive without this penalty."
+    },
+    {
+      "tip": "Think About the Longest Path",
+      "description": "The 10-point Longest Path bonus can decide the game. Try to build connected chains of routes rather than scattered segments across the map."
+    },
+    {
+      "tip": "Be Careful Drawing Extra Destination Tickets",
+      "description": "Only draw more Destination Tickets if you are confident you can complete at least one. Incomplete tickets subtract points from your score."
+    }
+  ]
+}

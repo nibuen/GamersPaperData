@@ -1,0 +1,65 @@
+{
+  "train_cars": {
+    "term": "Train Cars",
+    "definition": "Colored plastic pieces (45 per player) placed on the board to claim routes between cities. Once placed, they remain for the rest of the game. When a player has 2 or fewer remaining, the final round triggers.",
+    "context": "component",
+    "icon": "Pawn",
+    "tint": "#78909C"
+  },
+  "train_car_cards": {
+    "term": "Train Car Cards",
+    "definition": "Cards in 8 colors (plus Locomotives) used to claim routes. To claim a route, play cards matching the route's color equal to its length. Drawn from the face-up display or the draw deck.",
+    "context": "component",
+    "icon": "Card",
+    "tint": "#5C6BC0"
+  },
+  "locomotive": {
+    "term": "Locomotive",
+    "definition": "Wild card that substitutes for any color when claiming a route. 14 in the deck. When drawn face-up, it counts as both of your allowed draws. If 3 or more Locomotives appear in the face-up display, all 5 face-up cards are discarded and replaced.",
+    "context": "card",
+    "icon": "CardTarget",
+    "tint": "#F4511E"
+  },
+  "destination_ticket": {
+    "term": "Destination Ticket",
+    "definition": "A card showing two cities and a point value. If you connect those cities with a continuous path of your claimed routes by game end, you score the points. If not, you lose that many points. Kept secret until final scoring.",
+    "context": "card",
+    "icon": "CardFlip",
+    "tint": "#FFB300"
+  },
+  "route": {
+    "term": "Route",
+    "definition": "A set of connected colored spaces on the board between two adjacent cities. Claimed by playing matching Train Car Cards equal to the route's length (1-6 spaces). Once claimed, no other player can use it.",
+    "context": "mechanic",
+    "icon": "ArrowRight",
+    "tint": "#43A047"
+  },
+  "double_route": {
+    "term": "Double Route",
+    "definition": "Two parallel routes connecting the same pair of cities. A single player cannot claim both. In 2-3 player games, once one double route is claimed, the other is permanently closed to all players.",
+    "context": "mechanic",
+    "icon": "ArrowHorizontal",
+    "tint": "#8D6E63"
+  },
+  "face_up_cards": {
+    "term": "Face-Up Display",
+    "definition": "5 Train Car Cards placed face-up beside the board. Players may draw from these instead of the deck. Drawn cards are immediately replaced from the deck. If 3 or more are Locomotives, all 5 are discarded and replaced.",
+    "context": "mechanic",
+    "icon": "CardsCollection",
+    "tint": "#26A69A"
+  },
+  "longest_continuous_path": {
+    "term": "Longest Continuous Path",
+    "definition": "The longest unbroken chain of routes belonging to one player. May include loops and pass through the same city multiple times, but each plastic train piece counts only once. Worth a 10-point bonus at game end; tied players each receive the bonus.",
+    "context": "scoring",
+    "icon": "Award",
+    "tint": "#AB47BC"
+  },
+  "scoring_marker": {
+    "term": "Scoring Marker",
+    "definition": "Wooden piece placed on the scoring track around the board. Advanced immediately when a player claims a route, according to the route scoring table.",
+    "context": "component",
+    "icon": "Token",
+    "tint": "#EC407A"
+  }
+}

@@ -49,6 +49,12 @@
                       "game_name":  "Orloj: The Prague Astronomical Clock",
                       "designer":  "Paloma J. Pascual, Abraham Sánchez Hermida",
                       "publisher":  "Perro Loko Games"
+                  },
+                  {
+                      "id":  "ticket_to_ride",
+                      "game_name":  "Ticket to Ride",
+                      "designer":  "Alan R. Moon",
+                      "publisher":  "Days of Wonder"
                   }
               ]
 }
