@@ -234,11 +234,14 @@
       "Subtract points for incomplete Destination Tickets: if you failed to connect both cities on a ticket, subtract the ticket's point value from your score.",
       "Award the Longest Path Bonus Card: the player with the longest continuous path of connected routes receives a 10-point bonus."
     ],
-    "final_scoring": [
+    "intermediate_scoring": [
       {
         "source": "Route Points",
-        "description": "Already scored during the game when routes are claimed: 1 space = 1 pt, 2 spaces = 2 pts, 3 spaces = 4 pts, 4 spaces = 7 pts, 5 spaces = 10 pts, 6 spaces = 15 pts."
-      },
+        "description": "Score points immediately when claiming a route based on its length: 1 space = 1 pt, 2 spaces = 2 pts, 3 spaces = 4 pts, 4 spaces = 7 pts, 5 spaces = 10 pts, 6 spaces = 15 pts. Advance your Scoring Marker on the track.",
+        "when": "When Claiming a Route"
+      }
+    ],
+    "final_scoring": [
       {
         "source": "Completed Destination Tickets",
         "description": "Add the point value printed on each Destination Ticket where you have successfully connected both cities with a continuous path of your routes."
