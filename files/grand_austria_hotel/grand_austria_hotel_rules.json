@@ -306,17 +306,17 @@
       {
         "source": "Emperor Scoring",
         "when": "Round 3",
-        "description": "Score VP equal to the value at the BOTTOM of your Emperor track space (one of the A Tiles). Retreat 3 spaces. Yellow area (space 3+): receive Emperor Tile bonus. Black area (space 0): suffer penalty. Gray area (spaces 1–2): neither."
+        "description": { "description": "Score VP equal to the value at the BOTTOM of your Emperor track space (one of the A Tiles). Retreat 3 spaces. Yellow area (space 3+): receive Emperor Tile bonus. Black area (space 0): suffer penalty. Gray area (spaces 1--2): neither." }
       },
       {
         "source": "Emperor Scoring",
         "when": "Round 5",
-        "description": "Score VP equal to the value at the BOTTOM of your Emperor track space (one of the B Tiles). Retreat 5 spaces. Yellow area (space 3+): receive Emperor Tile bonus. Black area (space 0): suffer penalty. Gray area (spaces 1–2): neither."
+        "description": { "description": "Score VP equal to the value at the BOTTOM of your Emperor track space (one of the B Tiles). Retreat 5 spaces. Yellow area (space 3+): receive Emperor Tile bonus. Black area (space 0): suffer penalty. Gray area (spaces 1--2): neither." }
       },
       {
         "source": "Emperor Scoring",
         "when": "Round 7",
-        "description": "Score VP equal to the value at the BOTTOM of your Emperor track space (one of the C Tiles). Retreat 7 spaces. Yellow area (space 3+): receive Emperor Tile bonus. Black area (space 0): suffer penalty. Gray area (spaces 1–2): neither."
+        "description": { "description": "Score VP equal to the value at the BOTTOM of your Emperor track space (one of the C Tiles). Retreat 7 spaces. Yellow area (space 3+): receive Emperor Tile bonus. Black area (space 0): suffer penalty. Gray area (spaces 1--2): neither." }
       }
     ],
     "final_scoring": [

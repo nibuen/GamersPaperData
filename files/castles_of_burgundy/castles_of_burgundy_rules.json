@@ -243,24 +243,30 @@
     "trigger": "The game ends after the 5th round of Phase E (25 total rounds).",
     "intermediate_scoring": [
       {
-        "when": "During Play (Phases A–E)",
+        "when": "During Play (Phases A--E)",
         "source": "Region Completion",
-        "description": "Fill all spaces of a connected same-color region = VP by size (1: 1, 2: 3, 3: 6, 4: 10, 5: 15, 6: 21, 7: 28, 8: 36) plus phase bonus (A=+10, B=+8, C=+6, D=+4, E=+2)."
+        "description": {
+          "description": "Fill all spaces of a connected same-color region to score VP by region size, plus a phase bonus for completing it early.",
+          "action": { "type": "value_grid", "columns": [["Tiles", "1", "2", "3", "4", "5", "6", "7", "8"], ["VP", "1", "3", "6", "10", "15", "21", "28", "36"], ["Phase", "A", "B", "C", "D", "E"], ["Bonus", "+10", "+8", "+6", "+4", "+2"]] }
+        }
       },
       {
         "when": "During Play",
         "source": "Animal Placement",
-        "description": "Score VP shown on tile. Same-type animals already in that pasture score again."
+        "description": { "description": "Score VP shown on tile. Same-type animals already in that pasture score again." }
       },
       {
         "when": "During Play",
         "source": "Goods Sales",
-        "description": "1 Silverling + VP per tile sold (2p: 2VP, 3p: 3VP, 4p: 4VP)."
+        "description": {
+          "description": "1 Silverling + VP per tile sold. VP depends on player count.",
+          "action": { "type": "value_grid", "columns": [["Players", "2", "3", "4"], ["VP/Tile", "2", "3", "4"]] }
+        }
       },
       {
         "when": "During Play",
         "source": "Color Completion",
-        "description": "First to fill all spaces of one color = large bonus tile. Second = small bonus tile."
+        "description": { "description": "First to fill all spaces of one color = large bonus tile. Second = small bonus tile." }
       }
     ],
     "procedure": [
