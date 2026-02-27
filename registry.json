@@ -1,60 +1,66 @@
 {
-    "version":  "1.2.0",
-    "base_url":  "https://raw.githubusercontent.com/nibuen/GamePaperData/main/files",
-    "games":  [
-                  {
-                      "id":  "agricola",
-                      "game_name":  "Agricola",
-                      "designer":  "Uwe Rosenberg",
-                      "publisher":  "Lookout Games"
-                  },
-                  {
-                      "id":  "castles_of_burgundy",
-                      "game_name":  "The Castles of Burgundy",
-                      "designer":  "Stefan Feld",
-                      "publisher":  "alea / Ravensburger"
-                  },
-                  {
-                      "id":  "grand_austria_hotel",
-                      "game_name":  "Grand Austria Hotel",
-                      "designer":  "Virginio Gigli, Simone Luciani",
-                      "publisher":  "Lookout Games"
-                  },
-                  {
-                      "id":  "food_chain_magnate",
-                      "game_name":  "Food Chain Magnate",
-                      "designer":  "Jeroen Doumen, Joris Wiersinga",
-                      "publisher":  "Lucky Duck Games, Splotter Spellen"
-                  },
-                  {
-                      "id":  "lords_of_waterdeep",
-                      "game_name":  "Lords of Waterdeep",
-                      "designer":  "Peter Lee, Rodney Thompson",
-                      "publisher":  "Wizards of the Coast"
-                  },
-                  {
-                      "id":  "twilight_struggle",
-                      "game_name":  "Twilight Struggle",
-                      "designer":  "Ananda Gupta, Jason Matthews",
-                      "publisher":  "GMT Games"
-                  },
-                  {
-                      "id":  "santa_monica",
-                      "game_name":  "Santa Monica",
-                      "designer":  "Josh Wood",
-                      "publisher":  "Alderac Entertainment Group (AEG)"
-                  },
-                  {
-                      "id":  "orloj",
-                      "game_name":  "Orloj: The Prague Astronomical Clock",
-                      "designer":  "Paloma J. Pascual, Abraham Sánchez Hermida",
-                      "publisher":  "Perro Loko Games"
-                  },
-                  {
-                      "id":  "ticket_to_ride",
-                      "game_name":  "Ticket to Ride",
-                      "designer":  "Alan R. Moon",
-                      "publisher":  "Days of Wonder"
-                  }
-              ]
+    "version": "1.2.0",
+    "base_url": "https://raw.githubusercontent.com/nibuen/GamePaperData/main/files",
+    "games": [
+        {
+            "id": "agricola",
+            "game_name": "Agricola",
+            "designer": "Uwe Rosenberg",
+            "publisher": "Lookout Games"
+        },
+        {
+            "id": "castles_of_burgundy",
+            "game_name": "The Castles of Burgundy",
+            "designer": "Stefan Feld",
+            "publisher": "alea / Ravensburger"
+        },
+        {
+            "id": "grand_austria_hotel",
+            "game_name": "Grand Austria Hotel",
+            "designer": "Virginio Gigli, Simone Luciani",
+            "publisher": "Lookout Games"
+        },
+        {
+            "id": "food_chain_magnate",
+            "game_name": "Food Chain Magnate",
+            "designer": "Jeroen Doumen, Joris Wiersinga",
+            "publisher": "Lucky Duck Games, Splotter Spellen"
+        },
+        {
+            "id": "lords_of_waterdeep",
+            "game_name": "Lords of Waterdeep",
+            "designer": "Peter Lee, Rodney Thompson",
+            "publisher": "Wizards of the Coast"
+        },
+        {
+            "id": "twilight_struggle",
+            "game_name": "Twilight Struggle",
+            "designer": "Ananda Gupta, Jason Matthews",
+            "publisher": "GMT Games"
+        },
+        {
+            "id": "santa_monica",
+            "game_name": "Santa Monica",
+            "designer": "Josh Wood",
+            "publisher": "Alderac Entertainment Group (AEG)"
+        },
+        {
+            "id": "orloj",
+            "game_name": "Orloj: The Prague Astronomical Clock",
+            "designer": "Paloma J. Pascual, Abraham S\u00c3\u00a1nchez Hermida",
+            "publisher": "Perro Loko Games"
+        },
+        {
+            "id": "ticket_to_ride",
+            "game_name": "Ticket to Ride",
+            "designer": "Alan R. Moon",
+            "publisher": "Days of Wonder"
+        },
+        {
+            "id": "plains_indian_wars",
+            "game_name": "Plains Indian Wars",
+            "designer": "John Poniske",
+            "publisher": "GMT Games"
+        }
+    ]
 }
