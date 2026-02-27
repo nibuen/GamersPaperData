@@ -1,0 +1,441 @@
+{
+  "game_name": "Plains Indian Wars",
+  "designer": "John Poniske",
+  "publisher": "GMT Games",
+  "game_overview": "Plains Indian Wars is a card-driven wargame about the nineteenth century struggle between the United States and Plains Indian tribes to control the Great Plains. Players command major and minor factions using unique card decks to place cubes, move groups across regions, and resolve engagements with custom faction dice. The game features area control, asymmetric factions, and a race to complete (or prevent) the Transcontinental Railroad.",
+  "objective": "Amass the most victory points by controlling regions, completing or blocking the Transcontinental Railroad, and achieving faction-specific goals by the end of the game.",
+  "min_players": 1,
+  "max_players": 4,
+  "bgg_link": "https://boardgamegeek.com/boardgame/233958/plains-indian-wars",
+  "play_time_minutes": 90,
+  "components_overview": [
+    {
+      "name": "Game Board",
+      "type": "Board",
+      "description": "Mounted game board (34\" x 22\") depicting the Great Plains from the Mississippi River to the Rockies, with NPT (green), SPT (orange), and Enemies (purple) regions, wagon trails, and the Transcontinental Railroad route.",
+      "count": 1
+    },
+    {
+      "name": "Northern Plains Tribes (NPT) Cards",
+      "type": "Card",
+      "description": "Green faction deck with War Party and Event cards for the NPT player.",
+      "count": 15
+    },
+    {
+      "name": "Southern Plains Tribes (SPT) Cards",
+      "type": "Card",
+      "description": "Orange faction deck with War Party and Event cards for the SPT player.",
+      "count": 15
+    },
+    {
+      "name": "U.S. Cavalry Cards",
+      "type": "Card",
+      "description": "Blue faction deck with Engagement and Event cards for the Cavalry player.",
+      "count": 15
+    },
+    {
+      "name": "Settlers Cards",
+      "type": "Card",
+      "description": "Brown faction deck with Migration and Event cards for the Settlers player.",
+      "count": 15
+    },
+    {
+      "name": "Faction Dice",
+      "type": "Dice",
+      "description": "5 sets of custom dice (2 per major faction plus 2 for the Enemies minor faction). Each die has Weapon (Hit), Treaty, and Blank sides in faction-specific distributions.",
+      "count": 10
+    },
+    {
+      "name": "Draw Discs",
+      "type": "Token",
+      "description": "7 colored draw discs (Green, Orange, Blue, Brown, Purple, White, Black) drawn randomly from the draw bag to determine turn order.",
+      "count": 7
+    },
+    {
+      "name": "Draw Bag",
+      "type": "Token",
+      "description": "Bag for randomly drawing faction discs each round.",
+      "count": 1
+    },
+    {
+      "name": "Blue Cavalry Cubes",
+      "type": "Meeple",
+      "description": "Represent horse soldiers on the Plains. Dice have 2 Blank, 1 Treaty, and 3 Weapon sides.",
+      "count": 25
+    },
+    {
+      "name": "Brown Settler Cubes",
+      "type": "Meeple",
+      "description": "Represent families and settlers heading West. Dice have 4 Blank, 1 Treaty, and 1 Weapon side.",
+      "count": 35
+    },
+    {
+      "name": "Green NPT Cubes",
+      "type": "Meeple",
+      "description": "Represent the Northern Plains Tribes (Sioux, Assiniboine, Blackfeet, Mandan, Hidatsa). Dice have 3 Blank, 1 Treaty, and 2 Weapon sides.",
+      "count": 30
+    },
+    {
+      "name": "Orange SPT Cubes",
+      "type": "Meeple",
+      "description": "Represent the Southern Plains Tribes (Apache, Cheyenne, Comanche, Kiowa). Dice have 3 Blank, 1 Treaty, and 2 Weapon sides.",
+      "count": 30
+    },
+    {
+      "name": "Black Railroad Cubes",
+      "type": "Meeple",
+      "description": "Placed on RR spaces to indicate Transcontinental Railroad progress. Once placed, they cannot be attacked or removed.",
+      "count": 30
+    },
+    {
+      "name": "Purple Enemies Cubes",
+      "type": "Meeple",
+      "description": "Represent tribal enemies of the Plains Indians (Crow in the north, Mexicans/Apaches in the south). Dice have 3 Blank, 1 Treaty, and 2 Weapon sides.",
+      "count": 20
+    },
+    {
+      "name": "White Wagon Cubes",
+      "type": "Meeple",
+      "description": "Represent settler wagon trains bound for Oregon or California along the four wagon trails.",
+      "count": 20
+    }
+  ],
+  "setup": [
+    {
+      "description": "Choose one or both factions on either the U.S. or Plains Indian side.",
+      "short_description": "Choose Sides"
+    },
+    {
+      "description": "The Indian player controls both NPT (green) and SPT (orange) factions. The U.S. player controls Cavalry (blue), Settlers (brown), Enemies (purple), Wagons (white), and Railroad (black).",
+      "short_description": "Faction Assignment",
+      "condition": {"min_count_variant": 1, "max_count_variant": 2}
+    },
+    {
+      "description": "Two players act as allies on one side while the third plays both factions on the other side. Either two U.S. players and one Indian player, or two Indian players and one U.S. player.",
+      "short_description": "Faction Assignment",
+      "condition": {"min_count_variant": 3, "max_count_variant": 3}
+    },
+    {
+      "description": "One player plays NPT, one plays SPT, one plays Settlers, and one plays Cavalry & Enemies.",
+      "short_description": "Faction Assignment",
+      "condition": {"min_count_variant": 4, "max_count_variant": 4}
+    },
+    {
+      "description": "Each player obtains their faction cards, colored cubes, and colored dice. Place cubes in the appropriate faction Ready Box on the map.",
+      "short_description": "Get Components"
+    },
+    {
+      "description": "The Cavalry faction controls the Purple (Enemies) cubes. The Settlers faction controls the White (Wagons) cubes.",
+      "short_description": "Minor Factions"
+    },
+    {
+      "description": "Shuffle each faction deck and draw a 3-card starting hand.",
+      "short_description": "Draw Hands"
+    },
+    {
+      "description": "The Indian player places 1 Orange cube in every SPT region and 1 Green cube in every NPT region.",
+      "short_description": "Indian Starting Cubes"
+    },
+    {
+      "description": "The NPT player places 3 additional Green cubes in any Green region(s). The SPT player places 3 additional Orange cubes in any Orange region(s).",
+      "short_description": "Additional Indian Cubes"
+    },
+    {
+      "description": "The Cavalry player places 1 Blue cube in the St. Louis Box and 1 Blue cube in the Sacramento Box.",
+      "short_description": "Cavalry Starting Cubes"
+    },
+    {
+      "description": "The Cavalry player places 1 Purple cube in each of the 5 Purple Enemies of NPT regions, and 1 Purple cube in each of the 5 Purple Enemies of SPT regions. Place 2 additional Purple cubes in Canada and 2 additional Purple cubes in Mexico.",
+      "short_description": "Enemies Starting Cubes"
+    },
+    {
+      "description": "The Settlers player places 3 Brown cubes and 2 White Wagon cubes in the St. Louis Box, and 3 Brown cubes in the Sacramento Box.",
+      "short_description": "Settler Starting Cubes"
+    },
+    {
+      "description": "Place all 7 Draw Discs (Blue, Brown, Purple, Green, Orange, Black, White) in the draw bag.",
+      "short_description": "Fill Draw Bag"
+    }
+  ],
+  "gameplay": {
+    "turn_structure": "Each round, draw faction discs one at a time from the draw bag. The drawn faction completes all its actions before the next disc is drawn. After all 7 discs have been drawn, return them to the bag and begin a new round. Major factions (Green, Orange, Blue, Brown) play cards and move cubes. Minor factions (Purple, White, Black) perform specific actions without card play.",
+    "actions": [
+      {
+        "name": "Major Faction Turn (NPT, SPT, Cavalry, Settlers)",
+        "description": "When a major faction disc is drawn, that player plays cards from their hand, places cubes, moves groups, and resolves engagements.",
+        "steps": [
+          {"description": "Optionally play 1 Event card before the main action card. Place or remove cubes as instructed. Do not resolve engagements until after all movement ends."},
+          {"description": "Play exactly 1 War Party (Indian), Engagement (Cavalry), or Migration (Settlers) card. Place reinforcement cubes from the Ready Box as indicated on the card."},
+          {"description": "Move up to the number of groups up to the number of regions indicated on the card. Movement ceases when entering an enemy-controlled or contested region."},
+          {"description": "Resolve all engagements created by movement."},
+          {"description": "Optionally play 1 Event card after the main action card. Resolve any engagements immediately."},
+          {"description": "Draw cards from the faction deck to refill your hand to 3 cards."}
+        ],
+        "notes": [
+          {"description": "At least 1 card must be played per turn. A maximum of 1 War Party/Engagement/Migration card and up to 2 Event cards may be played."},
+          {"description": "If no War Party/Engagement/Migration card is in hand, an Event card must be used to activate 2 regions and move cubes up to 2 regions instead of its normal text."},
+          {"description": "Reinforcement cubes must be placed before movement begins. Cubes may temporarily overstack during placement and movement but must not exceed 8 friendly cubes per region at the end of movement."},
+          {"description": "Some Event cards have enduring instructions that last for the remainder of the current disc draw sequence, as long as the card remains visible on top of the discard pile."}
+        ]
+      },
+      {
+        "name": "Placing Cubes (NPT/SPT)",
+        "description": "Indian players place cubes from the Ready Box into controlled regions matching their faction color.",
+        "steps": [
+          {"description": "When playing a War Party card, place cubes from the Ready Box in one or more controlled regions of matching color (Green for NPT, Orange for SPT)."},
+          {"description": "If no controlled regions are available, place cubes in the Rockies, Canada (NPT only), or Mexico (SPT only) as indicated by colored arrows."},
+          {"description": "When playing an Event card, place cubes according to card instructions."}
+        ]
+      },
+      {
+        "name": "Placing Cubes (Cavalry)",
+        "description": "Cavalry cubes enter play through the St. Louis or Sacramento Boxes.",
+        "steps": [
+          {"description": "When playing an Engagement card, place all received Blue cubes in the St. Louis Box."},
+          {"description": "If desired, transfer 1 placed cube from St. Louis to the Sacramento Box."},
+          {"description": "When playing an Event card, place cubes according to card instructions."}
+        ]
+      },
+      {
+        "name": "Placing Cubes (Settlers)",
+        "description": "Settler cubes enter play through the St. Louis or Sacramento Boxes.",
+        "steps": [
+          {"description": "When playing a Migration card, place all received Brown cubes in the St. Louis Box."},
+          {"description": "If desired, transfer up to 4 placed cubes from St. Louis to the Sacramento Box."},
+          {"description": "When playing an Event card, place cubes according to card instructions."}
+        ]
+      },
+      {
+        "name": "Movement",
+        "description": "Groups of cubes move from one adjacent region to the next, up to the number of regions allowed by the card played.",
+        "steps": [
+          {"description": "Select groups to move from activated regions. A group is one or more cubes of a single faction in one region."},
+          {"description": "Move each group into adjacent connected regions. Cubes may be dropped off along the way but additional cubes may not be picked up."},
+          {"description": "Movement ceases immediately when entering an enemy-controlled or contested region, even if the card allows further movement."},
+          {"description": "Cubes cannot move through regions occupied by enemy cubes or be moved multiple times from the same card."}
+        ],
+        "notes": [
+          {"description": "A player may move cubes from one activated region to multiple destination regions."},
+          {"description": "All cube movement occurs before engagements take place, unless directed otherwise by cards."},
+          {"description": "Entering Canada, Mexico, or the Rockies ends movement immediately. Cubes may move out on a future turn."},
+          {"description": "Cavalry and Settler cubes may enter the Rockies from any region but may only exit via Trail-End regions."}
+        ]
+      },
+      {
+        "name": "Railroad Movement",
+        "description": "U.S. players may use one group move to transfer cubes along the completed railroad track.",
+        "steps": [
+          {"description": "From St. Louis, transfer cubes to any region adjacent to the Union Pacific railroad up to its railhead."},
+          {"description": "From Sacramento, transfer cubes to any region adjacent to the Central Pacific railroad up to its railhead (only after all 5 Mountain spaces are filled)."},
+          {"description": "A two-movement card may drop off units at one region along the rail. A three-movement card may drop off at one region then move one additional adjacent region."}
+        ],
+        "notes": [
+          {"description": "Railroad movement always begins in St. Louis or Sacramento. Units may not be railed into the Rockies."},
+          {"description": "Two single-movement cards (Forts Davis and Ellis) may not conduct rail movement."},
+          {"description": "Cubes may be railed into regions containing NPT and/or SPT cubes, creating engagements."}
+        ]
+      },
+      {
+        "name": "Influenced Movement",
+        "description": "Friendly faction cubes not belonging to the activated faction may be moved alongside activated cubes if enough activated cubes are present.",
+        "steps": [
+          {"description": "Each activated Blue (Cavalry) cube can move up to 2 Brown (Settler) cubes or 1 Purple (Enemies) cube."},
+          {"description": "2 activated Brown (Settler) cubes can move 1 Blue (Cavalry) cube."},
+          {"description": "2 activated Purple (Enemies) cubes can move 1 Blue (Cavalry) cube."},
+          {"description": "2 activated Green (NPT) cubes can move 1 Orange (SPT) cube, and vice versa."}
+        ],
+        "notes": [
+          {"description": "A Blank die result during engagement from either moving faction can retreat a cube from either friendly faction."},
+          {"description": "Allies must agree to influenced movement in 3 and 4 player games.", "condition": {"min_count_variant": 3}}
+        ]
+      },
+      {
+        "name": "Engagements",
+        "description": "Moving cubes into a region occupied by opponent cubes creates a contested region and initiates an engagement. Engagements are resolved after all movement ends.",
+        "steps": [
+          {"description": "Indian Ambush: If a region contains only a single Indian cube when attacked, that faction may roll 1 die against a cube from the largest enemy group before combat begins. A Weapon result removes the targeted cube. Treaty and Blank results have no effect during ambush."},
+          {"description": "Determine dice: A faction with 1 cube rolls 1 die. A faction with 2+ cubes rolls 2 dice."},
+          {"description": "Both sides roll simultaneously. Resolve results in order: Treaties first, then Hits, then Retreats (Blanks)."},
+          {"description": "Treaty: If at least one U.S. and one Indian Treaty symbol are rolled, combat ends immediately. Any hits that round are ignored. The stronger force relocates the weaker force to an adjacent friendly-controlled region."},
+          {"description": "Weapon (Hit): Each Weapon symbol rolled means the opponent loses one cube. Losses are selected from the largest faction group. Removed cubes go to the Casualty Box."},
+          {"description": "Blank (Retreat): Each Blank rolled allows the rolling player to optionally retreat one friendly cube (of any allied faction color) to a friendly-controlled or vacant region."},
+          {"description": "Continue rolling rounds until one side is eliminated, all cubes retreat, or a Treaty is struck."}
+        ],
+        "notes": [
+          {"description": "Wagons do not trigger engagements. Indians may attack Wagons only after all other U.S. cubes (Blue, Brown, Purple) have been eliminated or retreated from the region."},
+          {"description": "When attacking Wagons, Indians attack one White cube at a time. A Wagon is destroyed only if 2+ Hits are rolled in a single round. Single Hits against Wagons are ignored."},
+          {"description": "A surviving Wagon that rolls a Blank must advance west one region along its trail."},
+          {"description": "Attacker selects their losses first from the largest faction. Defender then selects losses from their largest faction."},
+          {"description": "Some Event cards modify combat results. Event card combat results take precedence over normal results."}
+        ]
+      },
+      {
+        "name": "Wagon Train Turn (White Disc)",
+        "description": "When the White disc is drawn, the Settlers player manages the wagon trains. No cards are played.",
+        "steps": [
+          {"description": "Place 2 White cubes in St. Louis."},
+          {"description": "All White cubes (including those just placed) move forward (west) one region along the wagon trail they occupy."},
+          {"description": "A White cube completing its journey by moving off its final region into the Rockies is placed in the U.S. Victory Point Box."}
+        ],
+        "notes": [
+          {"description": "White cubes never create engagements when entering enemy-controlled regions."},
+          {"description": "White cubes can only move or retreat west along one of the four wagon trails: Mormon Trail, Santa Fe Trail, California Trail, or Oregon Trail."},
+          {"description": "White cubes do not affect regional cube limits or control, except they deny Indian control of an otherwise empty region."}
+        ]
+      },
+      {
+        "name": "Railroad Turn (Black Disc)",
+        "description": "When the Black disc is drawn, the Settlers player extends the Transcontinental Railroad. No cards are played.",
+        "steps": [
+          {"description": "Union Pacific (East): Place 1 Black cube on the next empty RR space for each Brown cube present in a region adjacent to the railhead, up to 3 cubes maximum. Settlers must occupy at least one region adjacent to St. Louis to start placing eastern railroad cubes."},
+          {"description": "Central Pacific (West): While Mountain ('M') spaces remain, roll 2 Brown dice. Place 1 Black cube in a Mountain RR space for each Weapon or Treaty symbol rolled."},
+          {"description": "Once all 5 Mountain spaces are complete, the Central Pacific extends normally -- 1 Black cube per Brown cube adjacent to the railhead, up to 3 maximum."},
+          {"description": "Maximum of 6 Black cubes placed per turn (3 per railhead). All railroad cubes that can be played must be played -- they cannot be withheld."}
+        ],
+        "notes": [
+          {"description": "Black cubes are placed on RR spaces, not in regions. Once placed, they cannot be attacked or removed."},
+          {"description": "Filling the last remaining rail space triggers the end of the game (completed at end of disc draw)."},
+          {"description": "Settler and Cavalry cubes remain in the Sacramento Box until all 5 Mountain spaces are completed."},
+          {"description": "If 2 successful rolls are made on the final Mountain space, place 1 Black cube on the Mountain space and 1 on the adjacent Plains rail space."}
+        ]
+      },
+      {
+        "name": "Enemies Turn (Purple Disc)",
+        "description": "When the Purple disc is drawn, the Cavalry player commands the Enemies minor faction. No cards are played.",
+        "steps": [
+          {"description": "Place 1 Purple cube in any Purple region, Canada, or Mexico."},
+          {"description": "Optionally activate 1 Purple-controlled region (or area with Purple cubes). Move all, some, or none of those Purple cubes up to 2 regions."},
+          {"description": "Resolve any engagements created by Purple cube movement."}
+        ],
+        "notes": [
+          {"description": "Purple cubes negate Indian and U.S. control but do not give regional control to the Cavalry player."},
+          {"description": "Enemies cubes can enter or retreat into adjacent Purple regions, NPT/SPT regions adjacent to Purple regions, Canada, Mexico, or the Rockies."},
+          {"description": "Whenever Settlers (without Cavalry escort) enter a region with only Purple cubes, the Purple cubes voluntarily retreat, and vice versa."},
+          {"description": "Enemies and Settlers will not fight together in an engagement against Indians, even when Cavalry is present. Either Enemies or Settlers may combine with Cavalry, but not both."}
+        ]
+      },
+      {
+        "name": "Casualty Box Removal",
+        "description": "During a faction's turn, a player may spend a group move to shift all of that faction's casualty cubes back to the Ready Box.",
+        "steps": [
+          {"description": "Spend one of your available group moves to transfer all cubes from your faction's Casualty Box to your Ready Box."},
+          {"description": "Returned cubes may be placed as reinforcements in the same turn."}
+        ],
+        "notes": [
+          {"description": "Removed Wagon cubes are not returned to play -- they remain on the Victory Point Track."},
+          {"description": "Some Event cards mandate permanent removal of cubes from the game. These do not go to the Casualty Box."}
+        ]
+      }
+    ],
+    "key_concepts": [
+      {
+        "name": "Region Control",
+        "description": "An NPT or SPT region is Indian-controlled when Indian cubes (NPT + SPT) equal or outnumber both U.S. cubes and Enemy cubes (counted separately). If empty, NPT/SPT regions default to Indian control. Wagon Train and RR cubes have no effect on control. Purple regions follow the same rules except Enemy cubes win ties against both Indian and U.S. cubes."
+      },
+      {
+        "name": "Stacking Limit",
+        "description": "Each region can hold up to 8 Indian cubes (Green + Orange) and 8 U.S. Allied cubes (Blue + Brown + Purple). Wagon and Railroad cubes do not count against this limit. St. Louis, Sacramento, Canada, Mexico, and Rockies have no stacking limits."
+      },
+      {
+        "name": "Friendly Factions",
+        "description": "NPT and SPT are friendly factions. Cavalry and Settlers are friendly factions. Purple Enemy cubes are friendly with Cavalry but not Settlers."
+      },
+      {
+        "name": "Card Types",
+        "description": "War Party (Indian), Engagement (Cavalry), and Migration (Settlers) cards provide cube placement, group movement, and trigger engagements. Event cards provide unique historical effects and may have enduring instructions lasting the remainder of the disc draw."
+      },
+      {
+        "name": "Custer Card",
+        "description": "The Custer card is the only 'Play Immediately' card. It must be played as soon as it is drawn, even in the opening hand or as a replacement. It may not be used as a substitute War Party/Engagement/Migration card. The Indian player earns 2 bonus points if Custer's cubes are eliminated."
+      },
+      {
+        "name": "Trail-End Regions",
+        "description": "Three Trail-End regions (Oregon Trail NE1, Northern California Trail N1, Southern California Trail SE1) are where U.S. groups retreat toward in the west and where U.S. units exit the Rockies."
+      }
+    ]
+  },
+  "end_game": {
+    "trigger": "The game ends at the end of the current disc draw sequence when either: (1) any major faction plays the last card from their deck, or (2) the Transcontinental Railroad is completed by filling the last empty RR space with a Black cube.",
+    "procedure": [
+      "Complete the current disc draw sequence -- all remaining discs must be drawn and resolved.",
+      "Calculate victory points for both sides using the Victory Point Schedule."
+    ],
+    "final_scoring": [
+      {
+        "source": "Region Control (Both Sides)",
+        "description": "1 VP per controlled NPT/SPT region for each side."
+      },
+      {
+        "source": "Railroad Completion (U.S.)",
+        "description": "3 VP for joining the two Railroads before any player runs out of cards."
+      },
+      {
+        "source": "Railroad Prevention (Indian)",
+        "description": "3 VP for stopping the joining of the two Railroads at the time any player runs out of cards."
+      },
+      {
+        "source": "Wagon Trains (U.S.)",
+        "description": "1 VP for each Wagon cube that reaches the Rockies or remains in a Plains region at end of game."
+      },
+      {
+        "source": "Wagon Destruction (Indian)",
+        "description": "1 VP for the elimination of each Wagon cube."
+      },
+      {
+        "source": "Cavalry Elimination (Indian)",
+        "description": "1 VP for every 2 Cavalry cubes eliminated (rounded down) in each engagement."
+      },
+      {
+        "source": "Custer Bonus (Indian)",
+        "description": "2 bonus VP for eliminating Custer's force on the turn it is placed."
+      },
+      {
+        "source": "Purple Region Control (Indian)",
+        "description": "1 VP per controlled Purple region, but only if the NPT player controls at least 3 northern Purple regions and/or the SPT player controls at least 3 southern Purple regions. Control of fewer than 3 in either area yields no points."
+      },
+      {
+        "source": "Purple Region Penalty (Indian)",
+        "description": "-3 VP if the U.S. player controls more Purple regions than the Indian player."
+      },
+      {
+        "source": "Purple Regions (U.S.)",
+        "description": "Purple regions yield no points for the U.S. player."
+      }
+    ]
+  },
+  "winning_condition": "The player with the most victory points wins. In case of a tie, the player controlling the most Purple regions wins. If still tied, the player with the fewest cubes in their Casualty Box wins.",
+  "tips_for_new_players": [
+    {
+      "tip": "Movement is Key",
+      "description": "Echoing history, movement is crucial. Plan group movements carefully -- entering an enemy-controlled or contested region ends movement immediately, so position your forces for efficient strikes."
+    },
+    {
+      "tip": "Protect Your Wagons",
+      "description": "As the U.S. player, keep Cavalry or Settler cubes near your Wagon trains. Indians can only attack Wagons after all other U.S. cubes in the region are eliminated or retreated."
+    },
+    {
+      "tip": "Use Ambushes",
+      "description": "As the Indian player, a single cube in a region can ambush the largest incoming enemy group before combat begins. This free attack can remove a key Cavalry cube without risk of retaliation."
+    },
+    {
+      "tip": "Manage the Railroad Race",
+      "description": "The Settlers need Brown cubes adjacent to the railhead to extend the railroad. Indians should contest those regions. The U.S. earns 3 VP for completing the railroad, while Indians earn 3 VP for preventing it."
+    },
+    {
+      "tip": "Event Card Timing Matters",
+      "description": "Playing an Event card before your main card lets placed cubes augment moving groups. Playing it after means any engagements from cube placement resolve immediately. Choose timing strategically."
+    },
+    {
+      "tip": "Casualty Box Recovery",
+      "description": "Spending a group move to return all faction casualties to the Ready Box is often worth it, especially when your cubes are running low. Returned cubes can be placed as reinforcements that same turn."
+    },
+    {
+      "tip": "Understand Dice Odds",
+      "description": "Cavalry dice have 3 Weapon sides (50% hit chance per die), while Indian dice have 2 Weapon sides (33%). Settlers have only 1 Weapon side (17%). Pick your battles based on faction dice strengths."
+    },
+    {
+      "tip": "Purple Enemies Are Complex",
+      "description": "Enemies cubes negate both Indian and U.S. control without giving control to either. They can be useful for the Cavalry player to deny Indian control, but be careful -- they also negate your own control."
+    }
+  ]
+}

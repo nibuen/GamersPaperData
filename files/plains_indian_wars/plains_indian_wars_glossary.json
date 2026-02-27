@@ -1,0 +1,97 @@
+{
+  "ambush": {
+    "term": "Ambush",
+    "definition": "When a region containing only a single Indian cube is attacked, that faction may target a cube from the largest enemy group and roll 1 die before combat begins. A Weapon result removes the targeted cube without a defensive roll. Treaty and Blank results have no effect. White cubes may not be ambushed.",
+    "context": "Pre-combat attack by a lone Indian cube"
+  },
+  "attacker": {
+    "term": "Attacker",
+    "definition": "All factions allied to the activated faction playing the card (either U.S. or Indian) and involved in the same engagement are considered the Attacker. If a card says the Attacker's Treaty symbols cause hits, all allied factions gain the same advantage.",
+    "context": "The side that initiated the engagement through movement"
+  },
+  "blank_symbol": {
+    "term": "Blank (Die Symbol)",
+    "definition": "A Blank result on a die gives the rolling player the option to retreat one friendly cube (regardless of faction color) to a friendly-controlled or vacant region, or to disregard the result and leave the cube in the engagement.",
+    "context": "Die result allowing optional retreat of one friendly cube"
+  },
+  "casualty_box": {
+    "term": "Casualty Box",
+    "definition": "When cubes (other than White cubes) are removed from the board during engagements, they are placed in the player's Casualty Box. During a faction's turn, a player may spend a group move to transfer all casualty cubes back to the Ready Box. Some Event cards permanently remove cubes from the game instead.",
+    "context": "Holding area for eliminated cubes that can be recovered"
+  },
+  "contested_region": {
+    "term": "Contested Region",
+    "definition": "A region is contested when it contains cubes from opposing sides (Indian and U.S.) and neither side has clear control. Movement ceases when entering a contested or enemy-controlled region.",
+    "context": "Region with cubes from both sides where neither has control"
+  },
+  "disc_draw": {
+    "term": "Disc Draw",
+    "definition": "Faction discs are drawn one at a time from the draw bag and placed on the Disc Track. The drawn faction completes all actions before the next disc is drawn. After all 7 discs are drawn, they return to the bag for a new round. It is possible for a faction to have back-to-back turns across rounds.",
+    "context": "Random draw determining turn order each round"
+  },
+  "enduring_instructions": {
+    "term": "Enduring Instructions",
+    "definition": "Certain Event cards contain instructions that continue for the remainder of the current disc draw sequence (until the draw bag is empty). These instructions persist only as long as the card remains visible on top of the faction's discard pile. If a War Party, Engagement, or Migration card covers it, the effect ends. When enduring instructions conflict between factions, Indian card instructions have priority.",
+    "context": "Event card effects that last for the remainder of the round"
+  },
+  "engagement": {
+    "term": "Engagement",
+    "definition": "Moving cubes into a region occupied by opponent cubes creates a contested region and initiates an engagement. Engagements are resolved after all faction movement ends. Each side rolls dice based on cube count (1 cube = 1 die, 2+ cubes = 2 dice). Results are resolved in order: Treaties, then Hits, then Retreats. Combat continues until one side is eliminated, retreats, or a Treaty is struck.",
+    "context": "Combat resolution when opposing cubes occupy the same region"
+  },
+  "enemies": {
+    "term": "Enemies (Purple Faction)",
+    "definition": "Purple cubes represent the Northern (Crow) and Southern (Mexicans/Apaches) tribal enemies of the Plains Indians. Controlled by the Cavalry player. They negate both Indian and U.S. control but do not give regional control to the Cavalry. Enemies cubes are friendly with Cavalry but not with Settlers -- if alone with Settlers (no Cavalry present), one side must voluntarily retreat.",
+    "context": "Minor faction of tribal enemies, controlled by Cavalry player"
+  },
+  "group": {
+    "term": "Group",
+    "definition": "One or more cubes of a single faction in one region, or one or more cubes of a single faction who also influence friendly faction cubes to accompany them. Groups may be increased by reinforcement, then move as directed by the card played. A group can be split into multiple groups moving to different destinations.",
+    "context": "One or more cubes of a single faction that move together"
+  },
+  "influenced_movement": {
+    "term": "Influenced Movement",
+    "definition": "Friendly faction cubes not belonging to the activated faction may be moved if accompanied by enough activated cubes. Each Cavalry cube can influence 2 Settlers or 1 Enemies. Two Settlers can influence 1 Cavalry. Two NPT can influence 1 SPT and vice versa. Two Enemies can influence 1 Cavalry.",
+    "context": "Moving allied cubes alongside your own activated cubes"
+  },
+  "play_immediately": {
+    "term": "Play Immediately",
+    "definition": "The Custer card is the only Play Immediately card. It must be played as soon as it is drawn, even if drawn in the opening hand or as a replacement at the end of a turn. It may NOT be used to activate two regions and move cubes up to two regions. The Indian player earns 2 bonus points if Custer's cubes are eliminated.",
+    "context": "Special card type that must be played the instant it is drawn"
+  },
+  "railhead": {
+    "term": "Railhead",
+    "definition": "The last completed rail space at each end of the Transcontinental Railroad is considered the railhead. Black cubes extend the railhead when Brown cubes are present in adjacent regions (Union Pacific) or when dice rolls succeed (Central Pacific Mountain spaces). Railroad movement allows cubes to be placed in any region adjacent to the railroad up to the railhead.",
+    "context": "The furthest completed point of railroad construction"
+  },
+  "ready_box": {
+    "term": "Ready Box",
+    "definition": "The supply of available cubes for each faction, located on the game board. Reinforcement cubes are drawn from the Ready Box and placed on the board according to card instructions. Cubes recovered from the Casualty Box return here and may be placed as reinforcements in the same turn.",
+    "context": "Supply area for available faction cubes"
+  },
+  "region_control": {
+    "term": "Region Control",
+    "definition": "An NPT/SPT region is Indian-controlled when Indian cubes (NPT + SPT) equal or outnumber both U.S. cubes and Enemy cubes (counted separately). If U.S. or Enemy cubes outnumber Indian cubes, the region is contested or U.S.-controlled (if U.S. cubes also equal or outnumber Enemy cubes). Empty NPT/SPT regions are automatically Indian-controlled. Wagon Train and RR cubes have no effect on control.",
+    "context": "Determined by comparing cube counts of each side in a region"
+  },
+  "trail_end": {
+    "term": "Trail-End",
+    "definition": "Three Trail-End regions: Oregon Trail (NE1), Northern California Trail (N1), and Southern California Trail (SE1). U.S. groups retreat toward these in the west, and U.S. units exit the Rockies through them. Cavalry and Settler cubes may enter the Rockies from any region but may only exit via a Trail-End region.",
+    "context": "Western exit points where U.S. groups leave the Rockies"
+  },
+  "treaty_symbol": {
+    "term": "Treaty (Die Symbol)",
+    "definition": "Treaty symbols affect an engagement only if at least one U.S. and one Indian Treaty symbol are rolled in the same combat round. When a treaty is struck, all hits that round are ignored. The stronger force (more cubes) relocates the weaker force to an adjacent friendly-controlled region. If forces are equal, the defender relocates the attacker. Treaties do not allow placement into Canada or Mexico.",
+    "context": "Die result that ends combat when both sides roll one"
+  },
+  "wagon_trains": {
+    "term": "Wagon Trains (White Faction)",
+    "definition": "White cubes represent settler wagon trains traveling west along four trails (Mormon, Santa Fe, California, Oregon). When the White disc is drawn, 2 new cubes are placed in St. Louis and all White cubes advance one region west. Wagons do not trigger engagements, do not affect stacking limits, and do not control regions (but deny Indian control of empty regions). A Wagon reaching the Rockies earns 1 VP for the U.S. player.",
+    "context": "Minor faction moving west along wagon trails toward the Rockies"
+  },
+  "weapon_symbol": {
+    "term": "Weapon / Hit (Die Symbol)",
+    "definition": "Rolling a Weapon symbol means the opponent loses one cube. The player taking the loss selects from their largest faction group present. Removed cubes go to the Casualty Box. When attacking Wagons, 2+ Weapon results in a single round are required to destroy a White cube -- single Hits against Wagons are ignored.",
+    "context": "Die result that eliminates one enemy cube"
+  }
+}
