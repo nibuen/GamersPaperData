@@ -4,7 +4,8 @@
     "definition": "Dark green hex tile. When placed, immediately take one free action as if you had a third die of any value.",
     "context": "Tile Types",
     "icon": "Hexagon",
-    "tint": "#2D5A27"
+    "tint": "#2D5A27",
+    "overlay": "StructureTower"
   },
   "pasture_tile": {
     "term": "Pasture Tile",
@@ -25,21 +26,24 @@
     "definition": "Brown hex tile. Eight types (Warehouse, Carpenter, Church, Market, Boarding House, Bank, City Hall, Watchtower), each with a unique effect when placed. No duplicate types in the same connected brown region.",
     "context": "Tile Types",
     "icon": "Hexagon",
-    "tint": "#C8A064"
+    "tint": "#C8A064",
+    "overlay": "StructureHouse"
   },
   "knowledge_tile": {
     "term": "Knowledge Tile",
     "definition": "Yellow hex tile granting an ongoing ability or end-game scoring bonus. 26 different types exist.",
     "context": "Tile Types",
     "icon": "Hexagon",
-    "tint": "#F9A825"
+    "tint": "#F9A825",
+    "overlay": "BookOpen"
   },
   "mine_tile": {
     "term": "Mine Tile",
     "definition": "Grey hex tile. No immediate effect, but earns 1 Silverling at the end of every phase for the rest of the game.",
     "context": "Tile Types",
     "icon": "Hexagon",
-    "tint": "#78909C"
+    "tint": "#78909C",
+    "overlay": "Dollar"
   },
   "black_depot": {
     "term": "Black Depot",
