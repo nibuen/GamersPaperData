@@ -166,7 +166,7 @@
         "steps": [
           {"description": "Optionally play 1 Event card before the main action card. Place or remove cubes as instructed. Do not resolve engagements until after all movement ends."},
           {"description": "Play exactly 1 War Party (Indian), Engagement (Cavalry), or Migration (Settlers) card. Place reinforcement cubes from the Ready Box as indicated on the card."},
-          {"description": "Move up to the number of groups up to the number of regions indicated on the card. Movement ceases when entering an enemy-controlled or contested region."},
+          {"description": "Move up to the number of groups indicated on the card, each up to the number of regions indicated on the card. Movement ceases when entering an enemy-controlled or contested region."},
           {"description": "Resolve all engagements created by movement."},
           {"description": "Optionally play 1 Event card after the main action card. Resolve any engagements immediately."},
           {"description": "Draw cards from the faction deck to refill your hand to 3 cards."}
