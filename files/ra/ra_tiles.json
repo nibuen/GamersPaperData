@@ -1,0 +1,209 @@
+{
+  "ra": {
+    "id": "ra",
+    "name": "Ra",
+    "body": "When drawn, placed on the Ra track (not auction track). Triggers an involuntary auction immediately. If the Ra track fills, the epoch ends.",
+    "summary": "Triggers auction",
+    "details": "If no one bids on a Ra-triggered auction, all tiles on the auction track are discarded from the game.",
+    "extra": null,
+    "count": 30
+  },
+  "pharaoh": {
+    "id": "pharaoh",
+    "name": "Pharaoh",
+    "body": "Collected for majority scoring each epoch. Most pharaohs: +5 VP. Fewest: -2 VP.",
+    "summary": "Most/Fewest scoring",
+    "details": "Kept between epochs. Your pharaoh collection grows over the game.",
+    "extra": "Kept between epochs",
+    "count": 25
+  },
+  "gold": {
+    "id": "gold",
+    "name": "Gold",
+    "body": "Worth 3 VP each at the end of every epoch. Discarded after scoring.",
+    "summary": "+3 VP each",
+    "details": "Simple, reliable points. Good filler in auction lots.",
+    "extra": "Discarded each epoch",
+    "count": 5
+  },
+  "god": {
+    "id": "god",
+    "name": "God",
+    "body": "Spend on your turn to take any single tile from the auction track (instead of drawing or calling Ra). Unspent God tiles are worth 2 VP each at end of game.",
+    "summary": "Take tile or 2 VP",
+    "details": "Flexible: use for tactical advantage during the game, or hold for guaranteed end-game VP.",
+    "extra": "Kept between epochs",
+    "count": 8
+  },
+  "nile": {
+    "id": "nile",
+    "name": "Nile",
+    "body": "Score 1 VP each at epoch scoring, but ONLY if you have at least one Flood tile. Without Flood, Nile tiles score nothing.",
+    "summary": "+1 VP each (need Flood)",
+    "details": "Kept between epochs. Your Nile collection grows, making Floods increasingly important.",
+    "extra": "Kept between epochs",
+    "count": 25
+  },
+  "flood": {
+    "id": "flood",
+    "name": "Flood",
+    "body": "Activates Nile scoring. Each Flood tile also scores 1 VP. Discarded after each epoch's scoring.",
+    "summary": "+1 VP, activates Nile",
+    "details": "You must collect new Floods each epoch to score your Nile tiles. Losing Floods to Drought is devastating.",
+    "extra": "Discarded each epoch",
+    "count": 12
+  },
+  "civilization_agriculture": {
+    "id": "civilization_agriculture",
+    "name": "Civilization: Agriculture",
+    "body": "One of 5 civilization types. Scored by distinct types collected: 0=-5, 3=+5, 4=+10, 5=+15 VP. All discarded each epoch.",
+    "summary": "Civilization type",
+    "details": "Must rebuild your civilization set every epoch.",
+    "extra": "Discarded each epoch",
+    "count": 5
+  },
+  "civilization_art": {
+    "id": "civilization_art",
+    "name": "Civilization: Art",
+    "body": "One of 5 civilization types. Scored by distinct types collected: 0=-5, 3=+5, 4=+10, 5=+15 VP. All discarded each epoch.",
+    "summary": "Civilization type",
+    "details": "Must rebuild your civilization set every epoch.",
+    "extra": "Discarded each epoch",
+    "count": 5
+  },
+  "civilization_astronomy": {
+    "id": "civilization_astronomy",
+    "name": "Civilization: Astronomy",
+    "body": "One of 5 civilization types. Scored by distinct types collected: 0=-5, 3=+5, 4=+10, 5=+15 VP. All discarded each epoch.",
+    "summary": "Civilization type",
+    "details": "Must rebuild your civilization set every epoch.",
+    "extra": "Discarded each epoch",
+    "count": 5
+  },
+  "civilization_religion": {
+    "id": "civilization_religion",
+    "name": "Civilization: Religion",
+    "body": "One of 5 civilization types. Scored by distinct types collected: 0=-5, 3=+5, 4=+10, 5=+15 VP. All discarded each epoch.",
+    "summary": "Civilization type",
+    "details": "Must rebuild your civilization set every epoch.",
+    "extra": "Discarded each epoch",
+    "count": 5
+  },
+  "civilization_writing": {
+    "id": "civilization_writing",
+    "name": "Civilization: Writing",
+    "body": "One of 5 civilization types. Scored by distinct types collected: 0=-5, 3=+5, 4=+10, 5=+15 VP. All discarded each epoch.",
+    "summary": "Civilization type",
+    "details": "Must rebuild your civilization set every epoch.",
+    "extra": "Discarded each epoch",
+    "count": 5
+  },
+  "monument_fortress": {
+    "id": "monument_fortress",
+    "name": "Monument: Fortress",
+    "body": "One of 8 monument types. Only scored at end of game. Variety: 1-6 types = VP equals count, 7=10, 8=15 VP. Quantity: 3x=5, 4x=10, 5x=15 VP.",
+    "summary": "Monument type",
+    "details": "Kept between all epochs. Long-term investment.",
+    "extra": "Kept all game",
+    "count": 5
+  },
+  "monument_obelisk": {
+    "id": "monument_obelisk",
+    "name": "Monument: Obelisk",
+    "body": "One of 8 monument types. Only scored at end of game. Variety: 1-6 types = VP equals count, 7=10, 8=15 VP. Quantity: 3x=5, 4x=10, 5x=15 VP.",
+    "summary": "Monument type",
+    "details": "Kept between all epochs. Long-term investment.",
+    "extra": "Kept all game",
+    "count": 5
+  },
+  "monument_palace": {
+    "id": "monument_palace",
+    "name": "Monument: Palace",
+    "body": "One of 8 monument types. Only scored at end of game. Variety: 1-6 types = VP equals count, 7=10, 8=15 VP. Quantity: 3x=5, 4x=10, 5x=15 VP.",
+    "summary": "Monument type",
+    "details": "Kept between all epochs. Long-term investment.",
+    "extra": "Kept all game",
+    "count": 5
+  },
+  "monument_pyramid": {
+    "id": "monument_pyramid",
+    "name": "Monument: Pyramid",
+    "body": "One of 8 monument types. Only scored at end of game. Variety: 1-6 types = VP equals count, 7=10, 8=15 VP. Quantity: 3x=5, 4x=10, 5x=15 VP.",
+    "summary": "Monument type",
+    "details": "Kept between all epochs. Long-term investment.",
+    "extra": "Kept all game",
+    "count": 5
+  },
+  "monument_sphinx": {
+    "id": "monument_sphinx",
+    "name": "Monument: Sphinx",
+    "body": "One of 8 monument types. Only scored at end of game. Variety: 1-6 types = VP equals count, 7=10, 8=15 VP. Quantity: 3x=5, 4x=10, 5x=15 VP.",
+    "summary": "Monument type",
+    "details": "Kept between all epochs. Long-term investment.",
+    "extra": "Kept all game",
+    "count": 5
+  },
+  "monument_statue": {
+    "id": "monument_statue",
+    "name": "Monument: Statue",
+    "body": "One of 8 monument types. Only scored at end of game. Variety: 1-6 types = VP equals count, 7=10, 8=15 VP. Quantity: 3x=5, 4x=10, 5x=15 VP.",
+    "summary": "Monument type",
+    "details": "Kept between all epochs. Long-term investment.",
+    "extra": "Kept all game",
+    "count": 5
+  },
+  "monument_step_pyramid": {
+    "id": "monument_step_pyramid",
+    "name": "Monument: Step Pyramid",
+    "body": "One of 8 monument types. Only scored at end of game. Variety: 1-6 types = VP equals count, 7=10, 8=15 VP. Quantity: 3x=5, 4x=10, 5x=15 VP.",
+    "summary": "Monument type",
+    "details": "Kept between all epochs. Long-term investment.",
+    "extra": "Kept all game",
+    "count": 5
+  },
+  "monument_temple": {
+    "id": "monument_temple",
+    "name": "Monument: Temple",
+    "body": "One of 8 monument types. Only scored at end of game. Variety: 1-6 types = VP equals count, 7=10, 8=15 VP. Quantity: 3x=5, 4x=10, 5x=15 VP.",
+    "summary": "Monument type",
+    "details": "Kept between all epochs. Long-term investment.",
+    "extra": "Kept all game",
+    "count": 5
+  },
+  "disaster_funeral": {
+    "id": "disaster_funeral",
+    "name": "Disaster: Funeral",
+    "body": "When won in an auction, you must discard 2 Pharaoh tiles. If you have fewer than 2, discard what you have. The disaster tile is then removed from the game.",
+    "summary": "Lose 2 Pharaohs",
+    "details": "Consider whether the other tiles in the lot outweigh losing pharaohs before bidding.",
+    "extra": null,
+    "count": 2
+  },
+  "disaster_drought": {
+    "id": "disaster_drought",
+    "name": "Disaster: Drought",
+    "body": "When won in an auction, you must discard 2 Nile or Flood tiles (your choice). If you have fewer than 2, discard what you have.",
+    "summary": "Lose 2 Nile/Flood",
+    "details": "Especially painful if you lose your only Flood tile, as your Nile tiles then score nothing.",
+    "extra": null,
+    "count": 2
+  },
+  "disaster_unrest": {
+    "id": "disaster_unrest",
+    "name": "Disaster: Unrest",
+    "body": "When won in an auction, you must discard 1 Civilization tile of your choice.",
+    "summary": "Lose 1 Civilization",
+    "details": "Can disrupt your civilization set. Choose wisely which type to lose.",
+    "extra": null,
+    "count": 2
+  },
+  "disaster_earthquake": {
+    "id": "disaster_earthquake",
+    "name": "Disaster: Earthquake",
+    "body": "When won in an auction, you must discard 1 Monument tile of your choice.",
+    "summary": "Lose 1 Monument",
+    "details": "Since monuments are kept all game, losing one is a permanent setback.",
+    "extra": null,
+    "count": 2
+  }
+}

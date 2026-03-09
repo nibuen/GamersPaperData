@@ -61,6 +61,42 @@
             "game_name": "Plains Indian Wars",
             "designer": "John Poniske",
             "publisher": "GMT Games"
+        },
+        {
+            "id": "amun_re",
+            "game_name": "Amun-Re",
+            "designer": "Reiner Knizia",
+            "publisher": "Hans im Gl\u00fcck"
+        },
+        {
+            "id": "dune_imperium",
+            "game_name": "Dune: Imperium",
+            "designer": "Paul Dennen",
+            "publisher": "Dire Wolf Digital"
+        },
+        {
+            "id": "dune_war_for_arrakis",
+            "game_name": "Dune: War for Arrakis",
+            "designer": "Marco Maggi, Francesco Nepitello",
+            "publisher": "CMON"
+        },
+        {
+            "id": "fox_in_the_forest",
+            "game_name": "The Fox in the Forest",
+            "designer": "Joshua Buergel",
+            "publisher": "Renegade Game Studios"
+        },
+        {
+            "id": "ra",
+            "game_name": "Ra",
+            "designer": "Reiner Knizia",
+            "publisher": "alea / Ravensburger"
+        },
+        {
+            "id": "space_alert",
+            "game_name": "Space Alert",
+            "designer": "Vladim\u00edr Chv\u00e1til",
+            "publisher": "Czech Games Edition"
         }
     ]
 }

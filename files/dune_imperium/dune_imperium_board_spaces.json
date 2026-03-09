@@ -1,0 +1,178 @@
+{
+  "arrakeen": {
+    "id": "arrakeen",
+    "name": "Arrakeen",
+    "body": "Agent Icon: City. Combat space. Recruit a troop and draw a card. Arrakeen's controller gains 1 Solari.",
+    "summary": "City | Combat | Troop + Card",
+    "details": "One of three controllable locations. If you control Arrakeen, you gain 1 Solari whenever any player sends an Agent here. If a Conflict card for Arrakeen is revealed while you control it, deploy one troop from your supply as a defensive bonus.",
+    "extra": "Control Bonus: 1 Solari"
+  },
+  "carthag": {
+    "id": "carthag",
+    "name": "Carthag",
+    "body": "Agent Icon: City. Combat space. Recruit a troop and draw an Intrigue card. Carthag's controller gains 1 Solari.",
+    "summary": "City | Combat | Troop + Intrigue",
+    "details": "One of three controllable locations. If you control Carthag, you gain 1 Solari whenever any player sends an Agent here. If a Conflict card for Carthag is revealed while you control it, deploy one troop from your supply as a defensive bonus.",
+    "extra": "Control Bonus: 1 Solari"
+  },
+  "conspire": {
+    "id": "conspire",
+    "name": "Conspire",
+    "body": "Agent Icon: Emperor. Cost: 4 spice. Gain one Influence with the Emperor. Gain 5 Solari, recruit two troops, and draw an Intrigue card.",
+    "summary": "Emperor | 4 Spice -> +1 Emperor, 5 Solari, 2 Troops, Intrigue",
+    "details": "The most expensive Emperor space but extremely rewarding. Provides a massive swing of resources: Solari, troops, Intrigue, and Influence all in one action.",
+    "extra": "Faction: Emperor"
+  },
+  "foldspace": {
+    "id": "foldspace",
+    "name": "Foldspace",
+    "body": "Agent Icon: Spacing Guild. Gain one Influence with the Spacing Guild. Acquire a Foldspace card from the Reserve.",
+    "summary": "Spacing Guild | +1 SG Influence, Foldspace card",
+    "details": "The free Spacing Guild space. Foldspace cards are flexible Agent turn cards that can send Agents to many locations. Good for increasing deck flexibility.",
+    "extra": "Faction: Spacing Guild"
+  },
+  "the_great_flat": {
+    "id": "the_great_flat",
+    "name": "The Great Flat",
+    "body": "Agent Icon: Spice Trade. Combat space. Cost: 2 water. Gain 3 spice, plus any bonus spice accumulated here on the Maker icon.",
+    "summary": "Spice Trade | Combat | 2 Water -> 3+ Spice (Maker)",
+    "details": "The highest base spice yield of any harvesting space, but requires 2 water. Bonus spice accumulates here each round no Agent is present (Phase 4: Makers). Also a Combat space, allowing troop deployment.",
+    "extra": "Maker Space"
+  },
+  "hagga_basin": {
+    "id": "hagga_basin",
+    "name": "Hagga Basin",
+    "body": "Agent Icon: Spice Trade. Combat space. Cost: 1 water. Gain 2 spice, plus any bonus spice accumulated here on the Maker icon.",
+    "summary": "Spice Trade | Combat | 1 Water -> 2+ Spice (Maker)",
+    "details": "Mid-tier spice harvesting space requiring 1 water. Bonus spice accumulates here each round no Agent is present (Phase 4: Makers). Also a Combat space.",
+    "extra": "Maker Space"
+  },
+  "hall_of_oratory": {
+    "id": "hall_of_oratory",
+    "name": "Hall of Oratory",
+    "body": "Agent Icon: Landsraad. Recruit a troop. During your Reveal turn, gain 1 Persuasion if you have an Agent here.",
+    "summary": "Landsraad | Troop + 1 Persuasion on Reveal",
+    "details": "A free Landsraad space that provides both a troop and Persuasion. The Persuasion bonus applies during your Reveal turn, helping you acquire better cards for your deck.",
+    "extra": null
+  },
+  "hardy_warriors": {
+    "id": "hardy_warriors",
+    "name": "Hardy Warriors",
+    "body": "Agent Icon: Fremen. Combat space. Cost: 1 water. Gain one Influence with the Fremen. Recruit two troops.",
+    "summary": "Fremen | Combat | 1 Water -> +1 Fremen, 2 Troops",
+    "details": "The costly Fremen space. Provides strong combat presence with 2 troops plus Fremen Influence. Being a Combat space means you can deploy those troops immediately.",
+    "extra": "Faction: Fremen"
+  },
+  "heighliner": {
+    "id": "heighliner",
+    "name": "Heighliner",
+    "body": "Agent Icon: Spacing Guild. Combat space. Cost: 6 spice. Gain one Influence with the Spacing Guild. Recruit five troops and gain 2 water.",
+    "summary": "Spacing Guild | Combat | 6 Spice -> +1 SG, 5 Troops, 2 Water",
+    "details": "The most expensive board space but enormously powerful. Five troops is a massive combat commitment. The 2 water returned partially offsets the spice cost for future harvesting.",
+    "extra": "Faction: Spacing Guild"
+  },
+  "high_council": {
+    "id": "high_council",
+    "name": "High Council",
+    "body": "Agent Icon: Landsraad. Cost: 5 Solari. You may send an Agent here only once per game. Place your Councilor token on an unoccupied Council seat. For the rest of the game, during each of your Reveal turns, gain 2 Persuasion.",
+    "summary": "Landsraad | 5 Solari | Once per game | +2 Persuasion every Reveal",
+    "details": "A permanent upgrade that provides 2 Persuasion every Reveal turn for the rest of the game. The earlier you acquire this, the more value it provides. Only usable once per game. Cannot be re-used via Kwisatz Haderach.",
+    "extra": "Once per game"
+  },
+  "imperial_basin": {
+    "id": "imperial_basin",
+    "name": "Imperial Basin",
+    "body": "Agent Icon: Spice Trade. Combat space. Gain 1 spice, plus any bonus spice accumulated here on the Maker icon. Imperial Basin's controller gains 1 spice.",
+    "summary": "Spice Trade | Combat | 1+ Spice (Maker) | No cost",
+    "details": "The only free spice harvesting space. Lower base yield (1 spice) but requires no water. One of three controllable locations. If you control Imperial Basin, you gain 1 spice whenever any player sends an Agent here.",
+    "extra": "Maker Space | Control Bonus: 1 Spice"
+  },
+  "mentat": {
+    "id": "mentat",
+    "name": "Mentat",
+    "body": "Agent Icon: Landsraad. Cost: 2 Solari. Draw a card. If the Mentat is here, take it and place it on your Leader; this round, you may use it as one of your Agents to take an Agent turn. During Phase 5: Recall, return it here.",
+    "summary": "Landsraad | 2 Solari -> Card + Mentat (temp Agent)",
+    "details": "Taking the Mentat gives you a temporary third (or fourth) Agent for the round. The Mentat returns to this space during Recall unless you won it as a Conflict reward, in which case you keep it for the next round.",
+    "extra": null
+  },
+  "rally_troops": {
+    "id": "rally_troops",
+    "name": "Rally Troops",
+    "body": "Agent Icon: Landsraad. Cost: 4 Solari. Recruit four troops.",
+    "summary": "Landsraad | 4 Solari -> 4 Troops",
+    "details": "The most efficient way to build up your garrison. Not a Combat space, so troops go to your garrison and cannot be deployed to the Conflict this turn. Plan ahead to deploy them on a future Combat space turn.",
+    "extra": "Not a Combat space"
+  },
+  "research_station": {
+    "id": "research_station",
+    "name": "Research Station",
+    "body": "Agent Icon: City. Combat space. Cost: 2 water. Draw three cards.",
+    "summary": "City | Combat | 2 Water -> 3 Cards",
+    "details": "Expensive but powerful card draw. Drawing 3 cards gives you more options for future Agent turns this round. Also a Combat space, allowing troop deployment.",
+    "extra": null
+  },
+  "secrets": {
+    "id": "secrets",
+    "name": "Secrets",
+    "body": "Agent Icon: Bene Gesserit. Gain one Influence with the Bene Gesserit. Draw an Intrigue card. Each opponent who has four or more Intrigue cards must give you one of them (selected at random).",
+    "summary": "Bene Gesserit | +1 BG Influence, Intrigue, Steal Intrigue",
+    "details": "The free Bene Gesserit space. Provides Influence and an Intrigue card, plus the Steal Intrigue ability that punishes opponents hoarding Intrigue cards.",
+    "extra": "Faction: Bene Gesserit"
+  },
+  "secure_contract": {
+    "id": "secure_contract",
+    "name": "Secure Contract",
+    "body": "Agent Icon: Spice Trade. Gain 3 Solari.",
+    "summary": "Spice Trade | 3 Solari",
+    "details": "A simple, no-cost way to gain Solari. Useful when you need money for Swordmaster, High Council, Rally Troops, or Mentat.",
+    "extra": null
+  },
+  "selective_breeding": {
+    "id": "selective_breeding",
+    "name": "Selective Breeding",
+    "body": "Agent Icon: Bene Gesserit. Cost: 2 spice. Gain one Influence with the Bene Gesserit. Trash one card to draw two cards.",
+    "summary": "Bene Gesserit | 2 Spice -> +1 BG Influence, Trash 1 Draw 2",
+    "details": "The costly Bene Gesserit space. Provides Influence and powerful deck thinning - trashing a weak card while drawing two replacements. Excellent for improving deck quality.",
+    "extra": "Faction: Bene Gesserit"
+  },
+  "sell_melange": {
+    "id": "sell_melange",
+    "name": "Sell Melange",
+    "body": "Agent Icon: Spice Trade. Cost: 2 to 5 spice. Gain Solari based on spice paid: 2 spice -> 6 Solari, 3 spice -> 8 Solari, 4 spice -> 9 Solari, 5 spice -> 10 Solari. You can't make multiple exchanges on a single turn.",
+    "summary": "Spice Trade | 2-5 Spice -> 6-10 Solari",
+    "details": "Converts spice to Solari at favorable rates. Best value is at 2 spice (3 Solari per spice). Only one exchange per visit. Useful for funding expensive purchases like Swordmaster or High Council.",
+    "extra": null
+  },
+  "sietch_tabr": {
+    "id": "sietch_tabr",
+    "name": "Sietch Tabr",
+    "body": "Agent Icon: City. Combat space. Requirement: You must have 2 or more Influence with the Fremen. Recruit a troop and gain 1 water.",
+    "summary": "City | Combat | Req: 2+ Fremen | Troop + 1 Water",
+    "details": "Requires at least 2 Fremen Influence to access. Provides a troop and water, and is a Combat space. The water gained here can fuel future spice harvesting.",
+    "extra": "Requirement: 2+ Fremen Influence"
+  },
+  "stillsuits": {
+    "id": "stillsuits",
+    "name": "Stillsuits",
+    "body": "Agent Icon: Fremen. Combat space. Gain one Influence with the Fremen. Gain 1 water.",
+    "summary": "Fremen | Combat | +1 Fremen Influence, 1 Water",
+    "details": "The free Fremen space. Provides both Fremen Influence and water, making it a reliable way to build toward the Fremen Alliance while fueling spice harvesting. Also a Combat space.",
+    "extra": "Faction: Fremen"
+  },
+  "swordmaster": {
+    "id": "swordmaster",
+    "name": "Swordmaster",
+    "body": "Agent Icon: Landsraad. Cost: 8 Solari. You may send an Agent here only once per game. Gain your Swordmaster (your third Agent). Place it on your Leader. For the rest of the game (including this round) you have three Agents.",
+    "summary": "Landsraad | 8 Solari | Once per game | Gain 3rd Agent",
+    "details": "A permanent upgrade giving you a third Agent for the rest of the game (including the current round). Extremely powerful as it gives you an additional action every round. Cannot be re-used via Kwisatz Haderach.",
+    "extra": "Once per game"
+  },
+  "wealth": {
+    "id": "wealth",
+    "name": "Wealth",
+    "body": "Agent Icon: Emperor. Gain one Influence with the Emperor. Gain 2 Solari.",
+    "summary": "Emperor | +1 Emperor Influence, 2 Solari",
+    "details": "The free Emperor space. Provides Emperor Influence and a modest Solari income. A reliable way to build toward the Emperor Alliance.",
+    "extra": "Faction: Emperor"
+  }
+}

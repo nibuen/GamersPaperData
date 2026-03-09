@@ -1,0 +1,122 @@
+{
+  "berenike": {
+    "id": "berenike",
+    "name": "Berenike",
+    "body": "Upper Egypt, East Bank. Immediate Bonus: 12 Gold. Features a Gold Mine (+8 Gold every harvest).",
+    "summary": "Upper Egypt - High fixed income",
+    "details": "The most profitable Gold Mine in the game. Provides a massive 12 gold head-start upon acquisition.",
+    "extra": "Region: Upper Egypt | Bank: East | Gold Mine: +8 | Bonus: 12 Gold"
+  },
+  "abu": {
+    "id": "abu",
+    "name": "Abu (Elephantine)",
+    "body": "Upper Egypt, West Bank. Contains a Temple. Immediate Bonus: 1 Free Stone. Features a Gold Mine (+4 Gold every harvest).",
+    "summary": "Upper Egypt - Temple and Gold Mine",
+    "details": "A strategic hybrid province. It provides steady income and a victory point location via the temple.",
+    "extra": "Region: Upper Egypt | Bank: West | Temple: Yes | Gold Mine: +4 | Bonus: 1 Stone"
+  },
+  "edfu": {
+    "id": "edfu",
+    "name": "Edfu",
+    "body": "Upper Egypt, East Bank. Contains a Temple. Immediate Bonus: 1 Power Card.",
+    "summary": "Upper Egypt - Temple and Card",
+    "details": "A standard temple province. The power card provides immediate tactical flexibility.",
+    "extra": "Region: Upper Egypt | Bank: East | Temple: Yes | Bonus: 1 Power Card"
+  },
+  "kharga": {
+    "id": "kharga",
+    "name": "Kharga",
+    "body": "Upper Egypt, West Bank. Immediate Bonus: 1 Free Stone. Features a Caravan (+10 Gold if Nile level is 1 or 2).",
+    "summary": "Upper Egypt - High risk Caravan",
+    "details": "Provides a massive payout during low-flood years, making it a gamble on the Nile's behavior.",
+    "extra": "Region: Upper Egypt | Bank: West | Caravan: +10 | Bonus: 1 Stone"
+  },
+  "abydos": {
+    "id": "abydos",
+    "name": "Abydos",
+    "body": "Upper Egypt, East Bank. Contains a Temple. Immediate Bonus: 1 Free Stone. Provides 4 Favor Icons.",
+    "summary": "Upper Egypt - Temple and high card limit",
+    "details": "Unique for Upper Egypt, this province allows you to buy up to 4 items in the market phase.",
+    "extra": "Region: Upper Egypt | Bank: East | Temple: Yes | Favor: 4 | Bonus: 1 Stone"
+  },
+  "sawu": {
+    "id": "sawu",
+    "name": "Sawu",
+    "body": "Upper Egypt, West Bank. Immediate Bonus: 1 Power Card. Features a Caravan (+12 Gold if Nile level is 1 or 2).",
+    "summary": "Upper Egypt - Largest Caravan",
+    "details": "The most valuable caravan in the game, but yields nothing if the Nile floods heavily.",
+    "extra": "Region: Upper Egypt | Bank: West | Caravan: +12 | Bonus: 1 Power Card"
+  },
+  "thebes": {
+    "id": "thebes",
+    "name": "Thebes",
+    "body": "Upper Egypt, East Bank. Contains a Temple. Immediate Bonus: 2 Power Cards.",
+    "summary": "Upper Egypt - Temple and 2 Cards",
+    "details": "A high-value religious center that builds your hand of power cards quickly.",
+    "extra": "Region: Upper Egypt | Bank: East | Temple: Yes | Bonus: 2 Power Cards"
+  },
+  "bahariya": {
+    "id": "bahariya",
+    "name": "Bahariya",
+    "body": "Lower Egypt, West Bank. Provides 2 Favor Icons. Immediate Bonus: 1 Farmer.",
+    "summary": "Lower Egypt - Standard farming",
+    "details": "A standard northern province. Good for farming and moderate card-buying capacity.",
+    "extra": "Region: Lower Egypt | Bank: West | Favor: 2 | Bonus: 1 Farmer"
+  },
+  "amarna": {
+    "id": "amarna",
+    "name": "Amarna",
+    "body": "Lower Egypt, East Bank. Provides 2 Favor Icons. Immediate Bonus: 1 Stone and 1 Farmer.",
+    "summary": "Lower Egypt - Fast start",
+    "details": "Great for getting a pyramid started immediately due to the free stone and farmer.",
+    "extra": "Region: Lower Egypt | Bank: East | Favor: 2 | Bonus: 1 Stone, 1 Farmer"
+  },
+  "damanhur": {
+    "id": "damanhur",
+    "name": "Damanhur",
+    "body": "Lower Egypt, West Bank. Contains a Temple. Provides 1 Favor Icon. Immediate Bonus: 1 Free Stone.",
+    "summary": "Lower Egypt - Temple",
+    "details": "One of the three temple locations in the North. Crucial for scoring points in the Old and New Kingdoms.",
+    "extra": "Region: Lower Egypt | Bank: West | Temple: Yes | Favor: 1 | Bonus: 1 Stone"
+  },
+  "mendes": {
+    "id": "mendes",
+    "name": "Mendes",
+    "body": "Lower Egypt, East Bank. Provides 2 Favor Icons. Immediate Bonus: 1 Stone and 1 Power Card.",
+    "summary": "Lower Egypt - Versatile bonus",
+    "details": "Offers a balanced start with resources and a tactical card.",
+    "extra": "Region: Lower Egypt | Bank: East | Favor: 2 | Bonus: 1 Stone, 1 Power Card"
+  },
+  "memphis": {
+    "id": "memphis",
+    "name": "Memphis",
+    "body": "Lower Egypt, West Bank. Contains a Temple. Immediate Bonus: 1 Farmer and 1 Power Card.",
+    "summary": "Lower Egypt - Temple and economy",
+    "details": "A very strong province that sets up your food production and your temple scoring simultaneously.",
+    "extra": "Region: Lower Egypt | Bank: West | Temple: Yes | Bonus: 1 Farmer, 1 Power Card"
+  },
+  "alexandria": {
+    "id": "alexandria",
+    "name": "Alexandria",
+    "body": "Lower Egypt, East Bank. Provides 3 Favor Icons. Immediate Bonus: 2 Power Cards.",
+    "summary": "Lower Egypt - Card strategy center",
+    "details": "The best province for players focusing on Power Cards, both for the immediate draw and the high favor limit.",
+    "extra": "Region: Lower Egypt | Bank: East | Favor: 3 | Bonus: 2 Power Cards"
+  },
+  "avaris": {
+    "id": "avaris",
+    "name": "Avaris",
+    "body": "Lower Egypt, West Bank. Immediate Bonus: 1 Farmer. Features a Caravan (+8 Gold if Nile level is 1 or 2).",
+    "summary": "Lower Egypt - Farming and Caravan",
+    "details": "Combines traditional farming with extra income during dry years.",
+    "extra": "Region: Lower Egypt | Bank: West | Caravan: +8 | Bonus: 1 Farmer"
+  },
+  "dakhla": {
+    "id": "dakhla",
+    "name": "Dakhla",
+    "body": "Lower Egypt, East Bank. Contains a Temple. Immediate Bonus: 12 Gold and 1 Power Card.",
+    "summary": "Lower Egypt - High value temple",
+    "details": "Often the most expensive auction because of the massive gold and card injection provided immediately.",
+    "extra": "Region: Lower Egypt | Bank: East | Temple: Yes | Bonus: 12 Gold, 1 Power Card"
+  }
+}

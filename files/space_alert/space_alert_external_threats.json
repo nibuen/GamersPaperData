@@ -1,0 +1,114 @@
+{
+  "ext_common_01": {
+    "id": "ext_common_01",
+    "name": "Fighter",
+    "body": "A small, fast attack ship. Fires at the ship as it approaches. Deals 1 damage on action spaces and 2 damage when it reaches the ship.",
+    "summary": "Light attack ship dealing 1-2 damage",
+    "details": "Speed: Normal. Health: 3. Appears in one zone. Attacks on trajectory action spaces for 1 damage each, then deals 2 damage on impact.",
+    "extra": "Common External Threat"
+  },
+  "ext_common_02": {
+    "id": "ext_common_02",
+    "name": "Destroyer",
+    "body": "A heavily armed warship. Fires powerful volleys at the ship as it advances. Deals 2 damage on action spaces and 3 damage when it reaches the ship.",
+    "summary": "Heavy warship dealing 2-3 damage",
+    "details": "Speed: Normal. Health: 5. Appears in one zone. Attacks on trajectory action spaces for 2 damage each, then deals 3 damage on impact.",
+    "extra": "Common External Threat"
+  },
+  "ext_common_03": {
+    "id": "ext_common_03",
+    "name": "Energy Cloud",
+    "body": "A drifting cloud of charged particles. Drains 1 energy from the targeted zone on each action space. If it reaches the ship, drains all remaining energy in the zone.",
+    "summary": "Drains energy from the targeted zone",
+    "details": "Speed: Normal. Health: 2. Drains energy instead of dealing structural damage. Shields do not block energy drain.",
+    "extra": "Common External Threat"
+  },
+  "ext_common_04": {
+    "id": "ext_common_04",
+    "name": "Gunship",
+    "body": "A fast-moving gunship that fires rapidly. Deals 1 damage on each action space and 1 damage when it reaches the ship. Fast speed makes it harder to destroy in time.",
+    "summary": "Fast ship with repeated light attacks",
+    "details": "Speed: Fast (advances 2 spaces per turn). Health: 3. Frequent light attacks make accumulated damage significant.",
+    "extra": "Common External Threat"
+  },
+  "ext_common_05": {
+    "id": "ext_common_05",
+    "name": "Asteroid",
+    "body": "A large space rock hurtling toward the ship. Does nothing on approach but deals 4 damage on impact if not destroyed.",
+    "summary": "High impact damage if not destroyed",
+    "details": "Speed: Normal. Health: 4. No attacks during approach, but devastating 4 damage on impact. Must be destroyed before arrival.",
+    "extra": "Common External Threat"
+  },
+  "ext_common_06": {
+    "id": "ext_common_06",
+    "name": "Scout",
+    "body": "A small reconnaissance vessel. Deals 1 damage on each action space. Weak but arrives quickly due to fast speed.",
+    "summary": "Weak but fast reconnaissance ship",
+    "details": "Speed: Fast. Health: 2. Low damage per hit but arrives quickly, giving less time to react.",
+    "extra": "Common External Threat"
+  },
+  "ext_common_07": {
+    "id": "ext_common_07",
+    "name": "Pulse Ball",
+    "body": "An energy sphere that disrupts ship systems. On each action space, it forces the targeted zone's shield down. Deals 2 damage on impact.",
+    "summary": "Disables shields and deals impact damage",
+    "details": "Speed: Normal. Health: 3. Drops shields on action spaces, making the zone vulnerable to other threats. Deals 2 damage on arrival.",
+    "extra": "Common External Threat"
+  },
+  "ext_common_08": {
+    "id": "ext_common_08",
+    "name": "Frigate",
+    "body": "A sturdy military vessel. Deals 1 damage on action spaces and 3 damage on impact. High health makes it difficult to destroy.",
+    "summary": "Durable ship with moderate to high damage",
+    "details": "Speed: Normal. Health: 6. Tough to bring down with a single weapon. Coordinate fire from multiple turns.",
+    "extra": "Common External Threat"
+  },
+  "ext_serious_01": {
+    "id": "ext_serious_01",
+    "name": "Battleship",
+    "body": "A massive warship bristling with weapons. Deals 2 damage on each action space and 4 damage when it reaches the ship. Extremely dangerous if not handled quickly.",
+    "summary": "Heavily armed capital ship",
+    "details": "Speed: Normal. Health: 8. Serious threat. Requires concentrated fire from multiple crew members across several turns to destroy.",
+    "extra": "Serious External Threat"
+  },
+  "ext_serious_02": {
+    "id": "ext_serious_02",
+    "name": "Nemesis",
+    "body": "An advanced alien warship. Deals 2 damage on action spaces and regenerates 1 health each turn it is not damaged. Deals 5 damage on impact.",
+    "summary": "Regenerating alien warship",
+    "details": "Speed: Normal. Health: 7. Regenerates 1 HP per turn unless damaged that turn. Must sustain continuous fire to bring it down.",
+    "extra": "Serious External Threat"
+  },
+  "ext_serious_03": {
+    "id": "ext_serious_03",
+    "name": "Leviathan",
+    "body": "An enormous space creature. Deals 3 damage on each action space. If it reaches the ship, it deals 6 damage and destroys the zone outright.",
+    "summary": "Massive creature that destroys zones",
+    "details": "Speed: Slow. Health: 10. Slow but devastating. Use its slow speed to pour all available firepower into it before arrival.",
+    "extra": "Serious External Threat"
+  },
+  "ext_serious_04": {
+    "id": "ext_serious_04",
+    "name": "Stealth Fighter",
+    "body": "An invisible attack craft that cannot be targeted until visual confirmation is performed. Deals 2 damage on action spaces and 3 damage on impact.",
+    "summary": "Invisible until confirmed, then attacks hard",
+    "details": "Speed: Fast. Health: 4. Requires visual confirmation (Upper White B action) before any weapons can damage it. Fast speed leaves little time.",
+    "extra": "Serious External Threat"
+  },
+  "ext_serious_05": {
+    "id": "ext_serious_05",
+    "name": "Energy Leech",
+    "body": "A parasitic entity that drains 2 energy from the targeted zone on each action space. On impact, completely disables the zone's reactor permanently for the rest of the mission.",
+    "summary": "Drains energy and disables reactors",
+    "details": "Speed: Normal. Health: 5. Serious threat. Energy drain bypasses shields. If it reaches the ship, the zone loses all power permanently.",
+    "extra": "Serious External Threat"
+  },
+  "ext_serious_06": {
+    "id": "ext_serious_06",
+    "name": "Carrier",
+    "body": "A large carrier ship that launches fighter drones. On each action space, spawns a minor fighter threat in the same zone with 2 health and 1 damage. Deals 3 damage on impact.",
+    "summary": "Spawns additional fighters as it approaches",
+    "details": "Speed: Slow. Health: 7. Each spawned fighter must be dealt with separately. Can overwhelm a zone if not addressed early.",
+    "extra": "Serious External Threat"
+  }
+}

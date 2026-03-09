@@ -1,0 +1,266 @@
+{
+  "bells_01": {
+    "id": "bells_01",
+    "name": "Swan (Bells 1)",
+    "body": "If you play this card and lose the trick, you lead the next trick.",
+    "summary": "Lose trick -> Still lead next",
+    "details": "Even if your opponent wins this trick, you get to lead the next trick instead of them.",
+    "extra": "Rank: 1 (lowest)"
+  },
+  "bells_02": {
+    "id": "bells_02",
+    "name": "Bells 2",
+    "body": "No special ability.",
+    "summary": "Basic card",
+    "details": null,
+    "extra": "Rank: 2"
+  },
+  "bells_03": {
+    "id": "bells_03",
+    "name": "Fox (Bells 3)",
+    "body": "When you play this card, you may exchange the Decree Card with a card from your hand.",
+    "summary": "Swap Decree Card",
+    "details": "You may change the trump suit by swapping a card from your hand with the face-up Decree Card. The new Decree Card determines the new trump suit.",
+    "extra": "Rank: 3"
+  },
+  "bells_04": {
+    "id": "bells_04",
+    "name": "Bells 4",
+    "body": "No special ability.",
+    "summary": "Basic card",
+    "details": null,
+    "extra": "Rank: 4"
+  },
+  "bells_05": {
+    "id": "bells_05",
+    "name": "Woodcutter (Bells 5)",
+    "body": "When you play this card, draw 1 card from the draw deck. Then discard any 1 card from your hand to the bottom of the draw deck (face down).",
+    "summary": "Draw 1, discard 1",
+    "details": "This lets you cycle through your hand, potentially finding better cards or ditching unwanted ones.",
+    "extra": "Rank: 5"
+  },
+  "bells_06": {
+    "id": "bells_06",
+    "name": "Bells 6",
+    "body": "No special ability.",
+    "summary": "Basic card",
+    "details": null,
+    "extra": "Rank: 6"
+  },
+  "bells_07": {
+    "id": "bells_07",
+    "name": "Treasure (Bells 7)",
+    "body": "The winner of a trick containing this card scores 1 point for each 7 in the trick.",
+    "summary": "+1 point when won",
+    "details": "Points from Treasure cards are scored immediately when the trick is won, in addition to end-of-round scoring.",
+    "extra": "Rank: 7 | Bonus: +1 VP"
+  },
+  "bells_08": {
+    "id": "bells_08",
+    "name": "Bells 8",
+    "body": "No special ability.",
+    "summary": "Basic card",
+    "details": null,
+    "extra": "Rank: 8"
+  },
+  "bells_09": {
+    "id": "bells_09",
+    "name": "Witch (Bells 9)",
+    "body": "When determining the winner of a trick with only one 9, treat the 9 as if it were in the trump suit.",
+    "summary": "Counts as trump",
+    "details": "A single 9 acts like a trump card. If both players play a 9, they cancel out and act as their actual suits.",
+    "extra": "Rank: 9"
+  },
+  "bells_10": {
+    "id": "bells_10",
+    "name": "Bells 10",
+    "body": "No special ability.",
+    "summary": "Basic card",
+    "details": null,
+    "extra": "Rank: 10"
+  },
+  "bells_11": {
+    "id": "bells_11",
+    "name": "Monarch (Bells 11)",
+    "body": "When you lead this card, your opponent must play either the 1 of this suit or their highest-ranked card of this suit (if they have any cards of this suit).",
+    "summary": "Force opponent's play",
+    "details": "Your opponent must play their 1 (Swan) if they have it, otherwise their highest card of the led suit. This can force out high cards or deny them the Swan's ability.",
+    "extra": "Rank: 11 (highest)"
+  },
+  "keys_01": {
+    "id": "keys_01",
+    "name": "Swan (Keys 1)",
+    "body": "If you play this card and lose the trick, you lead the next trick.",
+    "summary": "Lose trick -> Still lead next",
+    "details": "Even if your opponent wins this trick, you get to lead the next trick instead of them.",
+    "extra": "Rank: 1 (lowest)"
+  },
+  "keys_02": {
+    "id": "keys_02",
+    "name": "Keys 2",
+    "body": "No special ability.",
+    "summary": "Basic card",
+    "details": null,
+    "extra": "Rank: 2"
+  },
+  "keys_03": {
+    "id": "keys_03",
+    "name": "Fox (Keys 3)",
+    "body": "When you play this card, you may exchange the Decree Card with a card from your hand.",
+    "summary": "Swap Decree Card",
+    "details": "You may change the trump suit by swapping a card from your hand with the face-up Decree Card. The new Decree Card determines the new trump suit.",
+    "extra": "Rank: 3"
+  },
+  "keys_04": {
+    "id": "keys_04",
+    "name": "Keys 4",
+    "body": "No special ability.",
+    "summary": "Basic card",
+    "details": null,
+    "extra": "Rank: 4"
+  },
+  "keys_05": {
+    "id": "keys_05",
+    "name": "Woodcutter (Keys 5)",
+    "body": "When you play this card, draw 1 card from the draw deck. Then discard any 1 card from your hand to the bottom of the draw deck (face down).",
+    "summary": "Draw 1, discard 1",
+    "details": "This lets you cycle through your hand, potentially finding better cards or ditching unwanted ones.",
+    "extra": "Rank: 5"
+  },
+  "keys_06": {
+    "id": "keys_06",
+    "name": "Keys 6",
+    "body": "No special ability.",
+    "summary": "Basic card",
+    "details": null,
+    "extra": "Rank: 6"
+  },
+  "keys_07": {
+    "id": "keys_07",
+    "name": "Treasure (Keys 7)",
+    "body": "The winner of a trick containing this card scores 1 point for each 7 in the trick.",
+    "summary": "+1 point when won",
+    "details": "Points from Treasure cards are scored immediately when the trick is won, in addition to end-of-round scoring.",
+    "extra": "Rank: 7 | Bonus: +1 VP"
+  },
+  "keys_08": {
+    "id": "keys_08",
+    "name": "Keys 8",
+    "body": "No special ability.",
+    "summary": "Basic card",
+    "details": null,
+    "extra": "Rank: 8"
+  },
+  "keys_09": {
+    "id": "keys_09",
+    "name": "Witch (Keys 9)",
+    "body": "When determining the winner of a trick with only one 9, treat the 9 as if it were in the trump suit.",
+    "summary": "Counts as trump",
+    "details": "A single 9 acts like a trump card. If both players play a 9, they cancel out and act as their actual suits.",
+    "extra": "Rank: 9"
+  },
+  "keys_10": {
+    "id": "keys_10",
+    "name": "Keys 10",
+    "body": "No special ability.",
+    "summary": "Basic card",
+    "details": null,
+    "extra": "Rank: 10"
+  },
+  "keys_11": {
+    "id": "keys_11",
+    "name": "Monarch (Keys 11)",
+    "body": "When you lead this card, your opponent must play either the 1 of this suit or their highest-ranked card of this suit (if they have any cards of this suit).",
+    "summary": "Force opponent's play",
+    "details": "Your opponent must play their 1 (Swan) if they have it, otherwise their highest card of the led suit. This can force out high cards or deny them the Swan's ability.",
+    "extra": "Rank: 11 (highest)"
+  },
+  "moons_01": {
+    "id": "moons_01",
+    "name": "Swan (Moons 1)",
+    "body": "If you play this card and lose the trick, you lead the next trick.",
+    "summary": "Lose trick -> Still lead next",
+    "details": "Even if your opponent wins this trick, you get to lead the next trick instead of them.",
+    "extra": "Rank: 1 (lowest)"
+  },
+  "moons_02": {
+    "id": "moons_02",
+    "name": "Moons 2",
+    "body": "No special ability.",
+    "summary": "Basic card",
+    "details": null,
+    "extra": "Rank: 2"
+  },
+  "moons_03": {
+    "id": "moons_03",
+    "name": "Fox (Moons 3)",
+    "body": "When you play this card, you may exchange the Decree Card with a card from your hand.",
+    "summary": "Swap Decree Card",
+    "details": "You may change the trump suit by swapping a card from your hand with the face-up Decree Card. The new Decree Card determines the new trump suit.",
+    "extra": "Rank: 3"
+  },
+  "moons_04": {
+    "id": "moons_04",
+    "name": "Moons 4",
+    "body": "No special ability.",
+    "summary": "Basic card",
+    "details": null,
+    "extra": "Rank: 4"
+  },
+  "moons_05": {
+    "id": "moons_05",
+    "name": "Woodcutter (Moons 5)",
+    "body": "When you play this card, draw 1 card from the draw deck. Then discard any 1 card from your hand to the bottom of the draw deck (face down).",
+    "summary": "Draw 1, discard 1",
+    "details": "This lets you cycle through your hand, potentially finding better cards or ditching unwanted ones.",
+    "extra": "Rank: 5"
+  },
+  "moons_06": {
+    "id": "moons_06",
+    "name": "Moons 6",
+    "body": "No special ability.",
+    "summary": "Basic card",
+    "details": null,
+    "extra": "Rank: 6"
+  },
+  "moons_07": {
+    "id": "moons_07",
+    "name": "Treasure (Moons 7)",
+    "body": "The winner of a trick containing this card scores 1 point for each 7 in the trick.",
+    "summary": "+1 point when won",
+    "details": "Points from Treasure cards are scored immediately when the trick is won, in addition to end-of-round scoring.",
+    "extra": "Rank: 7 | Bonus: +1 VP"
+  },
+  "moons_08": {
+    "id": "moons_08",
+    "name": "Moons 8",
+    "body": "No special ability.",
+    "summary": "Basic card",
+    "details": null,
+    "extra": "Rank: 8"
+  },
+  "moons_09": {
+    "id": "moons_09",
+    "name": "Witch (Moons 9)",
+    "body": "When determining the winner of a trick with only one 9, treat the 9 as if it were in the trump suit.",
+    "summary": "Counts as trump",
+    "details": "A single 9 acts like a trump card. If both players play a 9, they cancel out and act as their actual suits.",
+    "extra": "Rank: 9"
+  },
+  "moons_10": {
+    "id": "moons_10",
+    "name": "Moons 10",
+    "body": "No special ability.",
+    "summary": "Basic card",
+    "details": null,
+    "extra": "Rank: 10"
+  },
+  "moons_11": {
+    "id": "moons_11",
+    "name": "Monarch (Moons 11)",
+    "body": "When you lead this card, your opponent must play either the 1 of this suit or their highest-ranked card of this suit (if they have any cards of this suit).",
+    "summary": "Force opponent's play",
+    "details": "Your opponent must play their 1 (Swan) if they have it, otherwise their highest card of the led suit. This can force out high cards or deny them the Swan's ability.",
+    "extra": "Rank: 11 (highest)"
+  }
+}

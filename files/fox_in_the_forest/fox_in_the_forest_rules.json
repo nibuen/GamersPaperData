@@ -1,0 +1,170 @@
+{
+  "game_name": "The Fox in the Forest",
+  "designer": "Joshua Buergel",
+  "publisher": "Renegade Game Studios",
+  "game_overview": "The Fox in the Forest is a trick-taking game for two players set in a fairy tale world. Use the special abilities of the fairy tale characters to change the trump suit, lead even after you lose a trick, and more. Score points by winning the right number of tricks each round - but don't get greedy! Win too many tricks and you'll fall prey to the curse of the forest.",
+  "objective": "Be the first player to reach 21 points by winning the right number of tricks each round.",
+  "min_players": 2,
+  "max_players": 2,
+  "bgg_link": "https://boardgamegeek.com/boardgame/221965/the-fox-in-the-forest",
+  "play_time_minutes": 30,
+  "components_overview": [
+    {
+      "name": "Playing Cards",
+      "type": "Card",
+      "subTypes": ["Bells", "Keys", "Moons"],
+      "description": "33 cards: 11 cards in each of three suits (Bells, Keys, Moons), numbered 1-11.",
+      "detailed_description": "Each suit contains cards ranked 1-11. Odd-numbered cards (1, 3, 5, 7, 9, 11) feature fairy tale characters with special abilities. Even-numbered cards (2, 4, 6, 8, 10) have no special abilities.",
+      "action": {
+        "name": "CardList",
+        "value": "fox_in_the_forest_cards.json"
+      }
+    },
+    {
+      "name": "Scoring Tokens",
+      "type": "Token",
+      "description": "17 tokens in denominations of 1, 3, and 6 points for tracking score."
+    },
+    {
+      "name": "Player Reference Cards",
+      "type": "Card",
+      "description": "2 double-sided reference cards showing the scoring table and card abilities."
+    }
+  ],
+  "setup": [
+    {
+      "description": "Shuffle all 33 game cards together."
+    },
+    {
+      "description": "Deal 13 cards face-down to each player. Keep your hand hidden from your opponent."
+    },
+    {
+      "description": "Place the remaining 7 cards face-down in the center of the table to form the draw deck."
+    },
+    {
+      "description": "Flip the top card of the draw deck face-up. This is the Decree Card and its suit is the trump suit for this round."
+    },
+    {
+      "description": "The non-dealer leads the first trick."
+    }
+  ],
+  "gameplay": {
+    "turn_structure": "The game is played over multiple rounds. Each round consists of 13 tricks. The trick winner leads the next trick (unless a Swan ability changes this).",
+    "actions": [
+      {
+        "name": "Lead a Trick",
+        "description": "The lead player plays any card from their hand face-up to the center.",
+        "steps": [
+          {
+            "description": "Choose any card from your hand."
+          },
+          {
+            "description": "Play it face-up to the center of the table. This card determines the lead suit."
+          },
+          {
+            "description": "If the card has a special ability, resolve it now."
+          }
+        ]
+      },
+      {
+        "name": "Follow a Trick",
+        "description": "The following player must play a card that matches the lead suit if possible.",
+        "steps": [
+          {
+            "description": "If you have a card matching the lead suit, you MUST play one of those cards."
+          },
+          {
+            "description": "If you have no cards of the lead suit, you may play any card from your hand."
+          },
+          {
+            "description": "If the card has a special ability, resolve it now."
+          }
+        ]
+      },
+      {
+        "name": "Determine Trick Winner",
+        "description": "Compare the two cards to determine who wins the trick.",
+        "steps": [
+          {
+            "description": "If a trump suit card was played, the highest trump card wins the trick."
+          },
+          {
+            "description": "If no trump was played, the highest card of the lead suit wins."
+          },
+          {
+            "description": "The winner takes both cards and places them face-down in their scoring pile."
+          },
+          {
+            "description": "If the trick contains any 7s (Treasure), the winner immediately scores 1 point for each 7 in the trick."
+          }
+        ],
+        "notes": [
+          {
+            "description": "A 9 (Witch) played alone acts as if it were in the trump suit."
+          },
+          {
+            "description": "If both players play a 9, they cancel out and act as their actual suits."
+          }
+        ]
+      }
+    ],
+    "key_concepts": [
+      {
+        "name": "Trump Suit",
+        "description": "The suit of the Decree Card is the trump suit. Trump cards beat any card of another suit, regardless of rank."
+      },
+      {
+        "name": "Following Suit",
+        "description": "You must play a card of the lead suit if you have one. If you cannot follow suit, you may play any card (including trump to win, or discarding an unwanted card)."
+      },
+      {
+        "name": "Special Abilities",
+        "description": "Odd-numbered cards (1, 3, 5, 7, 9, 11) have special abilities that activate when played. Even-numbered cards have no abilities."
+      },
+      {
+        "name": "Greedy vs Humble",
+        "description": "Winning too many tricks (10+) is 'Greedy' and scores 0 points. Winning very few tricks (0-3) is 'Humble' and scores the maximum 6 points. The sweet spot is 7-9 tricks for 6 points."
+      }
+    ]
+  },
+  "end_game": {
+    "trigger": "The game ends immediately when either player has 21 or more points at the end of a round.",
+    "procedure": [
+      "After all 13 tricks are played, count the tricks each player won.",
+      "Award points according to the scoring table.",
+      "If neither player has 21+ points, shuffle all cards and deal a new round.",
+      "Alternate who deals each round (non-dealer leads the first trick)."
+    ],
+    "final_scoring": [
+      {
+        "source": "0-3 Tricks (Humble)",
+        "description": "Score 6 points. You avoided falling prey to the curse of the forest."
+      },
+      {
+        "source": "4 Tricks (Defeated)",
+        "description": "Score 1 point."
+      },
+      {
+        "source": "5 Tricks (Defeated)",
+        "description": "Score 2 points."
+      },
+      {
+        "source": "6 Tricks (Defeated)",
+        "description": "Score 3 points."
+      },
+      {
+        "source": "7-9 Tricks (Victorious)",
+        "description": "Score 6 points. You achieved victory through skill."
+      },
+      {
+        "source": "10-13 Tricks (Greedy)",
+        "description": "Score 0 points. Your greed has caught up with you!"
+      },
+      {
+        "source": "Treasure Cards (7s)",
+        "description": "During play, winning a trick with a 7 scores 1 bonus point per 7 in that trick."
+      }
+    ]
+  },
+  "winning_condition": "The player with the most points when the game ends wins. In case of a tie, the player who scored more points in the final round wins. Game length variants: 16 points (shorter game) or 35 points (longer game)."
+}

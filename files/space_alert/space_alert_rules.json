@@ -1,0 +1,377 @@
+{
+  "game_name": "Space Alert",
+  "designer": "Vladimír Chvátil",
+  "publisher": "Czech Games Edition",
+  "game_overview": "Space Alert is a cooperative team survival game where players serve as crew members of a small spaceship scanning dangerous sectors of the galaxy. The mission lasts just 10 real-time minutes, during which a soundtrack announces incoming threats. Players simultaneously plan their actions by playing action cards, then resolve those actions step by step to see if the ship survives. Communication is frantic and teamwork is essential.",
+  "objective": "Work together to survive the mission. The entire crew wins if the ship is not destroyed during the resolution phase, and loses if the ship takes too much damage.",
+  "min_players": 1,
+  "max_players": 5,
+  "bgg_link": "https://boardgamegeek.com/boardgame/38453/space-alert",
+  "play_time_minutes": 30,
+  "components_overview": [
+    {
+      "name": "Ship Board",
+      "type": "Board",
+      "count": 1,
+      "description": "Double-sided board showing the ship cross-section with 6 stations arranged in 3 zones (Red, White, Blue) across 2 decks (Upper and Lower). Tracks energy, shields, and damage for each zone."
+    },
+    {
+      "name": "Trajectory Board",
+      "type": "Board",
+      "count": 1,
+      "description": "Tracks the position and progress of external threats approaching the ship from each of the three zones."
+    },
+    {
+      "name": "Action Cards",
+      "type": "Card",
+      "description": "Cards used by players to program their actions during the mission. Include movement arrows (left/right), A buttons, B buttons, and numbered action cards (1-3) for each crew position."
+    },
+    {
+      "name": "Internal Threat Cards",
+      "type": "Card",
+      "description": "Threats that appear inside the ship and must be dealt with by crew members in specific locations. Include both common (white) and serious (yellow) threats.",
+      "action": {
+        "name": "CardList",
+        "value": "space_alert_internal_threats.json"
+      }
+    },
+    {
+      "name": "External Threat Cards",
+      "type": "Card",
+      "description": "Threats that approach the ship from outside and attack specific zones. Include both common (white) and serious (yellow) threats.",
+      "action": {
+        "name": "CardList",
+        "value": "space_alert_external_threats.json"
+      }
+    },
+    {
+      "name": "Player Figures",
+      "type": "Meeple",
+      "count": 5,
+      "description": "Color-coded figures representing each crew member on the ship board. All players start in the upper White (center) station."
+    },
+    {
+      "name": "Damage Tokens",
+      "type": "Token",
+      "description": "Placed on the ship board to track structural damage to each zone. When a zone accumulates too much damage, it is destroyed."
+    },
+    {
+      "name": "Energy Tokens",
+      "type": "Token",
+      "description": "Track the energy available in each zone's reactor. Energy is spent to fire weapons, raise shields, and power other systems."
+    },
+    {
+      "name": "Rocket Tokens",
+      "type": "Token",
+      "count": 3,
+      "description": "Represent the ship's limited supply of rockets, fired from the upper deck stations."
+    },
+    {
+      "name": "Mission Soundtrack",
+      "type": "Token",
+      "description": "A CD or app soundtrack that runs during the real-time phase. Announces incoming threats, data transfers, communications disruptions, and phase changes."
+    }
+  ],
+  "setup": [
+    {
+      "description": "Place the ship board in the center of the table.",
+      "short_description": "Ship Board"
+    },
+    {
+      "description": "Place the trajectory board next to the ship board.",
+      "short_description": "Trajectory Board"
+    },
+    {
+      "description": "Place energy tokens on each zone's reactor: 2 energy in each side zone (Red and Blue), 3 energy in the central zone (White).",
+      "short_description": "Energy Setup"
+    },
+    {
+      "description": "Place the 3 rocket tokens on the rocket supply area of the ship board.",
+      "short_description": "Rockets"
+    },
+    {
+      "description": "Each player takes a set of action cards and a player figure.",
+      "short_description": "Player Cards"
+    },
+    {
+      "description": "Place all player figures in the upper White (center) station.",
+      "short_description": "Starting Position"
+    },
+    {
+      "description": "Shuffle the external threat deck (common and serious separately) and internal threat deck (common and serious separately).",
+      "short_description": "Shuffle Threats"
+    },
+    {
+      "description": "Prepare the mission by selecting a mission card or soundtrack track to determine the difficulty and threat distribution.",
+      "short_description": "Select Mission"
+    },
+    {
+      "description": "Deal each player 5 action cards from their personal deck. Keep 2 remaining cards aside as delayed actions.",
+      "short_description": "Deal Hands",
+      "condition": {"min_count_variant": 4, "max_count_variant": 5}
+    },
+    {
+      "description": "Deal each player their full hand of action cards. The android (dummy player) acts automatically following its programmed instructions.",
+      "short_description": "Deal Hands",
+      "condition": {"min_count_variant": 1, "max_count_variant": 3}
+    },
+    {
+      "description": "Randomly determine the Captain (first player).",
+      "short_description": "Captain",
+      "action": {
+        "type": "dice_roll",
+        "use_player_count": true,
+        "label": "Captain"
+      }
+    }
+  ],
+  "gameplay": {
+    "turn_structure": "Each mission has two phases: a real-time Action Planning Phase (approximately 10 minutes) where players simultaneously program their actions, and a Resolution Phase where all actions and threats are resolved step by step across 12 turns.",
+    "actions": [
+      {
+        "name": "Phase 1: Action Planning (Real-Time)",
+        "description": "Start the soundtrack. Players have approximately 10 minutes to plan all their actions for the mission by placing action cards on their personal action boards.",
+        "steps": [
+          {
+            "description": "The soundtrack announces events in real-time. Listen carefully for incoming threats and other alerts."
+          },
+          {
+            "description": "When a threat is announced, draw the appropriate threat card (external or internal, common or serious) and place it on the trajectory board at its starting position."
+          },
+          {
+            "description": "Discuss plans with your teammates. Coordinate who will handle which threats, who will charge energy, and who will fire weapons."
+          },
+          {
+            "description": "Place action cards face-down on your personal action board in slots 1 through 12 to program your actions for each turn of the resolution phase."
+          },
+          {
+            "description": "During Communications Disruption phases announced by the soundtrack, players may NOT communicate with each other."
+          },
+          {
+            "description": "When 'Data Transfer' is announced, pick up your delayed action cards and add them to your hand."
+          },
+          {
+            "description": "When the soundtrack ends, all planning stops immediately. Any unplanned turns will be wasted."
+          }
+        ],
+        "notes": [
+          {
+            "description": "Players must remember where they will be at each point in the mission. Moving left from White goes to Red; moving right goes to White from Red, etc."
+          },
+          {
+            "description": "Plan carefully: if two players both try to fire the same weapon on the same turn, only the first one to arrive succeeds."
+          }
+        ]
+      },
+      {
+        "name": "Phase 2: Resolution",
+        "description": "Reveal all action cards and resolve the mission turn by turn (turns 1-12). Threats advance, players execute their programmed actions, and the ship takes damage.",
+        "steps": [
+          {
+            "description": "For each turn (1 through 12), resolve in order: Player actions, then Threat actions."
+          },
+          {
+            "description": "Player actions are resolved simultaneously. Flip each player's card for the current turn and execute the action."
+          },
+          {
+            "description": "After all player actions, advance threats on the trajectory board and resolve any threat actions that trigger this turn."
+          },
+          {
+            "description": "Track damage, energy expenditure, and shield status on the ship board."
+          },
+          {
+            "description": "After all 12 turns are resolved, check if the ship has survived."
+          }
+        ]
+      },
+      {
+        "name": "Action: A Button (Main System)",
+        "description": "Activate the main system of your current station. The effect depends on which station you occupy.",
+        "steps": [
+          {
+            "description": "Upper Red: Fire the Heavy Laser Cannon. Costs 1 energy from the Red zone. Deals 3 damage to the closest external threat in the Red zone."
+          },
+          {
+            "description": "Upper White: Fire the Pulse Cannon. Costs 1 energy from the White zone. Deals 2 damage to the closest external threat in the White zone, plus 1 damage to all other external threats in the White zone."
+          },
+          {
+            "description": "Upper Blue: Fire the Heavy Laser Cannon. Costs 1 energy from the Blue zone. Deals 3 damage to the closest external threat in the Blue zone."
+          },
+          {
+            "description": "Lower Red: Activate the Shield Generator. Costs 1 energy from the Red zone. Raises the Red zone shield for this turn and the next."
+          },
+          {
+            "description": "Lower White: Charge the Central Reactor. Adds 1 energy to each zone's reactor (Red, White, and Blue) from the central fuel supply."
+          },
+          {
+            "description": "Lower Blue: Activate the Shield Generator. Costs 1 energy from the Blue zone. Raises the Blue zone shield for this turn and the next."
+          }
+        ],
+        "notes": [
+          {
+            "description": "If there is not enough energy in the zone, the action fails silently."
+          }
+        ]
+      },
+      {
+        "name": "Action: B Button (Secondary System)",
+        "description": "Activate the secondary system of your current station.",
+        "steps": [
+          {
+            "description": "Upper Red or Upper Blue: Launch a Rocket. Does not cost energy. Deals 3 damage to a threat, but rockets are limited (3 total for the entire mission)."
+          },
+          {
+            "description": "Upper White: Use Visual Confirmation. Does not cost energy. Confirms the location of all external threats in the White zone (required for certain game mechanics)."
+          },
+          {
+            "description": "Lower Red: Fire Interceptors. Costs 1 energy. Deals 1 damage to each external threat in the Red zone."
+          },
+          {
+            "description": "Lower White: Deploy Battle Bots. Moves the battle bot token to your station. Battle bots help fight internal threats."
+          },
+          {
+            "description": "Lower Blue: Fire Interceptors. Costs 1 energy. Deals 1 damage to each external threat in the Blue zone."
+          }
+        ],
+        "notes": [
+          {
+            "description": "Rockets are a shared resource. Once all 3 are launched, no more rockets can be fired for the rest of the mission."
+          }
+        ]
+      },
+      {
+        "name": "Action: Movement",
+        "description": "Move your crew member to an adjacent station.",
+        "steps": [
+          {
+            "description": "Move Left: Move one zone to the left (Blue to White, White to Red). Stay on the same deck (upper or lower)."
+          },
+          {
+            "description": "Move Right: Move one zone to the right (Red to White, White to Blue). Stay on the same deck (upper or lower)."
+          },
+          {
+            "description": "Gravolift: Move between upper and lower decks within the same zone. Requires playing a movement card that matches your current zone."
+          }
+        ],
+        "notes": [
+          {
+            "description": "You cannot move beyond the edges of the ship. Moving left from Red or right from Blue has no effect."
+          }
+        ]
+      },
+      {
+        "name": "Threat Resolution",
+        "description": "External threats advance along their trajectory and attack the ship. Internal threats cause havoc inside the ship.",
+        "steps": [
+          {
+            "description": "External threats move one space along their trajectory track each turn they are active."
+          },
+          {
+            "description": "When an external threat reaches a marked action space on its trajectory, it performs its listed attack (dealing damage, draining energy, etc.)."
+          },
+          {
+            "description": "When an external threat reaches the ship (end of trajectory), it deals its full damage to the corresponding zone and is removed."
+          },
+          {
+            "description": "Internal threats activate on specific turns and affect ship systems, crew movement, or energy."
+          },
+          {
+            "description": "To defeat an internal threat, crew members must be present in the same station and use appropriate actions (often B button or battle bots)."
+          }
+        ]
+      }
+    ],
+    "key_concepts": [
+      {
+        "name": "Ship Layout",
+        "description": "The ship has 6 stations arranged in a 3×2 grid. Three zones (Red/Left, White/Center, Blue/Right) each have an Upper and Lower deck. Upper decks house weapons; Lower decks house shields and the reactor."
+      },
+      {
+        "name": "Energy Management",
+        "description": "Each zone has its own energy supply. Side zones (Red, Blue) start with 2 energy; the central zone (White) starts with 3. Energy is spent to fire weapons and raise shields. The Lower White reactor can recharge all zones."
+      },
+      {
+        "name": "Shields",
+        "description": "Shields absorb damage before it hits the ship's hull. Each zone can have its shield raised independently by activating the Lower Red or Lower Blue station. Shields last for the current turn and the next turn, then must be re-raised."
+      },
+      {
+        "name": "Threat Difficulty Levels",
+        "description": "Common (white) threats are standard difficulty. Serious (yellow) threats are more dangerous with higher health and more devastating attacks. Missions mix both types based on difficulty level."
+      },
+      {
+        "name": "Communications Disruption",
+        "description": "During certain phases announced by the soundtrack, players cannot communicate. You must rely on previously agreed plans and trust that teammates will follow through."
+      },
+      {
+        "name": "Heroic Actions",
+        "description": "Hero cards are wild action cards that can be used as any action (A, B, or movement). They are powerful but limited. Use them for critical moments when flexibility is essential."
+      },
+      {
+        "name": "Visual Confirmation",
+        "description": "Some threats require visual confirmation before they can be targeted. The Upper White B button action provides visual confirmation for threats in the White zone."
+      },
+      {
+        "name": "Battle Bots",
+        "description": "The battle bot is deployed from the Lower White station and moves to that location. It assists crew members fighting internal threats by adding extra combat strength."
+      }
+    ]
+  },
+  "end_game": {
+    "trigger": "The mission ends after all 12 turns of the Resolution Phase have been resolved.",
+    "procedure": [
+      "Complete all 12 turns of the Resolution Phase.",
+      "After the final turn, check the status of all three zones.",
+      "Total up all damage dealt to the ship and compare against each zone's structural integrity.",
+      "If any zone has been completely destroyed, the ship is destroyed."
+    ],
+    "final_scoring": [
+      {
+        "source": "Ship Survival",
+        "description": "If no zone is completely destroyed and the ship remains intact, the crew wins the mission. All players share the victory."
+      },
+      {
+        "source": "Zone Damage",
+        "description": "Each zone can absorb a limited amount of damage (typically 2-3 hits depending on the side). If any single zone takes more damage than it can absorb, it is destroyed."
+      },
+      {
+        "source": "Points (Optional)",
+        "description": "For competitive scoring between sessions: earn points for each threat destroyed, bonus points for remaining energy and undamaged zones, and penalties for damage taken."
+      }
+    ]
+  },
+  "winning_condition": "The crew wins if the ship survives the mission. The crew loses if any zone of the ship is destroyed. There are no individual winners - the entire team shares the outcome.",
+  "tips_for_new_players": [
+    {
+      "tip": "Start with the tutorial missions",
+      "description": "The game includes a series of tutorial missions that gradually introduce mechanics. Do not jump to the full game immediately - the tutorials are essential for learning."
+    },
+    {
+      "tip": "Assign roles early",
+      "description": "At the start of the planning phase, quickly agree on who covers which zone. Having one player responsible for each zone's weapons and shields prevents confusion."
+    },
+    {
+      "tip": "Keep the reactor running",
+      "description": "Designate one player to regularly visit Lower White and charge the reactor. Without energy, weapons and shields cannot function."
+    },
+    {
+      "tip": "Track your position mentally",
+      "description": "During the real-time phase, always know where your character will be at each turn. A miscount can leave you in the wrong station at a critical moment."
+    },
+    {
+      "tip": "Do not ignore internal threats",
+      "description": "Internal threats can be devastating if left unchecked. They can drain energy, lock stations, or deal damage from within. Always send someone to handle them."
+    },
+    {
+      "tip": "Communicate clearly and concisely",
+      "description": "Time is limited. Use short phrases like 'I'll handle Red' or 'Need someone on internal.' Save detailed discussions for after the mission."
+    },
+    {
+      "tip": "Plan for Communications Disruption",
+      "description": "Before the disruption phase starts, make sure everyone knows their plan for the upcoming turns. Once communication is cut off, you cannot adjust."
+    },
+    {
+      "tip": "Rockets are precious",
+      "description": "You only have 3 rockets for the entire mission. Save them for serious threats or emergencies when energy is depleted."
+    }
+  ]
+}

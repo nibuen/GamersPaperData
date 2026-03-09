@@ -1,0 +1,247 @@
+{
+  "game_name": "Amun-Re",
+  "designer": "Reiner Knizia",
+  "publisher": "Hans im Glück",
+  "game_overview": "In Amun-Re, players take on the role of Egyptian rulers competing to build the most magnificent pyramids along the Nile. Through clever bidding, strategic province management, and sacrifices to the god Amun-Re, players must balance their resources across two epochs to emerge victorious.",
+  "objective": "Score the most Victory Points across two epochs by controlling provinces, building pyramids, and managing resources effectively.",
+  "min_players": 3,
+  "max_players": 5,
+  "bgg_link": "https://boardgamegeek.com/boardgame/5404/amun-re",
+  "play_time_minutes": 90,
+  "components_overview": [
+    {
+      "name": "Game Board",
+      "type": "Board",
+      "description": "Shows 15 provinces along the Nile River divided into Upper Egypt (south) and Lower Egypt (north), plus scoring track, sacrifice temple, and epoch markers."
+    },
+    {
+      "name": "Province Cards",
+      "type": "Card",
+      "description": "15 cards representing each province, drawn to determine which provinces are available for auction each round.",
+      "action": {
+        "name": "CardList",
+        "value": "amun_re_provinces.json"
+      }
+    },
+    {
+      "name": "Power Cards",
+      "type": "Card",
+      "description": "Special ability cards that provide one-time or ongoing benefits. Drawn based on province bonuses.",
+      "action": {
+        "name": "CardList",
+        "value": "amun_re_power_cards.json"
+      }
+    },
+    {
+      "name": "Gold Cards",
+      "type": "Money",
+      "description": "Currency in denominations of 1, 2, 5, 10, and 20 gold. Used for bidding, buying farmers, and building pyramids."
+    },
+    {
+      "name": "Pyramids",
+      "type": "Building",
+      "description": "Stone pyramid pieces in two sizes. Building pyramids is essential for scoring. Pyramids remain on the board between epochs."
+    },
+    {
+      "name": "Building Stones",
+      "type": "Token",
+      "description": "Used to construct pyramids. Three stones are needed to build one pyramid."
+    },
+    {
+      "name": "Farmer Tokens",
+      "type": "Token",
+      "description": "Placed on provinces to generate income during harvest. The Nile flood level determines how much farmers produce."
+    },
+    {
+      "name": "Bidding Tokens",
+      "type": "Marker",
+      "description": "Each player has a set of bidding tokens (values 0, 1, 3, 6, 10, 15, 21, 28, 36) used in the province auction."
+    },
+    {
+      "name": "Player Markers",
+      "type": "Meeple",
+      "description": "Colored markers to indicate province ownership and track score."
+    },
+    {
+      "name": "Sacrifice Markers",
+      "type": "Token",
+      "description": "Placed on the temple track to show each player's sacrifice to Amun-Re."
+    }
+  ],
+  "setup": [
+    {
+      "description": "Place the game board in the center of the table.",
+      "short_description": "Place Board"
+    },
+    {
+      "description": "Sort the Gold cards by denomination and place them in supply piles near the board.",
+      "short_description": "Gold Supply"
+    },
+    {
+      "description": "Place all Pyramids and Building Stones in a general supply.",
+      "short_description": "Pyramid Supply"
+    },
+    {
+      "description": "Place all Farmer tokens in a general supply.",
+      "short_description": "Farmer Supply"
+    },
+    {
+      "description": "Shuffle the Province cards and place them face-down as a draw pile.",
+      "short_description": "Province Deck"
+    },
+    {
+      "description": "Shuffle the Power cards and place them face-down near the board.",
+      "short_description": "Power Card Deck"
+    },
+    {
+      "description": "Each player takes all components of one color: bidding tokens, player markers, and sacrifice marker.",
+      "short_description": "Player Components"
+    },
+    {
+      "description": "Each player receives starting gold: 20 gold in 3-player games, 15 gold in 4-player games, 12 gold in 5-player games.",
+      "short_description": "Starting Gold"
+    },
+    {
+      "description": "Place each player's score marker on space 0 of the scoring track.",
+      "short_description": "Score Markers"
+    },
+    {
+      "description": "Randomly determine a start player.",
+      "short_description": "Start Player"
+    }
+  ],
+  "gameplay": {
+    "turn_structure": "The game is played over 2 epochs (Old Kingdom and New Kingdom), each consisting of 3 rounds. Each round has 5 phases played in order.",
+    "actions": [
+      {
+        "name": "Phase 1: Province Cards",
+        "description": "Reveal province cards to determine which provinces are available for auction this round.",
+        "steps": [
+          {"description": "Draw province cards equal to the number of players."},
+          {"description": "Place each card next to its matching province on the board."},
+          {"description": "These provinces are now available for bidding."}
+        ],
+        "notes": [
+          {"description": "In rounds 1-3, draw from the shuffled deck. All 15 provinces will be auctioned across the 3 rounds of each epoch."}
+        ]
+      },
+      {
+        "name": "Phase 2: Province Auction",
+        "description": "Players bid simultaneously on available provinces using their bidding tokens.",
+        "steps": [
+          {"description": "Each player secretly selects one bidding token and places it face-down on a province they want."},
+          {"description": "All tokens are revealed simultaneously."},
+          {"description": "If multiple players bid on the same province, the player with the lower bid must move to a different province (or pass). They can outbid on their new province if desired."},
+          {"description": "Continue resolving conflicts until each province has at most one bidder."},
+          {"description": "Players pay their winning bids to the bank and place their marker on the province."}
+        ],
+        "notes": [
+          {"description": "You may place a 0 bid token to pass this phase entirely."},
+          {"description": "You cannot bid on a province you already own."},
+          {"description": "The player who was outbid must bid higher than all existing bids on their new choice."}
+        ]
+      },
+      {
+        "name": "Phase 3: Actions",
+        "description": "In player order, each player takes actions with their provinces.",
+        "steps": [
+          {"description": "Buy Farmers: Pay 1 gold per farmer and place them on your provinces."},
+          {"description": "Buy Building Stones: Pay gold based on province costs to acquire stones."},
+          {"description": "Build Pyramids: Convert 3 building stones into 1 pyramid on any of your provinces."},
+          {"description": "Draw Power Cards: If your province grants power cards, draw them now."},
+          {"description": "Sell Power Cards: You may sell power cards for gold."}
+        ],
+        "notes": [
+          {"description": "Some provinces have special abilities for buying stones, farmers, or free power cards."},
+          {"description": "Provinces on the west bank provide camels (stones) while east bank provinces provide farmers more easily."},
+          {"description": "You can build multiple pyramids if you have enough stones."}
+        ]
+      },
+      {
+        "name": "Phase 4: Sacrifice to Amun-Re",
+        "description": "Players secretly commit gold to sacrifice, determining the Nile flood level.",
+        "steps": [
+          {"description": "Each player secretly sets aside gold for their sacrifice."},
+          {"description": "All sacrifices are revealed simultaneously."},
+          {"description": "Calculate total sacrifice and consult the flood table to determine harvest level."},
+          {"description": "The player who sacrificed the most gains 3 VP. Second most gains 2 VP. Third most gains 1 VP (ties share)."},
+          {"description": "The player who sacrificed the least (including 0) gets a free power card."}
+        ],
+        "notes": [
+          {"description": "High total sacrifice = good flood = farmers produce more gold."},
+          {"description": "Low total sacrifice = poor flood = farmers produce less."},
+          {"description": "You may sacrifice 0 gold to try for the free power card."}
+        ]
+      },
+      {
+        "name": "Phase 5: Harvest",
+        "description": "Collect income based on farmers and the flood level.",
+        "steps": [
+          {"description": "Each farmer produces gold based on the flood level (0-4 gold per farmer)."},
+          {"description": "Some provinces have special harvest bonuses."},
+          {"description": "Collect province bonuses if applicable (gold, power cards, etc.)."}
+        ],
+        "notes": [
+          {"description": "Provinces in Lower Egypt (north) generally benefit more from good floods."},
+          {"description": "Provinces in Upper Egypt (south) have more consistent but lower harvests."}
+        ]
+      }
+    ],
+    "key_concepts": [
+      {
+        "name": "Epochs",
+        "description": "The game has two epochs: Old Kingdom and New Kingdom. After the Old Kingdom (3 rounds), score pyramids and temples. Then provinces reset - players lose ownership but pyramids stay. The New Kingdom plays the same 3 rounds, followed by final scoring."
+      },
+      {
+        "name": "Pyramids",
+        "description": "Pyramids are permanent and remain on provinces between epochs. They score based on sets (having pyramids on both sides of the Nile) and total count in provinces you own at scoring time."
+      },
+      {
+        "name": "Province Sets",
+        "description": "At each scoring, earn bonus VP for owning provinces on both sides of the Nile, especially matching pairs with temples."
+      },
+      {
+        "name": "Temples",
+        "description": "Some provinces contain temples. Control of temples at scoring time provides bonus VP."
+      },
+      {
+        "name": "Power Cards",
+        "description": "Provide special abilities - some are one-time use, others ongoing. Can be sold for gold or kept for their effects."
+      },
+      {
+        "name": "The Nile Flood",
+        "description": "Determined by total sacrifice to Amun-Re. Affects how much gold farmers generate. A key tension between spending gold on sacrifice vs. saving for purchases."
+      }
+    ]
+  },
+  "end_game": {
+    "trigger": "The game ends after the second epoch (6 total rounds).",
+    "procedure": [
+      "Complete the final harvest phase.",
+      "Proceed to final scoring."
+    ],
+    "final_scoring": [
+      {
+        "source": "Pyramids Owned",
+        "description": "Score VP based on total pyramids in provinces you currently own. More pyramids = exponentially more points."
+      },
+      {
+        "source": "Pyramid Majorities",
+        "description": "The player with the most pyramids on each side of the Nile scores bonus VP."
+      },
+      {
+        "source": "Temple Control",
+        "description": "Score VP for each temple in a province you own."
+      },
+      {
+        "source": "Province Sets",
+        "description": "Score bonus VP for owning connected or matching provinces across the Nile."
+      },
+      {
+        "source": "Remaining Gold",
+        "description": "Score 1 VP per 10 gold remaining."
+      }
+    ]
+  },
+  "winning_condition": "The player with the most Victory Points wins. Ties are broken by the player with the most remaining gold."
+}
