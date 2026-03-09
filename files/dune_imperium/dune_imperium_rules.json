@@ -1,0 +1,440 @@
+{
+  "game_name": "Dune: Imperium",
+  "designer": "Paul Dennen",
+  "publisher": "Dire Wolf Digital",
+  "game_overview": "Dune: Imperium is a deck-building worker placement game set in the world of Frank Herbert's Dune. Players are Leaders of Great Houses of the Landsraad, competing for control of the desert planet Arrakis and its precious spice melange. You'll send Agents to key locations, forge alliances with powerful Factions (Emperor, Spacing Guild, Bene Gesserit, Fremen), acquire new cards to build your deck, and deploy troops to win Conflicts. Cards and Agents are tightly linked: you can't send an Agent without playing a card that allows it. Each round features a Conflict where players commit troops and play Combat Intrigue cards to win rewards including Victory Points, resources, and control of key locations.",
+  "objective": "The player with the most Victory Points at the end of the game wins. The game ends at the end of a round in which any player has reached 10 or more Victory Points, or the Conflict Deck is empty.",
+  "min_players": 1,
+  "max_players": 4,
+  "bgg_link": "https://boardgamegeek.com/boardgame/316554/dune-imperium",
+  "play_time_minutes": 90,
+  "components_overview": [
+    {
+      "name": "Game Board",
+      "type": "Board",
+      "description": "Central board with 22 Agent spaces organized by Faction (Emperor, Spacing Guild, Bene Gesserit, Fremen) and type (Landsraad, City, Spice Trade). Includes Influence tracks, Combat track, Score track, garrisons, and Conflict area."
+    },
+    {
+      "name": "Board Space Reference",
+      "type": "Card",
+      "description": "All 22 board spaces with their Agent icons, costs, effects, and whether they are Combat spaces.",
+      "action": {
+        "name": "CardList",
+        "value": "dune_imperium_board_spaces.json"
+      }
+    },
+    {
+      "name": "Conflict Cards",
+      "type": "Card",
+      "description": "18 Conflict cards (4 Conflict I, 10 Conflict II, 4 Conflict III). One is revealed each round. They show rewards for 1st, 2nd, and 3rd place (3rd place only in 4-player games). Some reward control of Arrakeen, Carthag, or Imperial Basin.",
+      "count": 18
+    },
+    {
+      "name": "Intrigue Cards",
+      "type": "Card",
+      "description": "40 cards kept face down, separate from your deck. Three types: Plot (play during your Agent or Reveal turn), Combat (play during Combat phase), Endgame (play at end of game). Gained from board spaces like Carthag, Conspire, and Secrets.",
+      "count": 40
+    },
+    {
+      "name": "Imperium Deck Cards",
+      "type": "Card",
+      "description": "67 cards forming the Imperium Deck. Five are dealt face up as the Imperium Row. Acquired using Persuasion during your Reveal turn. Each card has Agent icons, an Agent box (used on Agent turns), and a Reveal box (used on Reveal turns).",
+      "count": 67
+    },
+    {
+      "name": "Reserve Cards",
+      "type": "Card",
+      "description": "24 always-available cards in three stacks: 8 Arrakis Liaison, 10 The Spice Must Flow, 6 Foldspace. Arrakis Liaison and The Spice Must Flow can be acquired with Persuasion. Foldspace is acquired from the Foldspace board space.",
+      "count": 24
+    },
+    {
+      "name": "Starting Deck",
+      "type": "Card",
+      "description": "Each player's identical 10-card starting deck: Convincing Argument (x2), Dagger (x2), Dune the Desert Planet (x2), Diplomacy (x1), Reconnaissance (x1), Seek Allies (x1), Signet Ring (x1). The Signet Ring activates your Leader's Signet Ring ability.",
+      "count": 10
+    },
+    {
+      "name": "Leaders",
+      "type": "Card",
+      "description": "8 Leader cards from four Great Houses (2 per house). Each has two abilities: a general ability (left) and a Signet Ring ability (right, activated when playing the Signet Ring card). Leaders with more icons after their name are more strategically complex. Recommended first-game leaders (1 icon): Paul Atreides, Glossu 'The Beast' Rabban, Earl Memnon Thorvald, Count Ilban Richese.",
+      "count": 8
+    },
+    {
+      "name": "Mentat",
+      "type": "Token",
+      "description": "A special freelance Agent token. Starts on the Mentat board space. When taken, acts as a temporary additional Agent for one round. Returns to the board during Recall unless won as a Conflict reward.",
+      "count": 1
+    },
+    {
+      "name": "Alliance Tokens",
+      "type": "Token",
+      "description": "4 tokens placed on Faction Influence tracks at the start. The first player to reach 4 Influence with a Faction takes the Alliance token (worth 1 VP). If an opponent later surpasses you on the track, they take the Alliance token from you.",
+      "count": 4
+    },
+    {
+      "name": "Agents",
+      "type": "Meeple",
+      "description": "3 Agents per player. Start with 2 on your Leader. The 3rd (Swordmaster) is placed next to the board and gained by visiting the Swordmaster board space (8 Solari, once per game).",
+      "count": 3
+    },
+    {
+      "name": "Troops",
+      "type": "Meeple",
+      "description": "16 cubes per player. 4 start on Influence tracks (1 per Faction). 3 start in your garrison. Remaining 9 in supply. Recruited troops go to garrison; from Combat spaces, may deploy to the Conflict (newly recruited troops plus up to 2 from garrison).",
+      "count": 16
+    },
+    {
+      "name": "Control Markers",
+      "type": "Marker",
+      "description": "3 per player. Placed on flags below Arrakeen, Carthag, or Imperial Basin when you win a Conflict rewarding control of that space. While placed, you gain a bonus when any player sends an Agent there. Also grants a defensive troop deployment when a Conflict for that space is revealed.",
+      "count": 3
+    },
+    {
+      "name": "Combat Marker",
+      "type": "Marker",
+      "description": "1 per player. Tracks your strength on the Combat track during each round's Conflict. Each troop in the Conflict = 2 strength. Each revealed sword = 1 strength. Must have at least 1 troop to have any strength. Flips to +20 side if over 20.",
+      "count": 1
+    },
+    {
+      "name": "Score Marker",
+      "type": "Marker",
+      "description": "1 disc per player placed on the Score track to track Victory Points.",
+      "count": 1
+    },
+    {
+      "name": "Councilor Token",
+      "type": "Token",
+      "description": "1 per player. Placed on a Council seat when visiting the High Council space. Grants 2 Persuasion during each Reveal turn for the rest of the game.",
+      "count": 1
+    },
+    {
+      "name": "Water Tokens",
+      "type": "Resource",
+      "description": "15 tokens. Essential for harvesting spice and accessing certain board spaces. Rare and precious - the Fremen Faction spaces are key sources.",
+      "count": 15
+    },
+    {
+      "name": "Solari Tokens",
+      "type": "Money",
+      "description": "24 tokens (4 large worth 5, 20 small worth 1). The main currency. Used to pay for board spaces like Swordmaster (8), High Council (5), Rally Troops (4), and Mentat (2). Gained from Emperor spaces, Secure Contract, Sell Melange, and Conflict rewards.",
+      "count": 24
+    },
+    {
+      "name": "Spice Tokens",
+      "type": "Resource",
+      "description": "23 tokens (3 large worth 5, 20 small worth 1). Harvested from Maker spaces (The Great Flat, Hagga Basin, Imperial Basin). Used to pay for Conspire (4), Selective Breeding (2), Heighliner (6), and Sell Melange (2-5). Can be sold for Solari.",
+      "count": 23
+    },
+    {
+      "name": "First Player Marker",
+      "type": "Token",
+      "description": "Indicates the starting player each round. Passes clockwise at the end of each round during the Recall phase.",
+      "count": 1
+    },
+    {
+      "name": "House Hagal Cards",
+      "type": "Card",
+      "description": "31 cards used only in Solo and 2-player games to control automated Rival opponents. Rivals send Agents to occupy board spaces and compete in Conflicts.",
+      "count": 31,
+      "condition": {"min_count_variant": 1, "max_count_variant": 2}
+    }
+  ],
+  "setup": [
+    {
+      "description": "Place the game board in the play area. Place the Mentat on its side in the Mentat space. Place the four Alliance tokens on the marked areas of the Faction Influence tracks (Emperor, Spacing Guild, Bene Gesserit, Fremen).",
+      "short_description": "Board Setup"
+    },
+    {
+      "description": "Create the Conflict Deck: Shuffle 4 Conflict III cards and place face down. Shuffle 10 Conflict II cards, deal 5 face down on top. Shuffle 4 Conflict I cards, deal 1 face down on top. You should have a 10-card deck (1 Conflict I on top, 5 Conflict II, 4 Conflict III on bottom). Return unused Conflict cards to the box without looking.",
+      "short_description": "Conflict Deck"
+    },
+    {
+      "description": "Shuffle the Intrigue Deck and place face down. Shuffle the Imperium Deck and place face down, then deal 5 cards face up to form the Imperium Row. Place Reserve cards in three stacks: Arrakis Liaison, The Spice Must Flow, and Foldspace.",
+      "short_description": "Card Setup"
+    },
+    {
+      "description": "Each player takes a Leader (choose or random). Leaders with 1 icon are recommended for first games: Paul Atreides, Glossu 'The Beast' Rabban, Earl Memnon Thorvald, or Count Ilban Richese. For the most authentic experience, two leaders from the same House shouldn't be used in the same game.",
+      "short_description": "Choose Leaders"
+    },
+    {
+      "description": "Each player takes a 10-card starting deck, shuffles it, and places it face down in their supply to the left of their Leader.",
+      "short_description": "Starting Decks"
+    },
+    {
+      "description": "Each player takes 1 water and places it in their supply. Create a bank with Solari, spice, and remaining water tokens.",
+      "short_description": "Starting Resources"
+    },
+    {
+      "description": "Each player chooses a color and takes all components of that color. Place 2 Agents on your Leader. Place your Swordmaster (3rd Agent) next to the board.",
+      "short_description": "Player Components"
+    },
+    {
+      "description": "Place your Score marker on the 0 space of the Score track.",
+      "short_description": "Score Track",
+      "condition": {"min_count_variant": 1, "max_count_variant": 3}
+    },
+    {
+      "description": "Place your Score marker on the 1 space of the Score track.",
+      "short_description": "Score Track",
+      "condition": {"min_count_variant": 4, "max_count_variant": 4}
+    },
+    {
+      "description": "Place your Combat marker (strength side up) on the 0 space of the Combat track. Place 4 cubes on the bottom spaces of the four Faction Influence tracks.",
+      "short_description": "Markers"
+    },
+    {
+      "description": "Your remaining 12 cubes are troops. Place 3 in your garrison (circular area on the board). Place remaining components in your supply.",
+      "short_description": "Troops"
+    },
+    {
+      "description": "Determine a first player randomly. They take the First Player marker.",
+      "short_description": "First Player"
+    },
+    {
+      "description": "Solo game: Choose 2 Leaders for Rivals (not Paul Atreides or Helena Richese). Each Rival places cubes on Influence tracks and troops per difficulty. Place 2 Rival Agents in supply, insert Swordmasters into Conflict deck. Remove '2P' marked House Hagal cards. Select difficulty: Mercenary (Novice), Sardaukar (Veteran), or Mentat (Expert). The Rival on your left takes the First Player marker.",
+      "short_description": "Solo Setup",
+      "condition": {"min_count_variant": 1, "max_count_variant": 1}
+    },
+    {
+      "description": "Choose a color for House Hagal (automated Rival). Place its cubes on Influence track bottoms. It starts with no garrison troops. Remove '1P' marked House Hagal cards. Shuffle remaining cards and place with House Hagal's 3 Agents. House Hagal doesn't collect resources, build a deck, earn rewards, or score VP.",
+      "short_description": "2-Player Rival Setup",
+      "condition": {"min_count_variant": 2, "max_count_variant": 2}
+    }
+  ],
+  "gameplay": {
+    "turn_structure": "Each round has 5 phases in order: Round Start, Player Turns, Combat, Makers, and Recall.",
+    "actions": [
+      {
+        "name": "Phase 1: Round Start",
+        "description": "Reveal the top Conflict card from the Conflict Deck and place it face up. Each player draws 5 cards from their deck to form their hand.",
+        "steps": [
+          {"description": "Reveal the top card of the Conflict Deck and place it face up next to the deck."},
+          {"description": "Each player draws 5 cards from their own deck."},
+          {"description": "If you control a space (Arrakeen, Carthag, or Imperial Basin) and the revealed Conflict is for that space, deploy 1 troop from your supply to the Conflict as a defensive bonus."}
+        ],
+        "notes": []
+      },
+      {
+        "name": "Phase 2: Agent Turn",
+        "description": "Play one card from your hand face up, then send an Agent from your Leader to an unoccupied board space matching one of the card's Agent icons. Gain the board space effects and the card's Agent box effects. If the space belongs to a Faction, gain 1 Influence with that Faction.",
+        "steps": [
+          {"description": "Play a card from your hand face up. Choose one of its Agent icons."},
+          {"description": "Send an Agent to an unoccupied board space matching that icon. Pay any costs."},
+          {"description": "Gain the board space effects, the card's Agent box effects, and (if applicable) Faction Influence - in any order."},
+          {"description": "At a Combat space: you may deploy newly recruited troops plus up to 2 troops from your garrison to the Conflict."},
+          {"description": "At a non-Combat space: all recruited troops go to your garrison."}
+        ],
+        "notes": [
+          {"description": "You can't send an Agent to an occupied space."},
+          {"description": "You must be able to pay the board space cost before resolving any effects."},
+          {"description": "Agent turns are optional - you can choose to take a Reveal turn even with Agents remaining."},
+          {"description": "Cards without Agent icons can only be used during a Reveal turn."},
+          {"description": "You may play Plot Intrigue cards during your Agent turns."},
+          {"description": "Seven Agent icons: Emperor, Spacing Guild, Bene Gesserit, Fremen, Landsraad, City, Spice Trade."},
+          {
+            "description": "House Hagal Rival: After each First Player Agent turn, House Hagal takes an Agent turn (if it has Agents left). Reveal the top House Hagal card and send a Rival Agent to the revealed space (if unoccupied; otherwise keep revealing). Ignore normal costs/effects; the Rival gains only the House Hagal card effects (Influence, troops, Signet ability). At Combat spaces, also deploy up to 2 troops from garrison. House Hagal doesn't collect resources, build a deck, earn rewards, or score VP. If it wins a Conflict for a controlled space, it removes the controller's marker.",
+            "condition": {"min_count_variant": 2, "max_count_variant": 2}
+          },
+          {
+            "description": "Solo Rival Turns: Both Rivals take Agent turns in sequence with you using House Hagal cards. Reveal the top card and send a Rival Agent to the revealed space (if unoccupied; otherwise keep revealing). Ignore normal costs/effects; Rivals gain only the House Hagal card effects. At Combat spaces, also deploy up to 2 troops from garrison. When a Rival uses Harvest Spice, it gains all spice there (base and bonus).",
+            "condition": {"min_count_variant": 1, "max_count_variant": 1}
+          }
+        ]
+      },
+      {
+        "name": "Phase 2: Reveal Turn",
+        "description": "When you have no Agents left (or choose not to use them), take a Reveal turn. Reveal remaining hand cards, resolve their Reveal box effects, set your Combat strength, acquire new cards with Persuasion, then clean up.",
+        "steps": [
+          {"description": "Reveal all remaining cards in your hand face up (separate from cards played on Agent turns)."},
+          {"description": "Resolve the Reveal box effects of all revealed cards (in any order). Ignore cards played on Agent turns."},
+          {"description": "Use Persuasion to acquire cards from the Imperium Row (5 face-up cards) or Reserve (Arrakis Liaison, The Spice Must Flow). Acquired cards go to your discard pile. Refill the Row immediately after each acquisition."},
+          {"description": "Set Strength: Each troop in Conflict = 2 strength. Each sword on revealed cards = 1 strength. You must have at least 1 troop to have any strength. Move Combat marker to your total."},
+          {"description": "Clean Up: Place all played and revealed cards into your discard pile."}
+        ],
+        "notes": [
+          {"description": "Persuasion cannot be saved between rounds. Use it or lose it."},
+          {"description": "You may acquire multiple cards if you have enough Persuasion."},
+          {"description": "You may pool Persuasion from multiple sources and split it across cards."},
+          {"description": "If your last troop is removed from the Conflict, your strength becomes 0 and cannot be increased."},
+          {"description": "Once you take a Reveal turn, your turns are skipped for the rest of the phase."},
+          {"description": "You may play Plot Intrigue cards during your Reveal turn."}
+        ]
+      },
+      {
+        "name": "Phase 3: Combat",
+        "description": "Players with troops in the Conflict may play Combat Intrigue cards, then the Conflict is resolved based on strength. Rewards go to the highest-strength players.",
+        "steps": [
+          {"description": "Starting with First Player, clockwise: each player with at least 1 troop in the Conflict may play any number of Combat Intrigue cards or pass. Continue until all involved players pass consecutively."},
+          {"description": "Highest strength wins 1st place reward. Second highest wins 2nd place reward."},
+          {"description": "All troops move from the Conflict to players' supplies (not garrisons). Reset all Combat markers to 0."}
+        ],
+        "notes": [
+          {"description": "You are not required to pass just because you passed earlier - you can play cards later if you passed before."},
+          {"description": "Players with 0 strength receive no reward."},
+          {"description": "Ties for 1st: no one wins the Conflict. Tied players each get the 2nd place reward."},
+          {"description": "Ties for 2nd: tied players each get the 3rd place reward."},
+          {"description": "Ties for 3rd: tied players receive nothing."},
+          {"description": "Intrigue cards that trigger 'when you win a Conflict' are played after winning, not before resolving."},
+          {
+            "description": "The 3rd highest strength player receives the 3rd place reward.",
+            "condition": {"min_count_variant": 4, "max_count_variant": 4}
+          },
+          {
+            "description": "If two players tie for 1st, the other two players still compete for the 3rd place reward.",
+            "condition": {"min_count_variant": 4, "max_count_variant": 4}
+          },
+          {
+            "description": "House Hagal Combat Bonus: Each Rival with at least 1 troop in the Conflict reveals a House Hagal card for bonus swords. Advance their Combat marker by the number of swords shown.",
+            "condition": {"min_count_variant": 1, "max_count_variant": 2}
+          },
+          {
+            "description": "Solo Rivals gain Conflict rewards (VP, Influence, resources, Control, Mentat). They spend resources to earn VP: 7 Solari = 1 VP, 7 Spice = 1 VP. Whenever a Rival has a choice about Influence, they choose the Faction where they have the least.",
+            "condition": {"min_count_variant": 1, "max_count_variant": 1}
+          }
+        ]
+      },
+      {
+        "name": "Phase 4: Makers",
+        "description": "Check each Maker space (The Great Flat, Hagga Basin, Imperial Basin). If no Agent is present, place 1 bonus spice from the bank on that space. Bonus spice accumulates across rounds.",
+        "steps": [],
+        "notes": [
+          {"description": "Bonus spice stacks with any already present from previous rounds."},
+          {"description": "When a player later sends an Agent to harvest, they gain the base spice plus all accumulated bonus spice."}
+        ]
+      },
+      {
+        "name": "Phase 5: Recall",
+        "description": "Check for game end. If no one has won, return the Mentat to its space, recall all Agents to Leaders, and pass the First Player marker clockwise.",
+        "steps": [
+          {"description": "If any player has 10+ VP or the Conflict Deck is empty, trigger the Endgame."},
+          {"description": "If no Endgame: return the Mentat to its space (if not kept from a Conflict reward). Recall all Agents to their Leaders. Pass First Player marker clockwise."}
+        ],
+        "notes": []
+      }
+    ],
+    "key_concepts": [
+      {
+        "name": "Agent Icons",
+        "description": "Seven types: Emperor (2 spaces: Conspire, Wealth), Spacing Guild (2: Foldspace, Heighliner), Bene Gesserit (2: Secrets, Selective Breeding), Fremen (2: Hardy Warriors, Stillsuits), Landsraad (5: Hall of Oratory, High Council, Mentat, Rally Troops, Swordmaster), City (4: Arrakeen, Carthag, Research Station, Sietch Tabr), Spice Trade (5: The Great Flat, Hagga Basin, Imperial Basin, Secure Contract, Sell Melange)."
+      },
+      {
+        "name": "Factions and Influence",
+        "description": "Four Factions: Emperor, Spacing Guild, Bene Gesserit, Fremen. Each has an Influence track. Sending an Agent to a Faction space gains +1 Influence. At 2 Influence: gain 1 VP (lose it if you drop below 2). At 4 Influence: gain a one-time bonus AND the Alliance token (1 VP). If an opponent surpasses you on the track, they take the Alliance. The Alliance token moves to whoever is highest."
+      },
+      {
+        "name": "Deck Building",
+        "description": "All players start with identical 10-card decks. Acquire new cards during your Reveal turn using Persuasion. Acquired cards go to your discard pile. When your draw deck is empty, reshuffle your discard pile. You can trash cards to remove them permanently, improving deck quality."
+      },
+      {
+        "name": "Combat Spaces and Troop Deployment",
+        "description": "Combat spaces (marked with desert art and crossed swords): Arrakeen, Carthag, The Great Flat, Hagga Basin, Imperial Basin, Research Station, Sietch Tabr, Hardy Warriors, Stillsuits, Heighliner. When sending to a Combat space, you may deploy: all troops recruited this turn PLUS up to 2 from your garrison."
+      },
+      {
+        "name": "Strength and Combat",
+        "description": "Each troop in the Conflict = 2 strength. Each sword icon on revealed cards = 1 strength. You must have at least 1 troop in the Conflict to have any strength. If your last troop is removed, strength drops to 0 and can't be increased."
+      },
+      {
+        "name": "Control",
+        "description": "Three controllable spaces: Arrakeen (bonus: 1 Solari), Carthag (bonus: 1 Solari), Imperial Basin (bonus: 1 Spice). Win a Conflict rewarding control to place your marker. The controller gains the bonus whenever ANY player sends an Agent there. When a Conflict for your controlled space is revealed, deploy 1 troop from supply as a defensive bonus."
+      },
+      {
+        "name": "Intrigue Cards",
+        "description": "Three types: Plot (play during your Agent or Reveal turn), Combat (play during Combat phase only), Endgame (play at end of game). Kept face down, separate from your deck. Gained from Carthag, Conspire, Secrets, and card effects. Steal Intrigue: opponents with 4+ Intrigue cards must give you one randomly."
+      },
+      {
+        "name": "Harvesting Spice (Maker Spaces)",
+        "description": "Three Maker spaces: The Great Flat (3 base, costs 2 water), Hagga Basin (2 base, costs 1 water), Imperial Basin (1 base, free). Each round during Phase 4, empty Maker spaces gain 1 bonus spice. When harvesting, gain base + all accumulated bonus spice."
+      },
+      {
+        "name": "Card Anatomy",
+        "description": "Each card has: Name, Faction (optional), Agent Icons (which spaces you can visit), Agent Box (effects when played on Agent turn), Reveal Box (effects when revealed), Persuasion Cost (top right, for acquiring), Acquire Effect (optional, gained once when acquired)."
+      },
+      {
+        "name": "Persuasion",
+        "description": "Used during your Reveal turn to acquire cards from the Imperium Row or Reserve (Arrakis Liaison, The Spice Must Flow). Can be pooled from multiple sources or split across cards. Cannot be saved between rounds. The Spice Must Flow costs 9 Persuasion and provides 1 VP when acquired."
+      },
+      {
+        "name": "Sell Melange Exchange Rates",
+        "description": "At the Sell Melange board space: 2 spice = 6 Solari, 3 spice = 8 Solari, 4 spice = 9 Solari, 5 spice = 10 Solari. Only one exchange per turn."
+      }
+    ]
+  },
+  "end_game": {
+    "trigger": "The Endgame is triggered at the end of a round if any player has 10 or more Victory Points on the Score track, or if the Conflict Deck is empty.",
+    "procedure": [
+      "Complete the current round through all 5 phases.",
+      "After Phase 5 (Recall), check if any player has 10+ VP or the Conflict Deck is empty.",
+      "If triggered, players may play and resolve any Endgame Intrigue cards they have.",
+      "The player with the most Victory Points wins."
+    ],
+    "final_scoring": [
+      {
+        "source": "Score Track",
+        "description": "All Victory Points accumulated during the game from Conflicts, Influence (2+ with any Faction = 1 VP), Alliances (4+ Influence with a Faction = 1 VP from Alliance token), card effects, and Intrigue cards."
+      },
+      {
+        "source": "Endgame Intrigue Cards",
+        "description": "Any Endgame Intrigue cards played at the end of the game may provide additional VP."
+      }
+    ]
+  },
+  "winning_condition": "Most Victory Points wins. Tiebreakers in order: most spice, most Solari, most water, most garrisoned troops.",
+  "tips_for_new_players": [
+    {
+      "tip": "Cards and Agents are linked",
+      "description": "You cannot send an Agent to a board space without playing a card with a matching Agent icon. When building your deck, consider which Agent icons you need access to."
+    },
+    {
+      "tip": "Garrison deployment limit",
+      "description": "When sending an Agent to a Combat space, you can deploy ALL newly recruited troops from that turn, plus UP TO 2 additional troops from your garrison. Troops recruited at non-Combat spaces go to your garrison."
+    },
+    {
+      "tip": "Timing troop commitment",
+      "description": "The longer you wait to commit troops to a Conflict, the more information you have. A lesser victory achieved cheaply can be more valuable than an expensive first-place finish."
+    },
+    {
+      "tip": "Water fuels spice",
+      "description": "Water is rare and essential for harvesting spice (the best spaces cost 1-2 water). Look to the Fremen spaces (Stillsuits, Sietch Tabr) for water."
+    },
+    {
+      "tip": "Spice is versatile",
+      "description": "Spice can be sold for Solari (Sell Melange), spent on powerful spaces (Conspire, Selective Breeding, Heighliner), or used to pay costs on cards. The Emperor and CHOAM (Sell Melange) convert spice to Solari."
+    },
+    {
+      "tip": "Swordmaster and High Council",
+      "description": "Both are once-per-game permanent upgrades. Swordmaster (8 Solari) gives a 3rd Agent. High Council (5 Solari) gives 2 Persuasion every Reveal. Getting either early is a strong advantage."
+    },
+    {
+      "tip": "Alliance races",
+      "description": "The first to 4 Influence with a Faction gets the Alliance (1 VP). But if someone passes you, they take it. Watch opponents' Influence tracks and consider racing for Alliances they're close to."
+    },
+    {
+      "tip": "Deck thinning",
+      "description": "Trashing weak starting cards (like Dagger or Convincing Argument) improves your deck quality. The Bene Gesserit space Selective Breeding lets you trash a card and draw two. Stronger cards appear more often in a thinner deck."
+    },
+    {
+      "tip": "Intrigue cards are game-changers",
+      "description": "Never count an opponent out of a Conflict - Combat Intrigue cards can swing strength dramatically. The Bene Gesserit spaces (Secrets, Selective Breeding) are the main sources."
+    },
+    {
+      "tip": "Kwisatz Haderach ruling",
+      "description": "This card lets you take an Agent turn even with no Agents available, by moving an Agent already on the board. You may send it back to the same space. However, you cannot use it on once-per-game spaces (High Council, Swordmaster) or spaces blocked by The Voice."
+    },
+    {
+      "tip": "Reveal turn is optional timing",
+      "description": "You can choose to take a Reveal turn even if you still have Agents. Sometimes it's strategic to reveal early to set your Combat strength and acquire cards before opponents."
+    },
+    {
+      "tip": "Troops return to supply after Combat",
+      "description": "After a Conflict resolves, all troops in the Conflict go to your supply, NOT your garrison. You must recruit them again to use them in future Conflicts."
+    },
+    {
+      "tip": "Influence bonuses at level 4",
+      "description": "The bonus at 4 Influence with each Faction is a one-time reward. You keep it even if you drop below 4 later, but you do not earn it again if you return to 4."
+    },
+    {
+      "tip": "Control defensive bonus",
+      "description": "If you control Arrakeen, Carthag, or Imperial Basin and the Conflict card revealed is for that location, you may deploy 1 troop from your supply to the Conflict before the round begins."
+    }
+  ]
+}

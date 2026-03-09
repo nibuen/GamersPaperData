@@ -1,0 +1,66 @@
+{
+  "treasury": {
+    "id": "treasury",
+    "name": "Treasury",
+    "body": "During the Harvest phase, choose one province you control. That province provides no income (no gold from Farmers, Mines, or Caravans). Instead, you receive exactly 8 gold.",
+    "summary": "Gain 8 gold instead of province income",
+    "details": "Played during Harvest. Best used on a province with few farmers or when the Nile level is low and income would otherwise be minimal.",
+    "extra": "Type: Favor (Yellow) | Timing: Harvest Phase"
+  },
+  "abundance": {
+    "id": "abundance",
+    "name": "Abundance",
+    "body": "During the Harvest phase, choose one province you control. Each Farmer in that province (including printed ones) earns 1 additional gold.",
+    "summary": "+1 gold per farmer in one province",
+    "details": "Synergizes with high-farmer provinces like Avaris or Damanhur to boost revenue during good flood years.",
+    "extra": "Type: Favor (Yellow) | Timing: Harvest Phase"
+  },
+  "architect": {
+    "id": "architect",
+    "name": "Architect",
+    "body": "On your turn, you may immediately build a pyramid using only 2 building stones instead of the usual 3. One-time use.",
+    "summary": "Build 1 pyramid with 2 stones",
+    "details": "Saves one stone. Since stones get progressively more expensive in the market, this card often saves 3-5 gold.",
+    "extra": "Type: Favor (Pink) | Timing: Build/Market Phase"
+  },
+  "theft": {
+    "id": "theft",
+    "name": "Theft (The Thief)",
+    "body": "During the Offering phase, you steal 3 gold from the total offering. You gain 3 gold, and the Nile flood level is reduced. You receive NO gifts from Amun-Re this round.",
+    "summary": "Steal 3 gold from temple; receive no gifts",
+    "details": "A double-edged sword. You gain money and can keep the flood low (helping Caravans), but you forfeit the chance to gain free stones/farmers/cards from the offering rewards.",
+    "extra": "Type: Favor (Red) | Timing: Offering Phase"
+  },
+  "bribery": {
+    "id": "bribery",
+    "name": "Bribery",
+    "body": "During the Auction phase, if you have been outbid on a province, you may play this card to place a higher bid on that same province immediately.",
+    "summary": "Re-bid on the same province",
+    "details": "Standard rules normally force you to move to a different province when outbid. This lets you fight for a specific location you desperately need.",
+    "extra": "Type: Favor (Red) | Timing: Auction Phase"
+  },
+  "protection": {
+    "id": "protection",
+    "name": "Protection",
+    "body": "When you bid on a province, play this to block the bidding space immediately above yours. Another player must bid at least 2 spaces higher to outbid you.",
+    "summary": "Block the next bidding space",
+    "details": "Makes it much more expensive for opponents to kick you out of a province. Excellent for securing a province cheaply.",
+    "extra": "Type: Favor (Red) | Timing: Auction Phase"
+  },
+  "vizier": {
+    "id": "vizier",
+    "name": "The Vizier",
+    "body": "When the offerings are revealed, you may increase or decrease the total offering value by 3. This affects the final Nile flood level.",
+    "summary": "+3 or -3 to the total Nile offering",
+    "details": "Use this to manipulate the flood level to benefit your specific setup (e.g., lowering it for Caravans or raising it for Farmers).",
+    "extra": "Type: Favor (Red) | Timing: Offering Phase"
+  },
+  "schemes": {
+    "id": "schemes",
+    "name": "Schemes (Bonus Cards)",
+    "body": "Keep these hidden. At the end of the Old and New Kingdoms, gain 3 VP if you meet the condition (e.g., Most Farmers, Most Gold, Most Cards, 3 Provinces in one region).",
+    "summary": "3 VP for end-of-era goals",
+    "details": "There are 6 different types. You cannot score two identical schemes in the same era, but you can score different ones.",
+    "extra": "Type: Favor (Brown) | Timing: Scoring Phase"
+  }
+}

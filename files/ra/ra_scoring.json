@@ -1,0 +1,74 @@
+{
+  "pharaohs": {
+    "id": "pharaohs",
+    "name": "Pharaohs",
+    "body": "Scored EACH EPOCH. Player with the most pharaoh tiles: +5 VP. Player with the fewest: -2 VP. Ties: all tied players receive the bonus or penalty.",
+    "summary": "Most +5 VP / Fewest -2 VP",
+    "details": "Pharaoh tiles are KEPT between epochs. Your collection grows over the game, so early pharaohs remain valuable.",
+    "extra": "Scored: Every epoch | Tiles: Kept"
+  },
+  "gold": {
+    "id": "gold",
+    "name": "Gold",
+    "body": "Scored EACH EPOCH. Each Gold tile is worth 3 VP. All Gold tiles are discarded after scoring.",
+    "summary": "+3 VP each",
+    "details": "Gold is simple and reliable. Good filler in auction lots.",
+    "extra": "Scored: Every epoch | Tiles: Discarded"
+  },
+  "nile_and_floods": {
+    "id": "nile_and_floods",
+    "name": "Nile & Floods",
+    "body": "Scored EACH EPOCH. If you have at least 1 Flood tile, score +1 VP per Nile tile AND +1 VP per Flood tile. If you have 0 Flood tiles, Nile tiles score nothing.",
+    "summary": "+1 VP per Nile/Flood (need ≥1 Flood)",
+    "details": "Nile tiles are KEPT between epochs but Flood tiles are DISCARDED. You must collect new Floods each epoch to activate your growing Nile collection.",
+    "extra": "Scored: Every epoch | Nile: Kept | Floods: Discarded"
+  },
+  "civilizations": {
+    "id": "civilizations",
+    "name": "Civilizations",
+    "body": "Scored EACH EPOCH based on distinct types collected. 0 types: -5 VP. 1-2 types: 0 VP. 3 types: +5 VP. 4 types: +10 VP. 5 types: +15 VP. Types: Agriculture, Art, Astronomy, Religion, Writing.",
+    "summary": "0: -5 / 3: +5 / 4: +10 / 5: +15",
+    "details": "All Civilization tiles are DISCARDED after each epoch's scoring. You must rebuild your set every epoch. Having zero is costly.",
+    "extra": "Scored: Every epoch | Tiles: Discarded"
+  },
+  "monuments_variety": {
+    "id": "monuments_variety",
+    "name": "Monuments (Variety)",
+    "body": "Scored END OF GAME ONLY. Points for number of distinct monument types: 1 type = 1 VP. 2 = 2 VP. 3 = 3 VP. 4 = 4 VP. 5 = 5 VP. 6 = 6 VP. 7 = 10 VP. All 8 = 15 VP.",
+    "summary": "1-6: VP=count / 7: 10 VP / 8: 15 VP",
+    "details": "The 8 monument types are: Fortress, Obelisk, Palace, Pyramid, Sphinx, Statue, Step Pyramid, Temple. Monuments are KEPT between all epochs.",
+    "extra": "Scored: End of game only | Tiles: Kept"
+  },
+  "monuments_quantity": {
+    "id": "monuments_quantity",
+    "name": "Monuments (Quantity)",
+    "body": "Scored END OF GAME ONLY. Points for multiples of the same type: 3 identical = 5 VP. 4 identical = 10 VP. 5+ identical = 15 VP. Score each monument type separately.",
+    "summary": "3x = 5 VP / 4x = 10 VP / 5x = 15 VP",
+    "details": "Combine with variety scoring. Having 3 of one type gives you 5 VP for quantity plus at least 1 VP for variety.",
+    "extra": "Scored: End of game only | Tiles: Kept"
+  },
+  "god_tiles": {
+    "id": "god_tiles",
+    "name": "God Tiles",
+    "body": "Scored END OF GAME ONLY. Each unused God tile in your collection is worth 2 VP. Alternatively, God tiles can be spent during the game to take any one tile from the auction track.",
+    "summary": "+2 VP each (unused)",
+    "details": "God tiles are a flexible resource: use them for tactical advantage during the game, or hold them for guaranteed VP at the end.",
+    "extra": "Scored: End of game only | Tiles: Kept (or spent)"
+  },
+  "sun_tokens": {
+    "id": "sun_tokens",
+    "name": "Sun Tokens",
+    "body": "Scored END OF GAME ONLY. The player with the highest total face value across all their suns: +5 VP. The player with the lowest total: -5 VP. Ties: all tied players share the bonus or penalty.",
+    "summary": "Highest total +5 VP / Lowest -5 VP",
+    "details": "Sun values shift throughout the game as you swap suns during auctions. The suns you end with may be very different from what you started with.",
+    "extra": "Scored: End of game only"
+  },
+  "disasters": {
+    "id": "disasters",
+    "name": "Disaster Tiles",
+    "body": "Resolved IMMEDIATELY when won in an auction. Funeral: discard 2 Pharaoh tiles. Drought: discard 2 Nile or Flood tiles. Unrest: discard 1 Civilization tile. Earthquake: discard 1 Monument tile. If you don't have enough, discard what you have.",
+    "summary": "Lose tiles of matching type",
+    "details": "Disasters make some auction lots risky. Consider whether the good tiles in a lot outweigh the disaster penalty before bidding.",
+    "extra": "Tiles: Discarded after resolving"
+  }
+}

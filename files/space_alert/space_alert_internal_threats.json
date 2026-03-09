@@ -1,0 +1,82 @@
+{
+  "int_common_01": {
+    "id": "int_common_01",
+    "name": "Slime",
+    "body": "A spreading organic mass that blocks movement through the affected station. Crew members cannot pass through until the slime is removed. Requires crew presence and B button action to clean up.",
+    "summary": "Blocks movement through the station",
+    "details": "Appears in a specific station. Blocks all movement through that station. Requires a crew member to use the B action while in the station to remove it. Health: 2.",
+    "extra": "Common Internal Threat"
+  },
+  "int_common_02": {
+    "id": "int_common_02",
+    "name": "Overheated Reactor",
+    "body": "The reactor in the affected zone begins to overheat. Each turn, 1 energy is lost from the zone. A crew member must be present in the Lower deck of the affected zone and press the A button to cool it down.",
+    "summary": "Drains 1 energy per turn from the zone",
+    "details": "Appears in one zone's Lower deck. Loses 1 energy per turn until resolved. Requires A button action in the Lower deck station to fix.",
+    "extra": "Common Internal Threat"
+  },
+  "int_common_03": {
+    "id": "int_common_03",
+    "name": "Malfunction",
+    "body": "A critical system malfunctions. The main system (A button) in the affected station is disabled until repaired. A crew member must press the B button in that station to perform repairs.",
+    "summary": "Disables the A button in a station",
+    "details": "Disables the primary system of one station. B button action in the affected station repairs it. Until repaired, A actions in that station have no effect.",
+    "extra": "Common Internal Threat"
+  },
+  "int_common_04": {
+    "id": "int_common_04",
+    "name": "Intruders",
+    "body": "Hostile aliens have boarded the ship. They occupy a station and deal 1 damage to the zone each turn. Crew members must fight them using B button actions or battle bots in the same station.",
+    "summary": "Aliens dealing 1 damage per turn",
+    "details": "Appears in a specific station. Deals 1 damage per turn to the zone. Requires crew B actions or battle bots to defeat. Health: 3.",
+    "extra": "Common Internal Threat"
+  },
+  "int_common_05": {
+    "id": "int_common_05",
+    "name": "Power Surge",
+    "body": "An electrical surge damages the ship's wiring. Drains 1 energy from all three zones simultaneously each turn until resolved. Requires a crew member in Lower White to press B to reset the system.",
+    "summary": "Drains 1 energy from all zones per turn",
+    "details": "Affects all zones. Loses 1 energy per zone per turn. Must be resolved at the Lower White station using B action.",
+    "extra": "Common Internal Threat"
+  },
+  "int_common_06": {
+    "id": "int_common_06",
+    "name": "Saboteur",
+    "body": "A malfunctioning robot is sabotaging ship systems. Moves between stations each turn. Disables the system in whatever station it currently occupies. Must be caught and deactivated by a crew member using B action.",
+    "summary": "Moving threat that disables systems",
+    "details": "Moves one station per turn. Disables all actions in its current station. Requires crew B action in the same station to defeat. Health: 2.",
+    "extra": "Common Internal Threat"
+  },
+  "int_serious_01": {
+    "id": "int_serious_01",
+    "name": "Alien Brood",
+    "body": "A nest of alien creatures rapidly multiplying inside the ship. Starts with 2 damage per turn and increases by 1 each turn. Spreads to adjacent stations if not destroyed quickly. Requires multiple crew members using B actions to eradicate.",
+    "summary": "Escalating damage that spreads to adjacent stations",
+    "details": "Serious threat. Damage increases each turn. Spreads to adjacent stations after 2 turns. Requires concentrated B actions from multiple crew members. Health: 6.",
+    "extra": "Serious Internal Threat"
+  },
+  "int_serious_02": {
+    "id": "int_serious_02",
+    "name": "Core Breach",
+    "body": "A critical breach in the ship's reactor core. Deals 2 damage to the affected zone each turn and prevents the central reactor from being charged. If not sealed within 3 turns, the zone is destroyed.",
+    "summary": "Critical reactor damage with a time limit",
+    "details": "Serious threat. Appears in one zone's Lower deck. 2 damage per turn. Blocks reactor charging. Zone destruction after 3 turns if unresolved. Requires 2 crew A actions in the same station to seal.",
+    "extra": "Serious Internal Threat"
+  },
+  "int_serious_03": {
+    "id": "int_serious_03",
+    "name": "Phantom",
+    "body": "An invisible entity that haunts the ship. Cannot be fought directly. Each turn, it randomly disables one station's systems. Only visual confirmation (Upper White B action) reveals its location, allowing crew to fight it.",
+    "summary": "Invisible threat that disables random stations",
+    "details": "Serious threat. Randomly disables one station per turn. Requires visual confirmation to locate, then crew B actions to defeat. Health: 4.",
+    "extra": "Serious Internal Threat"
+  },
+  "int_serious_04": {
+    "id": "int_serious_04",
+    "name": "Commandeered Battlebot",
+    "body": "The ship's battle bot has been hijacked and turned against the crew. It moves through the ship attacking crew members, forcing them to flee their stations. Deals 1 damage to the zone and displaces any crew in the station.",
+    "summary": "Hijacked bot that attacks crew and zones",
+    "details": "Serious threat. Moves each turn. Displaces crew from its station. Deals 1 damage per turn to the zone. Must be deactivated with 2 B actions from crew in the same station. Health: 5.",
+    "extra": "Serious Internal Threat"
+  }
+}

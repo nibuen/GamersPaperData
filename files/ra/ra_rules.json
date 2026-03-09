@@ -1,0 +1,259 @@
+{
+  "game_name": "Ra",
+  "designer": "Reiner Knizia",
+  "publisher": "alea / Ravensburger",
+  "game_overview": "Ra is an auction and set-collection game set in ancient Egypt. Players draw tiles from a bag and bid on lots using numbered sun tokens. Over three epochs, players collect pharaohs, monuments, civilizations, Nile floods, and more to score victory points.",
+  "objective": "Score the most victory points over three epochs by winning auctions and collecting valuable sets of tiles.",
+  "min_players": 2,
+  "max_players": 5,
+  "bgg_link": "https://boardgamegeek.com/boardgame/12/ra",
+  "play_time_minutes": 60,
+  "components_overview": [
+    {
+      "name": "Game Board",
+      "type": "Board",
+      "count": 1,
+      "description": "Features the auction track (8 spaces for tiles), the Ra track (tracks Ra tiles drawn this epoch), and the scoring track."
+    },
+    {
+      "name": "Tile Bag",
+      "type": "Token",
+      "count": 180,
+      "description": "Contains all game tiles. Players draw one tile per turn. Includes Ra, Pharaoh, Gold, God, Nile, Flood, Civilization, Monument, and Disaster tiles.",
+      "action": {
+        "name": "CardList",
+        "value": "ra_tiles.json"
+      }
+    },
+    {
+      "name": "Sun Tokens",
+      "type": "Token",
+      "count": 16,
+      "description": "Numbered 1-16, used for bidding in auctions. One sun starts face-up in the center of the board. Players receive a set of suns based on player count."
+    },
+    {
+      "name": "Ra Figure",
+      "type": "Marker",
+      "count": 1,
+      "description": "Placed in front of the active player to indicate whose turn it is."
+    },
+    {
+      "name": "Scoring Reference",
+      "type": "Card",
+      "description": "Quick reference for all scoring categories and their VP values.",
+      "action": {
+        "name": "CardList",
+        "value": "ra_scoring.json"
+      }
+    }
+  ],
+  "setup": [
+    {
+      "description": "Place the game board in the center of the table.",
+      "short_description": "Place Board"
+    },
+    {
+      "description": "Place all tiles into the bag and mix them thoroughly.",
+      "short_description": "Fill Bag"
+    },
+    {
+      "description": "Place the starting sun token face-up in the center of the board.",
+      "short_description": "Center Sun"
+    },
+    {
+      "description": "Each player receives 4 sun tokens. Distribute suns as shown on the reference card.",
+      "short_description": "Sun Tokens",
+      "condition": {"min_count_variant": 2, "max_count_variant": 4}
+    },
+    {
+      "description": "Each player receives 3 sun tokens. Distribute suns as shown on the reference card.",
+      "short_description": "Sun Tokens",
+      "condition": {"min_count_variant": 5, "max_count_variant": 5}
+    },
+    {
+      "description": "Place all sun tokens face-up in front of each player.",
+      "short_description": "Suns Face-Up"
+    },
+    {
+      "description": "Set the Ra track limit to 6 spaces for this epoch.",
+      "short_description": "Ra Track",
+      "condition": {"min_count_variant": 2, "max_count_variant": 2}
+    },
+    {
+      "description": "Set the Ra track limit to 8 spaces for this epoch.",
+      "short_description": "Ra Track",
+      "condition": {"min_count_variant": 3, "max_count_variant": 3}
+    },
+    {
+      "description": "Set the Ra track limit to 9 spaces for this epoch.",
+      "short_description": "Ra Track",
+      "condition": {"min_count_variant": 4, "max_count_variant": 4}
+    },
+    {
+      "description": "Set the Ra track limit to 10 spaces for this epoch.",
+      "short_description": "Ra Track",
+      "condition": {"min_count_variant": 5, "max_count_variant": 5}
+    },
+    {
+      "description": "Place each player's scoring marker on 0.",
+      "short_description": "Score Markers"
+    },
+    {
+      "description": "Choose a start player. Give them the Ra figure.",
+      "short_description": "Start Player"
+    }
+  ],
+  "gameplay": {
+    "turn_structure": "On your turn, you must do exactly ONE of three actions: Draw a Tile, Invoke Ra, or Use a God Tile. Play passes clockwise. If all your suns are face-down, you skip your turns for the rest of the epoch.",
+    "actions": [
+      {
+        "name": "1. Draw a Tile",
+        "description": "Draw one tile from the bag and place it on the next empty space of the auction track.",
+        "steps": [
+          {"description": "Draw one tile blindly from the bag."},
+          {"description": "If it is a normal tile, place it on the next empty auction track space."},
+          {"description": "If it is a Ra tile, place it on the Ra track instead, then an auction is immediately triggered (involuntary auction)."},
+          {"description": "If the auction track is completely full (8 tiles), an auction is triggered automatically before placing the tile."}
+        ],
+        "notes": [
+          {"description": "You may not draw a tile if the auction track is full. You must invoke Ra or use a God tile instead."}
+        ]
+      },
+      {
+        "name": "2. Invoke Ra (Voluntary Auction)",
+        "description": "Call 'Ra!' to start a voluntary auction for the tiles currently on the auction track.",
+        "steps": [
+          {"description": "Announce 'Ra!' to begin an auction."},
+          {"description": "Bidding begins with the player to your left and proceeds clockwise."},
+          {"description": "Each player may bid one of their face-up sun tokens or pass."},
+          {"description": "You (the invoker) bid last."},
+          {"description": "The highest sun token wins all tiles on the auction track."},
+          {"description": "The winner takes the center sun (face-down) and places their winning sun in the center (face-up)."},
+          {"description": "If nobody bids (including you), nothing happens. Tiles remain on the auction track."}
+        ],
+        "notes": [
+          {"description": "You can invoke Ra even if the auction track is empty (to waste other players' suns), but this is rarely useful."},
+          {"description": "Your face-down suns cannot be used again until the next epoch."}
+        ]
+      },
+      {
+        "name": "3. Use a God Tile",
+        "description": "Spend one of your God tiles to take any single tile from the auction track.",
+        "steps": [
+          {"description": "Discard one God tile from your collection."},
+          {"description": "Take any one tile of your choice from the auction track and add it to your collection."},
+          {"description": "Resolve disaster tiles immediately if taken."}
+        ],
+        "notes": [
+          {"description": "You cannot use a God tile if the auction track is empty."},
+          {"description": "This does not trigger an auction."}
+        ]
+      },
+      {
+        "name": "Involuntary Auction (Ra Tile Drawn)",
+        "description": "When a Ra tile is drawn, an auction is triggered. It works the same as a voluntary auction with one key difference.",
+        "steps": [
+          {"description": "Place the Ra tile on the Ra track."},
+          {"description": "Bidding proceeds clockwise starting left of the drawer. The drawer bids last."},
+          {"description": "Highest sun wins the lot as normal."},
+          {"description": "If nobody bids, all tiles on the auction track are DISCARDED from the game."}
+        ],
+        "notes": [
+          {"description": "This is the key difference from voluntary auctions: no bid on an involuntary auction means all auction tiles are lost."},
+          {"description": "If this Ra tile fills the Ra track, the epoch ends after this auction resolves."}
+        ]
+      },
+      {
+        "name": "Epoch End & Scoring",
+        "description": "An epoch ends when the Ra track is full OR all players have used all their suns.",
+        "steps": [
+          {"description": "Discard any tiles remaining on the auction track."},
+          {"description": "Score Pharaohs: Player with most pharaohs gains +5 VP. Player with fewest loses -2 VP. Ties share."},
+          {"description": "Score Gold: +3 VP per Gold tile. Discard all Gold tiles."},
+          {"description": "Score Nile: If you have at least 1 Flood tile, score +1 VP per Nile tile AND +1 VP per Flood tile. Discard Flood tiles. Keep Nile tiles."},
+          {"description": "Score Civilizations: 0 types = -5 VP. 1-2 types = 0 VP. 3 types = +5 VP. 4 types = +10 VP. 5 types = +15 VP. Discard all Civilization tiles."},
+          {"description": "Keep: Pharaoh tiles, Nile tiles, Monument tiles, God tiles."},
+          {"description": "Flip all face-down suns face-up. These are your suns for the next epoch."},
+          {"description": "Clear the Ra track. Begin the next epoch."}
+        ],
+        "notes": [
+          {"description": "After the third epoch, also perform final scoring (see End Game)."}
+        ]
+      }
+    ],
+    "key_concepts": [
+      {
+        "name": "Sun Token Economy",
+        "description": "When you win an auction, your bidding sun goes to the center face-up, and you take the old center sun face-down. Face-down suns can't be used until next epoch. High suns win auctions but become available to opponents. Managing sun values across epochs is a key strategy."
+      },
+      {
+        "name": "Disaster Tiles",
+        "description": "When you win disaster tiles in an auction, resolve them immediately: Funeral = discard 2 Pharaoh tiles. Drought = discard 2 Nile or Flood tiles. Unrest = discard 1 Civilization tile. Earthquake = discard 1 Monument tile. If you don't have enough tiles, discard what you have. Disasters are then removed from the game."
+      },
+      {
+        "name": "Tile Retention Between Epochs",
+        "description": "KEPT: Pharaohs, Nile tiles, Monuments, God tiles. DISCARDED: Gold, Flood tiles, Civilizations. This makes monuments a long-term investment and civilizations a per-epoch challenge."
+      }
+    ]
+  },
+  "end_game": {
+    "trigger": "The game ends after the third epoch's scoring is completed.",
+    "procedure": [
+      "Complete the third epoch scoring (Pharaohs, Gold, Nile, Civilizations) as normal.",
+      "Then perform final scoring for categories that only score at game end."
+    ],
+    "final_scoring": [
+      {
+        "source": "Monuments (Variety)",
+        "description": "Score based on number of distinct monument types: 1=1 VP, 2=2, 3=3, 4=4, 5=5, 6=6, 7=10, all 8=15 VP."
+      },
+      {
+        "source": "Monuments (Quantity)",
+        "description": "Score for multiples of the same monument type: 3 identical=5 VP, 4 identical=10 VP, 5+ identical=15 VP. Score each type separately."
+      },
+      {
+        "source": "God Tiles",
+        "description": "+2 VP per unused God tile remaining in your collection."
+      },
+      {
+        "source": "Sun Tokens",
+        "description": "Player with the highest total sun value: +5 VP. Player with the lowest total sun value: -5 VP. Ties share."
+      }
+    ]
+  },
+  "winning_condition": "The player with the most VP wins. In case of a tie, the tied player with the higher total sun value wins.",
+  "tips_for_new_players": [
+    {
+      "tip": "Nile without Flood is worthless",
+      "description": "Nile tiles only score if you have at least one Flood tile. Losing your Floods to a Drought disaster can be devastating."
+    },
+    {
+      "tip": "Monuments are long-term",
+      "description": "Monument tiles are only scored at the end of the game, not each epoch. Collecting them early pays off over time, but they don't help you in the short term."
+    },
+    {
+      "tip": "Civilizations reset each epoch",
+      "description": "All Civilization tiles are discarded after each epoch's scoring. You need to rebuild your set every epoch. Having 0 types costs you -5 VP."
+    },
+    {
+      "tip": "God tiles are flexible",
+      "description": "God tiles can be spent to cherry-pick any tile from the auction track without an auction, or kept for 2 VP each at game end. Use them to grab critical tiles or deny opponents."
+    },
+    {
+      "tip": "Calling Ra is a weapon",
+      "description": "Invoking Ra forces an auction. Use it to force opponents to bid when the lot is weak, or when they have few suns left. If no one bids on your voluntary Ra, tiles stay for later."
+    },
+    {
+      "tip": "Watch the Ra track",
+      "description": "If the epoch ends and you have unused suns, you've wasted bidding opportunities. Keep track of how many Ra tiles have been drawn and plan accordingly."
+    },
+    {
+      "tip": "High suns become available to opponents",
+      "description": "When you win an auction, your sun goes to the center and becomes available to the next winner. Bidding a high sun early gives opponents access to it."
+    },
+    {
+      "tip": "Disasters apply immediately",
+      "description": "When you win disaster tiles, you must discard tiles of the matching type right away. Consider the disasters in a lot before bidding."
+    }
+  ]
+}

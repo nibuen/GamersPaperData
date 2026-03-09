@@ -1,0 +1,130 @@
+{
+  "game_id": "ra",
+  "rounds": 3,
+  "round_label": "Epoch",
+  "categories": [
+    {
+      "id": "pharaohs",
+      "name": "Pharaohs",
+      "description": "Most pharaoh tiles: +5 VP. Fewest: -2 VP. Ties share the bonus/penalty.",
+      "input_type": "relative_standing",
+      "per_round": true,
+      "scoring_rule": {
+        "type": "standing",
+        "most": 5,
+        "middle": 0,
+        "least": -2
+      }
+    },
+    {
+      "id": "gold",
+      "name": "Gold",
+      "description": "Each Gold tile is worth 3 VP. Discarded after scoring.",
+      "input_type": "count",
+      "per_round": true,
+      "stepper_label": "Gold tiles",
+      "scoring_rule": {
+        "type": "multiplier",
+        "factor": 3
+      }
+    },
+    {
+      "id": "nile_and_floods",
+      "name": "Nile & Floods",
+      "description": "If you have at least 1 Flood tile, score +1 VP per Nile AND per Flood tile. No Floods = 0 VP from Nile.",
+      "input_type": "count_with_toggle",
+      "per_round": true,
+      "stepper_label": "Nile + Flood tiles",
+      "toggle_label": "Has Flood tile(s)",
+      "scoring_rule": {
+        "type": "toggle_gate"
+      }
+    },
+    {
+      "id": "civilizations",
+      "name": "Civilizations",
+      "description": "Distinct types: 0 = -5 VP, 1-2 = 0, 3 = +5, 4 = +10, 5 = +15. Discarded after scoring.",
+      "input_type": "distinct_count",
+      "per_round": true,
+      "max_value": 5,
+      "stepper_label": "Distinct types",
+      "scoring_rule": {
+        "type": "threshold",
+        "thresholds": [
+          {"min": 0, "max": 0, "vp": -5},
+          {"min": 1, "max": 2, "vp": 0},
+          {"min": 3, "max": 3, "vp": 5},
+          {"min": 4, "max": 4, "vp": 10},
+          {"min": 5, "max": null, "vp": 15}
+        ]
+      }
+    },
+    {
+      "id": "monuments_variety",
+      "name": "Monuments (Variety)",
+      "description": "Distinct monument types: 1-6 = VP equals count, 7 = 10 VP, all 8 = 15 VP.",
+      "input_type": "distinct_count",
+      "end_game_only": true,
+      "max_value": 8,
+      "stepper_label": "Distinct types",
+      "scoring_rule": {
+        "type": "threshold",
+        "thresholds": [
+          {"min": 0, "max": 0, "vp": 0},
+          {"min": 1, "max": 1, "vp": 1},
+          {"min": 2, "max": 2, "vp": 2},
+          {"min": 3, "max": 3, "vp": 3},
+          {"min": 4, "max": 4, "vp": 4},
+          {"min": 5, "max": 5, "vp": 5},
+          {"min": 6, "max": 6, "vp": 6},
+          {"min": 7, "max": 7, "vp": 10},
+          {"min": 8, "max": null, "vp": 15}
+        ]
+      }
+    },
+    {
+      "id": "monuments_quantity",
+      "name": "Monuments (Quantity)",
+      "description": "Per type: 3 identical = 5 VP, 4 = 10 VP, 5+ = 15 VP. Score each type separately.",
+      "input_type": "multi_count",
+      "end_game_only": true,
+      "max_value": 10,
+      "stepper_label": "Count per type",
+      "labels": ["Fortress", "Obelisk", "Palace", "Pyramid", "Sphinx", "Statue", "Step Pyramid", "Temple"],
+      "scoring_rule": {
+        "type": "multi_threshold",
+        "thresholds": [
+          {"min": 0, "max": 2, "vp": 0},
+          {"min": 3, "max": 3, "vp": 5},
+          {"min": 4, "max": 4, "vp": 10},
+          {"min": 5, "max": null, "vp": 15}
+        ]
+      }
+    },
+    {
+      "id": "god_tiles",
+      "name": "God Tiles",
+      "description": "Each unused God tile is worth 2 VP.",
+      "input_type": "count",
+      "end_game_only": true,
+      "stepper_label": "God tiles",
+      "scoring_rule": {
+        "type": "multiplier",
+        "factor": 2
+      }
+    },
+    {
+      "id": "sun_tokens",
+      "name": "Sun Tokens",
+      "description": "Highest total sun value: +5 VP. Lowest total: -5 VP. Ties share.",
+      "input_type": "relative_standing",
+      "end_game_only": true,
+      "scoring_rule": {
+        "type": "standing",
+        "most": 5,
+        "middle": 0,
+        "least": -5
+      }
+    }
+  ]
+}

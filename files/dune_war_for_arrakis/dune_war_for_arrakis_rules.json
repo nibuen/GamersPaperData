@@ -1,0 +1,627 @@
+{
+  "game_name": "Dune: War for Arrakis",
+  "designer": "Marco Maggi, Francesco Nepitello",
+  "publisher": "CMON",
+  "game_overview": "Dune: War for Arrakis is an asymmetric strategy board game based on Frank Herbert's Dune. Players recreate the Desert War, the struggle for control of Arrakis, the only source in the Imperium of the spice melange, fought between House Atreides and House Harkonnen. The Harkonnens start controlling the main populated areas and must destroy Fremen Sietches while harvesting spice. The Atreides wage guerrilla warfare alongside their Fremen allies, working to fulfill ancient prophecies. In a 2-player game, each player leads one faction. In 3-4 player games, players form two teams.",
+  "objective": "Harkonnen wins by accumulating 10 or more Supremacy Points (gained by destroying Fremen Sietches). Atreides wins by reaching or exceeding specific scores on each of the three types of Prescience Points, as indicated by a Secret Objective card drawn at the start of the game.",
+  "min_players": 2,
+  "max_players": 4,
+  "bgg_link": "https://boardgamegeek.com/boardgame/367150/dune-war-for-arrakis",
+  "play_time_minutes": 120,
+  "components_overview": [
+    {
+      "name": "Game Board",
+      "type": "Board",
+      "description": "Two-section board showing the northern hemisphere of Arrakis. Divided into 8 Sectors containing Areas of four types: Mountain, Plateau, Minor Erg, and Desert. Desert areas adjacent to board edges are Deep Desert. Includes Air zones for Harkonnen vehicles, the Supremacy Track, and the Prescience Track.",
+      "count": 2
+    },
+    {
+      "name": "The Spice Must Flow Board",
+      "type": "Board",
+      "description": "Tracks spice harvesting, Imperium relations, and vehicle placement based on the Imperium marker position.",
+      "count": 1
+    },
+    {
+      "name": "Player Dashboards",
+      "type": "Board",
+      "description": "Each player has a dashboard showing action die slots, the Regeneration Tank, and reference information for action dice results.",
+      "count": 2
+    },
+    {
+      "name": "Harkonnen Leaders",
+      "type": "Meeple",
+      "description": "Baron Harkonnen, Beast Rabban, Feyd-Rautha, Captain Aramsham, Thufir Hawat, and 6 Bashar Leaders. Leaders join Legions and provide combat abilities and special actions.",
+      "count": 11
+    },
+    {
+      "name": "Atreides Leaders",
+      "type": "Meeple",
+      "description": "Paul Atreides, Paul-Muad'Dib, Lady Jessica, Reverend Mother Jessica, Stilgar, Chani, Gurney Halleck, Alia, and 12 Naib Leaders. Leaders join Legions and provide combat abilities and special actions.",
+      "count": 20
+    },
+    {
+      "name": "Harkonnen Units",
+      "type": "Meeple",
+      "description": "24 Regular units, 12 Elite units, and 8 Sardaukar units (soldier-fanatics provided by the Emperor). Sardaukar have special combat abilities.",
+      "count": 44
+    },
+    {
+      "name": "Atreides Units",
+      "type": "Meeple",
+      "description": "16 Regular units, 8 Elite units, and 6 Fedaykin units (elite Fremen warriors). Fedaykin have special combat abilities.",
+      "count": 30
+    },
+    {
+      "name": "Vehicles",
+      "type": "Token",
+      "description": "6 Ornithopters (flying attack/transport), 8 Harvesters (spice collection), and 3 Carryalls (transport harvesters away from danger). Placed in Air zones each round based on the Imperium marker. All Harkonnen vehicles are returned by end of round.",
+      "count": 17
+    },
+    {
+      "name": "Sandworms",
+      "type": "Meeple",
+      "description": "4 Sandworms and 1 Wild Maker. Sandworms move and attack in desert areas. The Wild Maker is a special Atreides unit.",
+      "count": 5
+    },
+    {
+      "name": "Settlement Tokens",
+      "type": "Token",
+      "description": "1 Arrakeen, 1 Carthag (major cities), 4 Pyon Villages, and 8 Sietches (Fremen hidden shelters). Harkonnen gains Supremacy Points by destroying Sietches.",
+      "count": 14
+    },
+    {
+      "name": "Wormsign Tokens",
+      "type": "Token",
+      "description": "Placed during the Desert Hazards phase and via action dice. Wormsigns trigger sandworm appearances and Coriolis Storms that create desert hazards.",
+      "count": 16
+    },
+    {
+      "name": "Ecological Testing Stations",
+      "type": "Token",
+      "description": "Placed on designated board locations. Stations are not Settlements — areas with only stations are considered free for both players.",
+      "count": 6
+    },
+    {
+      "name": "Deployment Tokens",
+      "type": "Token",
+      "description": "8 Atreides Garrison, 8 Atreides Deployment, and 12 Harkonnen Garrison Deployment tokens. Used for deploying reinforcements.",
+      "count": 28
+    },
+    {
+      "name": "Family Atomics Tokens",
+      "type": "Token",
+      "description": "3 tokens representing the devastating Family Atomics weapons. Can create Splintered Rock, Hole in the Rock, and Rimwall effects.",
+      "count": 3
+    },
+    {
+      "name": "Prescience Markers",
+      "type": "Marker",
+      "description": "3 markers tracking the Atreides player's progress on the three Prescience tracks (Perils of Arrakis, Ornithopters, Desert Natives).",
+      "count": 3
+    },
+    {
+      "name": "Imperium Markers",
+      "type": "Marker",
+      "description": "3 markers representing relations with the great powers of the Imperium: CHOAM, Spacing Guild, and Landsraad. Position determines vehicle placement and Imperium Bans.",
+      "count": 3
+    },
+    {
+      "name": "Supremacy Marker",
+      "type": "Marker",
+      "description": "Tracks Harkonnen Supremacy Points on the Supremacy Track. Harkonnen wins at 10+ SP.",
+      "count": 1
+    },
+    {
+      "name": "Spice Reserve Token",
+      "type": "Token",
+      "description": "Tracks the current spice reserve level.",
+      "count": 1
+    },
+    {
+      "name": "Atreides Action Dice",
+      "type": "Dice",
+      "description": "4 dice with faces: Leadership (move 2 legions with leader), Men/Tactics (surprise attack with leader), Draw Planning Cards, Desert Power (use as any result if fewer dice than opponent), Wormsign (place 2 tokens), Sandworm (activate 2 sandworms).",
+      "count": 4
+    },
+    {
+      "name": "Harkonnen Action Dice",
+      "type": "Dice",
+      "description": "8 dice rolled each round. Results are allocated on the player dashboard. Harkonnen has more dice but Atreides gets Desert Power when outnumbered.",
+      "count": 8
+    },
+    {
+      "name": "Combat Dice",
+      "type": "Dice",
+      "description": "6 Atreides and 6 Harkonnen combat dice, used to resolve battles.",
+      "count": 12
+    },
+    {
+      "name": "Atreides Planning Cards",
+      "type": "Card",
+      "description": "36 cards split into House Atreides deck (18) and Fremen Ally deck (18). Draw 2 per round (1 from each). Can be played by spending an action die instead of using the die's action.",
+      "count": 36
+    },
+    {
+      "name": "Harkonnen Planning Cards",
+      "type": "Card",
+      "description": "36 cards split into House Harkonnen deck (18) and Corrino Ally deck (18). Draw 2 per round (1 from each). Can be played by spending an action die.",
+      "count": 36
+    },
+    {
+      "name": "Atreides Leader Cards",
+      "type": "Card",
+      "description": "10 cards: Paul Atreides, Lady Jessica, Reverend Mother Jessica, Gurney Halleck, Alia (House Atreides); Naib Leaders, Paul-Muad'Dib, Stilgar, Chani, Wild Maker (Fremen Ally). Define special abilities for each leader.",
+      "count": 10
+    },
+    {
+      "name": "Harkonnen Leader Cards",
+      "type": "Card",
+      "description": "6 cards: Beast Rabban, Thufir Hawat, Baron Harkonnen, Feyd-Rautha (House Harkonnen); Bashar Leaders, Captain Aramsham (Corrino Ally). Define special abilities for each leader.",
+      "count": 6
+    },
+    {
+      "name": "Prescience Cards",
+      "type": "Card",
+      "description": "16 cards revealed 3 at a time during setup of each round. Track Atreides progress toward victory. Can be discarded or reshuffled at end of round.",
+      "count": 16
+    },
+    {
+      "name": "Objective Cards",
+      "type": "Card",
+      "description": "6 secret objective cards. Atreides draws one at game start — it defines the Prescience Point thresholds needed to win.",
+      "count": 6
+    },
+    {
+      "name": "Imperium Bans Cards",
+      "type": "Card",
+      "description": "3 cards (CHOAM, Spacing Guild, Landsraad) defining penalties when Imperium markers reach certain positions during Spice Harvesting.",
+      "count": 3
+    }
+  ],
+  "setup": [
+    {
+      "description": "Assemble the two game board sections and place the Spice Must Flow board nearby.",
+      "short_description": "Board setup"
+    },
+    {
+      "description": "Place Settlement tokens on their designated board positions: Arrakeen, Carthag, 4 Pyon Villages, and 8 Sietches.",
+      "short_description": "Place settlements"
+    },
+    {
+      "description": "Place the 6 Ecological Testing Stations on their designated board positions.",
+      "short_description": "Place stations"
+    },
+    {
+      "description": "Place the Supremacy marker on the starting position of the Supremacy Track.",
+      "short_description": "Supremacy marker"
+    },
+    {
+      "description": "Place the 3 Prescience markers on the starting positions of the Prescience Track.",
+      "short_description": "Prescience markers"
+    },
+    {
+      "description": "Place the 3 Imperium markers on the starting positions of the Spice Must Flow board.",
+      "short_description": "Imperium markers"
+    },
+    {
+      "description": "Each player takes their Player Dashboard, action dice, combat dice, units, leaders, and deployment tokens.",
+      "short_description": "Player components"
+    },
+    {
+      "description": "Each player shuffles their two Planning card decks (House deck and Ally deck) separately and places them face down.",
+      "short_description": "Shuffle planning decks"
+    },
+    {
+      "description": "Shuffle the Prescience card deck and place it face down.",
+      "short_description": "Prescience deck"
+    },
+    {
+      "description": "The Atreides player draws a Secret Objective card — this defines their Prescience Point victory thresholds. Keep it hidden.",
+      "short_description": "Draw objective"
+    },
+    {
+      "description": "Deploy Harkonnen units and leaders to Arrakeen, Carthag, and other starting positions as indicated in the setup diagram.",
+      "short_description": "Deploy Harkonnen forces"
+    },
+    {
+      "description": "Deploy Atreides units and leaders to their starting Sietches and positions as indicated in the setup diagram.",
+      "short_description": "Deploy Atreides forces"
+    },
+    {
+      "description": "Place Harkonnen Garrison Deployment tokens on designated garrison locations.",
+      "short_description": "Garrison tokens"
+    },
+    {
+      "description": "Each player forms a Regeneration Tank area on their dashboard for eliminated named leaders.",
+      "short_description": "Regeneration Tank"
+    },
+    {
+      "description": "Organize additional components: 3 or 4 player game components if needed.",
+      "short_description": "Additional setup",
+      "condition": { "min_count_variant": 3 }
+    }
+  ],
+  "gameplay": {
+    "turn_structure": "The game is played over a series of rounds. Each round consists of 4 steps: (1) Vehicle Placement, (2) Action Resolution, (3) Desert Hazards, (4) Spice Harvesting. After Spice Harvesting, check victory conditions before starting the next round.",
+    "actions": [
+      {
+        "name": "Step 1: Vehicle Placement",
+        "description": "The Harkonnen player places vehicles (Ornithopters, Harvesters, Carryalls) based on the position of the lowest Imperium marker on the Spice Must Flow board.",
+        "steps": [
+          {
+            "description": "Check the position of the lowest Imperium marker on the Spice Must Flow board to determine the active row."
+          },
+          {
+            "description": "Set aside 1 Action die per slot on the active row and above — these extra dice will be available this round."
+          },
+          {
+            "description": "Place the indicated number of Ornithopters, Harvesters, and Carryalls in Air zones on the board."
+          }
+        ],
+        "notes": [
+          {
+            "description": "All Harkonnen vehicles are returned at the end of the round."
+          },
+          {
+            "description": "Vehicles are placed in Air zones, which are connected to all Areas within both adjacent Sectors."
+          },
+          {
+            "description": "Harvesters collect spice during Step 4. Ornithopters provide air support. Carryalls can rescue Harvesters from sandworm attacks."
+          }
+        ]
+      },
+      {
+        "name": "Step 2: Action Resolution",
+        "description": "The main phase of the game. Players roll action dice, allocate them on their dashboards, then alternate taking actions.",
+        "steps": [
+          {
+            "description": "Both players roll all their action dice simultaneously."
+          },
+          {
+            "description": "Allocate dice on player dashboards. If dice exceed available slots, reassign excess starting with the player who has the most free spaces (Harkonnen first if tied)."
+          },
+          {
+            "description": "Harkonnen first, then Atreides: each player may allocate 1 Bene Gesserit token on their dashboard."
+          },
+          {
+            "description": "Atreides goes first. Players alternate taking 1 action each until all dice are spent."
+          },
+          {
+            "description": "On your turn: spend 1 die to execute its action OR play a Planning card. You may also perform any number of Free Actions."
+          }
+        ],
+        "notes": [
+          {
+            "description": "Desert Power (Atreides only): If the Atreides player has fewer unused action dice than the Harkonnen player, they may use one die as any other action die result."
+          },
+          {
+            "description": "A player may play a Planning card instead of using a die's printed action. This still costs 1 die."
+          },
+          {
+            "description": "Free Actions can be taken in addition to your main action and do not cost dice."
+          }
+        ]
+      },
+      {
+        "name": "Step 3: Desert Hazards",
+        "description": "The desert strikes back. Wormsigns are placed and resolved, then Coriolis Storms sweep across the board.",
+        "steps": [
+          {
+            "description": "Place Wormsign tokens on designated areas as indicated by game effects."
+          },
+          {
+            "description": "Resolve each Wormsign: sandworms may appear in Minor Erg and Desert areas, threatening units and harvesters."
+          },
+          {
+            "description": "Resolve Coriolis Storms: storms move across the board following the storm track, potentially destroying units caught in open desert."
+          }
+        ],
+        "notes": [
+          {
+            "description": "Mountain and Plateau areas are safe from sandworms. Only Minor Erg and Desert areas are at risk."
+          },
+          {
+            "description": "Carryalls can rescue Harvesters from sandworm attacks."
+          },
+          {
+            "description": "The Atreides player can use Wormsign placement strategically via the Wormsign action die result."
+          }
+        ]
+      },
+      {
+        "name": "Step 4: Spice Harvesting",
+        "description": "Harvesters collect spice, which determines Imperium relations. Spice production affects the Harkonnen player's standing with CHOAM, the Spacing Guild, and the Landsraad.",
+        "steps": [
+          {
+            "description": "Count surviving Harvesters on the board and collect spice based on their locations."
+          },
+          {
+            "description": "Adjust the Spice Reserve based on spice collected."
+          },
+          {
+            "description": "Check Imperium Bans: if Imperium markers have reached certain thresholds, apply the corresponding Imperium Bans card penalties (CHOAM, Spacing Guild, or Landsraad)."
+          },
+          {
+            "description": "Return all Harkonnen vehicles from the board."
+          }
+        ],
+        "notes": [
+          {
+            "description": "The quantity of spice harvested determines the quality of Harkonnen relations with the Imperium powers."
+          },
+          {
+            "description": "Poor spice production can lead to Imperium Bans that restrict Harkonnen options in future rounds."
+          }
+        ]
+      },
+      {
+        "name": "Action Dice: Leadership",
+        "description": "Move 2 different Legions, each with a leader attached.",
+        "steps": [
+          {
+            "description": "Select 2 different Legions that each have at least one leader."
+          },
+          {
+            "description": "Move each Legion following normal movement rules."
+          }
+        ],
+        "notes": []
+      },
+      {
+        "name": "Action Dice: Men/Tactics",
+        "description": "Make a surprise attack with a Legion that has a leader.",
+        "steps": [
+          {
+            "description": "Select a Legion with a leader."
+          },
+          {
+            "description": "Move the Legion into an area containing enemy units to initiate a surprise attack."
+          }
+        ],
+        "notes": [
+          {
+            "description": "Surprise attacks may grant combat advantages."
+          }
+        ]
+      },
+      {
+        "name": "Action Dice: Draw Planning Cards",
+        "description": "Draw 2 Planning cards, 1 from each of your two decks (House deck and Ally deck).",
+        "steps": [
+          {
+            "description": "Draw 1 card from your House deck and 1 card from your Ally deck."
+          }
+        ],
+        "notes": []
+      },
+      {
+        "name": "Action Dice: Wormsign",
+        "description": "Place 2 Wormsign tokens on the board.",
+        "steps": [
+          {
+            "description": "Place 2 Wormsign tokens on eligible areas."
+          }
+        ],
+        "notes": [
+          {
+            "description": "Wormsigns threaten units in Minor Erg and Desert areas during the Desert Hazards phase."
+          }
+        ]
+      },
+      {
+        "name": "Action Dice: Sandworm",
+        "description": "Activate 2 Sandworms already on the board.",
+        "steps": [
+          {
+            "description": "Select up to 2 Sandworms on the board."
+          },
+          {
+            "description": "Move and/or attack with each selected Sandworm."
+          }
+        ],
+        "notes": [
+          {
+            "description": "Sandworms can move through Desert and Minor Erg areas."
+          },
+          {
+            "description": "Sandworm attacks can destroy units and Harvesters."
+          },
+          {
+            "description": "Sandworms cannot enter Mountain areas."
+          }
+        ]
+      },
+      {
+        "name": "Movement",
+        "description": "Moving Legions (groups of units and leaders) across the board.",
+        "steps": [
+          {
+            "description": "A Legion moves from one Area to an adjacent Area. Multiple Legions can be moved with the Leadership die."
+          },
+          {
+            "description": "A Legion can move across multiple areas if allowed by the action."
+          },
+          {
+            "description": "Areas separated by impassable borders (thick red/white lines) cannot be crossed by ground movement."
+          }
+        ],
+        "notes": [
+          {
+            "description": "Sandriding (Atreides only): Atreides Legions can ride sandworms across desert areas for rapid long-distance movement."
+          },
+          {
+            "description": "Troop-Transport (Harkonnen only): Harkonnen can use Ornithopters and Carryalls for aerial troop transport."
+          }
+        ]
+      },
+      {
+        "name": "Combat",
+        "description": "Battles occur when a Legion moves into an area containing enemy units.",
+        "steps": [
+          {
+            "description": "The attacker declares the battle. Both sides count their units and determine combat strength."
+          },
+          {
+            "description": "Combat Roll: both players roll combat dice based on their units present."
+          },
+          {
+            "description": "Apply Leader Combat Abilities if leaders are present in the battle."
+          },
+          {
+            "description": "Remove Casualties: each hit removes one enemy unit. Sardaukar (Harkonnen) and Fedaykin (Atreides) have special casualty rules."
+          },
+          {
+            "description": "The attacker may Cease the Attack or Retreat. If neither side retreats, another round of combat begins."
+          },
+          {
+            "description": "End of Battle: the side that controls the area after combat may advance."
+          }
+        ],
+        "notes": [
+          {
+            "description": "Sardaukar and Fedaykin are elite units with enhanced combat effectiveness."
+          },
+          {
+            "description": "Leaders provide combat bonuses and special abilities during battle."
+          },
+          {
+            "description": "Advancing After a Battle: the winning side may move into the contested area."
+          },
+          {
+            "description": "Destroying Settlements: if all defenders are eliminated, the attacker may destroy the Settlement. Destroying a Sietch earns the Harkonnen player Supremacy Points."
+          },
+          {
+            "description": "The Regeneration Tank: eliminated named leaders go to the Regeneration Tank and can return to play in future rounds."
+          }
+        ]
+      }
+    ],
+    "key_concepts": [
+      {
+        "name": "Asymmetric Factions",
+        "description": "Harkonnen start controlling cities (Arrakeen, Carthag) with more units (44 vs 30), more action dice (8 vs 4), and vehicles. Atreides have more leaders (20 vs 11), Sandriding ability, Desert Power, and the Prescience system. Each faction has fundamentally different victory conditions and playstyles."
+      },
+      {
+        "name": "Legions",
+        "description": "Units and leaders are organized into Legions (groups in the same area). Legions move together and fight together. A leader must be present for Leadership and Tactics actions."
+      },
+      {
+        "name": "Area Types",
+        "description": "Mountain: safe from sandworms and storms. Plateau: safe from sandworms. Minor Erg: vulnerable to sandworms. Desert: vulnerable to sandworms and storms. Deep Desert: desert areas adjacent to board edges, extra dangerous."
+      },
+      {
+        "name": "Sectors and Air Zones",
+        "description": "The board is divided into 8 Sectors. Air zones sit on borders between 2 Sectors and are connected to all Areas in both Sectors. Harkonnen vehicles (Ornithopters, Carryalls) are placed in Air zones."
+      },
+      {
+        "name": "Free Areas",
+        "description": "An area is free for a player when it contains no enemy Settlements, enemy Units, or Sandworms. Areas with only Ecological Stations or Harvesters are free for both players."
+      },
+      {
+        "name": "Prescience System (Atreides Victory)",
+        "description": "The Atreides player advances on 3 Prescience tracks (Perils of Arrakis, Ornithopters, Desert Natives). 3 Prescience cards are revealed each round. The Atreides wins by reaching thresholds on all 3 tracks as defined by their secret Objective card. Steps 3, 6, and 8 on the track trigger special effects."
+      },
+      {
+        "name": "Supremacy Points (Harkonnen Victory)",
+        "description": "Harkonnen gains Supremacy Points by destroying Fremen Sietches. The Harkonnen player wins immediately upon reaching 10 or more SP on the Supremacy Track."
+      },
+      {
+        "name": "Imperium Relations",
+        "description": "Three Imperium markers (CHOAM, Spacing Guild, Landsraad) track Harkonnen relations with the major powers. Position is affected by spice harvesting. Low positions trigger Imperium Bans that restrict Harkonnen capabilities."
+      },
+      {
+        "name": "Desert Power",
+        "description": "Atreides-only ability: when the Atreides player has fewer unused action dice than Harkonnen, they may use one die as any other action die result. This compensates for having fewer dice (4 vs 8)."
+      },
+      {
+        "name": "Family Atomics",
+        "description": "Devastating weapons with 3 effects: Splintered Rock (terrain destruction), Hole in the Rock (creates passage), and Rimwall (blocks passage). Powerful but with strategic consequences."
+      },
+      {
+        "name": "Sandriding (Atreides)",
+        "description": "Atreides Legions can ride sandworms for rapid movement across desert terrain, allowing hit-and-fade guerrilla tactics."
+      },
+      {
+        "name": "Troop Transport (Harkonnen)",
+        "description": "Harkonnen can use Ornithopters and Carryalls for aerial movement, transporting troops across the map without ground movement restrictions."
+      },
+      {
+        "name": "Bene Gesserit",
+        "description": "Each round, starting with Harkonnen, players may allocate 1 Bene Gesserit token on their dashboard. Bene Gesserit cards provide special abilities."
+      },
+      {
+        "name": "The North Pole",
+        "description": "A Mountain area considered part of all four central Sectors. All four central Air zones are connected to it. A strategic position on the board."
+      },
+      {
+        "name": "Named Leader Special Actions",
+        "description": "Named leaders (not generic Naib/Bashar leaders) have unique special actions defined on their Leader cards. Examples include Reverend Mother Jessica, Paul-Muad'Dib, Gurney Halleck, and the Wild Maker."
+      },
+      {
+        "name": "Planning Cards",
+        "description": "Each faction has 36 cards in two decks (House + Ally). Draw 2 per round. Playing a card costs 1 action die (you play the card instead of using the die's printed result). Cards provide special abilities, combat modifiers, and strategic options."
+      }
+    ]
+  },
+  "end_game": {
+    "trigger": "The game ends immediately when either victory condition is met, or at the end of a round when checked.",
+    "procedure": [
+      "Check after each round's Spice Harvesting phase.",
+      "Harkonnen victory: 10 or more Supremacy Points on the Supremacy Track (immediate win when destroying a Sietch pushes SP to 10+).",
+      "Atreides victory: all three Prescience markers have reached or exceeded the thresholds shown on the Atreides player's secret Objective card."
+    ],
+    "final_scoring": [
+      {
+        "source": "Harkonnen Supremacy Points",
+        "description": "Gained by destroying Fremen Sietches. Track on the Supremacy Track. 10+ SP wins the game for Harkonnen."
+      },
+      {
+        "source": "Atreides Prescience Points",
+        "description": "Three tracks: Perils of Arrakis, Ornithopters, and Desert Natives. Must reach thresholds on ALL three tracks as defined by the secret Objective card."
+      }
+    ]
+  },
+  "winning_condition": "There is no tiebreaker — each faction has a distinct win condition. Harkonnen: 10+ Supremacy Points. Atreides: meet all three Prescience thresholds. If neither condition is met, the game continues to the next round.",
+  "tips_for_new_players": [
+    {
+      "tip": "Asymmetric strengths",
+      "description": "Harkonnen has raw military power (more units, more dice, vehicles). Atreides has flexibility (Desert Power, Sandriding, more leaders). Play to your faction's strengths."
+    },
+    {
+      "tip": "Harkonnen: balance offense and harvesting",
+      "description": "You need to destroy Sietches for victory BUT also harvest spice to maintain Imperium relations. Neglecting spice leads to Imperium Bans that cripple your capabilities."
+    },
+    {
+      "tip": "Atreides: guerrilla warfare",
+      "description": "Don't try to match Harkonnen in direct combat. Use hit-and-fade tactics, Sandriding for mobility, and focus on advancing Prescience tracks rather than holding territory."
+    },
+    {
+      "tip": "Desert Power is key",
+      "description": "The Atreides player should leverage Desert Power (using a die as any result when they have fewer unused dice). This partially compensates for having only 4 dice vs Harkonnen's 8."
+    },
+    {
+      "tip": "Protect your Sietches",
+      "description": "Atreides: each destroyed Sietch brings Harkonnen closer to victory. Defend or keep them hidden. Harkonnen: identifying and attacking Sietches is your primary path to victory."
+    },
+    {
+      "tip": "Leaders matter",
+      "description": "Leaders provide combat abilities and enable special actions. Named leaders have unique powers on their Leader cards. Use them wisely — eliminated named leaders go to the Regeneration Tank but take time to return."
+    },
+    {
+      "tip": "Watch the terrain",
+      "description": "Mountain areas are safe from sandworms and storms. Desert areas are dangerous. Use terrain to your advantage — Atreides can use the desert as a weapon, while Harkonnen should be wary of overextending into open desert."
+    },
+    {
+      "tip": "Prescience cards",
+      "description": "3 Prescience cards are revealed each round. They can be discarded or reshuffled at end of round. Certain Prescience Track steps (3, 6, 8) trigger special effects."
+    },
+    {
+      "tip": "Free areas",
+      "description": "An area is free when it has no enemy Settlements, Units, or Sandworms. Harvesters and Ecological Stations don't make an area non-free."
+    },
+    {
+      "tip": "Vehicles return each round",
+      "description": "All Harkonnen vehicles are returned at end of round. Plan vehicle placement based on that round's priorities — they don't carry over."
+    }
+  ]
+}

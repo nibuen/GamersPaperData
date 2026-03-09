@@ -1,0 +1,77 @@
+{
+  "favor_icon": {
+    "term": "Favor Icon",
+    "definition": "A symbol found on Province cards that determines your capacity to buy Favor Cards. Your total number of icons across all controlled provinces is the maximum number of Favor Cards you can purchase during a single Market Phase.",
+    "context": "Market Phase / Province Attributes"
+  },
+  "market_phase": {
+    "term": "Market Phase",
+    "definition": "The phase where players purchase Farmers, Stones, and Favor Cards. Costs are progressive: the 1st item costs 1 gold, the 2nd costs 2 gold, and the 3rd costs 3 gold. (e.g., buying 3 stones costs 1 + 2 + 3 = 6 gold).",
+    "context": "Economy / Purchasing"
+  },
+  "offering_phase": {
+    "term": "Offering Phase (Sacrifice)",
+    "definition": "Players simultaneously and secretly bid gold to determine the Nile Flood Level. The total gold spent by all players determines the flood level (0–4) and the rewards (Gifts of the Gods) distributed to the highest bidders.",
+    "context": "Nile Mechanics / Rewards"
+  },
+  "nile_flood_level": {
+    "term": "Nile Flood Level",
+    "definition": "A value from 0 to 4 determined during the Offering Phase. This number acts as a multiplier for Farmer income during the Harvest Phase and determines if Caravans provide gold.",
+    "context": "Harvest / Economy"
+  },
+  "harvest_phase": {
+    "term": "Harvest Phase",
+    "definition": "The phase where players collect gold. Income = (Number of Farmers x Nile Flood Level) + Gold Mines + active Caravans.",
+    "context": "Income Generation"
+  },
+  "gold_mine": {
+    "term": "Gold Mine",
+    "definition": "A province attribute (found mainly in Upper Egypt) that provides a fixed amount of gold (usually +4 or +8) during every Harvest Phase, regardless of the Nile Flood Level.",
+    "context": "Province Attributes / Income"
+  },
+  "caravan": {
+    "term": "Caravan",
+    "definition": "A province attribute that provides a high gold payout during the Harvest Phase, but ONLY if the Nile Flood Level is 1 or 2. If the flood is 0, 3, or 4, the Caravan provides nothing.",
+    "context": "Province Attributes / Income"
+  },
+  "temple": {
+    "term": "Temple",
+    "definition": "A permanent structure in a province. Temples are the primary way to score Victory Points (VP) during the Scoring Phase. The more pyramids in a province with a temple, the higher the VP yield.",
+    "context": "Scoring / Board State"
+  },
+  "old_kingdom": {
+    "term": "Old Kingdom",
+    "definition": "The first half of the game (Rounds 1–3). After the Old Kingdom, the board is partially reset: players lose control of provinces and all Farmers are removed, but Pyramids and Temples remain for the New Kingdom.",
+    "context": "Game Structure / Epoch"
+  },
+  "new_kingdom": {
+    "term": "New Kingdom",
+    "definition": "The second half of the game (Rounds 4–6). Players bid on provinces again, often fighting for locations where they (or others) built pyramids during the Old Kingdom.",
+    "context": "Game Structure / Epoch"
+  },
+  "auction_s_curve": {
+    "term": "S-Curve Auction",
+    "definition": "The unique bidding mechanic where each province has a specific track of increasing gold values. If a player is outbid, they must immediately move their marker to a different province; they cannot immediately outbid the person who just displaced them on the same track (unless using a 'Bribery' card).",
+    "context": "Auction Phase"
+  },
+  "favor_card": {
+    "term": "Favor Card (Power Card)",
+    "definition": "Single-use cards (Action/Favor) or end-of-epoch scoring cards (Schemes). They provide tactical advantages like cheaper pyramid building (Architect) or extra gold (Treasury).",
+    "context": "Resources"
+  },
+  "deben": {
+    "term": "Deben",
+    "definition": "The currency of the game (Gold). 1 VP is awarded for every 10 Deben held at the very end of the game.",
+    "context": "Economy / Final Scoring"
+  },
+  "upper_egypt": {
+    "term": "Upper Egypt (The South)",
+    "definition": "The southern part of the board (Provinces 1–7). Known for Gold Mines and higher starting rewards, but fewer Favor Icons.",
+    "context": "Geography"
+  },
+  "lower_egypt": {
+    "term": "Lower Egypt (The North)",
+    "definition": "The northern part of the board (Provinces 9–15). Known for high Favor Icon counts and high-yield farming, but lacks fixed Gold Mines.",
+    "context": "Geography"
+  }
+}
