@@ -21,6 +21,12 @@
             "publisher": "Lookout Games"
         },
         {
+            "id": "faiyum",
+            "game_name": "Faiyum",
+            "designer": "Friedemann Friese",
+            "publisher": "2F-Spiele"
+        },
+        {
             "id": "food_chain_magnate",
             "game_name": "Food Chain Magnate",
             "designer": "Jeroen Doumen, Joris Wiersinga",
