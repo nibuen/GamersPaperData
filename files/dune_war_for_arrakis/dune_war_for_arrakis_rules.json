@@ -287,7 +287,15 @@
     }
   ],
   "gameplay": {
-    "turn_structure": "Draw cards and reveal prescience cards\nPlace vehicles\nAlternate actions (Atreides first)\nResolve desert hazards\nHarvest spice\nCheck victory and cleanup",
+    "turn_structure": "Each round: draw cards, place vehicles, alternate actions, resolve desert hazards, harvest spice, check victory.",
+    "turn_steps": [
+      "Draw cards and reveal prescience cards",
+      "Place vehicles",
+      "Alternate actions (Atreides first)",
+      "Resolve desert hazards",
+      "Harvest spice",
+      "Check victory and cleanup"
+    ],
     "actions": [
       {
         "name": "Start of the Round",
