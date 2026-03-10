@@ -1,0 +1,44 @@
+{
+  "_note": "Icon choices that may need review -- placeholders or best-available matches. This file is for human review only and is not loaded by the app.",
+  "review_items": [
+    {
+      "location": "component: Wear Tokens",
+      "current_icon": "Token",
+      "note": "Generic Token placeholder. No broken-shield or cracked-armor icon available yet."
+    },
+    {
+      "location": "glossary: positional_grid",
+      "current_icon": "ArrowCross",
+      "note": "Best available match for a grid concept. No grid icon exists."
+    }
+  ],
+  "resolved": [
+    {
+      "location": "component: Wound Tokens",
+      "icon": "Bullseye",
+      "tint": "#D32F2F",
+      "note": "Bullseye icon added in v1.11.3+"
+    },
+    {
+      "location": "component: Power Tokens",
+      "icon": "Fire",
+      "tint": "#EF6C00",
+      "note": "Fire icon for power-up concept"
+    },
+    {
+      "location": "component: Event Tokens",
+      "icon": "HexagonQuestion",
+      "note": "Question-mark hexagon fits event mystery"
+    },
+    {
+      "location": "component: Travel Tokens",
+      "icon": "Token",
+      "note": "Token (circle) matches the physical component"
+    },
+    {
+      "location": "glossary: critical",
+      "icon": "DiceSword",
+      "note": "Kept DiceSword with different tint (#EF6C00 vs #D32F2F)"
+    }
+  ]
+}

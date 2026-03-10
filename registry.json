@@ -1,108 +1,132 @@
 {
-    "version": "1.2.0",
+    "version": "1.3.0",
     "base_url": "https://cdn.jsdelivr.net/gh/nibuen/GamersPaperData@main/files",
     "games": [
+        {
+            "id": "arydia",
+            "game_name": "Arydia: The Paths We Dare Tread",
+            "designer": "Cody Miller",
+            "publisher": "Far Off Games",
+            "added_date": "2026-03-10"
+        },
         {
             "id": "agricola",
             "game_name": "Agricola",
             "designer": "Uwe Rosenberg",
-            "publisher": "Lookout Games"
+            "publisher": "Lookout Games",
+            "added_date": "2026-02-15"
         },
         {
             "id": "castles_of_burgundy",
             "game_name": "The Castles of Burgundy",
             "designer": "Stefan Feld",
-            "publisher": "alea / Ravensburger"
+            "publisher": "alea / Ravensburger",
+            "added_date": "2026-02-24"
         },
         {
             "id": "grand_austria_hotel",
             "game_name": "Grand Austria Hotel",
             "designer": "Virginio Gigli, Simone Luciani",
-            "publisher": "Lookout Games"
+            "publisher": "Lookout Games",
+            "added_date": "2026-02-20"
         },
         {
             "id": "faiyum",
             "game_name": "Faiyum",
             "designer": "Friedemann Friese",
-            "publisher": "2F-Spiele"
+            "publisher": "2F-Spiele",
+            "added_date": "2026-03-09"
         },
         {
             "id": "food_chain_magnate",
             "game_name": "Food Chain Magnate",
             "designer": "Jeroen Doumen, Joris Wiersinga",
-            "publisher": "Lucky Duck Games, Splotter Spellen"
+            "publisher": "Lucky Duck Games, Splotter Spellen",
+            "added_date": "2026-02-16"
         },
         {
             "id": "lords_of_waterdeep",
             "game_name": "Lords of Waterdeep",
             "designer": "Peter Lee, Rodney Thompson",
-            "publisher": "Wizards of the Coast"
+            "publisher": "Wizards of the Coast",
+            "added_date": "2026-02-13"
         },
         {
             "id": "twilight_struggle",
             "game_name": "Twilight Struggle",
             "designer": "Ananda Gupta, Jason Matthews",
-            "publisher": "GMT Games"
+            "publisher": "GMT Games",
+            "added_date": "2026-02-18"
         },
         {
             "id": "santa_monica",
             "game_name": "Santa Monica",
             "designer": "Josh Wood",
-            "publisher": "Alderac Entertainment Group (AEG)"
+            "publisher": "Alderac Entertainment Group (AEG)",
+            "added_date": "2026-02-19"
         },
         {
             "id": "orloj",
             "game_name": "Orloj: The Prague Astronomical Clock",
             "designer": "Paloma J. Pascual, Abraham S\u00c3\u00a1nchez Hermida",
-            "publisher": "Perro Loko Games"
+            "publisher": "Perro Loko Games",
+            "added_date": "2026-02-22"
         },
         {
             "id": "ticket_to_ride",
             "game_name": "Ticket to Ride",
             "designer": "Alan R. Moon",
-            "publisher": "Days of Wonder"
+            "publisher": "Days of Wonder",
+            "added_date": "2026-02-25"
         },
         {
             "id": "plains_indian_wars",
             "game_name": "Plains Indian Wars",
             "designer": "John Poniske",
-            "publisher": "GMT Games"
+            "publisher": "GMT Games",
+            "added_date": "2026-02-27"
         },
         {
             "id": "amun_re",
             "game_name": "Amun-Re",
             "designer": "Reiner Knizia",
-            "publisher": "Hans im Gl\u00fcck"
+            "publisher": "Hans im Gl\u00fcck",
+            "added_date": "2026-03-09"
         },
         {
             "id": "dune_imperium",
             "game_name": "Dune: Imperium",
             "designer": "Paul Dennen",
-            "publisher": "Dire Wolf Digital"
+            "publisher": "Dire Wolf Digital",
+            "added_date": "2026-02-19"
         },
         {
             "id": "dune_war_for_arrakis",
             "game_name": "Dune: War for Arrakis",
             "designer": "Marco Maggi, Francesco Nepitello",
-            "publisher": "CMON"
+            "publisher": "CMON",
+            "added_date": "2026-02-19"
         },
         {
             "id": "fox_in_the_forest",
             "game_name": "The Fox in the Forest",
             "designer": "Joshua Buergel",
-            "publisher": "Renegade Game Studios"
+            "publisher": "Renegade Game Studios",
+            "added_date": "2026-02-19"
         },
         {
             "id": "ra",
             "game_name": "Ra",
             "designer": "Reiner Knizia",
-            "publisher": "alea / Ravensburger"
+            "publisher": "alea / Ravensburger",
+            "added_date": "2026-02-19"
         },
         {
             "id": "space_alert",
             "game_name": "Space Alert",
             "designer": "Vladim\u00edr Chv\u00e1til",
-            "publisher": "Czech Games Edition"
+            "publisher": "Czech Games Edition",
+            "added_date": "2026-02-19"
         }
     ]
 }

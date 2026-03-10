@@ -1,0 +1,331 @@
+{
+  "hp": {
+    "term": "HP",
+    "definition": "Hit Points. An exile's health. When HP reaches 0, the exile is KO'd. In Adventure mode, other exiles can use skills or items to heal; if still at 0 HP, draw a DAY card then set to 1 HP. In Combat, KO'd exiles cannot act.",
+    "context": "Stat",
+    "icon": "SuitHearts",
+    "tint": "#D32F2F"
+  },
+  "mp": {
+    "term": "MP",
+    "definition": "Mana Points. A resource spent to activate certain skills, primarily used by magic-oriented Paths.",
+    "context": "Stat",
+    "icon": "FlaskFull",
+    "tint": "#1565C0"
+  },
+  "sp": {
+    "term": "SP",
+    "definition": "Stamina Points. A resource spent to activate certain skills and as a Reaction to gain +2 movement during a Basic Move in combat.",
+    "context": "Stat",
+    "icon": "FlaskHalf",
+    "tint": "#388E3C"
+  },
+  "rp": {
+    "term": "RP",
+    "definition": "Roleplay Point. Earned by the Guide when reaching a roleplay marker on a card. Can be spent as a Reaction after rolling an attribute check to add +3 to the roll. Max RP: 3 for 1-exile party, 2 for 2-exile party, 1 for 3-4 exile party. A natural 1 is always a failure regardless of RP.",
+    "context": "Stat",
+    "icon": "BookOpen",
+    "tint": "#7B1FA2"
+  },
+  "kae": {
+    "term": "Kae",
+    "definition": "The in-game currency. Used to purchase items from Armorers, pay certain skill costs, and refresh some markers. Gained from selling items at Vendors, completing jobs, defeating foes (loot rolls), and resolving events.",
+    "context": "Resource",
+    "icon": "Dollar",
+    "tint": "#FFD54F"
+  },
+  "xp": {
+    "term": "XP",
+    "definition": "Experience Points. Gained by all exiles when resolving cards or defeating foes. Spent at towns to level up, which grants a new Stat point, Attribute point, and a new skill.",
+    "context": "Resource",
+    "icon": "Award",
+    "tint": "#EF6C00"
+  },
+  "combo": {
+    "term": "Combo",
+    "definition": "A shared resource among exiles in combat. Gained by performing Basic Move (+1 combo) and rolling natural 20s (+2 combo). When combo reaches 7, any exile may spend all 7 as a Free action to take one action without paying combo costs or an action token. Combo can never exceed 7.",
+    "context": "Combat Resource",
+    "icon": "Sword",
+    "tint": "#EF6C00"
+  },
+  "threat": {
+    "term": "Threat",
+    "definition": "A shared foe resource in combat. Increased by Threat cards drawn at the start of each Foe Turn. Foes spend Threat to activate their most expensive affordable behavior. When Threat reaches 7, a Limit Break occurs: add 1 Power token to each foe AI card, then activate all foes. Threat can never exceed 7.",
+    "context": "Combat Resource",
+    "icon": "Skull",
+    "tint": "#37474F"
+  },
+  "movement": {
+    "term": "Movement",
+    "definition": "Used to move miniatures on maps. Normal and Obscure borders cost 1 movement; Difficult borders cost 2 movement. Exiles can move through other exiles but not foes. Foes can move through other foes but not exiles. Neither can move through untraversable borders.",
+    "context": "Mechanic",
+    "icon": "PawnRight",
+    "tint": "#78909C"
+  },
+  "adventure_mode": {
+    "term": "Adventure Mode",
+    "definition": "The default game mode when not in Combat. Players take turns in any order. Exiles perform Worldmap Actions (travel, enter locations, interact with POIs) or Location Map Actions (move, interact, explore). Natural 20 on a check adds TRV-77 or THR-77.",
+    "context": "Mode",
+    "icon": "Campfire",
+    "tint": "#388E3C"
+  },
+  "combat_mode": {
+    "term": "Combat Mode",
+    "definition": "Triggered when entering an uncleared map with foes. Flip Mode token to Combat. Each round has a Foe Turn then an Exile Turn. Exiles cannot move floors, explore, or interact with NPCs/POIs/Chests during combat. Stats and Wear tokens persist after combat ends.",
+    "context": "Mode",
+    "icon": "DiceSword",
+    "tint": "#D32F2F"
+  },
+  "exile": {
+    "term": "Exile",
+    "definition": "A player character. Each exile has a character sheet with HP, MP, SP, 6 attributes (CHA, DEX, END, INT, STR, WIS), equipment slots, inventory, and learned skills. The term 'exile' in skill text includes the exile using the ability.",
+    "context": "Character",
+    "icon": "Character",
+    "tint": "#1565C0"
+  },
+  "guide": {
+    "term": "Guide",
+    "definition": "The player to the left of the active player. The Guide draws and runs event/NPC/POI cards by roleplaying or reading them aloud. The Guide earns RP when reaching a roleplay marker on a card.",
+    "context": "Role",
+    "icon": "BookClosed",
+    "tint": "#5D4037"
+  },
+  "foe": {
+    "term": "Foe",
+    "definition": "An enemy creature with a Hit Grid (showing Hit Points, Armored points, Weak points, and Criticals) and an AI card (showing behaviors, targeting priority, and initiative). Foe abilities in red text are ongoing; abilities in black text are activated as part of a behavior.",
+    "context": "Combat",
+    "icon": "Skull",
+    "tint": "#D32F2F"
+  },
+  "ko_d": {
+    "term": "KO'd",
+    "definition": "Knocked out -- an exile with 0 HP. Place miniature on its side. In Adventure mode, other exiles may heal them; if still at 0 HP, draw a DAY card then set to 1 HP. In Combat, KO'd exiles take their turn but cannot perform actions, use items, or move. Foes do not target KO'd exiles.",
+    "context": "Status",
+    "icon": "SuitHeartsBroken",
+    "tint": "#D32F2F"
+  },
+  "surge": {
+    "term": "Surge",
+    "definition": "Once per combat, a KO'd exile can Surge by placing an orange gem on their portrait. That round, the exile acts normally. If they gain 1+ HP before end of turn, they remain standing. Surge tokens are removed at end of combat.",
+    "context": "Combat",
+    "icon": "Fire",
+    "tint": "#EF6C00"
+  },
+  "attribute_check": {
+    "term": "Attribute Check",
+    "definition": "Roll a d20 and add the exile's value for the tested attribute (CHA, DEX, END, INT, STR, or WIS). A natural 1 is always a failure. A natural 20 in Adventure mode adds TRV-77 or THR-77; in Combat adds 2 combos. You may spend 1 RP after seeing the roll to add +3.",
+    "context": "Mechanic",
+    "icon": "D20",
+    "tint": "#78909C"
+  },
+  "adjacency": {
+    "term": "Adjacency",
+    "definition": "Pointer within a square: you are adjacent if in that square or in a square sharing a traversable border with it. Pointer at intersection of corners: you are adjacent to the squares the pointer intersects. In combat, adjacent means anything in your square, a corner of your square, or a square sharing a traversable border.",
+    "context": "Mechanic",
+    "icon": "ArrowCross",
+    "tint": "#78909C"
+  },
+  "traversable_border": {
+    "term": "Traversable Border",
+    "definition": "Normal, Difficult, and Obscure borders, denoted by dashed lines. Exiles and foes can move through these. Normal and Obscure cost 1 movement; Difficult costs 2 movement.",
+    "context": "Map",
+    "icon": "ArrowRight",
+    "tint": "#388E3C"
+  },
+  "untraversable_border": {
+    "term": "Untraversable Border",
+    "definition": "Impassable and Wall borders, denoted by solid lines. Exiles and foes cannot move through these. Wall borders also block Ranged abilities. Only Area abilities can pass through Impassable borders (but not Wall borders).",
+    "context": "Map",
+    "icon": "StructureWall",
+    "tint": "#D32F2F"
+  },
+  "wound": {
+    "term": "Wound",
+    "definition": "When damage hits a foe's Hit Point, place a Wound token (red gem) on it. A foe is defeated when its Hit Grid is fully covered with wounds.",
+    "context": "Combat",
+    "icon": "Token",
+    "tint": "#D32F2F"
+  },
+  "armored_point": {
+    "term": "Armored Point",
+    "definition": "A Hit Point on a foe's Hit Grid protected by an Armor (blue) cube. When the Armored Point would take damage, remove the Armor cube instead of wounding. It then becomes a normal Hit Point. Piercing damage ignores Armor cubes.",
+    "context": "Combat",
+    "icon": "Shield",
+    "tint": "#1565C0"
+  },
+  "critical": {
+    "term": "Critical",
+    "definition": "A special point on a foe's Hit Grid. When an attack pattern passes through a Critical, follow the orange arrow from it and place bonus damage on that Hit Point.",
+    "context": "Combat",
+    "icon": "DiceSword",
+    "tint": "#EF6C00"
+  },
+  "weak_point": {
+    "term": "Weak Point",
+    "definition": "A special point on a foe's Hit Grid. When wounded, resolve its effect after applying all damage and bonus damage. If the foe is defeated, Weak Points do not trigger.",
+    "context": "Combat",
+    "icon": "Token",
+    "tint": "#FFEB3B"
+  },
+  "power_token": {
+    "term": "Power Token",
+    "definition": "Orange gem placed on a foe AI card during a Limit Break (when Threat hits 7). For each Power token on a foe's AI card, each foe attack deals 1 additional damage (or 1 additional HP loss for abilities that directly reduce HP).",
+    "context": "Combat",
+    "icon": "Token",
+    "tint": "#EF6C00"
+  },
+  "limit_break": {
+    "term": "Limit Break",
+    "definition": "Occurs when Threat reaches 7. After the current Exile or Foe Turn ends, add 1 Power token (orange gem) to each foe AI card, then activate all foes as if an All Foes Threat card was drawn.",
+    "context": "Combat",
+    "icon": "Fire",
+    "tint": "#D32F2F"
+  },
+  "day_card": {
+    "term": "DAY Card",
+    "definition": "Drawn when resting at a town or when KO'd exiles remain at 0 HP after healing attempts. Represents the passage of time and may trigger world events.",
+    "context": "Card",
+    "icon": "CardFlip",
+    "tint": "#FFEB3B"
+  },
+  "travel_deck": {
+    "term": "Travel Deck",
+    "definition": "A deck of cards drawn when traveling between hexes on the Worldmap. Draw the top card, resolve its effects (you may use skills or items before resolving), then discard. Shuffled and Travel tokens refreshed when Resting.",
+    "context": "Card",
+    "icon": "CardsStack",
+    "tint": "#5D4037"
+  },
+  "threat_deck": {
+    "term": "Threat Deck",
+    "definition": "A deck of cards shuffled at the start of combat. One card is drawn each Foe Turn. Cards either increase Threat, activate Mob or Boss foes (or increase Threat if that type is absent), or activate all foes.",
+    "context": "Card",
+    "icon": "CardsStack",
+    "tint": "#37474F"
+  },
+  "travel_token": {
+    "term": "Travel Token",
+    "definition": "Tokens that determine whether the party can explore new hexes. When any Travel token is exhausted (gray side), the party can only move to explored (face-up) hexes and cannot travel to unexplored (face-down) hexes. Refreshed by Resting.",
+    "context": "Token",
+    "icon": "Token",
+    "tint": "#5D4037"
+  },
+  "event_token": {
+    "term": "Event Token",
+    "definition": "Placed on designated pointers when exploring an uncleared map. When an exile moves adjacent to an Event token, the event immediately triggers (mandatory). In Adventure mode, exiles cannot move through Event tokens.",
+    "context": "Token",
+    "icon": "Token",
+    "tint": "#388E3C"
+  },
+  "chest_token": {
+    "term": "Chest Token",
+    "definition": "Placed on maps during exploration. Path chest: each exile draws 1 random item from their Path chest. Pathless chest: only 1 exile draws 1 random item. If the chest is empty (no items left), gain 3 Kae instead.",
+    "context": "Token",
+    "icon": "LockClosed",
+    "tint": "#FFD54F"
+  },
+  "path_item": {
+    "term": "Path Item",
+    "definition": "Items specific to an exile's chosen Path, identified by colored Path icons. Path items cannot be traded between exiles.",
+    "context": "Item",
+    "icon": "HandCard",
+    "tint": "#7B1FA2"
+  },
+  "pathless_item": {
+    "term": "Pathless Item",
+    "definition": "General items available to any exile, identified by a brown 'A' icon. Pathless items can be freely traded between exiles.",
+    "context": "Item",
+    "icon": "HandCard",
+    "tint": "#5D4037"
+  },
+  "durability": {
+    "term": "Durability",
+    "definition": "A property of armor. When armor with remaining durability is hit, add exactly one Wear token (orange gem) to that armor and reduce attack damage to the exile's HP by the armor's defense value. Armor with no remaining durability provides no protection.",
+    "context": "Equipment",
+    "icon": "Shield",
+    "tint": "#78909C"
+  },
+  "wear_token": {
+    "term": "Wear Token",
+    "definition": "Orange gem placed on armor when it absorbs damage. Each Wear token reduces remaining durability by 1. Removed at a Smithy (Repair armor) at towns. Wear tokens persist after combat ends. Items with Wear tokens must be repaired before stowing.",
+    "context": "Equipment",
+    "icon": "Token",
+    "tint": "#EF6C00"
+  },
+  "melee_ability": {
+    "term": "Melee Ability",
+    "definition": "An ability that passes through all traversable borders (Normal, Difficult, and Obscure). Foes using melee abilities move the minimum number of squares to reach their target.",
+    "context": "Ability Type",
+    "icon": "Sword",
+    "tint": "#78909C"
+  },
+  "ranged_ability": {
+    "term": "Ranged Ability",
+    "definition": "An ability that only passes through Normal, Difficult, and Impassable borders (white lines). Blocked by Wall and Obscure borders. Foes using ranged abilities position at maximum range from their target while still able to hit.",
+    "context": "Ability Type",
+    "icon": "Bow",
+    "tint": "#78909C"
+  },
+  "area_ability": {
+    "term": "Area Ability",
+    "definition": "An ability that passes through all borders except Wall borders (solid black lines). Foes using area abilities position to hit the most exiles while still hitting their target.",
+    "context": "Ability Type",
+    "icon": "Fire",
+    "tint": "#78909C"
+  },
+  "piercing_damage": {
+    "term": "Piercing Damage",
+    "definition": "Ignores Armor (blue) cubes on a foe's Hit Grid and directly wounds the Hit Point.",
+    "context": "Combat",
+    "icon": "Bow",
+    "tint": "#D32F2F"
+  },
+  "eureka_moment": {
+    "term": "Eureka Moment",
+    "definition": "When you complete a skill's Mastery requirement, as a Reaction you may immediately use that skill one time without paying any costs.",
+    "context": "Skill",
+    "icon": "Award",
+    "tint": "#FFEB3B"
+  },
+  "flee_combat": {
+    "term": "Flee Combat",
+    "definition": "An exile on a Hex pointer or Stairs pointer may flee combat as a Free action by drawing EVT-333.",
+    "context": "Combat",
+    "icon": "PawnRight",
+    "tint": "#5D4037"
+  },
+  "positional_grid": {
+    "term": "Positional Grid",
+    "definition": "A grid on skill or attack cards showing the position of the exile relative to targets. Can be rotated. Solid bracket: must target creature in that square. Dashed bracket: can only target one creature in those squares. Red bracket: cannot use if creature is in that square. X = enemy, O = ally.",
+    "context": "Combat",
+    "icon": "ArrowCross",
+    "tint": "#37474F"
+  },
+  "aimed_damage": {
+    "term": "Aimed Damage",
+    "definition": "A type of attack damage applied to any unwounded Hit Point on the foe's Hit Grid (player's choice).",
+    "context": "Combat",
+    "icon": "DiceSword",
+    "tint": "#78909C"
+  },
+  "directional_damage": {
+    "term": "Directional Damage",
+    "definition": "A type of attack damage indicated by a black arrow. From the card edge along a chosen row, column, or diagonal, trace a straight-line path in the arrow's direction. Apply the first point of damage to the first unwounded Hit Point along that path.",
+    "context": "Combat",
+    "icon": "ArrowDiagonal",
+    "tint": "#78909C"
+  },
+  "shift": {
+    "term": "Shift",
+    "definition": "Move a target X squares in a direction (not a normal move). The target cannot enter occupied squares or cross untraversable borders. Foes shift as far as possible; exiles choose how far. Pull: each square must be closer to origin. Push: each square must be further from origin.",
+    "context": "Combat",
+    "icon": "ArrowRight",
+    "tint": "#78909C"
+  },
+  "marker": {
+    "term": "Marker",
+    "definition": "Placed on skills and items to track usage. Different refresh icons indicate when markers refresh: out of combat, with a Rest action, for 1 MP, for 1 SP, for 1 Kae at a town, or special refresh rules.",
+    "context": "Mechanic",
+    "icon": "Token",
+    "tint": "#78909C"
+  }
+}

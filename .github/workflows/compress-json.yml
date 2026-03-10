@@ -33,10 +33,35 @@ jobs:
           pip install Pillow
           python3 scripts/generate_og_images.py
 
+      - name: Auto-stamp added_date on new registry entries
+        run: |
+          python3 -c "
+          import json, datetime, sys
+
+          path = 'registry.json'
+          with open(path, 'r', encoding='utf-8') as f:
+              data = json.load(f)
+
+          today = datetime.date.today().isoformat()
+          changed = False
+          for game in data.get('games', []):
+              if 'added_date' not in game:
+                  game['added_date'] = today
+                  changed = True
+
+          if changed:
+              with open(path, 'w', encoding='utf-8') as f:
+                  json.dump(data, f, indent=4, ensure_ascii=False)
+                  f.write('\n')
+              print(f'Stamped added_date={today} on new entries')
+          else:
+              print('All entries already have added_date')
+          "
+
       - name: Commit if anything changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add --all '*.json.gz' '*.png'
+          git add --all '*.json.gz' '*.png' 'registry.json'
           git diff --cached --quiet || git commit -m "chore: sync compressed JSON & OG images [skip ci]"
           git push
