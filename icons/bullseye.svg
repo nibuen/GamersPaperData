@@ -1,9 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-40 -40 80 80" width="80" height="80">
   <defs/>
-  <g transform="translate(-40,-40) scale(1.25)">
-    <circle stroke="none" fill="#FFFFFF" cx="32" cy="32" r="27"/>
-    <circle stroke="none" fill="none" cx="32" cy="32" r="21"/>
-    <ellipse stroke="none" fill="#FFFFFF" cx="32" cy="31.5" rx="14" ry="14.5"/>
-    <ellipse stroke="none" fill="none" cx="32" cy="31.5" rx="7" ry="7.5"/>
+  <g>
+    <path stroke="none" fill="#FFFFFF" d="M0 -34 C18.78 -34 34 -18.78 34 0 C34 18.78 18.78 34 0 34 C-18.78 34 -34 18.78 -34 0 C-34 -18.78 -18.78 -34 0 -34 M0 26 C14.36 26 26 14.36 26 0 C26 -14.36 14.36 -26 0 -26 C-14.36 -26 -26 -14.36 -26 0 C-26 14.36 -14.36 26 0 26"/>
+    <path stroke="none" fill="#FFFFFF" d="M0 -18 C9.94 -18 18 -9.94 18 0 C18 9.94 9.94 18 0 18 C-9.94 18 -18 9.94 -18 0 C-18 -9.94 -9.94 -18 0 -18 M0 10 C5.52 10 10 5.52 10 0 C10 -5.52 5.52 -10 0 -10 C-5.52 -10 -10 -5.52 -10 0 C-10 5.52 -5.52 10 0 10"/>
   </g>
 </svg>
