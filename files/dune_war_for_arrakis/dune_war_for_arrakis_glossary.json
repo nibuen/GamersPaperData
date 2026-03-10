@@ -141,7 +141,7 @@
   },
   "imperium_ban": {
     "term": "Imperium Ban",
-    "definition": "Penalties activated when Imperium markers move down during Spice Harvesting or are on the bottom step. CHOAM Ban reduces the stacking limit from 6 to 5 units. Landsraad Ban prevents discarding cards from the reinforcements deck for additional combat dice. Bans remain active until the beginning of the next round's harvesting phase.",
+    "definition": "Penalties activated when Imperium markers move down during Spice Harvesting or are on the bottom step. CHOAM Ban reduces the stacking limit from 6 to 5 units. Landsraad Ban prevents discarding Planning cards from hand to gain additional combat dice. Bans remain active until the beginning of the next round's harvesting phase.",
     "context": "Spice Harvesting",
     "icon": "LockClosed",
     "tint": "#C62828",
