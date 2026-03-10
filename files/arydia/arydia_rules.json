@@ -191,9 +191,10 @@
           {"description": "Draw the top card of the Travel deck, resolve its effects, then discard it. You may use skills or items before resolving."},
           {"description": "Move the Party token to the destination hex. If the hex was unexplored, flip it face-up."}
         ],
-        "notes": [
-          {"description": "The entire party must travel together."},
-          {"description": "You cannot travel to unexplored hexes if any Travel token is exhausted."}
+        "details": [
+          {"short_description": "Party Movement", "description": "The entire party must travel together -- you cannot split up on the Worldmap. All exiles move as a group with the Party token."},
+          {"short_description": "Exhausted Travel Tokens", "description": "If any Travel token is on its gray (exhausted) side, you can only travel to explored (face-up) hexes. Refresh Travel tokens by Resting at a town."},
+          {"short_description": "Travel Card Resolution", "description": "After placing the Party token on the border, draw and resolve 1 Travel card. You may use skills or items before resolving the card's effects. Discard the card after resolution."}
         ]
       },
       {
@@ -205,6 +206,11 @@
           {"description": "Place exile miniatures adjacent to the Hex pointer (HEX-XX) on the location map. Each square can only contain 1 miniature."},
           {"description": "If exploring the map for the first time or the map is uncleared (parchment-side up), place Event or Chest tokens on their designated pointers."},
           {"description": "If the map is uncleared and contains foes, switch to Combat mode. Otherwise, proceed with Location Map Actions."}
+        ],
+        "details": [
+          {"short_description": "Map Sizes", "description": "Location maps come in 4 sizes: BIG, MED, SML, and LNG. The map size is indicated on the hex or in the Map index. Draw the correct size from the index."},
+          {"short_description": "Cleared vs Uncleared", "description": "Uncleared maps are placed parchment-side up and have tokens and possibly foes. Cleared maps are face-up and have no tokens or foes remaining."},
+          {"short_description": "Exile Placement", "description": "Place exile miniatures adjacent to the Hex pointer (HEX-XX). Each square can only hold 1 miniature, so spread out around the pointer."}
         ]
       },
       {
@@ -239,6 +245,11 @@
           {"description": "You cannot move through untraversable borders (Impassable or Wall -- denoted by solid lines) or through Event tokens."},
           {"description": "In Adventure mode, movement is unlimited but you must end on an unoccupied square (one miniature per square)."},
           {"description": "When moving to another floor via Stairs pointer, the whole party must move together."}
+        ],
+        "details": [
+          {"short_description": "Border Types", "description": "Normal borders (dashed): cost 1 movement. Difficult borders (dashed, marked): cost 2 movement. Obscure borders (dashed): cost 1 movement but block line of sight. Wall/Impassable borders (solid lines): cannot be crossed."},
+          {"short_description": "Adventure vs Combat Movement", "description": "In Adventure mode, movement is unlimited -- move freely through traversable borders. In Combat mode, Basic Move grants up to 3 movement, with border costs applying."},
+          {"short_description": "Stairs and Floors", "description": "When moving to another floor via a Stairs pointer, the entire party must move together. You cannot split exiles across floors."}
         ]
       },
       {
@@ -253,10 +264,10 @@
           {"description": "When interacting with a Pathless chest, only 1 exile takes 1 random item from the Pathless chest."},
           {"description": "If a chest is empty (no items left), gain 3 Kae instead."}
         ],
-        "notes": [
-          {"description": "When you gain XP from resolving a card, ALL exiles gain that amount of XP."},
-          {"description": "If the Guide reaches a roleplay marker on a card, the Guide earns 1 RP (up to their max)."},
-          {"description": "If RP is not gained (max limit or did not reach the marker), the card is uncleared and can still be claimed later."}
+        "details": [
+          {"short_description": "XP Sharing", "description": "When you gain XP from resolving a card, ALL exiles gain that amount of XP -- not just the interacting exile."},
+          {"short_description": "Roleplay Points", "description": "If the Guide reaches a roleplay marker on a card, the Guide earns 1 RP (up to their max). If RP is not gained (max limit or did not reach the marker), the card is uncleared and can still be claimed later."},
+          {"short_description": "Chest Types", "description": "Path chest: each exile takes 1 random item from their Path chest. Pathless chest: only 1 exile takes 1 random item. Empty chest (no items left): gain 3 Kae instead."}
         ]
       },
       {
@@ -268,6 +279,10 @@
           {"description": "An exile adjacent to a Map or Stairs pointer draws the connected map card (BIG, MED, SML, or LNG) from the Map index."},
           {"description": "If the map card has a Stairs pointer, place it so it does not touch the current map. The maps connect via the Stairs pointer."},
           {"description": "If the map is uncleared, place Event or Chest tokens on designated pointers. If it contains foes, switch to Combat mode."}
+        ],
+        "details": [
+          {"short_description": "Cleared Requirement", "description": "You can only Explore if your current map is cleared -- no tokens or foes remain. Clear all events and defeat all foes first."},
+          {"short_description": "Stairs Placement", "description": "If the new map connects via a Stairs pointer, place it so it does not physically touch the current map. The maps connect logically via the Stairs pointer."}
         ]
       },
       {
@@ -279,6 +294,10 @@
           {"description": "Leave the location by placing exile miniatures on the Mode token."},
           {"description": "Return map components to storage: maps go parchment-side up if uncleared, face-up if cleared. Cards go face-down if uncleared, face-up if cleared."},
           {"description": "You are now on the Worldmap. Proceed with Worldmap Actions."}
+        ],
+        "details": [
+          {"short_description": "Map Storage", "description": "Return map components to storage: maps go parchment-side up if uncleared, face-up if cleared. Cards go face-down if uncleared, face-up if cleared."},
+          {"short_description": "Returning Later", "description": "If the map is uncleared when you leave, tokens and foes will still be present when you return. Cleared maps remain cleared."}
         ]
       },
       {
@@ -319,6 +338,11 @@
           {"description": "Shuffle all cards in the Threat deck."},
           {"description": "Reset Threat and Combo markers to 0 on the Combo/Threat Tracker."},
           {"description": "Resolve any 'Start of Combat' effects, abilities, or rules."}
+        ],
+        "details": [
+          {"short_description": "Foe Miniatures", "description": "Retrieve the matching FOE cards from the index and their miniatures from FIG boxes. Snap on matching colored ring bases and place foe miniatures on their map pointers."},
+          {"short_description": "Hit Grid Setup", "description": "Place an Armor (blue) cube on each Armored point on every foe's Hit Grid card. These cubes must be removed before the underlying Hit Point can be wounded."},
+          {"short_description": "Tracker Reset", "description": "Reset both the Threat and Combo markers to 0 on the Combo/Threat Tracker. Shuffle all cards in the Threat deck."}
         ]
       },
       {
@@ -331,11 +355,9 @@
           {"description": "Each foe checks the Threat Tracker and chooses the most expensive behavior it can afford, spending that Threat."},
           {"description": "After all foes have acted, check for Foe Limit Break (Threat at 7)."}
         ],
-        "notes": [
-          {"description": "Foe abilities in red text are ongoing; abilities in black text are activated as part of a behavior."},
-          {"description": "Foes can move through other foes but not exiles. Foes cannot move floors."}
-        ],
         "details": [
+          {"short_description": "Foe Ability Colors", "description": "Foe abilities in red text are ongoing (always active). Abilities in black text are activated as part of a behavior and only trigger when the foe acts."},
+          {"short_description": "Foe Movement Rules", "description": "Foes can move through other foes but not exiles. Foes cannot move floors."},
           {"short_description": "Shared AI Cards", "description": "If multiple foes share the same AI card, Threat is spent once, and those foes perform the behavior in initiative order."},
           {"short_description": "Targeting", "description": "Determine target using the targeting priority on the foe AI card. Ties go to the exile requiring fewest movement to reach."},
           {"short_description": "Foe Movement", "description": "Move the foe to its desired position: Melee -- minimum movement to hit target. Ranged -- maximum range while able to hit. Area -- position hitting most exiles including target. Only Boss foes can end on another foe's square. Large foes move as 1x1 from closest occupied square."},
@@ -354,14 +376,11 @@
           {"description": "At end of turn: Check for victory or defeat. Check for Foe Limit Break (Threat at 7)."},
           {"description": "If combat has not ended, play passes to the player on the left and a new round begins with the Foe Turn."}
         ],
-        "notes": [
-          {"description": "A Minor action allows you to use either a Minor or Normal action token."},
-          {"description": "In combat, exiles cannot move floors, explore, or interact with NPC, POI, or Chest pointers."},
-          {"description": "If an exile moves adjacent to an Event token in combat, it immediately triggers."},
-          {"description": "In the first combat round, the active exile is the one who triggered combat."},
-          {"description": "You may take the same action multiple times on a single turn (e.g., multiple Basic Moves, Skills, or Basic Attacks), as long as you have the required action tokens and pay all costs."}
-        ],
         "details": [
+          {"short_description": "Minor Action Tokens", "description": "A Minor action allows you to use either a Minor or Normal action token. This gives flexibility in how you spend your actions."},
+          {"short_description": "Combat Restrictions", "description": "In combat, exiles cannot move floors, explore, or interact with NPC, POI, or Chest pointers. Events still trigger if you move adjacent."},
+          {"short_description": "First Round", "description": "In the first combat round, the active exile is the one who triggered combat."},
+          {"short_description": "Repeating Actions", "description": "You may take the same action multiple times on a single turn (e.g., multiple Basic Moves, Skills, or Basic Attacks), as long as you have the required action tokens and pay all costs."},
           {"short_description": "Basic Move (Minor action)", "description": "Place token on feet location. Gain 1 Combo, then move up to 3. As a Reaction: Spend 1 SP for +2 movement. Movement costs: Normal 1, Difficult 2, Obscure 1. Can move through exiles but not foes."},
           {"short_description": "Use Item (varies)", "description": "Place token on item, pay costs, then use the item as described on the card."},
           {"short_description": "Equip and/or Trade (Minor action)", "description": "Place token on either hand. Rearrange items between inventory and equipment mat. You may also trade 1 Pathless item and/or Kae with an adjacent exile."},
@@ -379,9 +398,6 @@
           {"description": "Perform the attack: Basic Attack rolls d20. Skills perform as indicated. You may spend 1 RP for +3 to your check."},
           {"description": "Apply damage to Hit Grid, then resolve Criticals and Weak Points."}
         ],
-        "notes": [
-          {"description": "Armored points: Remove Armor (blue) cube instead of wounding. Piercing ignores Armor cubes."}
-        ],
         "details": [
           {"short_description": "Targeting", "description": "Range X-Y means between X and Y range. Only Wall borders obstruct range. Multiple targets use one roll for all."},
           {"short_description": "Aimed vs Directional", "description": "Apply first point of damage as Aimed (any unwounded Hit Point) or Directional (trace path from card edge along arrow direction to first unwounded Hit Point). Apply following damage relative to the first point."},
@@ -397,13 +413,13 @@
         "steps": [
           {"description": "Stats (HP, MP, SP) and Wear tokens on armor remain as they are. Remove Surge token if any."}
         ],
-        "notes": [
-          {"description": "Defeat: If every exile is KO'd (0 HP) at end of an Exile Turn, draw EVT-999."},
-          {"description": "Victory: When all foes are defeated (Hit Grids fully wounded), gain XP and rewards from the foe AI card."},
-          {"description": "Loot roll: Make one d20 roll (no modifier). Gain the listed Kae, or if a 20 is rolled, gain exactly 1 item from the Pathless chest."},
-          {"description": "Flip Mode token from Combat to Adventure."},
-          {"description": "KO'd exiles: Any exile may use skills or items to heal them. If still at 0 HP, draw and resolve a DAY card, then set to 1 HP."},
-          {"description": "Refresh markers for Out of Combat skills/items, paying costs if necessary."}
+        "details": [
+          {"short_description": "Defeat", "description": "If every exile is KO'd (0 HP) at end of an Exile Turn, draw EVT-999."},
+          {"short_description": "Victory", "description": "When all foes are defeated (Hit Grids fully wounded), gain XP and rewards from the foe AI card."},
+          {"short_description": "Loot Roll", "description": "Make one d20 roll (no modifier). Gain the listed Kae, or if a 20 is rolled, gain exactly 1 item from the Pathless chest."},
+          {"short_description": "Mode Switch", "description": "Flip the Mode token from Combat to Adventure."},
+          {"short_description": "KO'd Exiles", "description": "Any exile may use skills or items to heal KO'd exiles. If still at 0 HP, draw and resolve a DAY card, then set to 1 HP."},
+          {"short_description": "Marker Refresh", "description": "Refresh markers for Out of Combat skills/items, paying costs if necessary."}
         ]
       }
     ]
