@@ -78,7 +78,7 @@
     {
       "name": "Ecological Testing Stations",
       "type": "Token",
-      "description": "Placed on designated board locations. Stations are not Settlements — areas with only stations are considered free for both players.",
+      "description": "Placed on designated board locations. Stations are not Settlements \u2014 areas with only stations are considered free for both players.",
       "count": 6
     },
     {
@@ -168,7 +168,7 @@
     {
       "name": "Objective Cards",
       "type": "Card",
-      "description": "6 secret objective cards. Atreides draws one at game start — it defines the Prescience Point thresholds needed to win.",
+      "description": "6 secret objective cards. Atreides draws one at game start \u2014 it defines the Prescience Point thresholds needed to win.",
       "count": 6
     },
     {
@@ -216,7 +216,7 @@
       "short_description": "Prescience deck"
     },
     {
-      "description": "The Atreides player draws a Secret Objective card — this defines their Prescience Point victory thresholds. Keep it hidden.",
+      "description": "The Atreides player draws a Secret Objective card \u2014 this defines their Prescience Point victory thresholds. Keep it hidden.",
       "short_description": "Draw objective"
     },
     {
@@ -238,7 +238,9 @@
     {
       "description": "Organize additional components: 3 or 4 player game components if needed.",
       "short_description": "Additional setup",
-      "condition": { "min_count_variant": 3 }
+      "condition": {
+        "min_count_variant": 3
+      }
     }
   ],
   "gameplay": {
@@ -252,7 +254,7 @@
             "description": "Check the position of the lowest Imperium marker on the Spice Must Flow board to determine the active row."
           },
           {
-            "description": "Set aside 1 Action die per slot on the active row and above — these extra dice will be available this round."
+            "description": "Set aside 1 Action die per slot on the active row and above \u2014 these extra dice will be available this round."
           },
           {
             "description": "Place the indicated number of Ornithopters, Harvesters, and Carryalls in Air zones on the board."
@@ -267,6 +269,12 @@
           },
           {
             "description": "Harvesters collect spice during Step 4. Ornithopters provide air support. Carryalls can rescue Harvesters from sandworm attacks."
+          }
+        ],
+        "details": [
+          {
+            "short_description": "What if CHOAM Imperium Ban activates and Harkonnen already has 6+ Units in Legions?",
+            "description": "The stacking limit becomes 5. Any Units exceeding this must be immediately removed."
           }
         ]
       },
@@ -300,6 +308,40 @@
           {
             "description": "Free Actions can be taken in addition to your main action and do not cost dice."
           }
+        ],
+        "details": [
+          {
+            "short_description": "Can Atreides act after Harkonnen uses their last die?",
+            "description": "No. The Action Resolution phase is over once the Harkonnen player has executed all their available Actions. The Atreides player loses any remaining Actions."
+          },
+          {
+            "short_description": "When both players must change dice results (exceeding slots), what order?",
+            "description": "The new die results are chosen one at a time, in turns, starting with the Harkonnen player."
+          },
+          {
+            "short_description": "Can Free Actions interrupt a normal Action?",
+            "description": "Yes. Free Actions can be performed at any time during a player's turn, even interrupting a normal Action. For example, you can use a \"Full Control of the Air\" Planning card to place an Ornithopter, use it for Scouting, then place the second Vehicle in the same Air Zone."
+          },
+          {
+            "short_description": "What happens to Bene Gesserit tokens after they have been used?",
+            "description": "Bene Gesserit tokens are discarded and removed from play as soon as they are used."
+          },
+          {
+            "short_description": "If all Generic Leaders are on the board, can a Named Leader still be replaced?",
+            "description": "The Named Leader can still be removed, but is not replaced with any Generic Leader."
+          },
+          {
+            "short_description": "When can the \"Families Flee to the Palmaries of the South\" Prescience card be claimed?",
+            "description": "As a Free Action during the Atreides' turn."
+          },
+          {
+            "short_description": "Does the Prescience card with \"Eyes of Ibad\" remain in play after attaching a Planning card?",
+            "description": "Until it is claimed, that Prescience card remains in play. On following rounds, it is a fourth available Prescience card."
+          },
+          {
+            "short_description": "What happens to claimed Prescience cards?",
+            "description": "They are effectively out of the game. Suggest laying them next to the Atreides dashboard as a thematic display of the Atreides journey."
+          }
         ]
       },
       {
@@ -326,6 +368,16 @@
           {
             "description": "The Atreides player can use Wormsign placement strategically via the Wormsign action die result."
           }
+        ],
+        "details": [
+          {
+            "short_description": "Which areas are at risk from sandworms?",
+            "description": "Only Minor Erg and Desert areas. Mountain and Plateau areas are completely safe from sandworm attacks."
+          },
+          {
+            "short_description": "Can Carryalls rescue Harvesters from sandworm attacks?",
+            "description": "Yes. Each Carryall can rescue one Harvester from a sandworm attack, returning the Harvester to the supply for later placement."
+          }
         ]
       },
       {
@@ -339,7 +391,7 @@
             "description": "Adjust the Spice Reserve based on spice collected."
           },
           {
-            "description": "Check Imperium Bans: if Imperium markers have reached certain thresholds, apply the corresponding Imperium Bans card penalties (CHOAM, Spacing Guild, or Landsraad)."
+            "description": "Check Imperium Bans: ALL Bans corresponding to Imperium markers that just moved down are activated (there is no limit of 1 Ban per round)."
           },
           {
             "description": "Return all Harkonnen vehicles from the board."
@@ -351,6 +403,16 @@
           },
           {
             "description": "Poor spice production can lead to Imperium Bans that restrict Harkonnen options in future rounds."
+          }
+        ],
+        "details": [
+          {
+            "short_description": "Can Stockpiling be done regardless of Imperium marker positions?",
+            "description": "Yes. However, spice points spent on Stockpiling obviously cannot be spent on anything else."
+          },
+          {
+            "short_description": "Is there a difference between \"Harvester is destroyed\" and \"Harvester is removed\"?",
+            "description": "No difference for game purposes. Destroyed/removed Harvesters are discarded back to the supply, but they remain available for later placement (just like Units)."
           }
         ]
       },
@@ -365,7 +427,13 @@
             "description": "Move each Legion following normal movement rules."
           }
         ],
-        "notes": []
+        "notes": [],
+        "details": [
+          {
+            "short_description": "When using Beast Rabban's Leader special Action, must he be part of each movement?",
+            "description": "Yes. Rabban must be part of each movement."
+          }
+        ]
       },
       {
         "name": "Action Dice: Men/Tactics",
@@ -382,6 +450,12 @@
           {
             "description": "Surprise attacks may grant combat advantages."
           }
+        ],
+        "details": [
+          {
+            "short_description": "What makes a surprise attack different from normal combat?",
+            "description": "A surprise attack is initiated by moving a Legion with a leader into an enemy-occupied area using the Men/Tactics die result. It may grant combat advantages over a standard engagement."
+          }
         ]
       },
       {
@@ -392,7 +466,20 @@
             "description": "Draw 1 card from your House deck and 1 card from your Ally deck."
           }
         ],
-        "notes": []
+        "notes": [
+          {
+            "description": "House Atreides can also draw from the Fremen Ally deck. If they do, they must pass the card to the Fremen ally -- they can look at it before passing (without using a Cone of Silence).",
+            "condition": {
+              "min_count_variant": 3
+            }
+          }
+        ],
+        "details": [
+          {
+            "short_description": "Can I choose which deck to draw from?",
+            "description": "No. You must draw exactly 1 card from your House deck and 1 card from your Ally deck -- you cannot draw 2 from the same deck."
+          }
+        ]
       },
       {
         "name": "Action Dice: Wormsign",
@@ -405,6 +492,12 @@
         "notes": [
           {
             "description": "Wormsigns threaten units in Minor Erg and Desert areas during the Desert Hazards phase."
+          }
+        ],
+        "details": [
+          {
+            "short_description": "If 2 Harkonnen Legions enter a Wormsign area in the same Action, is the token revealed immediately?",
+            "description": "No. All movement allowed by the same Action should be considered simultaneous, so the token is not revealed until both Legions have merged."
           }
         ]
       },
@@ -429,6 +522,16 @@
           {
             "description": "Sandworms cannot enter Mountain areas."
           }
+        ],
+        "details": [
+          {
+            "short_description": "Does the Wild Maker increase the Sandworm limit on the board to 5?",
+            "description": "Yes to both -- it increases the limit and can be placed during the Desert Hazards phase instead of a normal Sandworm."
+          },
+          {
+            "short_description": "Does a Harkonnen Legion retreat when a Sandworm appears in its area via Wormsign?",
+            "description": "Harkonnen Legions never retreat \"during a battle\", but they can (and must) retreat when a Sandworm appears -- which does not trigger a battle."
+          }
         ]
       },
       {
@@ -452,6 +555,36 @@
           {
             "description": "Troop-Transport (Harkonnen only): Harkonnen can use Ornithopters and Carryalls for aerial troop transport."
           }
+        ],
+        "details": [
+          {
+            "short_description": "Can Atreides Deployment tokens be moved?",
+            "description": "Yes. Deployment tokens can be moved in the same way as Units. However, to separate the Units contained in a Deployment token, the token must first be revealed (voluntarily or otherwise)."
+          },
+          {
+            "short_description": "Can I move or attack with any Legion, including my opponent's?",
+            "description": "Only your own Legions."
+          },
+          {
+            "short_description": "Can a Legion move and leave a Leader alone behind?",
+            "description": "No. Leaders must always be accompanied by at least 1 Unit."
+          },
+          {
+            "short_description": "Can a transported Legion land in an Area not connected to the Ornithopter's Air Zone?",
+            "description": "Only the starting Area must be connected to the Ornithopter's Air Zone."
+          },
+          {
+            "short_description": "Can a Legion use more than one Troop-transport in the same turn?",
+            "description": "No, a Legion cannot use more than one Troop-transport per turn."
+          },
+          {
+            "short_description": "Can the Atreides combine Superior Troop-Transport with Sandriding in the same movement?",
+            "description": "No. They must decide which \"mode\" to use for each movement."
+          },
+          {
+            "short_description": "Can the Atreides voluntarily reveal Deployment tokens in a Sector with an Ornithopter?",
+            "description": "The restriction only refers to the voluntary reveal from Guerrilla Training. Attacking a Legion containing a Deployment token still requires revealing it."
+          }
         ]
       },
       {
@@ -474,7 +607,7 @@
             "description": "The attacker may Cease the Attack or Retreat. If neither side retreats, another round of combat begins."
           },
           {
-            "description": "End of Battle: the side that controls the area after combat may advance."
+            "description": "End of Battle: if the attacking player wins, the attacking Legion (all Units and Leaders) CAN be moved into the attacked Area or remain where it was. The attacker is not forced to advance."
           }
         ],
         "notes": [
@@ -492,6 +625,31 @@
           },
           {
             "description": "The Regeneration Tank: eliminated named leaders go to the Regeneration Tank and can return to play in future rounds."
+          },
+          {
+            "description": "If Arrakeen is destroyed, after advancing all Prescience markers, the Atreides player checks if they reached their Secret Objective score. If so, they win immediately (instead of waiting until End of Round)."
+          }
+        ],
+        "details": [
+          {
+            "short_description": "Can Shield results from Special Elites be cancelled?",
+            "description": "Yes."
+          },
+          {
+            "short_description": "What if a player must replace an Elite with a Regular Unit, but all Regular Units are on the board?",
+            "description": "The Elite or Special Elite is simply removed as a casualty instead of being replaced."
+          },
+          {
+            "short_description": "When do Named Leaders in the Regeneration Tank advance?",
+            "description": "At the end of the Action turn."
+          },
+          {
+            "short_description": "Can an unspent Shield prevent a Hit when continuing battle?",
+            "description": "No. Since this happens after adjudicating results and resolving casualties from dice, the Shield result cannot be used."
+          },
+          {
+            "short_description": "Do special attacks (like \"Explosive Artillery\") force the reveal of a Sietch?",
+            "description": "No."
           }
         ]
       }
@@ -581,7 +739,7 @@
       }
     ]
   },
-  "winning_condition": "There is no tiebreaker — each faction has a distinct win condition. Harkonnen: 10+ Supremacy Points. Atreides: meet all three Prescience thresholds. If neither condition is met, the game continues to the next round.",
+  "winning_condition": "There is no tiebreaker \u2014 each faction has a distinct win condition. Harkonnen: 10+ Supremacy Points. Atreides: meet all three Prescience thresholds. If neither condition is met, the game continues to the next round.",
   "tips_for_new_players": [
     {
       "tip": "Asymmetric strengths",
@@ -605,11 +763,11 @@
     },
     {
       "tip": "Leaders matter",
-      "description": "Leaders provide combat abilities and enable special actions. Named leaders have unique powers on their Leader cards. Use them wisely — eliminated named leaders go to the Regeneration Tank but take time to return."
+      "description": "Leaders provide combat abilities and enable special actions. Named leaders have unique powers on their Leader cards. Use them wisely \u2014 eliminated named leaders go to the Regeneration Tank but take time to return."
     },
     {
       "tip": "Watch the terrain",
-      "description": "Mountain areas are safe from sandworms and storms. Desert areas are dangerous. Use terrain to your advantage — Atreides can use the desert as a weapon, while Harkonnen should be wary of overextending into open desert."
+      "description": "Mountain areas are safe from sandworms and storms. Desert areas are dangerous. Use terrain to your advantage \u2014 Atreides can use the desert as a weapon, while Harkonnen should be wary of overextending into open desert."
     },
     {
       "tip": "Prescience cards",
@@ -621,7 +779,8 @@
     },
     {
       "tip": "Vehicles return each round",
-      "description": "All Harkonnen vehicles are returned at end of round. Plan vehicle placement based on that round's priorities — they don't carry over."
+      "description": "All Harkonnen vehicles are returned at end of round. Plan vehicle placement based on that round's priorities \u2014 they don't carry over."
     }
-  ]
+  ],
+  "rules_version": "Rulebook v3 + FAQ 3.1 (Nov 2024)"
 }
