@@ -3,6 +3,12 @@
     "base_url": "https://cdn.jsdelivr.net/gh/nibuen/GamersPaperData@main/files",
     "games": [
         {
+            "id": "arydia",
+            "game_name": "Arydia: The Paths We Dare Tread",
+            "designer": "Cody Miller",
+            "publisher": "Far Off Games"
+        },
+        {
             "id": "agricola",
             "game_name": "Agricola",
             "designer": "Uwe Rosenberg",

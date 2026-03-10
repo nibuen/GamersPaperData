@@ -1,0 +1,40 @@
+{
+  "_note": "Icon choices that may need review -- placeholders or best-available matches. This file is for human review only and is not loaded by the app.",
+  "review_items": [
+    {
+      "location": "glossary: weak_point",
+      "current_icon": "Token",
+      "note": "Generic Token placeholder. No target/bullseye icon available."
+    },
+    {
+      "location": "glossary: power_token",
+      "current_icon": "Token",
+      "note": "Generic Token placeholder. Could use Fire for the power-up concept."
+    },
+    {
+      "location": "glossary: wear_token",
+      "current_icon": "Token",
+      "note": "Generic Token placeholder. No broken-shield icon available."
+    },
+    {
+      "location": "glossary: travel_token",
+      "current_icon": "Token",
+      "note": "Generic Token placeholder. PawnRight could work but already used for movement."
+    },
+    {
+      "location": "glossary: event_token",
+      "current_icon": "Token",
+      "note": "Generic Token placeholder. Could use HexagonQuestion or CardFlip."
+    },
+    {
+      "location": "glossary: positional_grid",
+      "current_icon": "ArrowCross",
+      "note": "Best available match for a grid concept. No grid icon exists."
+    },
+    {
+      "location": "glossary: critical",
+      "current_icon": "DiceSword",
+      "note": "Reused from combat_mode but with different tint (#EF6C00 vs #D32F2F)."
+    }
+  ]
+}
