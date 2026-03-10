@@ -300,7 +300,17 @@
             "description": "Draw 3 prescience cards and place them face up in a row next to the deck, visible to all players."
           }
         ],
-        "notes": []
+        "notes": [],
+        "details": [
+          {
+            "short_description": "Can the Atreides draw from the Fremen Ally deck during setup draw?",
+            "description": "In a 3-4 player game, the House Atreides player can draw from the Fremen Ally deck instead and pass the card to the Fremen ally (they can look at it first without using a Cone of Silence)."
+          },
+          {
+            "short_description": "What if a planning card deck is exhausted?",
+            "description": "Do not reshuffle the discards. You can no longer draw cards from that exhausted deck. If both decks are exhausted, you draw no cards."
+          }
+        ]
       },
       {
         "name": "Step 1: Vehicle Placement",
@@ -514,7 +524,21 @@
             "description": "Both players recover their used action dice from their dashboards and a new round begins."
           }
         ],
-        "notes": []
+        "notes": [],
+        "details": [
+          {
+            "short_description": "How many prescience cards can be claimed per round total?",
+            "description": "A maximum of 2 prescience cards can be claimed in one round, regardless of when they were claimed (during the Action Resolution phase or at End of Round)."
+          },
+          {
+            "short_description": "What happens to unclaimed prescience cards?",
+            "description": "The Atreides player chooses whether to permanently discard any revealed but unclaimed prescience cards, or reshuffle them back into the deck for the following round. Prescience cards are always discarded openly."
+          },
+          {
+            "short_description": "What is the hand limit for planning cards?",
+            "description": "Both players check their hand of planning cards and discard down to 6 cards (if needed), choosing which cards to discard."
+          }
+        ]
       },
       {
         "name": "Action Dice: Strategy",
@@ -532,7 +556,16 @@
             "description": "A moving legion moves from the area it occupies to an adjacent free area (containing no enemy settlements, units, or sandworms). A legion cannot move between areas separated by an impassable border, unless using troop-transport."
           }
         ],
-        "details": []
+        "details": [
+          {
+            "short_description": "Can I move and attack with the same action?",
+            "description": "No. Strategy lets you move 2 different legions OR attack with 1 legion. You cannot do both with a single Strategy action."
+          },
+          {
+            "short_description": "Are movements from the same action simultaneous?",
+            "description": "Yes. All movements allowed by the same action are considered simultaneous. Stacking limits are only checked after all movement is complete."
+          }
+        ]
       },
       {
         "name": "Action Dice: Leadership",
@@ -580,7 +613,16 @@
             "description": "The Atreides player cannot take an ecological testing station if their legion is moving across multiple areas and does not stop in the station's area."
           }
         ],
-        "details": []
+        "details": [
+          {
+            "short_description": "Can I place a deployment token in an area without a sietch?",
+            "description": "No. Deployment tokens from this action must be placed in an area that contains a sietch token."
+          },
+          {
+            "short_description": "Can I look at the deployment token before placing it?",
+            "description": "Yes. Draw the token, look at it secretly, then place it face-down in the chosen area."
+          }
+        ]
       },
       {
         "name": "Action Dice: Mentat",
@@ -598,7 +640,16 @@
             }
           }
         ],
-        "details": []
+        "details": [
+          {
+            "short_description": "Can I draw 2 cards from the same deck?",
+            "description": "Yes. You may draw either 2 cards from the same deck or 1 from each deck (choose before drawing)."
+          },
+          {
+            "short_description": "What if one of my decks is exhausted?",
+            "description": "Exhausted decks are not reshuffled. If one deck is empty, you can only draw from the other. If both are empty, you draw nothing."
+          }
+        ]
       },
       {
         "name": "Action Dice: House (Atreides)",
@@ -609,7 +660,16 @@
           }
         ],
         "notes": [],
-        "details": []
+        "details": [
+          {
+            "short_description": "Can the House die be used as Desert Power?",
+            "description": "Yes. The Atreides House action can be used as any other action die result, including Desert Power (place wormsign tokens or attack with a sandworm)."
+          },
+          {
+            "short_description": "Does using House as Leadership still require a leader?",
+            "description": "Yes. If you use the House die as a Leadership result, the normal requirements of that action still apply -- affected legions must contain at least 1 leader."
+          }
+        ]
       },
       {
         "name": "Action Dice: House (Harkonnen)",
@@ -623,7 +683,16 @@
           }
         ],
         "notes": [],
-        "details": []
+        "details": [
+          {
+            "short_description": "Can I split the House action (1 elite replacement + 1 vehicle)?",
+            "description": "No. You must choose one option: either replace 2 regular units with 2 elite units, OR place 2 vehicles. You cannot mix the two."
+          },
+          {
+            "short_description": "What if I only have 1 regular unit to replace?",
+            "description": "You can still use the action -- the effects are never mandatory and can be carried out partially or not at all."
+          }
+        ]
       },
       {
         "name": "Movement",
@@ -792,7 +861,16 @@
             "description": "Deployment tokens can be moved in the same way as units. However, to separate the units inside, the token must first be revealed."
           }
         ],
-        "details": []
+        "details": [
+          {
+            "short_description": "Can Atreides Deployment tokens be moved?",
+            "description": "Yes. Deployment tokens can be moved in the same way as Units. However, to separate the Units contained in a Deployment token, the token must first be revealed (voluntarily or otherwise)."
+          },
+          {
+            "short_description": "Can the Atreides voluntarily reveal tokens near an Ornithopter?",
+            "description": "The restriction only refers to the voluntary reveal from Guerrilla Training. Attacking a Legion containing a Deployment token still requires revealing it. The Atreides cannot use Guerrilla Training in a Sector with an Ornithopter in a connected Air Zone."
+          }
+        ]
       },
       {
         "name": "Scouting (Harkonnen)",
@@ -813,7 +891,16 @@
             "description": "Scouting costs an Ornithopter -- the Ornithopter is removed from the board and returned to the supply."
           }
         ],
-        "details": []
+        "details": [
+          {
+            "short_description": "Does scouting cost an action die?",
+            "description": "No. Scouting is not an action -- it costs an Ornithopter (which is removed from the board). It can be done as part of other actions."
+          },
+          {
+            "short_description": "What if the Spacing Guild Ban is active?",
+            "description": "Ornithopter Scouting is disabled while the Spacing Guild Imperium Ban is active. The Harkonnen player cannot scout during this time."
+          }
+        ]
       },
       {
         "name": "Prescience",
@@ -892,73 +979,20 @@
             "description": "Wild Maker: This giant sandworm enters play if the Atreides player plays 1 of the 3 Sand-Hulud Fremen Ally planning cards. It is placed instead of a sandworm for all rules and effects. It can be placed on the board, moved, used for sandriding, or to attack like any other sandworm (though its attacks are more lethal -- 6 combat dice instead of 4)."
           }
         ],
-        "details": []
-      }
-    ],
-    "key_concepts": [
-      {
-        "name": "Asymmetric Factions",
-        "description": "Harkonnen start controlling cities (Arrakeen, Carthag) with more units (44 vs 30), more action dice (up to 8 vs 4), and vehicles. Atreides have more leaders (20 vs 11), Sandriding ability, Desert Power, hidden deployment tokens, and the Prescience system. Each faction has fundamentally different victory conditions and playstyles."
-      },
-      {
-        "name": "Legions",
-        "description": "Units and leaders in the same area form a Legion. Legions move together and fight together. A leader must be present for Leadership actions. Combat power (used for movement priority and attacking requirements, not dice): 1 point per unit plus 2 points per leader. For tie-breaking: 1 for a generic leader, 2 for a regular unit, 3 for an elite unit, 4 for a Sardaukar or Fedaykin. Note: in combat, each unit contributes 1 combat die (max 6) -- leaders do not add dice but convert Special results."
-      },
-      {
-        "name": "Area Types",
-        "description": "Mountain: safe from sandworms and Coriolis Storms. Plateau: safe from sandworms, exposed to Coriolis Storms (no hits from Special results). Minor Erg: vulnerable to sandworms, exposed to Coriolis Storms (no hits from Special results). Desert: vulnerable to sandworms and Coriolis Storms (Special = 1 hit). Deep Desert: desert areas adjacent to board edges, exposed to Coriolis Storms (Special = 2 hits)."
-      },
-      {
-        "name": "Sectors and Air Zones",
-        "description": "The board is divided into 8 Sectors. Air zones sit on borders between 2 Sectors and are connected to all Areas in both Sectors. The North Pole is a Mountain area that is part of all 4 central Sectors; all 4 central Air zones are connected to it. Harkonnen vehicles are placed in Air zones."
-      },
-      {
-        "name": "Free Areas",
-        "description": "An area is free for a player when it contains no enemy Settlements, enemy Units, or Sandworms. An area is empty when it contains no figures or tokens of any kind. Areas with only Ecological Stations or Harvesters are considered free for both players."
-      },
-      {
-        "name": "Stacking Limit",
-        "description": "All areas can contain a maximum of 6 units. If exceeded at any time, the controlling player must immediately remove excess units of their choice. Leaders do not count toward the limit. An Atreides deployment token counts as 1 unit. This limit is reduced to 5 when the CHOAM Imperium Ban is active."
-      },
-      {
-        "name": "Prescience System (Atreides Victory)",
-        "description": "The Atreides player advances on 3 Prescience tracks: Kwisatz Haderach (green), Sand Dwellers (yellow), and Jihad (red). 3 Prescience cards are revealed each round. The Atreides wins by reaching thresholds on all 3 tracks as defined by their secret Objective card. Step 3 triggers Desert Leader upgrades, Step 6 brings Alia into play, Step 8 unlocks Family Atomics."
-      },
-      {
-        "name": "Supremacy Points (Harkonnen Victory)",
-        "description": "Harkonnen gains Supremacy Points by destroying Fremen Sietches (points equal to the sietch rank). Harkonnen can also gain 1 SP per round by spending 3 spice during harvesting (only when Supremacy marker is at step 5 or below). Harkonnen wins immediately upon reaching 10 or more SP."
-      },
-      {
-        "name": "Imperium Relations",
-        "description": "Three Imperium markers (CHOAM, Spacing Guild, Landsraad) track Harkonnen relations with the major powers. Each round during Spice Harvesting, it costs 2 spice to keep a marker in place and 3 spice to raise it 1 step (max 1 step per marker per round). Markers not maintained drop 1 step. Low positions trigger Imperium Bans."
-      },
-      {
-        "name": "Desert Power",
-        "description": "Atreides-only free action: when the Atreides player has fewer unused action dice than Harkonnen, they may perform a Desert Power action without spending a die. Options: place 2 wormsign tokens in desert areas (1 per area, no existing wormsign/sandworm/sietch) OR attack with 1 sandworm on the board."
-      },
-      {
-        "name": "Family Atomics",
-        "description": "Available when any Prescience marker reaches step 8. The Atreides player may detonate as a free action, choosing 1 of the 3 family atomics tokens and placing it over the border on the board. Effects change terrain: Splintered Rock (Hagga Basin exposed to storms/sandworms), Hole in the Rock (Imperial Basin exposed), Rimwall (Imperial Basin and Arrakeen exposed). One-time detonation per game."
-      },
-      {
-        "name": "Sandriding (Atreides)",
-        "description": "Atreides Legions adjacent to areas containing wormsign tokens or sandworms can ride through any number of adjacent, consecutive areas containing wormsign/sandworm tokens, ending movement or attacking from an area adjacent to one of those tokens. The final destination may contain a wormsign but not a sandworm. Cannot be combined with Troop-Transport."
-      },
-      {
-        "name": "Troop Transport (Harkonnen)",
-        "description": "Harkonnen can use 1 Ornithopter (removed from an Air zone connected to the starting sector) to move or attack with a legion up to 1 additional area, crossing impassable borders, enemy legions, and sandworms. Only the starting area must be connected to the Ornithopter's Air Zone. Max 1 troop-transport per legion per turn."
-      },
-      {
-        "name": "Regeneration Tank",
-        "description": "Eliminated named leaders go to the leftmost slot of their regeneration tank track and become inactive. Each time a player spends 1 action die (or 1 Bene Gesserit token) for their action turn and places it in the used action dice box, all figures already in their regeneration tank are immediately moved 1 step to the right (taking Desert Power actions does not advance the tank). When a leader on the rightmost slot is moved, it leaves the tank and is available for placement and deployment starting from the following turn."
-      },
-      {
-        "name": "Planning Cards",
-        "description": "Each faction has 36 cards in two decks (House + Ally). Draw 2 per round. Playing a card costs 1 action die (you play the card instead of using the die's printed result). Cards provide special abilities, combat modifiers, and strategic options. Hand limit is 6 cards, discarded at end of round. They are always discarded openly. If a deck is exhausted, do not reshuffle the discards; you can no longer draw cards from that deck."
-      },
-      {
-        "name": "Bene Gesserit Tokens",
-        "description": "Atreides starts with 1 token. Additional tokens gained from the Supremacy Track (at specific steps) and when Gaius Helen Mohiam enters play. At the start of Action Resolution, each player may place 1 token on an empty action box as a temporary die. Once used (the action is taken), the token is permanently discarded."
+        "details": [
+          {
+            "short_description": "When do spent leader cards refresh?",
+            "description": "At the End of Round, flip and place back on their corresponding action boxes all 'spent' leader cards. Leaders in the regeneration tank are flipped face-up but not placed on dashboards."
+          },
+          {
+            "short_description": "Can a named leader's special action be used while in the Regeneration Tank?",
+            "description": "No. Unless they are in the regeneration tank, leaders allow you to choose from additional or enhanced options when spending a matching die result."
+          },
+          {
+            "short_description": "What happens when Paul upgrades to Paul-Muad'Dib?",
+            "description": "The figure and card of Paul Atreides are removed from the game entirely. Paul-Muad'Dib is placed in the same position (board, set aside, or regeneration tank). Any card referring to 'Paul' applies to both versions."
+          }
+        ]
       }
     ]
   },
