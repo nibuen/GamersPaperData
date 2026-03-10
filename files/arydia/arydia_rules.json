@@ -329,22 +329,19 @@
           {"description": "Draw and resolve a Threat card: Threat Increase raises the Threat marker. Mob/Boss cards activate all foes of that type (or increase Threat if absent). All Foes cards activate every foe in play."},
           {"description": "Activated foes act in ascending initiative order (number on bottom-left of Hit Grid)."},
           {"description": "Each foe checks the Threat Tracker and chooses the most expensive behavior it can afford, spending that Threat."},
-          {"description": "If multiple foes share the same AI card, Threat is spent once, and those foes perform the behavior in initiative order."},
-          {"description": "Determine target using the targeting priority on the foe AI card. Ties go to the exile requiring fewest movement to reach."},
-          {"description": "Move the foe to its desired position: Melee -- minimum movement to hit target. Ranged -- maximum range while able to hit. Area -- position hitting most exiles including target."},
-          {"description": "Perform the foe's attack or ability. Roll Hit dice; the black square indicates where the exile is hit. Multiple targets use one roll for all."},
-          {"description": "Apply damage. Attacks with +X add X to total damage. If hit location has armor with remaining durability, add 1 Wear token and reduce damage by that armor's defense value."},
-          {"description": "Resolve any additional effects. If the behavior has more than 1 ability, repeat the attack/ability step."},
           {"description": "After all foes have acted, check for Foe Limit Break (Threat at 7)."}
         ],
         "notes": [
           {"description": "Foe abilities in red text are ongoing; abilities in black text are activated as part of a behavior."},
-          {"description": "Foes can move through other foes but not exiles. Foes cannot move floors."},
-          {"description": "Only Boss foes can end movement on another foe's square (shift the other foe to nearest unoccupied traversable square)."},
-          {"description": "Moving large foes: Choose the closest occupied square to the destination, then move as if 1x1."},
-          {"description": "Reaction: 'When you are attacked' triggers after rolling Hit die, before applying damage."},
-          {"description": "Reaction: 'After you absorb damage' triggers after taking damage."},
-          {"description": "Reaction: 'After you are attacked' triggers after damage and additional effects."}
+          {"description": "Foes can move through other foes but not exiles. Foes cannot move floors."}
+        ],
+        "details": [
+          {"short_description": "Shared AI Cards", "description": "If multiple foes share the same AI card, Threat is spent once, and those foes perform the behavior in initiative order."},
+          {"short_description": "Targeting", "description": "Determine target using the targeting priority on the foe AI card. Ties go to the exile requiring fewest movement to reach."},
+          {"short_description": "Foe Movement", "description": "Move the foe to its desired position: Melee -- minimum movement to hit target. Ranged -- maximum range while able to hit. Area -- position hitting most exiles including target. Only Boss foes can end on another foe's square. Large foes move as 1x1 from closest occupied square."},
+          {"short_description": "Foe Attack", "description": "Perform the foe's attack or ability. Roll Hit dice; the black square indicates where the exile is hit. Multiple targets use one roll for all. If the behavior has more than 1 ability, repeat the attack/ability step."},
+          {"short_description": "Damage Resolution", "description": "Attacks with +X add X to total damage. If hit location has armor with remaining durability, add 1 Wear token and reduce damage by that armor's defense value."},
+          {"short_description": "Reactions", "description": "'When you are attacked' triggers after rolling Hit die, before applying damage. 'After you absorb damage' triggers after taking damage. 'After you are attacked' triggers after damage and additional effects."}
         ]
       },
       {
@@ -378,19 +375,19 @@
         "description": "The procedure for exile attacks against foes in combat.",
         "icon": "Sword",
         "steps": [
-          {"description": "Select valid target(s) using positional grid, range, or ability type. Range X-Y means between X and Y range. Only Wall borders obstruct range."},
-          {"description": "Perform the attack: Basic Attack rolls d20 to determine attack pattern. Skills perform as indicated. Multiple targets use one roll for all. You may spend 1 RP to add +3 to your attribute check."},
-          {"description": "Apply first point of damage as Aimed (any unwounded Hit Point) or Directional (trace path from card edge along arrow direction to first unwounded Hit Point)."},
-          {"description": "Apply following damage (if any) relative to the first point of damage."},
-          {"description": "Apply bonus damage from triggering Criticals (follow orange arrow) or from Skills."},
-          {"description": "Resolve wounded Weak Points one at a time. If the foe is defeated, Weak Points do not trigger."}
+          {"description": "Select valid target(s) using positional grid, range, or ability type. Only Wall borders obstruct range."},
+          {"description": "Perform the attack: Basic Attack rolls d20. Skills perform as indicated. You may spend 1 RP for +3 to your check."},
+          {"description": "Apply damage to Hit Grid, then resolve Criticals and Weak Points."}
         ],
         "notes": [
-          {"description": "Armored points: Remove Armor (blue) cube instead of wounding. The point becomes a normal Hit Point."},
-          {"description": "Piercing damage ignores Armor cubes and directly wounds the Hit Point."},
-          {"description": "Reaction: 'When you hit a foe' triggers after hitting, before applying damage."},
-          {"description": "Reaction: 'When you wound a foe' triggers after applying damage and bonus damage, before resolving Weak Points."},
-          {"description": "Reaction: 'After your attack action' triggers after resolving Weak Points."}
+          {"description": "Armored points: Remove Armor (blue) cube instead of wounding. Piercing ignores Armor cubes."}
+        ],
+        "details": [
+          {"short_description": "Targeting", "description": "Range X-Y means between X and Y range. Only Wall borders obstruct range. Multiple targets use one roll for all."},
+          {"short_description": "Aimed vs Directional", "description": "Apply first point of damage as Aimed (any unwounded Hit Point) or Directional (trace path from card edge along arrow direction to first unwounded Hit Point). Apply following damage relative to the first point."},
+          {"short_description": "Bonus Damage", "description": "Apply bonus damage from triggering Criticals (follow orange arrow) or from Skills. Resolve wounded Weak Points one at a time. If the foe is defeated, Weak Points do not trigger."},
+          {"short_description": "Armor & Piercing", "description": "Armored points: Remove Armor (blue) cube instead of wounding. The point becomes a normal Hit Point. Piercing damage ignores Armor cubes and directly wounds the Hit Point."},
+          {"short_description": "Reactions", "description": "'When you hit a foe' triggers after hitting, before applying damage. 'When you wound a foe' triggers after damage and bonus damage, before resolving Weak Points. 'After your attack action' triggers after resolving Weak Points."}
         ]
       },
       {
