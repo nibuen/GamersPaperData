@@ -65,3 +65,33 @@ jobs:
           git add --all '*.json.gz' '*.png' 'registry.json'
           git diff --cached --quiet || git commit -m "chore: sync compressed JSON & OG images [skip ci]"
           git push
+
+      - name: Create data tag and update registry base_url
+        run: |
+          # Create a timestamped tag for jsDelivr versioned URLs.
+          # jsDelivr caches @main for up to 7 days, but tagged versions
+          # are immutable and served instantly.
+          TAG="data-$(date -u +%Y%m%d-%H%M%S)"
+          git tag "$TAG"
+          git push origin "$TAG"
+
+          # Update base_url in registry.json to point to this tag
+          python3 -c "
+          import json, sys
+          tag = sys.argv[1]
+          path = 'registry.json'
+          with open(path, 'r', encoding='utf-8') as f:
+              data = json.load(f)
+          data['base_url'] = f'https://cdn.jsdelivr.net/gh/nibuen/GamersPaperData@{tag}/files'
+          with open(path, 'w', encoding='utf-8') as f:
+              json.dump(data, f, indent=4, ensure_ascii=False)
+              f.write('\n')
+          print(f'Updated base_url to @{tag}')
+          " "$TAG"
+
+          # Commit and push the updated base_url
+          git add registry.json
+          git diff --cached --quiet || {
+            git commit -m "chore: update base_url to @$TAG [skip ci]"
+            git push
+          }
