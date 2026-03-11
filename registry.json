@@ -1,6 +1,6 @@
 {
     "version": "1.3.0",
-    "base_url": "https://cdn.jsdelivr.net/gh/nibuen/GamersPaperData@main/files",
+    "base_url": "https://cdn.jsdelivr.net/gh/nibuen/GamersPaperData@data-20260311-000736/files",
     "games": [
         {
             "id": "arydia",
@@ -68,7 +68,7 @@
         {
             "id": "orloj",
             "game_name": "Orloj: The Prague Astronomical Clock",
-            "designer": "Paloma J. Pascual, Abraham S\u00c3\u00a1nchez Hermida",
+            "designer": "Paloma J. Pascual, Abraham SÃ¡nchez Hermida",
             "publisher": "Perro Loko Games",
             "added_date": "2026-02-22"
         },
@@ -90,7 +90,7 @@
             "id": "amun_re",
             "game_name": "Amun-Re",
             "designer": "Reiner Knizia",
-            "publisher": "Hans im Gl\u00fcck",
+            "publisher": "Hans im Glück",
             "added_date": "2026-03-09"
         },
         {
@@ -124,7 +124,7 @@
         {
             "id": "space_alert",
             "game_name": "Space Alert",
-            "designer": "Vladim\u00edr Chv\u00e1til",
+            "designer": "Vladimír Chvátil",
             "publisher": "Czech Games Edition",
             "added_date": "2026-02-19"
         }
