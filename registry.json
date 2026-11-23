@@ -176,6 +176,13 @@
             "designer": "Dan Cassaro",
             "publisher": "Weast Coast Games",
             "genre": "card"
+        },
+        {
+            "id": "through_the_desert",
+            "game_name": "Through the Desert",
+            "designer": "Reiner Knizia",
+            "publisher": "Z-Man Games",
+            "added_date": "2026-11-22"
         }
     ]
 }
