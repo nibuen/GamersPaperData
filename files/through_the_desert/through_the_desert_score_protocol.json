@@ -1,0 +1,69 @@
+{
+  "game_id": "through_the_desert",
+  "rounds": 1,
+  "round_label": "Final scoring",
+  "categories": [
+    {
+      "id": "waterholes",
+      "name": "Waterhole tokens",
+      "description": "Add up the values on your face-down waterhole tokens (1 to 3 each).",
+      "input_type": "count",
+      "end_game_only": true,
+      "stepper_label": "Waterhole points",
+      "scoring_rule": {
+        "type": "multiplier",
+        "factor": 1
+      }
+    },
+    {
+      "id": "oases",
+      "name": "Oasis tokens",
+      "description": "5 points for each oasis token: one per caravan linked to an oasis, including oases inside your enclosed areas.",
+      "input_type": "count",
+      "end_game_only": true,
+      "stepper_label": "Oasis tokens",
+      "scoring_rule": {
+        "type": "multiplier",
+        "factor": 5
+      }
+    },
+    {
+      "id": "caravans",
+      "name": "Largest caravans",
+      "description": "10 points for each caravan token: you had the largest caravan of that color.",
+      "input_type": "count",
+      "end_game_only": true,
+      "max_value": 5,
+      "stepper_label": "Caravan tokens",
+      "scoring_rule": {
+        "type": "multiplier",
+        "factor": 10
+      }
+    },
+    {
+      "id": "ties",
+      "name": "Tied caravans",
+      "description": "5 points for each color where you tied for the largest caravan.",
+      "input_type": "count",
+      "end_game_only": true,
+      "max_value": 5,
+      "stepper_label": "Tied colors",
+      "scoring_rule": {
+        "type": "multiplier",
+        "factor": 5
+      }
+    },
+    {
+      "id": "enclosed",
+      "name": "Enclosed areas",
+      "description": "1 point per empty space inside your enclosed areas. Oases do not count.",
+      "input_type": "count",
+      "end_game_only": true,
+      "stepper_label": "Empty spaces",
+      "scoring_rule": {
+        "type": "multiplier",
+        "factor": 1
+      }
+    }
+  ]
+}

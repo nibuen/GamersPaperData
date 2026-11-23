@@ -1236,21 +1236,208 @@
       {
         "description": "For each camel color, the player with the most camels in a caravan of that color takes that color's 10-point caravan token.",
         "action": {
-          "type": "micro_animation",
-          "motif": "gain",
-          "icon": "Award",
-          "count": 10,
-          "tint": "#E0B341"
+          "type": "board_view",
+          "board": {
+            "tiling": "hex",
+            "rows": 4,
+            "cols": 7,
+            "holes": [
+              "r4.c4",
+              "r4.c5"
+            ],
+            "cells": [
+              {
+                "at": "r1.c2",
+                "terrain": "oasis"
+              },
+              {
+                "at": "r2.c6",
+                "terrain": "oasis"
+              },
+              {
+                "at": "r3.c3",
+                "terrain": "oasis"
+              },
+              {
+                "at": "r1.c5",
+                "terrain": "waterhole"
+              },
+              {
+                "at": "r3.c7",
+                "terrain": "waterhole"
+              },
+              {
+                "at": "r4.c2",
+                "terrain": "waterhole"
+              },
+              {
+                "at": "r4.c6",
+                "terrain": "waterhole"
+              }
+            ],
+            "pieces": [
+              {
+                "at": "r3.c1",
+                "kind": "leader",
+                "owner": "you",
+                "color": "pink"
+              },
+              {
+                "at": "r3.c2",
+                "kind": "camel",
+                "owner": "you",
+                "color": "pink"
+              },
+              {
+                "at": "r4.c1",
+                "kind": "camel",
+                "owner": "you",
+                "color": "pink"
+              },
+              {
+                "at": "r2.c1",
+                "kind": "camel",
+                "owner": "you",
+                "color": "pink"
+              },
+              {
+                "at": "r2.c4",
+                "kind": "leader",
+                "owner": "rival",
+                "color": "pink"
+              },
+              {
+                "at": "r2.c3",
+                "kind": "camel",
+                "owner": "rival",
+                "color": "pink"
+              },
+              {
+                "at": "r1.c4",
+                "kind": "camel",
+                "owner": "rival",
+                "color": "pink"
+              }
+            ]
+          },
+          "beats": [
+            {
+              "op": "group",
+              "at": "r3.c1"
+            },
+            {
+              "op": "group",
+              "at": "r2.c4"
+            },
+            {
+              "op": "tally",
+              "at": "r3.c1",
+              "text": "+10"
+            }
+          ]
         }
       },
       {
         "description": "If players tie for the largest caravan of a color, each tied player takes a 5-point token and nobody takes the caravan token.",
         "action": {
-          "type": "micro_animation",
-          "motif": "gain",
-          "icon": "Award",
-          "count": 5,
-          "tint": "#E0B341"
+          "type": "board_view",
+          "board": {
+            "tiling": "hex",
+            "rows": 4,
+            "cols": 7,
+            "holes": [
+              "r4.c4",
+              "r4.c5"
+            ],
+            "cells": [
+              {
+                "at": "r1.c2",
+                "terrain": "oasis"
+              },
+              {
+                "at": "r2.c6",
+                "terrain": "oasis"
+              },
+              {
+                "at": "r3.c3",
+                "terrain": "oasis"
+              },
+              {
+                "at": "r1.c5",
+                "terrain": "waterhole"
+              },
+              {
+                "at": "r3.c7",
+                "terrain": "waterhole"
+              },
+              {
+                "at": "r4.c2",
+                "terrain": "waterhole"
+              },
+              {
+                "at": "r4.c6",
+                "terrain": "waterhole"
+              }
+            ],
+            "pieces": [
+              {
+                "at": "r3.c1",
+                "kind": "leader",
+                "owner": "you",
+                "color": "pink"
+              },
+              {
+                "at": "r3.c2",
+                "kind": "camel",
+                "owner": "you",
+                "color": "pink"
+              },
+              {
+                "at": "r4.c1",
+                "kind": "camel",
+                "owner": "you",
+                "color": "pink"
+              },
+              {
+                "at": "r2.c4",
+                "kind": "leader",
+                "owner": "rival",
+                "color": "pink"
+              },
+              {
+                "at": "r2.c3",
+                "kind": "camel",
+                "owner": "rival",
+                "color": "pink"
+              },
+              {
+                "at": "r1.c4",
+                "kind": "camel",
+                "owner": "rival",
+                "color": "pink"
+              }
+            ]
+          },
+          "beats": [
+            {
+              "op": "group",
+              "at": "r3.c1"
+            },
+            {
+              "op": "group",
+              "at": "r2.c4"
+            },
+            {
+              "op": "tally",
+              "at": "r3.c1",
+              "text": "+5"
+            },
+            {
+              "op": "tally",
+              "at": "r2.c4",
+              "text": "+5"
+            }
+          ]
         }
       }
     ],
@@ -1263,7 +1450,27 @@
         "source": "Enclosed areas",
         "description": "1 point per empty space inside each of your enclosed areas, not counting oases."
       }
-    ]
+    ],
+    "trigger_action": {
+      "type": "micro_animation",
+      "motif": "pick_from_supply",
+      "icon": "Pawn",
+      "count": 1,
+      "tints": [
+        "#93D3A2",
+        "#F2A7C3",
+        "#F2D46B",
+        "#C6A6E6",
+        "#7FD6D0"
+      ],
+      "row_counts": [
+        2,
+        2,
+        1,
+        2,
+        2
+      ]
+    }
   },
   "winning_condition": "The player with the most points wins. Tied players share the victory.",
   "tips_for_new_players": [
