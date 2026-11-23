@@ -73,7 +73,41 @@
         "board": {
           "tiling": "hex",
           "rows": 4,
-          "cols": 7
+          "cols": 7,
+          "holes": [
+            "r4.c4",
+            "r4.c5"
+          ],
+          "cells": [
+            {
+              "at": "r1.c2",
+              "terrain": "large pool"
+            },
+            {
+              "at": "r2.c6",
+              "terrain": "large pool"
+            },
+            {
+              "at": "r3.c3",
+              "terrain": "large pool"
+            },
+            {
+              "at": "r4.c6",
+              "terrain": "large pool"
+            },
+            {
+              "at": "r1.c5",
+              "terrain": "small pool"
+            },
+            {
+              "at": "r4.c2",
+              "terrain": "small pool"
+            },
+            {
+              "at": "r3.c7",
+              "terrain": "small pool"
+            }
+          ]
         }
       }
     },
@@ -155,20 +189,124 @@
       "description": "Place up to 5 palm trees, one per space, on large pools of water. Each palm tree marks an oasis.",
       "short_description": "Oases",
       "action": {
-        "type": "micro_animation",
-        "motif": "place",
-        "icon": "HexagonTile",
-        "tint": "#5F8A3F"
+        "type": "board_view",
+        "board": {
+          "tiling": "hex",
+          "rows": 4,
+          "cols": 7,
+          "holes": [
+            "r4.c4",
+            "r4.c5"
+          ],
+          "cells": [
+            {
+              "at": "r1.c2",
+              "terrain": "large pool"
+            },
+            {
+              "at": "r2.c6",
+              "terrain": "large pool"
+            },
+            {
+              "at": "r3.c3",
+              "terrain": "large pool"
+            },
+            {
+              "at": "r4.c6",
+              "terrain": "large pool"
+            },
+            {
+              "at": "r1.c5",
+              "terrain": "small pool"
+            },
+            {
+              "at": "r4.c2",
+              "terrain": "small pool"
+            },
+            {
+              "at": "r3.c7",
+              "terrain": "small pool"
+            }
+          ]
+        },
+        "add": [
+          {
+            "at": "r1.c2",
+            "terrain": "oasis"
+          },
+          {
+            "at": "r2.c6",
+            "terrain": "oasis"
+          },
+          {
+            "at": "r3.c3",
+            "terrain": "oasis"
+          }
+        ]
       }
     },
     {
       "description": "Shuffle the waterhole tokens and place one face up on every small pool and on every large pool without a palm tree.",
       "short_description": "Waterholes",
       "action": {
-        "type": "micro_animation",
-        "motif": "place",
-        "icon": "Hexagon",
-        "tint": "#3F8EA0"
+        "type": "board_view",
+        "board": {
+          "tiling": "hex",
+          "rows": 4,
+          "cols": 7,
+          "holes": [
+            "r4.c4",
+            "r4.c5"
+          ],
+          "cells": [
+            {
+              "at": "r4.c6",
+              "terrain": "large pool"
+            },
+            {
+              "at": "r1.c5",
+              "terrain": "small pool"
+            },
+            {
+              "at": "r4.c2",
+              "terrain": "small pool"
+            },
+            {
+              "at": "r3.c7",
+              "terrain": "small pool"
+            },
+            {
+              "at": "r1.c2",
+              "terrain": "oasis"
+            },
+            {
+              "at": "r2.c6",
+              "terrain": "oasis"
+            },
+            {
+              "at": "r3.c3",
+              "terrain": "oasis"
+            }
+          ]
+        },
+        "add": [
+          {
+            "at": "r4.c6",
+            "terrain": "waterhole"
+          },
+          {
+            "at": "r1.c5",
+            "terrain": "waterhole"
+          },
+          {
+            "at": "r4.c2",
+            "terrain": "waterhole"
+          },
+          {
+            "at": "r3.c7",
+            "terrain": "waterhole"
+          }
+        ]
       }
     },
     {
@@ -196,24 +334,44 @@
         "board": {
           "tiling": "hex",
           "rows": 4,
-          "cols": 6,
+          "cols": 7,
           "holes": [
             "r4.c4",
             "r4.c5"
           ],
           "cells": [
             {
-              "at": "r2.c5",
+              "at": "r1.c2",
               "terrain": "oasis"
             },
             {
-              "at": "r1.c2",
+              "at": "r2.c6",
+              "terrain": "oasis"
+            },
+            {
+              "at": "r3.c3",
+              "terrain": "oasis"
+            },
+            {
+              "at": "r4.c6",
+              "terrain": "waterhole"
+            },
+            {
+              "at": "r1.c5",
+              "terrain": "waterhole"
+            },
+            {
+              "at": "r4.c2",
+              "terrain": "waterhole"
+            },
+            {
+              "at": "r3.c7",
               "terrain": "waterhole"
             }
           ],
           "pieces": [
             {
-              "at": "r3.c2",
+              "at": "r2.c4",
               "kind": "leader",
               "owner": "rival",
               "color": "green"
@@ -244,7 +402,7 @@
           "owner": "you",
           "color": "turquoise"
         },
-        "example": "r1.c4"
+        "example": "r3.c1"
       }
     },
     {
