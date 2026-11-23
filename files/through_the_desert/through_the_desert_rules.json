@@ -13,7 +13,7 @@
       "name": "Game Board",
       "type": "Board",
       "count": 1,
-      "description": "Double-sided hex board: mountain side (standard) and river side (variant)."
+      "description": "Hex board of desert, pools of water and mountains."
     },
     {
       "name": "Pastel Camels",
@@ -66,13 +66,15 @@
   ],
   "setup": [
     {
-      "description": "Place the game board mountain side up (the river side is a variant).",
+      "description": "Place the game board in the middle of the table.",
       "short_description": "Board",
       "action": {
-        "type": "micro_animation",
-        "motif": "place",
-        "icon": "HexagonOutline",
-        "tint": "#B08A4E"
+        "type": "board_view",
+        "board": {
+          "tiling": "hex",
+          "rows": 4,
+          "cols": 7
+        }
       }
     },
     {
@@ -83,13 +85,16 @@
       }
     },
     {
-      "description": "Each player takes the 6 leaders of their color and places the gray leader in front of them as a color reminder.",
+      "description": "Each player takes their 6 leaders: 5 riders on pastel camels plus 1 on a gray camel. Keep the gray leader in front of you to show your color.",
       "short_description": "Leaders",
       "action": {
         "type": "micro_animation",
         "motif": "take_from_supply",
         "icon": "Pawn",
-        "count": 6
+        "tint": "#A8A8B0",
+        "variable": true,
+        "icon2": "Pawn",
+        "tint2": "#F2A7C3"
       }
     },
     {
@@ -133,8 +138,8 @@
       }
     },
     {
-      "description": "Return 8 camels of each color to the box.",
-      "short_description": "Return 8",
+      "description": "Return 10 camels of each color to the box.",
+      "short_description": "Return 10",
       "condition": {
         "max_count_variant": 2
       },
@@ -142,18 +147,17 @@
         "type": "micro_animation",
         "motif": "return_to_supply",
         "icon": "Pawn",
-        "count": 8,
+        "count": 10,
         "tint": "#F2A7C3"
       }
     },
     {
-      "description": "Place the 5 palm trees, one per space, on large pools of water. These spaces are the oases.",
+      "description": "Place up to 5 palm trees, one per space, on large pools of water. Each palm tree marks an oasis.",
       "short_description": "Oases",
       "action": {
         "type": "micro_animation",
         "motif": "place",
         "icon": "HexagonTile",
-        "count": 5,
         "tint": "#5F8A3F"
       }
     },
@@ -175,7 +179,8 @@
         "motif": "return_to_supply",
         "icon": "Award",
         "variable": true,
-        "tint": "#E0B341"
+        "tint": "#E0B341",
+        "area": "Supply"
       }
     },
     {
@@ -183,7 +188,7 @@
       "short_description": "First player"
     },
     {
-      "description": "Starting with the first player and going clockwise, place leaders (not gray) one at a time on empty spaces: NOT on a waterhole, an oasis, a mountain or another leader, and NOT next to an oasis or ANY leader.",
+      "description": "Starting with the first player and going clockwise, place your leaders (not gray) one at a time on empty spaces.",
       "short_description": "Place leaders",
       "action": {
         "type": "board_rule",
