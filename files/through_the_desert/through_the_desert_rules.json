@@ -9,28 +9,179 @@
   "bgg_link": "https://boardgamegeek.com/boardgame/503/through-the-desert",
   "play_time_minutes": 45,
   "components_overview": [
-    {"name": "Game Board", "type": "Board", "count": 1, "description": "Double-sided hex board: mountain side (standard) and river side (variant)."},
-    {"name": "Pastel Camels", "type": "Token", "count": 175, "description": "5 colors (green, pink, yellow, purple, turquoise), 35 of each. The shared camel supply."},
-    {"name": "Gray Camels", "type": "Token", "count": 5, "description": "Carry each player's gray leader, a reminder of who plays which color."},
-    {"name": "Riders", "type": "Meeple", "count": 30, "description": "5 player colors, 6 of each. A rider on a camel is a leader: it starts one of your caravans."},
-    {"name": "Palm Trees", "type": "Marker", "count": 5, "description": "Mark the 5 oases."},
-    {"name": "Waterhole Tokens", "type": "Token", "count": 45, "description": "Worth 1, 2 or 3 points, 15 of each."},
-    {"name": "5-Point Tokens", "type": "Token", "count": 29, "description": "Taken when a caravan links to an oasis."},
-    {"name": "10-Point Tokens", "type": "Token", "count": 15, "description": "Spare points."},
-    {"name": "Caravan Tokens", "type": "Token", "count": 5, "description": "10 points each, one per camel color, for the largest caravan of that color."}
+    {
+      "name": "Game Board",
+      "type": "Board",
+      "count": 1,
+      "description": "Double-sided hex board: mountain side (standard) and river side (variant)."
+    },
+    {
+      "name": "Pastel Camels",
+      "type": "Token",
+      "count": 175,
+      "description": "5 colors (green, pink, yellow, purple, turquoise), 35 of each. The shared camel supply."
+    },
+    {
+      "name": "Gray Camels",
+      "type": "Token",
+      "count": 5,
+      "description": "Carry each player's gray leader, a reminder of who plays which color."
+    },
+    {
+      "name": "Riders",
+      "type": "Meeple",
+      "count": 30,
+      "description": "5 player colors, 6 of each. A rider on a camel is a leader: it starts one of your caravans."
+    },
+    {
+      "name": "Palm Trees",
+      "type": "Marker",
+      "count": 5,
+      "description": "Mark the 5 oases."
+    },
+    {
+      "name": "Waterhole Tokens",
+      "type": "Token",
+      "count": 45,
+      "description": "Worth 1, 2 or 3 points, 15 of each."
+    },
+    {
+      "name": "5-Point Tokens",
+      "type": "Token",
+      "count": 29,
+      "description": "Taken when a caravan links to an oasis."
+    },
+    {
+      "name": "10-Point Tokens",
+      "type": "Token",
+      "count": 15,
+      "description": "Spare points."
+    },
+    {
+      "name": "Caravan Tokens",
+      "type": "Token",
+      "count": 5,
+      "description": "10 points each, one per camel color, for the largest caravan of that color."
+    }
   ],
   "setup": [
-    {"description": "Place the game board mountain side up (the river side is a variant).", "short_description": "Board"},
-    {"description": "Spaces beyond the elevation line are not used.", "short_description": "Elevation line", "condition": {"max_count_variant": 3}},
-    {"description": "Each player takes the 6 leaders of their color and places the gray leader in front of them as a color reminder.", "short_description": "Leaders"},
-    {"description": "Each player returns one leader to the box. All returned leaders must ride different pastel camel colors. Each player controls 4 caravans.", "short_description": "Return 1", "condition": {"min_count_variant": 5}},
-    {"description": "Sort the camels without riders by color into a shared supply.", "short_description": "Camel supply"},
-    {"description": "Return 4 camels of each color to the box.", "short_description": "Return 4", "condition": {"min_count_variant": 3, "max_count_variant": 3}},
-    {"description": "Return 8 camels of each color to the box.", "short_description": "Return 8", "condition": {"max_count_variant": 2}},
-    {"description": "Place the 5 palm trees, one per space, on large pools of water. These spaces are the oases.", "short_description": "Oases"},
-    {"description": "Shuffle the waterhole tokens and place one face up on every small pool and on every large pool without a palm tree.", "short_description": "Waterholes"},
-    {"description": "Put the point tokens near the board, sorted by type.", "short_description": "Tokens"},
-    {"description": "The youngest player goes first.", "short_description": "First player"},
+    {
+      "description": "Place the game board mountain side up (the river side is a variant).",
+      "short_description": "Board",
+      "action": {
+        "type": "micro_animation",
+        "motif": "place",
+        "icon": "HexagonOutline",
+        "tint": "#B08A4E"
+      }
+    },
+    {
+      "description": "Spaces beyond the elevation line are not used.",
+      "short_description": "Elevation line",
+      "condition": {
+        "max_count_variant": 3
+      }
+    },
+    {
+      "description": "Each player takes the 6 leaders of their color and places the gray leader in front of them as a color reminder.",
+      "short_description": "Leaders",
+      "action": {
+        "type": "micro_animation",
+        "motif": "take_from_supply",
+        "icon": "Pawn",
+        "count": 6
+      }
+    },
+    {
+      "description": "Each player returns one leader to the box. All returned leaders must ride different pastel camel colors. Each player controls 4 caravans.",
+      "short_description": "Return 1",
+      "condition": {
+        "min_count_variant": 5
+      },
+      "action": {
+        "type": "micro_animation",
+        "motif": "return_to_supply",
+        "icon": "Pawn"
+      }
+    },
+    {
+      "description": "Sort the camels without riders by color into a shared supply.",
+      "short_description": "Camel supply",
+      "action": {
+        "type": "micro_animation",
+        "motif": "return_to_supply",
+        "icon": "Pawn",
+        "tint": "#F2A7C3",
+        "variable": true,
+        "icon2": "Pawn",
+        "tint2": "#7FD6D0"
+      }
+    },
+    {
+      "description": "Return 4 camels of each color to the box.",
+      "short_description": "Return 4",
+      "condition": {
+        "min_count_variant": 3,
+        "max_count_variant": 3
+      },
+      "action": {
+        "type": "micro_animation",
+        "motif": "return_to_supply",
+        "icon": "Pawn",
+        "count": 4,
+        "tint": "#F2A7C3"
+      }
+    },
+    {
+      "description": "Return 8 camels of each color to the box.",
+      "short_description": "Return 8",
+      "condition": {
+        "max_count_variant": 2
+      },
+      "action": {
+        "type": "micro_animation",
+        "motif": "return_to_supply",
+        "icon": "Pawn",
+        "count": 8,
+        "tint": "#F2A7C3"
+      }
+    },
+    {
+      "description": "Place the 5 palm trees, one per space, on large pools of water. These spaces are the oases.",
+      "short_description": "Oases",
+      "action": {
+        "type": "micro_animation",
+        "motif": "place",
+        "icon": "HexagonTile",
+        "count": 5,
+        "tint": "#5F8A3F"
+      }
+    },
+    {
+      "description": "Shuffle the waterhole tokens and place one face up on every small pool and on every large pool without a palm tree.",
+      "short_description": "Waterholes",
+      "action": {
+        "type": "micro_animation",
+        "motif": "place",
+        "icon": "Hexagon",
+        "tint": "#3F8EA0"
+      }
+    },
+    {
+      "description": "Put the point tokens near the board, sorted by type.",
+      "short_description": "Tokens",
+      "action": {
+        "type": "micro_animation",
+        "motif": "return_to_supply",
+        "icon": "Award",
+        "variable": true,
+        "tint": "#E0B341"
+      }
+    },
+    {
+      "description": "The youngest player goes first.",
+      "short_description": "First player"
+    },
     {
       "description": "Starting with the first player and going clockwise, place leaders (not gray) one at a time on empty spaces: NOT on a waterhole, an oasis, a mountain or another leader, and NOT next to an oasis or ANY leader.",
       "short_description": "Place leaders",
@@ -41,24 +192,60 @@
           "tiling": "hex",
           "rows": 4,
           "cols": 6,
-          "holes": ["r4.c4", "r4.c5"],
+          "holes": [
+            "r4.c4",
+            "r4.c5"
+          ],
           "cells": [
-            {"at": "r2.c5", "terrain": "oasis"},
-            {"at": "r1.c2", "terrain": "waterhole"}
+            {
+              "at": "r2.c5",
+              "terrain": "oasis"
+            },
+            {
+              "at": "r1.c2",
+              "terrain": "waterhole"
+            }
           ],
           "pieces": [
-            {"at": "r3.c2", "kind": "leader", "owner": "rival", "color": "green"}
+            {
+              "at": "r3.c2",
+              "kind": "leader",
+              "owner": "rival",
+              "color": "green"
+            }
           ]
         },
         "placement": {
-          "not_on": [{"terrain": "waterhole"}, {"terrain": "oasis"}],
-          "not_touch": [{"terrain": "oasis"}, {"kind": "leader", "owner": "any"}]
+          "not_on": [
+            {
+              "terrain": "waterhole"
+            },
+            {
+              "terrain": "oasis"
+            }
+          ],
+          "not_touch": [
+            {
+              "terrain": "oasis"
+            },
+            {
+              "kind": "leader",
+              "owner": "any"
+            }
+          ]
         },
-        "piece": {"kind": "leader", "owner": "you", "color": "turquoise"},
+        "piece": {
+          "kind": "leader",
+          "owner": "you",
+          "color": "turquoise"
+        },
         "example": "r1.c4"
       }
     },
-    {"description": "The first leader each player places must ride a camel color that no leader already on the board has.", "short_description": "First leader"}
+    {
+      "description": "The first leader each player places must ride a camel color that no leader already on the board has.",
+      "short_description": "First leader"
+    }
   ],
   "gameplay": {
     "turn_steps": [
@@ -72,7 +259,16 @@
         "name": "1. Place Camels",
         "description": "Add two camels to your caravans.",
         "steps": [
-          {"description": "Take two camels from the supply: two of one color or two different colors."},
+          {
+            "description": "Take two camels from the supply: two of one color or two different colors.",
+            "action": {
+              "type": "micro_animation",
+              "motif": "take_from_supply",
+              "icon": "Pawn",
+              "count": 2,
+              "tint": "#F2A7C3"
+            }
+          },
           {
             "description": "Place each camel next to your caravan of the same color.",
             "action": {
@@ -82,52 +278,161 @@
                 "tiling": "hex",
                 "rows": 4,
                 "cols": 6,
-                "holes": ["r4.c1"],
+                "holes": [
+                  "r4.c1"
+                ],
                 "cells": [
-                  {"at": "r4.c4", "terrain": "oasis"},
-                  {"at": "r1.c4", "terrain": "waterhole"}
+                  {
+                    "at": "r4.c4",
+                    "terrain": "oasis"
+                  },
+                  {
+                    "at": "r1.c4",
+                    "terrain": "waterhole"
+                  }
                 ],
                 "pieces": [
-                  {"at": "r2.c2", "kind": "leader", "owner": "you", "color": "pink"},
-                  {"at": "r2.c3", "kind": "camel", "owner": "you", "color": "pink"},
-                  {"at": "r1.c6", "kind": "leader", "owner": "rival", "color": "pink"},
-                  {"at": "r2.c6", "kind": "camel", "owner": "rival", "color": "pink"},
-                  {"at": "r3.c5", "kind": "leader", "owner": "rival", "color": "yellow"}
+                  {
+                    "at": "r2.c2",
+                    "kind": "leader",
+                    "owner": "you",
+                    "color": "pink"
+                  },
+                  {
+                    "at": "r2.c3",
+                    "kind": "camel",
+                    "owner": "you",
+                    "color": "pink"
+                  },
+                  {
+                    "at": "r1.c6",
+                    "kind": "leader",
+                    "owner": "rival",
+                    "color": "pink"
+                  },
+                  {
+                    "at": "r2.c6",
+                    "kind": "camel",
+                    "owner": "rival",
+                    "color": "pink"
+                  },
+                  {
+                    "at": "r3.c5",
+                    "kind": "leader",
+                    "owner": "rival",
+                    "color": "yellow"
+                  }
                 ]
               },
               "placement": {
-                "not_on": [{"terrain": "oasis"}],
-                "must_touch": [{"owner": "own", "color": "same", "label": "your caravan of that color"}],
-                "not_touch": [{"owner": "rival", "color": "same", "label": "a rival's caravan of that color"}]
+                "not_on": [
+                  {
+                    "terrain": "oasis"
+                  }
+                ],
+                "must_touch": [
+                  {
+                    "owner": "own",
+                    "color": "same",
+                    "label": "your caravan of that color"
+                  }
+                ],
+                "not_touch": [
+                  {
+                    "owner": "rival",
+                    "color": "same",
+                    "label": "a rival's caravan of that color"
+                  }
+                ]
               },
-              "piece": {"kind": "camel", "owner": "you", "color": "pink"},
+              "piece": {
+                "kind": "camel",
+                "owner": "you",
+                "color": "pink"
+              },
               "example": "r2.c4"
             }
           }
         ],
         "notes": [
-          {"description": "First turn: the first two players place only one camel each.", "condition": {"min_count_variant": 3}},
-          {"description": "First turn: the first player places only one camel.", "condition": {"max_count_variant": 2}},
-          {"description": "NOT on a mountain, an occupied space or an oasis."},
-          {"description": "Caravans may fork; they do not have to form a single line."},
-          {"description": "A camel may be placed next to a camel of a different color, whoever owns it."},
-          {"description": "NEVER next to another player's camel of the same color: two caravans of one color cannot merge."},
-          {"description": "No camel may be placed inside an enclosed area."}
+          {
+            "description": "First turn: the first two players place only one camel each.",
+            "condition": {
+              "min_count_variant": 3
+            }
+          },
+          {
+            "description": "First turn: the first player places only one camel.",
+            "condition": {
+              "max_count_variant": 2
+            }
+          },
+          {
+            "description": "NOT on a mountain, an occupied space or an oasis."
+          },
+          {
+            "description": "Caravans may fork; they do not have to form a single line."
+          },
+          {
+            "description": "A camel may be placed next to a camel of a different color, whoever owns it."
+          },
+          {
+            "description": "NEVER next to another player's camel of the same color: two caravans of one color cannot merge."
+          },
+          {
+            "description": "No camel may be placed inside an enclosed area."
+          }
         ]
       },
       {
         "name": "2. Score as You Go",
         "description": "Points are taken the moment a camel lands.",
         "steps": [
-          {"description": "Waterhole: place a camel on a space with a waterhole token and take the token face down. Keep it hidden until the end."},
-          {"description": "Oasis: when a caravan is placed next to an oasis, it links to that oasis. Take a 5-point token."},
-          {"description": "Enclose: when a single caravan, with the board edge or a mountain, completely surrounds an area that holds no other camels, take every waterhole token inside and a 5-point token for each oasis inside that this caravan is not linked to yet."}
+          {
+            "description": "Waterhole: place a camel on a space with a waterhole token and take the token face down. Keep it hidden until the end.",
+            "action": {
+              "type": "micro_animation",
+              "motif": "take",
+              "icon": "Hexagon",
+              "tint": "#3F8EA0"
+            }
+          },
+          {
+            "description": "Oasis: when a caravan is placed next to an oasis, it links to that oasis. Take a 5-point token.",
+            "action": {
+              "type": "micro_animation",
+              "motif": "gain",
+              "icon": "Award",
+              "count": 5,
+              "tint": "#E0B341"
+            }
+          },
+          {
+            "description": "Enclose: when a single caravan, with the board edge or a mountain, completely surrounds an area that holds no other camels, take every waterhole token inside and a 5-point token for each oasis inside that this caravan is not linked to yet.",
+            "action": {
+              "type": "micro_animation",
+              "motif": "take_from_supply",
+              "icon": "Hexagon",
+              "variable": true,
+              "tint": "#3F8EA0",
+              "icon2": "Award",
+              "tint2": "#E0B341"
+            }
+          }
         ],
         "notes": [
-          {"description": "Each caravan links to each oasis only once. One caravan can link to many oases."},
-          {"description": "Any number of caravans, from any players, can link to the same oasis."},
-          {"description": "You cannot enclose an area with caravans of different colors."},
-          {"description": "Enclosed areas score 1 point per empty space at the end of the game, not counting oases."}
+          {
+            "description": "Each caravan links to each oasis only once. One caravan can link to many oases."
+          },
+          {
+            "description": "Any number of caravans, from any players, can link to the same oasis."
+          },
+          {
+            "description": "You cannot enclose an area with caravans of different colors."
+          },
+          {
+            "description": "Enclosed areas score 1 point per empty space at the end of the game, not counting oases."
+          }
         ]
       }
     ]
@@ -135,18 +440,51 @@
   "end_game": {
     "trigger": "The game ends at the end of the turn in which the last camel of any one color is placed.",
     "procedure": [
-      {"description": "For each camel color, the player with the most camels in a caravan of that color takes that color's 10-point caravan token."},
-      {"description": "If players tie for the largest caravan of a color, each tied player takes a 5-point token and nobody takes the caravan token."}
+      {
+        "description": "For each camel color, the player with the most camels in a caravan of that color takes that color's 10-point caravan token.",
+        "action": {
+          "type": "micro_animation",
+          "motif": "gain",
+          "icon": "Award",
+          "count": 10,
+          "tint": "#E0B341"
+        }
+      },
+      {
+        "description": "If players tie for the largest caravan of a color, each tied player takes a 5-point token and nobody takes the caravan token.",
+        "action": {
+          "type": "micro_animation",
+          "motif": "gain",
+          "icon": "Award",
+          "count": 5,
+          "tint": "#E0B341"
+        }
+      }
     ],
     "final_scoring": [
-      {"source": "Point tokens", "description": "Waterhole, oasis, caravan and spare point tokens taken during the game."},
-      {"source": "Enclosed areas", "description": "1 point per empty space inside each of your enclosed areas, not counting oases."}
+      {
+        "source": "Point tokens",
+        "description": "Waterhole, oasis, caravan and spare point tokens taken during the game."
+      },
+      {
+        "source": "Enclosed areas",
+        "description": "1 point per empty space inside each of your enclosed areas, not counting oases."
+      }
     ]
   },
   "winning_condition": "The player with the most points wins. Tied players share the victory.",
   "tips_for_new_players": [
-    {"tip": "Use the edge", "description": "The board edge and mountains help you enclose large areas with few camels."},
-    {"tip": "Watch the supply", "description": "The game ends the moment any one color runs out. Count the colors that are running low."},
-    {"tip": "Block same colors", "description": "Your caravan blocks rivals' caravans of the same color, so a well-placed camel can cut a rival off from an oasis."}
+    {
+      "tip": "Use the edge",
+      "description": "The board edge and mountains help you enclose large areas with few camels."
+    },
+    {
+      "tip": "Watch the supply",
+      "description": "The game ends the moment any one color runs out. Count the colors that are running low."
+    },
+    {
+      "tip": "Block same colors",
+      "description": "Your caravan blocks rivals' caravans of the same color, so a well-placed camel can cut a rival off from an oasis."
+    }
   ]
 }
