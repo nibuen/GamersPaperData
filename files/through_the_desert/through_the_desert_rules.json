@@ -481,10 +481,16 @@
             "description": "Take two camels from the supply: two of one color or two different colors.",
             "action": {
               "type": "micro_animation",
-              "motif": "take_from_supply",
+              "motif": "pick_from_supply",
               "icon": "Pawn",
               "count": 2,
-              "tint": "#F2A7C3"
+              "tints": [
+                "#93D3A2",
+                "#F2A7C3",
+                "#F2D46B",
+                "#C6A6E6",
+                "#7FD6D0"
+              ]
             }
           },
           {
