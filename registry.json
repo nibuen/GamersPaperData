@@ -177,6 +177,14 @@
             "publisher": "Weast Coast Games",
             "genre": "card",
             "added_date": "2026-08-03"
+        },
+        {
+            "id": "through_the_desert",
+            "game_name": "Through the Desert",
+            "designer": "Reiner Knizia",
+            "publisher": "Z-Man Games",
+            "genre": "area_control",
+            "added_date": "2026-11-22"
         }
     ]
 }

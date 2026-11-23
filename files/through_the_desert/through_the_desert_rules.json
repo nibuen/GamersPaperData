@@ -1,0 +1,1490 @@
+{
+  "game_name": "Through the Desert",
+  "designer": "Reiner Knizia",
+  "publisher": "Z-Man Games",
+  "game_overview": "Lead Tuareg camel caravans across the Sahara. Each turn you add camels to your caravans to reach water holes, link to oases and wall off land. The game ends the moment any one camel color runs out.",
+  "objective": "Score the most points from water hole tokens, oases, enclosed areas and the largest caravan of each color.",
+  "min_players": 2,
+  "max_players": 5,
+  "bgg_link": "https://boardgamegeek.com/boardgame/503/through-the-desert",
+  "play_time_minutes": 45,
+  "components_overview": [
+    {
+      "name": "Game Board",
+      "type": "Board",
+      "count": 1,
+      "description": "Hex board of desert, pools of water and mountains."
+    },
+    {
+      "name": "Pastel Camels",
+      "type": "Token",
+      "count": 175,
+      "description": "5 colors (green, pink, yellow, purple, turquoise), 35 of each. The shared camel supply."
+    },
+    {
+      "name": "Gray Camels",
+      "type": "Token",
+      "count": 5,
+      "description": "Carry each player's gray leader, a reminder of who plays which color."
+    },
+    {
+      "name": "Riders",
+      "type": "Meeple",
+      "count": 30,
+      "description": "5 player colors, 6 of each. A rider on a camel is a leader: it starts one of your caravans."
+    },
+    {
+      "name": "Palm Trees",
+      "type": "Marker",
+      "count": 5,
+      "description": "Mark the 5 oases."
+    },
+    {
+      "name": "Waterhole Tokens",
+      "type": "Token",
+      "count": 45,
+      "description": "Worth 1, 2 or 3 points, 15 of each."
+    },
+    {
+      "name": "5-Point Tokens",
+      "type": "Token",
+      "count": 29,
+      "description": "Taken when a caravan links to an oasis."
+    },
+    {
+      "name": "10-Point Tokens",
+      "type": "Token",
+      "count": 15,
+      "description": "Spare points."
+    },
+    {
+      "name": "Caravan Tokens",
+      "type": "Token",
+      "count": 5,
+      "description": "10 points each, one per camel color, for the largest caravan of that color."
+    }
+  ],
+  "setup": [
+    {
+      "description": "Place the game board in the middle of the table.",
+      "short_description": "Board",
+      "action": {
+        "type": "board_view",
+        "board": {
+          "tiling": "hex",
+          "rows": 4,
+          "cols": 7,
+          "holes": [
+            "r4.c4",
+            "r4.c5"
+          ],
+          "cells": [
+            {
+              "at": "r1.c2",
+              "terrain": "palm spot"
+            },
+            {
+              "at": "r2.c6",
+              "terrain": "palm spot"
+            },
+            {
+              "at": "r3.c3",
+              "terrain": "palm spot"
+            },
+            {
+              "at": "r4.c6",
+              "terrain": "palm spot"
+            },
+            {
+              "at": "r1.c5",
+              "terrain": "small pool"
+            },
+            {
+              "at": "r4.c2",
+              "terrain": "small pool"
+            },
+            {
+              "at": "r3.c7",
+              "terrain": "small pool"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "description": "Play only on the spaces inside the elevation line. The spaces beyond it are not used.",
+      "short_description": "Elevation line",
+      "condition": {
+        "max_count_variant": 3
+      },
+      "action": {
+        "type": "board_view",
+        "board": {
+          "tiling": "hex",
+          "rows": 4,
+          "cols": 7,
+          "holes": [
+            "r4.c4",
+            "r4.c5"
+          ],
+          "cells": [
+            {
+              "at": "r1.c2",
+              "terrain": "palm spot"
+            },
+            {
+              "at": "r2.c6",
+              "terrain": "palm spot"
+            },
+            {
+              "at": "r3.c3",
+              "terrain": "palm spot"
+            },
+            {
+              "at": "r4.c6",
+              "terrain": "palm spot"
+            },
+            {
+              "at": "r1.c5",
+              "terrain": "small pool"
+            },
+            {
+              "at": "r4.c2",
+              "terrain": "small pool"
+            },
+            {
+              "at": "r3.c7",
+              "terrain": "small pool"
+            }
+          ]
+        },
+        "dim": [
+          "r1.c6",
+          "r2.c6",
+          "r3.c6",
+          "r4.c6",
+          "r1.c7",
+          "r2.c7",
+          "r3.c7",
+          "r4.c7"
+        ]
+      }
+    },
+    {
+      "description": "Each player takes their 6 leaders: 5 riders on pastel camels plus 1 on a gray camel. Keep the gray leader in front of you to show your color.",
+      "short_description": "Leaders",
+      "action": {
+        "type": "micro_animation",
+        "motif": "take_from_supply",
+        "icon": "Pawn",
+        "tint": "#A8A8B0",
+        "variable": true,
+        "icon2": "Pawn",
+        "tint2": "#F2A7C3"
+      }
+    },
+    {
+      "description": "Each player returns one leader to the box. All returned leaders must ride different pastel camel colors. Each player controls 4 caravans.",
+      "short_description": "Return 1",
+      "condition": {
+        "min_count_variant": 5
+      },
+      "action": {
+        "type": "micro_animation",
+        "motif": "return_to_supply",
+        "icon": "Pawn"
+      }
+    },
+    {
+      "description": "Sort the camels without riders by color into a shared supply.",
+      "short_description": "Camel supply",
+      "action": {
+        "type": "micro_animation",
+        "motif": "sort",
+        "icon": "Pawn",
+        "tints": [
+          "#93D3A2",
+          "#F2A7C3",
+          "#F2D46B",
+          "#C6A6E6",
+          "#7FD6D0"
+        ]
+      }
+    },
+    {
+      "description": "Return 4 camels of each color to the box.",
+      "short_description": "Return 4",
+      "condition": {
+        "min_count_variant": 3,
+        "max_count_variant": 3
+      },
+      "action": {
+        "type": "micro_animation",
+        "motif": "return_to_supply",
+        "icon": "Pawn",
+        "count": 4,
+        "tint": "#F2A7C3"
+      }
+    },
+    {
+      "description": "Return 10 camels of each color to the box.",
+      "short_description": "Return 10",
+      "condition": {
+        "max_count_variant": 2
+      },
+      "action": {
+        "type": "micro_animation",
+        "motif": "return_to_supply",
+        "icon": "Pawn",
+        "count": 10,
+        "tint": "#F2A7C3"
+      }
+    },
+    {
+      "description": "Place up to 5 palm trees on the palm spots, one per spot. Each palm tree makes its spot an oasis.",
+      "short_description": "Oases",
+      "action": {
+        "type": "board_view",
+        "board": {
+          "tiling": "hex",
+          "rows": 4,
+          "cols": 7,
+          "holes": [
+            "r4.c4",
+            "r4.c5"
+          ],
+          "cells": [
+            {
+              "at": "r1.c2",
+              "terrain": "palm spot"
+            },
+            {
+              "at": "r2.c6",
+              "terrain": "palm spot"
+            },
+            {
+              "at": "r3.c3",
+              "terrain": "palm spot"
+            },
+            {
+              "at": "r4.c6",
+              "terrain": "palm spot"
+            },
+            {
+              "at": "r1.c5",
+              "terrain": "small pool"
+            },
+            {
+              "at": "r4.c2",
+              "terrain": "small pool"
+            },
+            {
+              "at": "r3.c7",
+              "terrain": "small pool"
+            }
+          ]
+        },
+        "add": [
+          {
+            "at": "r1.c2",
+            "terrain": "oasis"
+          },
+          {
+            "at": "r2.c6",
+            "terrain": "oasis"
+          },
+          {
+            "at": "r3.c3",
+            "terrain": "oasis"
+          }
+        ]
+      }
+    },
+    {
+      "description": "Palm spots you left empty become waterholes: place a waterhole token face up on each of them and on every small pool. Waterhole tokens are worth points.",
+      "short_description": "Waterholes",
+      "action": {
+        "type": "board_view",
+        "board": {
+          "tiling": "hex",
+          "rows": 4,
+          "cols": 7,
+          "holes": [
+            "r4.c4",
+            "r4.c5"
+          ],
+          "cells": [
+            {
+              "at": "r4.c6",
+              "terrain": "palm spot"
+            },
+            {
+              "at": "r1.c5",
+              "terrain": "small pool"
+            },
+            {
+              "at": "r4.c2",
+              "terrain": "small pool"
+            },
+            {
+              "at": "r3.c7",
+              "terrain": "small pool"
+            },
+            {
+              "at": "r1.c2",
+              "terrain": "oasis"
+            },
+            {
+              "at": "r2.c6",
+              "terrain": "oasis"
+            },
+            {
+              "at": "r3.c3",
+              "terrain": "oasis"
+            }
+          ]
+        },
+        "add": [
+          {
+            "at": "r4.c6",
+            "terrain": "waterhole"
+          },
+          {
+            "at": "r1.c5",
+            "terrain": "waterhole"
+          },
+          {
+            "at": "r4.c2",
+            "terrain": "waterhole"
+          },
+          {
+            "at": "r3.c7",
+            "terrain": "waterhole"
+          }
+        ]
+      }
+    },
+    {
+      "description": "Put the point tokens near the board, sorted by type.",
+      "short_description": "Tokens",
+      "action": {
+        "type": "micro_animation",
+        "motif": "return_to_supply",
+        "icon": "Award",
+        "variable": true,
+        "tint": "#E0B341",
+        "area": "Supply"
+      }
+    },
+    {
+      "description": "The youngest player goes first.",
+      "short_description": "First player"
+    },
+    {
+      "description": "Starting with the first player and going clockwise, place your leaders (not gray) one at a time on empty spaces.",
+      "short_description": "Place leaders",
+      "action": {
+        "type": "board_rule",
+        "title": "Where a leader may go",
+        "board": {
+          "tiling": "hex",
+          "rows": 4,
+          "cols": 7,
+          "holes": [
+            "r4.c4",
+            "r4.c5"
+          ],
+          "cells": [
+            {
+              "at": "r1.c2",
+              "terrain": "oasis"
+            },
+            {
+              "at": "r2.c6",
+              "terrain": "oasis"
+            },
+            {
+              "at": "r3.c3",
+              "terrain": "oasis"
+            },
+            {
+              "at": "r4.c6",
+              "terrain": "waterhole"
+            },
+            {
+              "at": "r1.c5",
+              "terrain": "waterhole"
+            },
+            {
+              "at": "r4.c2",
+              "terrain": "waterhole"
+            },
+            {
+              "at": "r3.c7",
+              "terrain": "waterhole"
+            }
+          ],
+          "pieces": [
+            {
+              "at": "r2.c4",
+              "kind": "leader",
+              "owner": "rival",
+              "color": "green"
+            }
+          ]
+        },
+        "placement": {
+          "not_on": [
+            {
+              "terrain": "waterhole"
+            },
+            {
+              "terrain": "oasis"
+            }
+          ],
+          "not_touch": [
+            {
+              "terrain": "oasis"
+            },
+            {
+              "kind": "leader",
+              "owner": "any"
+            }
+          ]
+        },
+        "piece": {
+          "kind": "leader",
+          "owner": "you",
+          "color": "turquoise"
+        },
+        "example": "r3.c1"
+      }
+    },
+    {
+      "description": "The first leader each player places must ride a camel color that no leader already on the board has.",
+      "short_description": "First leader"
+    }
+  ],
+  "gameplay": {
+    "turn_steps": [
+      "Take two camels from the supply, in any colors.",
+      "Place them to extend your caravans of those colors.",
+      "Score whatever the new camels reach, immediately.",
+      "Play passes clockwise."
+    ],
+    "actions": [
+      {
+        "name": "1. Place Camels",
+        "description": "Add two camels to your caravans.",
+        "steps": [
+          {
+            "description": "Take two camels from the supply: two of one color or two different colors.",
+            "action": {
+              "type": "micro_animation",
+              "motif": "pick_from_supply",
+              "icon": "Pawn",
+              "count": 2,
+              "tints": [
+                "#93D3A2",
+                "#F2A7C3",
+                "#F2D46B",
+                "#C6A6E6",
+                "#7FD6D0"
+              ]
+            }
+          },
+          {
+            "description": "Place each camel next to your caravan of the same color.",
+            "action": {
+              "type": "board_rule",
+              "title": "Where a camel may go",
+              "board": {
+                "tiling": "hex",
+                "rows": 4,
+                "cols": 7,
+                "holes": [
+                  "r4.c4",
+                  "r4.c5"
+                ],
+                "cells": [
+                  {
+                    "at": "r1.c2",
+                    "terrain": "oasis"
+                  },
+                  {
+                    "at": "r2.c6",
+                    "terrain": "oasis"
+                  },
+                  {
+                    "at": "r3.c3",
+                    "terrain": "oasis"
+                  },
+                  {
+                    "at": "r1.c5",
+                    "terrain": "waterhole"
+                  },
+                  {
+                    "at": "r3.c7",
+                    "terrain": "waterhole"
+                  },
+                  {
+                    "at": "r4.c2",
+                    "terrain": "waterhole"
+                  },
+                  {
+                    "at": "r4.c6",
+                    "terrain": "waterhole"
+                  }
+                ],
+                "pieces": [
+                  {
+                    "at": "r3.c1",
+                    "kind": "leader",
+                    "owner": "you",
+                    "color": "pink"
+                  },
+                  {
+                    "at": "r3.c2",
+                    "kind": "camel",
+                    "owner": "you",
+                    "color": "pink"
+                  },
+                  {
+                    "at": "r2.c4",
+                    "kind": "leader",
+                    "owner": "rival",
+                    "color": "pink"
+                  },
+                  {
+                    "at": "r2.c3",
+                    "kind": "camel",
+                    "owner": "rival",
+                    "color": "pink"
+                  }
+                ]
+              },
+              "placement": {
+                "not_on": [
+                  {
+                    "terrain": "oasis"
+                  }
+                ],
+                "must_touch": [
+                  {
+                    "owner": "own",
+                    "color": "same",
+                    "label": "your caravan of that color"
+                  }
+                ],
+                "not_touch": [
+                  {
+                    "owner": "rival",
+                    "color": "same",
+                    "label": "a rival's caravan of that color"
+                  }
+                ]
+              },
+              "piece": {
+                "kind": "camel",
+                "owner": "you",
+                "color": "pink"
+              },
+              "example": "r2.c1"
+            }
+          }
+        ],
+        "notes": [
+          {
+            "description": "First turn: the first two players place only one camel each.",
+            "condition": {
+              "min_count_variant": 3
+            }
+          },
+          {
+            "description": "First turn: the first player places only one camel.",
+            "condition": {
+              "max_count_variant": 2
+            }
+          },
+          {
+            "description": "NOT on a mountain, an occupied space or an oasis.",
+            "action": {
+              "type": "board_view",
+              "board": {
+                "tiling": "hex",
+                "rows": 4,
+                "cols": 7,
+                "holes": [
+                  "r4.c4",
+                  "r4.c5"
+                ],
+                "cells": [
+                  {
+                    "at": "r1.c2",
+                    "terrain": "oasis"
+                  },
+                  {
+                    "at": "r2.c6",
+                    "terrain": "oasis"
+                  },
+                  {
+                    "at": "r3.c3",
+                    "terrain": "oasis"
+                  },
+                  {
+                    "at": "r1.c5",
+                    "terrain": "waterhole"
+                  },
+                  {
+                    "at": "r3.c7",
+                    "terrain": "waterhole"
+                  },
+                  {
+                    "at": "r4.c2",
+                    "terrain": "waterhole"
+                  },
+                  {
+                    "at": "r4.c6",
+                    "terrain": "waterhole"
+                  }
+                ],
+                "pieces": [
+                  {
+                    "at": "r3.c1",
+                    "kind": "leader",
+                    "owner": "you",
+                    "color": "pink"
+                  },
+                  {
+                    "at": "r3.c2",
+                    "kind": "camel",
+                    "owner": "you",
+                    "color": "pink"
+                  },
+                  {
+                    "at": "r2.c4",
+                    "kind": "leader",
+                    "owner": "rival",
+                    "color": "pink"
+                  },
+                  {
+                    "at": "r2.c3",
+                    "kind": "camel",
+                    "owner": "rival",
+                    "color": "pink"
+                  }
+                ]
+              },
+              "beats": [
+                {
+                  "op": "blocked",
+                  "at": "r3.c3",
+                  "piece": {
+                    "kind": "camel",
+                    "owner": "you",
+                    "color": "pink"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "description": "Caravans may fork; they do not have to form a single line.",
+            "action": {
+              "type": "board_view",
+              "board": {
+                "tiling": "hex",
+                "rows": 4,
+                "cols": 7,
+                "holes": [
+                  "r4.c4",
+                  "r4.c5"
+                ],
+                "cells": [
+                  {
+                    "at": "r1.c2",
+                    "terrain": "oasis"
+                  },
+                  {
+                    "at": "r2.c6",
+                    "terrain": "oasis"
+                  },
+                  {
+                    "at": "r3.c3",
+                    "terrain": "oasis"
+                  },
+                  {
+                    "at": "r1.c5",
+                    "terrain": "waterhole"
+                  },
+                  {
+                    "at": "r3.c7",
+                    "terrain": "waterhole"
+                  },
+                  {
+                    "at": "r4.c2",
+                    "terrain": "waterhole"
+                  },
+                  {
+                    "at": "r4.c6",
+                    "terrain": "waterhole"
+                  }
+                ],
+                "pieces": [
+                  {
+                    "at": "r3.c1",
+                    "kind": "leader",
+                    "owner": "you",
+                    "color": "pink"
+                  },
+                  {
+                    "at": "r3.c2",
+                    "kind": "camel",
+                    "owner": "you",
+                    "color": "pink"
+                  }
+                ]
+              },
+              "beats": [
+                {
+                  "op": "place",
+                  "at": "r2.c1",
+                  "piece": {
+                    "kind": "camel",
+                    "owner": "you",
+                    "color": "pink"
+                  }
+                },
+                {
+                  "op": "place",
+                  "at": "r4.c2",
+                  "piece": {
+                    "kind": "camel",
+                    "owner": "you",
+                    "color": "pink"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "description": "A camel may be placed next to a camel of a different color, whoever owns it."
+          },
+          {
+            "description": "NEVER next to another player's camel of the same color: two caravans of one color cannot merge.",
+            "action": {
+              "type": "board_view",
+              "board": {
+                "tiling": "hex",
+                "rows": 4,
+                "cols": 7,
+                "holes": [
+                  "r4.c4",
+                  "r4.c5"
+                ],
+                "cells": [
+                  {
+                    "at": "r1.c2",
+                    "terrain": "oasis"
+                  },
+                  {
+                    "at": "r2.c6",
+                    "terrain": "oasis"
+                  },
+                  {
+                    "at": "r3.c3",
+                    "terrain": "oasis"
+                  },
+                  {
+                    "at": "r1.c5",
+                    "terrain": "waterhole"
+                  },
+                  {
+                    "at": "r3.c7",
+                    "terrain": "waterhole"
+                  },
+                  {
+                    "at": "r4.c2",
+                    "terrain": "waterhole"
+                  },
+                  {
+                    "at": "r4.c6",
+                    "terrain": "waterhole"
+                  }
+                ],
+                "pieces": [
+                  {
+                    "at": "r3.c1",
+                    "kind": "leader",
+                    "owner": "you",
+                    "color": "pink"
+                  },
+                  {
+                    "at": "r3.c2",
+                    "kind": "camel",
+                    "owner": "you",
+                    "color": "pink"
+                  },
+                  {
+                    "at": "r2.c4",
+                    "kind": "leader",
+                    "owner": "rival",
+                    "color": "pink"
+                  },
+                  {
+                    "at": "r2.c3",
+                    "kind": "camel",
+                    "owner": "rival",
+                    "color": "pink"
+                  }
+                ]
+              },
+              "beats": [
+                {
+                  "op": "pulse",
+                  "at": "r2.c3"
+                },
+                {
+                  "op": "blocked",
+                  "at": "r2.c2",
+                  "piece": {
+                    "kind": "camel",
+                    "owner": "you",
+                    "color": "pink"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "description": "No camel may be placed inside an enclosed area.",
+            "action": {
+              "type": "board_view",
+              "board": {
+                "tiling": "hex",
+                "rows": 4,
+                "cols": 7,
+                "holes": [
+                  "r4.c4",
+                  "r4.c5"
+                ],
+                "cells": [
+                  {
+                    "at": "r1.c2",
+                    "terrain": "oasis"
+                  },
+                  {
+                    "at": "r2.c6",
+                    "terrain": "oasis"
+                  },
+                  {
+                    "at": "r3.c3",
+                    "terrain": "oasis"
+                  },
+                  {
+                    "at": "r1.c5",
+                    "terrain": "waterhole"
+                  },
+                  {
+                    "at": "r4.c2",
+                    "terrain": "waterhole"
+                  },
+                  {
+                    "at": "r4.c6",
+                    "terrain": "waterhole"
+                  }
+                ],
+                "pieces": [
+                  {
+                    "at": "r4.c7",
+                    "kind": "leader",
+                    "owner": "you",
+                    "color": "yellow"
+                  },
+                  {
+                    "at": "r3.c7",
+                    "kind": "camel",
+                    "owner": "you",
+                    "color": "yellow"
+                  },
+                  {
+                    "at": "r3.c1",
+                    "kind": "leader",
+                    "owner": "you",
+                    "color": "pink"
+                  },
+                  {
+                    "at": "r3.c2",
+                    "kind": "camel",
+                    "owner": "you",
+                    "color": "pink"
+                  },
+                  {
+                    "at": "r2.c4",
+                    "kind": "leader",
+                    "owner": "rival",
+                    "color": "pink"
+                  },
+                  {
+                    "at": "r2.c3",
+                    "kind": "camel",
+                    "owner": "rival",
+                    "color": "pink"
+                  }
+                ]
+              },
+              "beats": [
+                {
+                  "op": "place",
+                  "at": "r3.c6",
+                  "piece": {
+                    "kind": "camel",
+                    "owner": "you",
+                    "color": "yellow"
+                  }
+                },
+                {
+                  "op": "enclose",
+                  "at": "r3.c6"
+                },
+                {
+                  "op": "blocked",
+                  "at": "r4.c6",
+                  "piece": {
+                    "kind": "camel",
+                    "owner": "you",
+                    "color": "pink"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "2. Score as You Go",
+        "description": "Points are taken the moment a camel lands.",
+        "steps": [
+          {
+            "description": "Waterhole: place a camel on a space with a waterhole token and take the token face down. Keep it hidden until the end.",
+            "action": {
+              "type": "board_view",
+              "board": {
+                "tiling": "hex",
+                "rows": 4,
+                "cols": 7,
+                "holes": [
+                  "r4.c4",
+                  "r4.c5"
+                ],
+                "cells": [
+                  {
+                    "at": "r1.c2",
+                    "terrain": "oasis"
+                  },
+                  {
+                    "at": "r2.c6",
+                    "terrain": "oasis"
+                  },
+                  {
+                    "at": "r3.c3",
+                    "terrain": "oasis"
+                  },
+                  {
+                    "at": "r1.c5",
+                    "terrain": "waterhole"
+                  },
+                  {
+                    "at": "r3.c7",
+                    "terrain": "waterhole"
+                  },
+                  {
+                    "at": "r4.c2",
+                    "terrain": "waterhole"
+                  },
+                  {
+                    "at": "r4.c6",
+                    "terrain": "waterhole"
+                  }
+                ],
+                "pieces": [
+                  {
+                    "at": "r3.c1",
+                    "kind": "leader",
+                    "owner": "you",
+                    "color": "pink"
+                  },
+                  {
+                    "at": "r3.c2",
+                    "kind": "camel",
+                    "owner": "you",
+                    "color": "pink"
+                  }
+                ]
+              },
+              "beats": [
+                {
+                  "op": "place",
+                  "at": "r4.c2",
+                  "piece": {
+                    "kind": "camel",
+                    "owner": "you",
+                    "color": "pink"
+                  }
+                },
+                {
+                  "op": "take",
+                  "at": "r4.c2"
+                }
+              ]
+            }
+          },
+          {
+            "description": "Oasis: when a caravan is placed next to an oasis, it links to that oasis. Take a 5-point token.",
+            "action": {
+              "type": "board_view",
+              "board": {
+                "tiling": "hex",
+                "rows": 4,
+                "cols": 7,
+                "holes": [
+                  "r4.c4",
+                  "r4.c5"
+                ],
+                "cells": [
+                  {
+                    "at": "r1.c2",
+                    "terrain": "oasis"
+                  },
+                  {
+                    "at": "r2.c6",
+                    "terrain": "oasis"
+                  },
+                  {
+                    "at": "r3.c3",
+                    "terrain": "oasis"
+                  },
+                  {
+                    "at": "r1.c5",
+                    "terrain": "waterhole"
+                  },
+                  {
+                    "at": "r3.c7",
+                    "terrain": "waterhole"
+                  },
+                  {
+                    "at": "r4.c2",
+                    "terrain": "waterhole"
+                  },
+                  {
+                    "at": "r4.c6",
+                    "terrain": "waterhole"
+                  }
+                ],
+                "pieces": [
+                  {
+                    "at": "r3.c1",
+                    "kind": "leader",
+                    "owner": "you",
+                    "color": "pink"
+                  },
+                  {
+                    "at": "r3.c2",
+                    "kind": "camel",
+                    "owner": "you",
+                    "color": "pink"
+                  }
+                ]
+              },
+              "beats": [
+                {
+                  "op": "place",
+                  "at": "r2.c1",
+                  "piece": {
+                    "kind": "camel",
+                    "owner": "you",
+                    "color": "pink"
+                  }
+                },
+                {
+                  "op": "pulse",
+                  "at": "r1.c2"
+                },
+                {
+                  "op": "tally",
+                  "at": "r1.c2",
+                  "text": "+5"
+                }
+              ]
+            }
+          },
+          {
+            "description": "Enclose: when a single caravan, with the board edge or a mountain, completely surrounds an area that holds no other camels, take every waterhole token inside and a 5-point token for each oasis inside that this caravan is not linked to yet.",
+            "action": {
+              "type": "board_view",
+              "board": {
+                "tiling": "hex",
+                "rows": 4,
+                "cols": 7,
+                "holes": [
+                  "r4.c4",
+                  "r4.c5"
+                ],
+                "cells": [
+                  {
+                    "at": "r1.c2",
+                    "terrain": "oasis"
+                  },
+                  {
+                    "at": "r2.c6",
+                    "terrain": "oasis"
+                  },
+                  {
+                    "at": "r3.c3",
+                    "terrain": "oasis"
+                  },
+                  {
+                    "at": "r1.c5",
+                    "terrain": "waterhole"
+                  },
+                  {
+                    "at": "r4.c2",
+                    "terrain": "waterhole"
+                  },
+                  {
+                    "at": "r4.c6",
+                    "terrain": "waterhole"
+                  }
+                ],
+                "pieces": [
+                  {
+                    "at": "r4.c7",
+                    "kind": "leader",
+                    "owner": "you",
+                    "color": "yellow"
+                  },
+                  {
+                    "at": "r3.c7",
+                    "kind": "camel",
+                    "owner": "you",
+                    "color": "yellow"
+                  },
+                  {
+                    "at": "r3.c1",
+                    "kind": "leader",
+                    "owner": "you",
+                    "color": "pink"
+                  },
+                  {
+                    "at": "r3.c2",
+                    "kind": "camel",
+                    "owner": "you",
+                    "color": "pink"
+                  },
+                  {
+                    "at": "r2.c4",
+                    "kind": "leader",
+                    "owner": "rival",
+                    "color": "pink"
+                  },
+                  {
+                    "at": "r2.c3",
+                    "kind": "camel",
+                    "owner": "rival",
+                    "color": "pink"
+                  }
+                ]
+              },
+              "beats": [
+                {
+                  "op": "place",
+                  "at": "r3.c6",
+                  "piece": {
+                    "kind": "camel",
+                    "owner": "you",
+                    "color": "yellow"
+                  }
+                },
+                {
+                  "op": "enclose",
+                  "at": "r3.c6"
+                }
+              ]
+            }
+          }
+        ],
+        "notes": [
+          {
+            "description": "Each caravan links to each oasis only once. One caravan can link to many oases."
+          },
+          {
+            "description": "Any number of caravans, from any players, can link to the same oasis."
+          },
+          {
+            "description": "You cannot enclose an area with caravans of different colors."
+          },
+          {
+            "description": "Enclosed areas score 1 point per empty space at the end of the game, not counting oases."
+          }
+        ]
+      }
+    ]
+  },
+  "end_game": {
+    "trigger": "The game ends at the end of the turn in which the last camel of any one color is placed.",
+    "procedure": [
+      {
+        "description": "For each camel color, the player with the most camels in a caravan of that color takes that color's 10-point caravan token.",
+        "action": {
+          "type": "board_view",
+          "board": {
+            "tiling": "hex",
+            "rows": 4,
+            "cols": 7,
+            "holes": [
+              "r4.c4",
+              "r4.c5"
+            ],
+            "cells": [
+              {
+                "at": "r1.c2",
+                "terrain": "oasis"
+              },
+              {
+                "at": "r2.c6",
+                "terrain": "oasis"
+              },
+              {
+                "at": "r3.c3",
+                "terrain": "oasis"
+              },
+              {
+                "at": "r1.c5",
+                "terrain": "waterhole"
+              },
+              {
+                "at": "r3.c7",
+                "terrain": "waterhole"
+              },
+              {
+                "at": "r4.c2",
+                "terrain": "waterhole"
+              },
+              {
+                "at": "r4.c6",
+                "terrain": "waterhole"
+              }
+            ],
+            "pieces": [
+              {
+                "at": "r3.c1",
+                "kind": "leader",
+                "owner": "you",
+                "color": "pink"
+              },
+              {
+                "at": "r3.c2",
+                "kind": "camel",
+                "owner": "you",
+                "color": "pink"
+              },
+              {
+                "at": "r4.c1",
+                "kind": "camel",
+                "owner": "you",
+                "color": "pink"
+              },
+              {
+                "at": "r2.c1",
+                "kind": "camel",
+                "owner": "you",
+                "color": "pink"
+              },
+              {
+                "at": "r2.c4",
+                "kind": "leader",
+                "owner": "rival",
+                "color": "pink"
+              },
+              {
+                "at": "r2.c3",
+                "kind": "camel",
+                "owner": "rival",
+                "color": "pink"
+              },
+              {
+                "at": "r1.c4",
+                "kind": "camel",
+                "owner": "rival",
+                "color": "pink"
+              }
+            ]
+          },
+          "beats": [
+            {
+              "op": "group",
+              "at": "r3.c1"
+            },
+            {
+              "op": "group",
+              "at": "r2.c4"
+            },
+            {
+              "op": "tally",
+              "at": "r3.c1",
+              "text": "+10"
+            }
+          ]
+        }
+      },
+      {
+        "description": "If players tie for the largest caravan of a color, each tied player takes a 5-point token and nobody takes the caravan token.",
+        "action": {
+          "type": "board_view",
+          "board": {
+            "tiling": "hex",
+            "rows": 4,
+            "cols": 7,
+            "holes": [
+              "r4.c4",
+              "r4.c5"
+            ],
+            "cells": [
+              {
+                "at": "r1.c2",
+                "terrain": "oasis"
+              },
+              {
+                "at": "r2.c6",
+                "terrain": "oasis"
+              },
+              {
+                "at": "r3.c3",
+                "terrain": "oasis"
+              },
+              {
+                "at": "r1.c5",
+                "terrain": "waterhole"
+              },
+              {
+                "at": "r3.c7",
+                "terrain": "waterhole"
+              },
+              {
+                "at": "r4.c2",
+                "terrain": "waterhole"
+              },
+              {
+                "at": "r4.c6",
+                "terrain": "waterhole"
+              }
+            ],
+            "pieces": [
+              {
+                "at": "r3.c1",
+                "kind": "leader",
+                "owner": "you",
+                "color": "pink"
+              },
+              {
+                "at": "r3.c2",
+                "kind": "camel",
+                "owner": "you",
+                "color": "pink"
+              },
+              {
+                "at": "r4.c1",
+                "kind": "camel",
+                "owner": "you",
+                "color": "pink"
+              },
+              {
+                "at": "r2.c4",
+                "kind": "leader",
+                "owner": "rival",
+                "color": "pink"
+              },
+              {
+                "at": "r2.c3",
+                "kind": "camel",
+                "owner": "rival",
+                "color": "pink"
+              },
+              {
+                "at": "r1.c4",
+                "kind": "camel",
+                "owner": "rival",
+                "color": "pink"
+              }
+            ]
+          },
+          "beats": [
+            {
+              "op": "group",
+              "at": "r3.c1"
+            },
+            {
+              "op": "group",
+              "at": "r2.c4"
+            },
+            {
+              "op": "tally",
+              "at": "r3.c1",
+              "text": "+5"
+            },
+            {
+              "op": "tally",
+              "at": "r2.c4",
+              "text": "+5"
+            }
+          ]
+        }
+      }
+    ],
+    "final_scoring": [
+      {
+        "source": "Point tokens",
+        "description": "Waterhole, oasis, caravan and spare point tokens taken during the game."
+      },
+      {
+        "source": "Enclosed areas",
+        "description": "1 point per empty space inside each of your enclosed areas, not counting oases."
+      }
+    ],
+    "trigger_action": {
+      "type": "micro_animation",
+      "motif": "pick_from_supply",
+      "icon": "Pawn",
+      "count": 1,
+      "tints": [
+        "#93D3A2",
+        "#F2A7C3",
+        "#F2D46B",
+        "#C6A6E6",
+        "#7FD6D0"
+      ],
+      "row_counts": [
+        2,
+        2,
+        1,
+        2,
+        2
+      ]
+    }
+  },
+  "winning_condition": "The player with the most points wins. Tied players share the victory.",
+  "tips_for_new_players": [
+    {
+      "tip": "Use the edge",
+      "description": "The board edge and mountains help you enclose large areas with few camels."
+    },
+    {
+      "tip": "Watch the supply",
+      "description": "The game ends the moment any one color runs out. Count the colors that are running low."
+    },
+    {
+      "tip": "Block same colors",
+      "description": "Your caravan blocks rivals' caravans of the same color, so a well-placed camel can cut a rival off from an oasis."
+    }
+  ]
+}
