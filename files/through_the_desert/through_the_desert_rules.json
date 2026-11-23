@@ -81,19 +81,19 @@
           "cells": [
             {
               "at": "r1.c2",
-              "terrain": "large pool"
+              "terrain": "palm spot"
             },
             {
               "at": "r2.c6",
-              "terrain": "large pool"
+              "terrain": "palm spot"
             },
             {
               "at": "r3.c3",
-              "terrain": "large pool"
+              "terrain": "palm spot"
             },
             {
               "at": "r4.c6",
-              "terrain": "large pool"
+              "terrain": "palm spot"
             },
             {
               "at": "r1.c5",
@@ -112,10 +112,62 @@
       }
     },
     {
-      "description": "Spaces beyond the elevation line are not used.",
+      "description": "Play only on the spaces inside the elevation line. The spaces beyond it are not used.",
       "short_description": "Elevation line",
       "condition": {
         "max_count_variant": 3
+      },
+      "action": {
+        "type": "board_view",
+        "board": {
+          "tiling": "hex",
+          "rows": 4,
+          "cols": 7,
+          "holes": [
+            "r4.c4",
+            "r4.c5"
+          ],
+          "cells": [
+            {
+              "at": "r1.c2",
+              "terrain": "palm spot"
+            },
+            {
+              "at": "r2.c6",
+              "terrain": "palm spot"
+            },
+            {
+              "at": "r3.c3",
+              "terrain": "palm spot"
+            },
+            {
+              "at": "r4.c6",
+              "terrain": "palm spot"
+            },
+            {
+              "at": "r1.c5",
+              "terrain": "small pool"
+            },
+            {
+              "at": "r4.c2",
+              "terrain": "small pool"
+            },
+            {
+              "at": "r3.c7",
+              "terrain": "small pool"
+            }
+          ]
+        },
+        "dim": [
+          "r1.c6",
+          "r2.c6",
+          "r3.c6",
+          "r4.c6",
+          "r1.c7",
+          "r2.c7",
+          "r3.c7",
+          "r4.c7"
+        ]
       }
     },
     {
@@ -148,12 +200,15 @@
       "short_description": "Camel supply",
       "action": {
         "type": "micro_animation",
-        "motif": "return_to_supply",
+        "motif": "sort",
         "icon": "Pawn",
-        "tint": "#F2A7C3",
-        "variable": true,
-        "icon2": "Pawn",
-        "tint2": "#7FD6D0"
+        "tints": [
+          "#93D3A2",
+          "#F2A7C3",
+          "#F2D46B",
+          "#C6A6E6",
+          "#7FD6D0"
+        ]
       }
     },
     {
@@ -186,7 +241,7 @@
       }
     },
     {
-      "description": "Place up to 5 palm trees, one per space, on large pools of water. Each palm tree marks an oasis.",
+      "description": "Place up to 5 palm trees on the palm spots, one per spot. Each palm tree makes its spot an oasis.",
       "short_description": "Oases",
       "action": {
         "type": "board_view",
@@ -201,19 +256,19 @@
           "cells": [
             {
               "at": "r1.c2",
-              "terrain": "large pool"
+              "terrain": "palm spot"
             },
             {
               "at": "r2.c6",
-              "terrain": "large pool"
+              "terrain": "palm spot"
             },
             {
               "at": "r3.c3",
-              "terrain": "large pool"
+              "terrain": "palm spot"
             },
             {
               "at": "r4.c6",
-              "terrain": "large pool"
+              "terrain": "palm spot"
             },
             {
               "at": "r1.c5",
@@ -246,7 +301,7 @@
       }
     },
     {
-      "description": "Shuffle the waterhole tokens and place one face up on every small pool and on every large pool without a palm tree.",
+      "description": "Palm spots you left empty become waterholes: place a waterhole token face up on each of them and on every small pool. Waterhole tokens are worth points.",
       "short_description": "Waterholes",
       "action": {
         "type": "board_view",
@@ -261,7 +316,7 @@
           "cells": [
             {
               "at": "r4.c6",
-              "terrain": "large pool"
+              "terrain": "palm spot"
             },
             {
               "at": "r1.c5",
